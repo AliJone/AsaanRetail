@@ -1,0 +1,26 @@
+@use "../../../utils/fonts"
+@use "../../../utils/colors"
+
+.buttonClass
+    @include fonts.fontbold
+    display: flex
+    height: 47.147px
+    padding: var(--Size-08, 8px) var(--Size-16, 16px)
+    justify-content: center
+    align-items: center
+    gap: 8.572px
+    
+
+    // style
+    border-radius: colors.$border-radius 
+    border: colors.$border-color !important
+    background: colors.$color
+    box-shadow: 0px 1.71445px 0px 0px rgba(0, 0, 0, 0.04)
+    color: fonts.$fontColor_primary !important
+
+    :hover
+        background: colors.$color
+        border-color: colors.$color !important
+        color: fonts.$fontColor_primary !important
+        box-shadow: 0px 1.71445px 0px 0px rgba(0, 0, 0, 0.04)
+        cursor: pointer

@@ -1,0 +1,87 @@
+@use "../../utils/fonts"
+    
+.HeaderClass
+    display: flex
+    justify-content: center
+    // align-items: start
+    // flex-direction: row
+    padding: 0 0
+    background-color: rgb(255, 255, 255)
+    // box-shadow: 0 0 10px 0 rgb(255, 255, 255)
+    // z-index: 100
+    // position: fixed
+    height: 55px
+    top:0
+    width: 100%
+    transition: all 0.3s ease-in-out
+    
+
+.DivClass
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    padding: 0 0
+    
+    background-color: rgb(255, 255, 255)
+    // box-shadow: 0 0 10px 0 rgb(255, 255, 255)
+    z-index: 100
+    position: fixed
+    width: 100%
+    top: 0
+    
+.MenuDivClass
+    display: flex
+    justify-self: left
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    // width: 100%
+    // width: auto
+
+
+.LogoClass
+    @include fonts.fontbold
+    display: inline
+    margin: 0 0 0 0
+    justify-self: left
+    align-self: center
+    
+.userLogoClass
+    width: 20px
+    height: 20px
+    
+.dividerClass
+    display: flex
+    align-items: center
+    gap: 10px
+    align-self: stretch
+    height: auto
+    
+.divClass2
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 0 0 0 10px
+    
+.BottomLine
+
+    // ::after
+    //     border-bottom-color: #37bf2d !important
+    
+    //     .ant-menu-item-selected::after
+    //         border-bottom-color: #37bf2d !important
+    
+    :hover::after
+        // position: absolute
+        // bottom: 0
+        // left: 0
+        // width: 100%
+        // height: 2px
+        border-bottom: 2px solid #37bf2d !important
+        // visibility: hidden
+        // transform: scaleX(0)
+        // transition: all 0.3s ease-in-out 0s
+
+

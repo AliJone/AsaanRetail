@@ -1,0 +1,21 @@
+@use "../../utils/fonts"
+
+.imageClass
+    display: flex,
+    justify-content: center,
+    align-items: center,
+    
+.contentClassSetting
+    display: flex,
+    justify-content: center,
+    align-items: flex-start,
+    flex-direction: column,
+    
+.titleClass
+    @include fonts.fontboldh4
+    color: fonts.$fontColor_primary
+
+.contentClass
+    @include fonts.fontbodyRegular
+    color: fonts.$fontColor_primary
+    
