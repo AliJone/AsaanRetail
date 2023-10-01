@@ -9,7 +9,7 @@ import styles from "./style.module.sass";
 
 const SolutionsDropDown = () => {
     return(
-        <>
+        <div className = {styles.divAnimation}>
         <GenericDropDown
         child1 ={
             <>
@@ -41,7 +41,7 @@ const SolutionsDropDown = () => {
         }
         
         />
-        </>
+        </div>
     )
 }
 

@@ -3,6 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
   font-family:
     Inter,
     -apple-system,
@@ -18,6 +19,20 @@ body {
     sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 0.1rem; /* You can set this to 0 to completely hide the scrollbar */
+}
+
+/* Optional: Add some styling to the track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Optional: Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -31,4 +46,6 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
 

@@ -1,4 +1,7 @@
-$fontColor_primary : #ffffff
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,700'
+
+
+
 
     
 @mixin fontbold
@@ -8,6 +11,37 @@ $fontColor_primary : #ffffff
     font-weight: 500
     line-height: 120%
 
+@mixin fontHeadingLandingPage
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    font-family: Roboto
+    font-size: 72px
+    font-style: normal
+    font-weight: 700
+    line-height: 100%
+    
+@mixin fontDesktopH1Bold
+    font-family: Roboto
+    font-size: 61px
+    font-style: normal
+    font-weight: 700
+    line-height: 120%
+
+@mixin fontDesktopH5Regular
+    /* Desktop/H5/Regular */
+    font-family: Roboto
+    font-size: 21px
+    font-style: normal
+    font-weight: 400
+    line-height: 120%
+
+@mixin fontH5Bold
+    /* H5/bold */
+    font-family: Roboto
+    font-size: 16px
+    font-style: normal
+    font-weight: 700
+    line-height: 24px 
+
 @mixin fontboldh2
     font-family: Roboto
     font-size: 30px
@@ -16,11 +50,14 @@ $fontColor_primary : #ffffff
     line-height: 40px
     
 @mixin fontboldh4
+    /* H4/regular */
     font-family: Roboto
     font-size: 20px
     font-style: normal
     font-weight: 700
     line-height: 28px
+
+ 
 
 @mixin fontbodyRegular
     font-family: Roboto
@@ -28,3 +65,21 @@ $fontColor_primary : #ffffff
     font-style: normal
     font-weight: 400
     line-height: 22px
+ 
+@mixin fontBodyH3Regular
+    font-family: Roboto
+    font-size: 24px
+    font-style: normal
+    font-weight: 400
+    line-height: 32px
+
+    
+
+@mixin fontBodyRegularGrey
+    font-family: Roboto
+    font-size: 16px
+    font-style: normal
+    font-weight: 400
+    line-height: 150%
+
+    

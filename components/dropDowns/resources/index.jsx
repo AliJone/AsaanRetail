@@ -2,14 +2,12 @@ import { Col, Row } from "antd";
 
 import CustomFilledButton from "../../buttons/filledButton";
 import GenericDropDown from "../genericDropDown";
-import Image from "next/image"
 import ImageWithBGGradient from "../../imageWithBGGradient";
-import IntegrationTile from "./integrationTile";
-import SalesOrders from "../../../images/svgs/salesOrders.svg";
+import Resources from "../../../images/svgs/resources.svg";
 import Tiles from "./tiles";
 import styles from "./style.module.sass";
 
-const ProductsDropDown = () => {
+const ResourcesDropDown = () => {
     return(
         <div className = {styles.divAnimation}>
         <GenericDropDown
@@ -17,7 +15,7 @@ const ProductsDropDown = () => {
             <>
             <Row>
                 <Col span={24}>
-                    {<><ImageWithBGGradient image={SalesOrders} /></>}
+                    {<><ImageWithBGGradient image={Resources} /></>}
                 </Col>
                 <Col span={24}>
                     <Row>
@@ -38,9 +36,6 @@ const ProductsDropDown = () => {
                 <Col span={24}>
                     <Tiles/>
                 </Col>
-                <Col span={24}>
-                    <IntegrationTile/>
-                </Col>
             </Row>
             </>
         }
@@ -50,4 +45,4 @@ const ProductsDropDown = () => {
     )
 }
 
-export default ProductsDropDown;
+export default ResourcesDropDown;

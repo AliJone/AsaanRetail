@@ -7,10 +7,12 @@ import {
 } from '@ant-design/icons';
 
 import CustomFilledButton from '../buttons/filledButton';
+import CustomNavButtons from '../buttons/navButtons';
 import CustomTextButton from '../buttons/textButton';
 import { Divider } from 'antd';
 import ProductsDropDown from '../dropDowns/products';
 import React from 'react';
+import ResourcesDropDown from '../dropDowns/resources';
 import SolutionsDropDown from '../dropDowns/solutions';
 import classNames from 'classnames';
 import style from './style.module.sass';
@@ -70,13 +72,13 @@ const NavBarExample = () => {
       }
     }
 
-    const handleClickPricing = () => {
+    const handleClickResources = () => {
       // Handle click event
-      if(current === 'Pricing'){
+      if(current === 'Resources'){
         setCurrent('')
       }
       else {
-        setCurrent('Pricing') 
+        setCurrent('Resources') 
       }
     }
     return(
@@ -85,18 +87,22 @@ const NavBarExample = () => {
               <div className = {divClass}>
                   <div className={menuClass}>
                       <div className = {logoClass}>Asaan Retail</div> 
-                      <Menu  mode="horizontal" defaultSelectedKeys={['1']} className = {BottomLineClass}>
-                          <Menu.Item key="1" onClick={handleClickProduct} >
-                              <CustomTextButton children={<div>Product<DownOutlined /></div>} /> 
-                          </Menu.Item>
-                          <Menu.Item key="2" onClick={handleClickSolution}>
-                              <CustomTextButton children={<div>Solutions<DownOutlined /></div>} /> 
-                          </Menu.Item>
-                          <Menu.Item key="3" onClick = {handleClickPricing} >
-                              <CustomTextButton children={<div>Pricing<DownOutlined /></div>} /> 
-                          </Menu.Item>
-                          
-                      </Menu>
+                      <div className = {classNames(style.divClassRow)} >
+                        <div className = {style.divButtonContainer}>
+                          <CustomNavButtons  children={<>Product <DownOutlined /></>} handleClick={handleClickProduct}/>
+                          { current === 'Product' ? <div className = {style.barColor}/>: <></>}
+                        </div>
+                        <div className = {style.divButtonContainer}>
+                          <CustomNavButtons  children={<>Solution <DownOutlined /></>} handleClick={handleClickSolution}/>
+                          { current === 'Solution' ? <div className = {style.barColor}/>: <></>}
+                        </div>
+                        <div className = {style.divButtonContainer}>
+                          <CustomNavButtons  children={<>Resources <DownOutlined /></>} handleClick={handleClickResources}/>
+                          { current === 'Resources' ? <div className = {style.barColor}/>: <></>}
+                        </div>
+                      </div>
+
+                      
                   </div>
                   <div className = {style.divClass2}>
                       <UserOutlined className = {style.userLogoClass}/>
@@ -110,6 +116,7 @@ const NavBarExample = () => {
           </Header>
           {current === 'Product' ? <ProductsDropDown/> : <></>}
           {current === 'Solution' ? <SolutionsDropDown/> : <></>}
+          {current === 'Resources' ? <ResourcesDropDown/> : <></>}
         </>
 )
 };

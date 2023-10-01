@@ -1,0 +1,38 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+.Body
+    height:787px
+    width: 100%
+    background: colors.$bgSecondary
+    display: flex
+    justify-content: center
+    align-items: center
+
+.divClass
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.divClassText
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.titleText
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_secondary
+
+.subTitleText
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_secondary
+    text-align: center
+
+.divGradientLineClass
+    display: flex
+    justify-content: flex-end
+    width: 54.5%
+
+    

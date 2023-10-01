@@ -10,10 +10,11 @@
     // box-shadow: 0 0 10px 0 rgb(255, 255, 255)
     // z-index: 100
     // position: fixed
+    
     height: 55px
     top:0
     width: 100%
-    transition: all 0.3s ease-in-out
+    // transition: all 0.3s ease-in-out
     
 
 .DivClass
@@ -24,11 +25,13 @@
     padding: 0 0
     
     background-color: rgb(255, 255, 255)
-    // box-shadow: 0 0 10px 0 rgb(255, 255, 255)
+    box-shadow: 0 0 10px 0 rgb(182, 182, 182)
     z-index: 100
     position: fixed
     width: 100%
     top: 0
+    height: inherit
+    // border-bottom: 1px solid#aeaeae0
     
 .MenuDivClass
     display: flex
@@ -64,24 +67,27 @@
     justify-content: center
     align-items: center
     padding: 0 0 0 10px
-    
-.BottomLine
 
-    // ::after
-    //     border-bottom-color: #37bf2d !important
+
+.divClassRow
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
     
-    //     .ant-menu-item-selected::after
-    //         border-bottom-color: #37bf2d !important
-    
-    :hover::after
-        // position: absolute
-        // bottom: 0
-        // left: 0
-        // width: 100%
-        // height: 2px
-        border-bottom: 2px solid #37bf2d !important
-        // visibility: hidden
-        // transform: scaleX(0)
-        // transition: all 0.3s ease-in-out 0s
+.divButtonContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    height:100%
+    // justify-content: center
+
+
+.barColor
+    background: linear-gradient(90deg, #5FFF27 0.02%, rgba(237, 251, 239, 0.68) 61.33%, rgba(204, 240, 58, 0.68) 98.45%)
+    border-radius: 20px
+    width: 81px
+    height: 4px
+    position: relative
 
 

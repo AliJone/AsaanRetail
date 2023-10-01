@@ -1,3 +1,13 @@
+import analytics from './images/svgs/icons/Analytics.svg';
+import google from './images/svgs/logos/google.svg';
+import highfy from './images/svgs/logos/highfy.svg';
+import inventory from './images/svgs/icons/InventoryManagement.svg';
+import linkedIn from './images/svgs/logos/linkedIn.svg';
+import orders from './images/svgs/icons/OrderManagement.svg';
+import orient from './images/svgs/logos/orient.svg';
+import peachmart from './images/svgs/logos/peachMart.svg';
+import stripe from './images/svgs/logos/stripe.svg';
+
 const TilesProduct  = [
     {
         title: "Inventory Management",
@@ -68,4 +78,64 @@ const TilesResources = [
     },
 ]
 
-export {TilesProduct,TilesResources,TilesSolution}
+
+const LandingPageText = {
+    TextB4ColorText : "Elevate Your",
+    TextColorText : "Business",
+    TextAfterColorText : "with",
+    TextAfterColorText2 : "Asaan Retail"
+}
+
+const CarouselImages = [google,peachmart,highfy,linkedIn,stripe,orient]
+
+const IntegrationText = {
+    Title: "Integrate, Innovate, Elevate",
+    subTitle : `With Asaan Retail's robust integration capabilities, innovate your retail operations by \nseamlessly connecting with leading solutions.`
+}
+
+const FeaturesText = {
+    Title : "Features that \nMake a Difference",
+    subTitle:"Explore the Rich Array of Features That Set Asaan Retail Apart \nand Boost Your Business"
+}
+
+const FeatureList = [
+    {
+        icon: inventory,
+        title: "Inventory Management",
+        list: [
+            "Centralize and manage your inventory across multiple sales channels.",
+            "Real-time inventory updates ensure accurate stock levels and prevent overselling.",
+            "Efficiently track product variants, bundles, and promotions for better inventory control."
+        ]
+    },
+    {
+        icon: orders,
+        title: "Orders Processing",
+        list: [
+            "Automate and streamline your order fulfillment process.",
+            "Easily process orders from multiple sales channels in one centralized system.",
+            "Improve order accuracy and reduce processing time with automated workflows."
+        ]
+    },
+    {
+        icon: analytics,
+        title: "Real-Time Reporting",
+        list: [
+            "Gain valuable insights into your Ecommerce performance.",
+            "Access real-time reports on sales, revenue, and inventory levels.",
+            "Analyze customer behavior, identify trends, and make data-driven decisions to drive business growth."
+        ]
+    }  
+]
+
+const CTASectionText = {
+    Title : "Unlock Efficiency & \nProductivity with Automation",
+    subTitle: "Discover How Asaan Retail's Automation Features Can Simplify \nTasks and Boost Business Efficiency"
+}
+
+const VideoSectionText ={
+    Title : "Success in the Spotlight",
+    subTitle: "Explore Real-Life Success Stories of Businesses Empowered by \nAsaan Retail's Solutions."
+}
+
+export {TilesProduct,TilesResources,TilesSolution, LandingPageText , CarouselImages, IntegrationText,FeaturesText, FeatureList , CTASectionText, VideoSectionText}
