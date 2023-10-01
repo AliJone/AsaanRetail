@@ -1,3 +1,4 @@
+import UseCase from './images/svgs/UseCase.svg';
 import analytics from './images/svgs/icons/Analytics.svg';
 import google from './images/svgs/logos/google.svg';
 import highfy from './images/svgs/logos/highfy.svg';
@@ -138,4 +139,47 @@ const VideoSectionText ={
     subTitle: "Explore Real-Life Success Stories of Businesses Empowered by \nAsaan Retail's Solutions."
 }
 
-export {TilesProduct,TilesResources,TilesSolution, LandingPageText , CarouselImages, IntegrationText,FeaturesText, FeatureList , CTASectionText, VideoSectionText}
+const useCaseSection1Text = {
+    Title : "Real-time \nInventory monitoring",
+    subTitle: "Asaan Retail synchronizes inventory across all of your sales channels and warehouses.",
+    image : UseCase,
+    items:[
+        {
+            title:"Streamlined Inventory Sync",
+            subTitle: "Effortlessly synchronize inventory across all your sales channels and warehouses with Asaan Retail."
+        },
+        {
+            title:"Seamless Multichannel Integration",
+            subTitle: "Connect your inventory seamlessly across multiple sales channels and locations in just a few clicks. Real-time updates ensure accurate stock levels across platforms."
+        },
+        {
+            title:"Real-time Stock Monitoring",
+            subTitle: "Stay on top of your stock levels with real-time monitoring. Asaan Retail provides instant visibility into your inventory, allowing you to prevent stockouts and optimize replenishment."
+
+        }
+    ]
+}
+
+
+const useCaseSection2Text = {
+    Title : "Hassle Free \nProduct Management",
+    subTitle: "Asaan Retail tracks your inventory at all times, updates stock and generates alerts whenever required.",
+    image : UseCase,
+    items:[
+        {
+            title:"Streamlined Inventory Sync",
+            subTitle: "Effortlessly synchronize inventory across all your sales channels and warehouses with Asaan Retail."
+        },
+        {
+            title:"Seamless Multichannel Integration",
+            subTitle: "Connect your inventory seamlessly across multiple sales channels and locations in just a few clicks. Real-time updates ensure accurate stock levels across platforms."
+        },
+        {
+            title:"Real-time Stock Monitoring",
+            subTitle: "Stay on top of your stock levels with real-time monitoring. Asaan Retail provides instant visibility into your inventory, allowing you to prevent stockouts and optimize replenishment."
+
+        }
+    ]
+}
+
+export {TilesProduct,TilesResources,TilesSolution, LandingPageText , CarouselImages, IntegrationText,FeaturesText, FeatureList , CTASectionText, VideoSectionText, useCaseSection1Text, useCaseSection2Text}

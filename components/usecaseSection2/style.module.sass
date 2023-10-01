@@ -1,0 +1,63 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+    
+.useCase2Div
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 904px
+    background: colors.$radialGradient
+
+.titleText
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+    text-align: center
+
+.divTextClass
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.subTitleClass
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+    text-align: center
+
+.divRightColumn
+    display: flex
+    justify-content: flex-start
+    width: 100%
+    overflow: hidden
+
+.divImageClass
+    border-radius: 20px
+    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(1.0355486869812012px)
+
+.divLeftColumn
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    width: 100%
+    flex-direction: column
+    height: 100%
+
+.divLeftColumnTitleOptionText
+    @include fonts.fontH2Medium
+    color: colors.$fontColor_primary
+    text-align: left
+
+.divLeftColumnTitleOptionContent
+    @include fonts.fontH5Regular
+    color: colors.$fontColor_primary
+    text-align: left
+
+.divColumn
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    
