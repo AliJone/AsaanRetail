@@ -1,6 +1,9 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
- 
+
+$small: 680px
+$medium: 991px
+
 .Footer
     display: flex
     padding: 4rem 6.25rem
@@ -15,8 +18,8 @@
 .InfoSection
     // Layout 
     display: flex
-    width: 77.375rem
-    height: 17.25rem
+    // width: 77.375rem
+    // height: 17.25rem
     align-items: flex-start
     gap: 3.5rem var(--Spacing-56, 3.5rem)
     flex-wrap: wrap
@@ -38,3 +41,131 @@
     align-items: center
     gap: 0.25rem
     color: var(--neutral-5, #D9E0DC)
+    cursor: pointer
+
+.SubTitleBlock
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.625rem
+
+.SubTitle
+    color: var(--neutral-7, #8CA397)
+    display: flex
+    padding: 4px 0px
+    align-items: center
+    gap: 10px
+    border-radius: 2px
+    cursor: pointer
+
+.Description
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1.5rem
+    flex: 1 0 0
+    align-self: stretch
+
+.logo
+    width: 5.25rem
+    height: 3.60938rem
+
+.Text
+    display: flex
+    padding: 0.25rem 0rem
+    align-items: flex-start
+    gap: 0.625rem
+    flex: 1 0 0
+    align-self: stretch
+    color: var(--character-primary-inverse, #FFF)
+    font-family: Roboto
+    font-size: 1rem
+    font-style: normal
+    font-weight: 400
+    line-height: 170% 
+
+.Divider
+    width: 100%
+
+.Extra
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    row-gap: 2rem
+    align-self: stretch
+    flex-wrap: wrap
+
+.Copyright
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    color: var(--neutral-7, #8CA397)
+
+.ExtraNSocials
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    flex-wrap: wrap
+
+.ExtraLinks
+    display: flex
+    padding: 0.25rem 0rem
+    align-items: center
+    gap: 0.625rem
+    color: var(--neutral-7, #8CA397)
+
+.ExtraLinks
+    a
+        color: inherit
+
+.Socials
+    display: flex
+    align-items: center
+    gap: 1.5rem
+
+.MobileView
+    display: none
+.TabView
+    display: none 
+.DesktopView
+    display: block
+
+@media (max-width: $medium)
+    .TabView
+        display: block
+    .Extra
+        gap: 1rem
+    .MobileView
+        display: none
+    .TabView
+        display: block 
+    .DesktopView
+        display: none
+
+@media (max-width: $small)
+    .Footer
+        padding: 1.5rem 1.5rem
+    
+    .VerticalContent
+        gap: 1.5rem
+        flex-wrap: wrap
+
+    .MobileView
+        display: block
+
+    .tabView
+        display: none
+
+    .MobileView
+        display: block
+    .TabView
+        display: none 
+    .DesktopView
+        display: none
+
+    .ExtraNSocials
+        justify-content: center
+
+    .Extra
+        text-align: center

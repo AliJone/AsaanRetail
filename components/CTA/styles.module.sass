@@ -1,10 +1,13 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
-    
+
+$small: 680px
+$medium: 991px
+
 .CTA 
     /* Layout */
     display: flex
-    height: 42.125rem
+    // height: 42.125rem
     /* width: 70.625rem */
     padding: var(--Spacing-64, 4rem) 6.25rem
     flex-direction: column
@@ -21,7 +24,7 @@
 .MainLayoutBlock 
     /* Layout */
     display: flex
-    width: 70.625rem
+    width: 100%
     padding: 4rem 1.5rem
     flex-direction: column
     align-items: flex-start
@@ -68,14 +71,7 @@
 
 .Image 
     /* Layout  */
-
-    /* Position  */
-    position: absolute
-    left: -6.875rem
-    bottom: -4.6875rem
-
-    /* Style  */
-    border-radius: 1.25rem
+    display: none
 
 
 .DescLayoutBlock 
@@ -131,19 +127,7 @@
     height: 2.25rem
 
 .Divider
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 2.5rem
-    align-self: stretch
-    display: flex
-    width: 44.375rem
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    gap: 0.625rem
-    color: #26523A
-    margin: auto
+    width: 55%
 
 .GetDemo
     border-radius: 2.5rem
@@ -179,4 +163,88 @@
     gap: 2rem
     align-self: stretch
 
+.mobileView
+    display: none
+
+// media query in sass
+
+@media (max-width: $medium)
+    .Checkboxes
+        /* Layout  */
+        display: flex
+        padding: var(--tallyCount, 0rem)
+        flex-direction: column
+        align-items: flex-start
+        gap: 2rem
+
+        /* Style  */
+        border-radius: var(--tallyCount, 0rem)
     
+    .Image
+        display: block
+
+    .DescLayoutBlockInside
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        gap: 4rem
+        align-self: stretch
+
+    .Divider
+        width: 90%
+
+@media (max-width: $small)
+    .mobileView
+        display: block
+
+    .Checkboxes
+        /* Layout  */
+        display: flex
+        padding: var(--tallyCount, 0rem)
+        flex-direction: column
+        align-items: flex-start
+        gap: 2rem
+
+        /* Style  */
+        border-radius: var(--tallyCount, 0rem)
+    
+    .Image
+        display: none
+
+    .DescLayoutBlockInside
+        display: inherit
+
+    .Divider
+        width: 90%
+
+    .Avatar
+        color: transparent
+        margin-bottom: -11rem
+        width: 100%
+        height: 100%
+
+    .fontMobileH1Bold
+        color: var(--character-primary-inverse, #FFF)
+        display: flex
+        align-items: center
+        gap: 0.25rem
+        align-self: stretch
+        text-align: center
+        justify-content: center
+        font-family: Roboto
+        font-size: 2.5rem
+        font-style: normal
+        font-weight: 700
+        line-height: 150%
+
+    .Title
+        display: none 
+    
+    .MainLayoutBlock
+        background-color: rgba(25, 25, 25, 1)
+
+    .CheckText
+        font-size: 1.4375rem !important
+    
+    .CTA
+        padding: var(--Spacing-64, 4rem) 2.25rem !important
