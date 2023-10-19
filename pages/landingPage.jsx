@@ -6,10 +6,12 @@ import Carousel from '../components/carousel';
 import FeaturesSection from '../components/featuresSection';
 import HeroSection from '../components/heroSection';
 import IntegrationSection from '../components/integrationSection';
-import NavigationBar from "../components/navbar";
+// import NavigationBar from "../components/navbar";
 import UseCaseSection1 from '../components/usecaseSection1';
 import UseCaseSection2 from '../components/usecaseSection2';
 import VideoSection from '../components/videoSection';
+import CTA from '../components/CTA/CTA';
+import Footer from '../components/Footer/Footer';
 
 const page = () => {
     return (
@@ -18,7 +20,7 @@ const page = () => {
                 <div style = {{
                     overflowX : "hidden",
                     }}>
-                    <NavigationBar/>
+                    {/* <NavigationBar/> */}
                     <HeroSection/>
                     <Carousel imagesarray={CarouselImages}/>
                     <IntegrationSection/>
@@ -27,6 +29,8 @@ const page = () => {
                     <VideoSection/>
                     <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
                     <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} />
+                     <CTA/>
+                     <Footer/>
                 </div>
             </App>        
         </>
