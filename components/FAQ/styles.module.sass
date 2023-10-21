@@ -1,0 +1,85 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$small: 680px
+$medium: 991px
+
+.FAQ
+    display: flex
+    padding: var(--Size-32, 2rem) 6.40625rem var(--Size-32, 4.75rem) 6.40625rem
+    flex-direction: column
+    align-items: center
+    gap: var(--Spacing-40, 2.375rem)
+    align-self: stretch
+    background: var(--background-light, radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #FFF)
+
+.Head
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+
+.Title
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    text-align: center
+    @include fonts.fontDesktopH2Bold
+    display: flex
+    gap: 0.5rem
+    flex-wrap: wrap
+    justify-content: center
+    
+
+.SubTitle
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    text-align: center
+    font-family: Roboto
+    font-size: 1.3125rem
+    font-style: normal
+    font-weight: 400
+    line-height: 120%
+
+.ButtonGroup
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    gap: 1rem
+    @include fonts.fontDesktopBodyRegular
+    flex-wrap: wrap
+    
+
+.Body
+    width: 71.3%
+
+.PanelHead
+    @include fonts.fontDesktopH5Bold
+    align-items: center
+
+.PanelBody
+    @include fonts.fontDesktopBodyRegular
+
+.Underline
+    width: fit-content
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    
+@media (max-width: $small)
+    .FAQ
+        padding: var(--Size-32, 2rem) 1.25rem var(--Size-32, 3.875rem) 1.25rem
+    .Title
+        @include fonts.fontMobileH2Bold
+    .SubTitle
+        @include fonts.fontMobileH5Regular
+    .ButtonGroup
+        @include fonts.fontMobileSmallRegular
+        gap: 0.6875rem
+    .Body
+        width: 100%
+    .PanelHead
+        @include fonts.fontMobileH5Bold
+        align-items: center
+    .PanelBody
+        @include fonts.fontMobileBodyRegular
+        
+
+        

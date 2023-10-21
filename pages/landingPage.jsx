@@ -12,27 +12,30 @@ import UseCaseSection2 from '../components/usecaseSection2';
 import VideoSection from '../components/videoSection';
 import CTA from '../components/CTA/CTA';
 import Footer from '../components/Footer/Footer';
+import FAQ from '../components/FAQ/FAQ';
 
 const page = () => {
     return (
         <>
             <App>
-                <div style = {{
-                    overflowX : "hidden",
-                    }}>
+                <div style={{
+                    overflowX: "hidden",
+                }}>
                     {/* <NavigationBar/> */}
-                    <HeroSection/>
-                    <Carousel imagesarray={CarouselImages}/>
-                    <IntegrationSection/>
-                    <FeaturesSection/>
-                    <CTASection/>
-                    <VideoSection/>
+                    {/* <HeroSection />
+                    <Carousel imagesarray={CarouselImages} />
+                    <IntegrationSection />
+                    <FeaturesSection />
+                    <CTASection />
+                    <VideoSection />
                     <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
                     <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} />
-                     <CTA/>
-                     <Footer/>
+                     */}
+                    <FAQ />
+                    <CTA />
+                    <Footer />
                 </div>
-            </App>        
+            </App>
         </>
     )
 }
