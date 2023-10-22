@@ -16,7 +16,7 @@ const FeaturesSection = () => {
           {line}
           <>
           {
-            index === 0 ? <div style={{paddingLeft:"14%"}} ><GradientLine width={"247px"} /></div> :<div style={{paddingLeft:"43%"}} ><GradientLine width={"294px"} /></div>
+            index === 0 ? <div className={style.FirstGradientLine}  ><GradientLine width={"247px"} height="7px" /></div> :<div className={style.SecondGradientLine} ><GradientLine width={"294px"} height="7px" /></div>
           }
           </>
         </React.Fragment>
@@ -43,14 +43,20 @@ const FeaturesSection = () => {
                     </div>
                     <div style={{width:"1%" , paddingTop:"40px"}}/>
                 </Col>
-                
-                <Col span={12} className = {cn(style.divLeftColumn)}>
-                    <Image src = {Features} alt = "Features" className={cn(style.divImageContainer)} />
+                <Col span={24}>
+                    <div className={cn(style.spacer1)}/>
+                    <Row>
+                    <Col span={13} className = {cn(style.divLeftColumn)}>
+                        <Image src = {Features} alt = "Features" className={cn(style.divImageContainer)} />
+                    </Col>
+                    <Col span={11} className={cn(style.verticalSpacer)}>
+                        <FeatureList/>
+                    </Col>
+                    </Row>
                 </Col>
-                <Col span={12}>
-                    <FeatureList/>
-                </Col>
+                <div className={cn(style.spacer2)}/>
             </Row>
+            
         </div>
     )
 }

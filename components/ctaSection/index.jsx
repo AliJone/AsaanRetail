@@ -1,4 +1,5 @@
 import {CTASectionText} from "../../strings"
+import CalendarOutlined from '@ant-design/icons/CalendarOutlined';
 import CustomFilledButton from "../buttons/filledButton"
 import GradientLine from "../gradientLine"
 import Image from "next/image"
@@ -14,7 +15,7 @@ const CTASection = () =>{
           {line}
           <>
           {
-            index === 0 ? <div style={{paddingLeft:"43%"}} ><GradientLine width={"278px"} /></div> :<div ><GradientLine width={"336px"} /></div>
+            index === 0 ? <div style={{paddingLeft:"43%"}} ><GradientLine width={"278px"} height="7px" /></div> :<div ><GradientLine width={"336px"} height="7px"/></div>
           }
           </>
         </React.Fragment>
@@ -33,17 +34,18 @@ const CTASection = () =>{
             <span className ={cn(style.titleClass)}>
                 {TitleWithLineBreaks}
             </span>
-            <div style={{paddingTop:"8px",width:"1px"}}/>
+            <div className={cn(style.spacer1)}/>
             <span className ={cn(style.subTitleClass)}>
                 {subTitleWithLineBreaks}
             </span>
-            <div style= {{paddingTop: "32px" , width:"1px"}}/>
+            <div className={cn(style.spacer2)}/>
             <div className={cn(style.buttonShadowClass)}>
-                <CustomFilledButton handleClick={()=>{}} children={<span className = {cn(style.buttonText)} > Get Demo</span>} />
+                <CustomFilledButton handleClick={()=>{}} children={<span className = {cn(style.buttonText)} > <CalendarOutlined /> Get Demo</span>} />
             </div>
             <div className={cn(style.RobotPositioningDivClass)}>
             <Image src = {robot} alt = "robot" />
             </div>
+            <div className={cn(style.spacer3)}/>
         </div>
     )
 }

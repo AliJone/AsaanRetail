@@ -3,11 +3,12 @@
 
 .featuresSectionDiv
     width: 100%
-    height: 835px
+    // height: 835px
     display: flex
     justify-content: center
     align-items: center
     background: colors.$radialGradient
+    padding-top: 4.5rem
 
 .titleText
     @include fonts.fontDesktopH1Bold
@@ -21,15 +22,17 @@
     flex-direction: column
 
 .subTitleClass
+    margin-top: 0.75rem
     @include fonts.fontDesktopH5Regular
     color: colors.$fontColor_primary
     text-align: center
 
 .divLeftColumn
     display: flex
-    justify-content: center
+    justify-content: flex-end
     align-items: center
     width: 100%
+    // margin-left: 20px
 
 .divImageContainer
     border-radius: 10px
@@ -55,6 +58,7 @@
 // feature Element sass
 .divFeatureElementTextContainer
     max-width: min-content
+    padding-left: 3px
     
 
 .divFeatureElementTitle
@@ -74,7 +78,26 @@
     height: 100%
     justify-content: flex-start
     align-items: flex-start
+
+.divFeatureElementIconCheck
+    padding-left: 20px
     
+.FirstGradientLine
+    padding-left: 14%
+    margin-top:-7.7px
+    margin-left:-15px
     
-    
-    
+.SecondGradientLine
+    padding-left: 43%
+    margin-top:2px
+
+.spacer1
+    padding-top: 20px
+    width: 1%
+
+.verticalSpacer
+    padding-left: 40px
+
+.spacer2
+    padding-top: 60px
+    width: 1%

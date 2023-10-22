@@ -3,8 +3,7 @@ import style from './style.module.sass';
 
 const InputField = ({placeHolder}) =>{
     return(
-        
-            <Input size="large" placeholder= {placeHolder} />
+            <Input placeholder={placeHolder} bordered={false} />
     )
 }
 

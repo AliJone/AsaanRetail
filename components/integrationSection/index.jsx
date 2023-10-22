@@ -25,13 +25,13 @@ const IntegrationSection = () => {
                     <span className = {cn(style.titleText)}>{IntegrationText.Title}</span>
                     
                     <div className = {cn(style.divGradientLineClass)}>
-                    <GradientLine width = "206px"/>
+                    <GradientLine width = "206px" height="7px"/>
                     </div>
                     
                     <span className = {cn(style.subTitleText)}>{subTitleWithLineBreaks}</span>
                     </div>
                 </Col>
-                <div style={{paddingTop:"60px" , width:"1%"}}/>
+                <div className={style.spacer}/>
                 
                 <Col span={24}>
                     <div className={style.divClass}>
@@ -39,6 +39,8 @@ const IntegrationSection = () => {
 
                     </div>
                 </Col>
+
+                <div className={style.spacer}/>
             </Row>
         </div>
     )

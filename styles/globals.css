@@ -4,6 +4,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  display: inline;
   font-family:
     Inter,
     -apple-system,
@@ -44,7 +45,7 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 

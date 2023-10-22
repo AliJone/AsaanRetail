@@ -1,12 +1,13 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
 .Body
-    height:787px
+    // height:787px
     width: 100%
     background: colors.$bgSecondary
     display: flex
     justify-content: center
     align-items: center
+    padding-top:4.5rem 
 
 .divClass
     width: 100%
@@ -26,13 +27,20 @@
     color: colors.$fontColor_secondary
 
 .subTitleText
+    margin-top: 0.9rem
     @include fonts.fontDesktopH5Regular
     color: colors.$fontColor_secondary
     text-align: center
+
 
 .divGradientLineClass
     display: flex
     justify-content: flex-end
     width: 54.5%
+    transform: translate(3px,-4px)
+
+.spacer
+    padding-top:60px
+    width:1%
 
     

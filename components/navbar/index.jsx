@@ -10,11 +10,14 @@ import CustomFilledButton from '../buttons/filledButton';
 import CustomNavButtons from '../buttons/navButtons';
 import CustomTextButton from '../buttons/textButton';
 import { Divider } from 'antd';
+import DropDownIcon from '../../images/svgs/icons/Icon_Drop_Down.svg'
+import Image from 'next/image';
 import ProductsDropDown from '../dropDowns/products';
 import React from 'react';
 import ResourcesDropDown from '../dropDowns/resources';
 import SolutionsDropDown from '../dropDowns/solutions';
 import classNames from 'classnames';
+import cn from 'classnames';
 import style from './style.module.sass';
 
 const { Header } = Layout;
@@ -43,6 +46,7 @@ const NavBarExample = () => {
 
     const [current, setCurrent] = React.useState('');
 
+    
 
     
 
@@ -88,27 +92,33 @@ const NavBarExample = () => {
                   <div className={menuClass}>
                       <div className = {logoClass}>Asaan Retail</div> 
                       <div className = {classNames(style.divClassRow)} >
-                        <div className = {style.divButtonContainer}>
-                          <CustomNavButtons  children={<>Product <DownOutlined /></>} handleClick={handleClickProduct}/>
+                          <div className={style.divButtonContainer}>
+                          <CustomNavButtons  children={<div className={cn(style.NavButtonFonts,style.DivCenter)}>Product <Image src={DropDownIcon} /></div>} handleClick={handleClickProduct}/>
                           { current === 'Product' ? <div className = {style.barColor}/>: <></>}
-                        </div>
-                        <div className = {style.divButtonContainer}>
-                          <CustomNavButtons  children={<>Solution <DownOutlined /></>} handleClick={handleClickSolution}/>
-                          { current === 'Solution' ? <div className = {style.barColor}/>: <></>}
-                        </div>
-                        <div className = {style.divButtonContainer}>
-                          <CustomNavButtons  children={<>Resources <DownOutlined /></>} handleClick={handleClickResources}/>
-                          { current === 'Resources' ? <div className = {style.barColor}/>: <></>}
-                        </div>
-                      </div>
+                          </div>
 
-                      
+                          <div className={style.divButtonContainer}>
+                          <CustomNavButtons  children={<div className={cn(style.NavButtonFonts,style.DivCenter)}>Solution <Image src={DropDownIcon} /></div>} handleClick={handleClickSolution}/>
+                          { current === 'Solution' ? <div className = {style.barColor}/>: <></>}
+                          </div>
+                          <div className={style.divButtonContainer}>
+                          <CustomNavButtons  children={<div className={cn(style.NavButtonFonts,style.DivCenter)}>Pricing</div>} handleClick={handleClickSolution}/>
+                          </div>
+                          <div className={style.divButtonContainer}>
+                          <CustomNavButtons  children={<div className={cn(style.NavButtonFonts,style.DivCenter)}>Resources <Image src={DropDownIcon} /></div>} handleClick={handleClickResources}/>
+                          { current === 'Resources' ? <div className = {style.barColor}/>: <></>}
+                          </div>
+
+                          <div className={style.divButtonContainer}>
+                          <CustomNavButtons  children={<div className={cn(style.NavButtonFonts,style.DivCenter)}>About</div>} handleClick={handleClickSolution}/>
+                          </div>
+                      </div>   
                   </div>
                   <div className = {style.divClass2}>
-                      <UserOutlined className = {style.userLogoClass}/>
+                      <UserOutlined  className = {style.userLogoClass}/>
                       <Divider type="vertical" className={style.dividerClass} />
-                      <CustomTextButton children={"Login"} handleClick = {handleClick}/>
-                      <CustomFilledButton children={"Start Free Trial"} handleClick = {handleClick}/>
+                      <CustomTextButton children={<span className={cn(style.NavButtonFonts)}>Get Demo</span>} handleClick = {handleClick}/>
+                      <CustomFilledButton children={<span className={cn(style.NavButtonFonts)} style={{color:'white'}}>Start Free Trial</span>} handleClick = {handleClick}/>
                       {/* <Button>Sign up</Button> */}
 
                   </div>

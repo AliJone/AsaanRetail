@@ -1,12 +1,10 @@
+import { Button, Collapse } from 'antd';
 import { React, useState } from 'react'
 
-import styles from './styles.module.sass'
-import { Collapse, Button } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
-
-import cn from 'classnames'
 import GradientLine from '../gradientLine';
-
+import { PlusOutlined } from '@ant-design/icons';
+import cn from 'classnames'
+import styles from './styles.module.sass'
 
 const { Panel } = Collapse;
 
@@ -25,7 +23,7 @@ function FAQ() {
     <>
       <div className={styles.FAQ}>
         <div className={styles.Head}> 
-          <div className={styles.Title}>Frequently asked  <span className={styles.Underline}> questions  <GradientLine width='60%' /> </span> </div>
+          <div className={styles.Title}>Frequently asked  <span className={styles.Underline}> questions  <GradientLine width='60%' height="7px" /> </span> </div>
           
           <div className={styles.SubTitle}>If you can’t find an answer what you are looking for, feel free to drop us a line</div>
           <div className={styles.ButtonGroup}>

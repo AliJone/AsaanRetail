@@ -13,7 +13,7 @@ const UseCaseSection2 = ({image,Title,subTitle,options}) => {
           {line}
           <>
           {
-            index === 0 ? <div style={{paddingLeft:"22%"}} ><GradientLine width={"196px"} /></div> :<div style={{paddingLeft:"0"}} ><GradientLine width={"223px"} /></div>
+            index === 0 ? <div style={{paddingLeft:"22%"}} ><GradientLine width={"196px"} height="15px" /></div> :<div style={{paddingLeft:"0"}} ><GradientLine width={"223px"} height="15px" /></div>
           }
           </>
         </React.Fragment>

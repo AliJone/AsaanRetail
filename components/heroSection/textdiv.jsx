@@ -3,7 +3,7 @@ import style from './style.module.sass';
 
 const TextDiv = (props)=>{
     return(
-        <div >
+        <div  >
             <span className = {style.NonColorText}>
                     {props.TextB4ColorText}
                 <span className = {style.ColorText}>
