@@ -15,7 +15,7 @@ const CTASection = () =>{
           {line}
           <>
           {
-            index === 0 ? <div className={cn(style.FirstGradientLine)} ><GradientLine width={"inherit"} height="7px" /></div> :<div className={cn(style.SecondGradientLine)} ><GradientLine width={"336px"} height="7px"/></div>
+            index === 0 ? <div className={cn(style.FirstGradientLine)} ><GradientLine width={"inherit"} height=".4375rem" /></div> :<div className={cn(style.SecondGradientLine)} ><GradientLine width={"21rem"} height=".4375rem"/></div>
           }
           </>
         </React.Fragment>

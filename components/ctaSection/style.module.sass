@@ -7,7 +7,7 @@ $medium: breakpoints.$medium
 
 .CTASectionDiv
     background: colors.$bgSecondary
-    // height: 482px
+    // height: 30.125rem
     width: 100%
     display: flex
     flex-direction: column
@@ -30,9 +30,9 @@ $medium: breakpoints.$medium
     text-align: center
 
 .buttonShadowClass
-    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
-    backdrop-filter: blur(1.0355486869812012px)
-    border-radius: 360px
+    box-shadow: 0rem .2589rem 3.1066rem 0rem rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(.0647rem)
+    border-radius: 22.5rem
     width: min-content
 
 .buttonPositioningDivClass
@@ -45,28 +45,28 @@ $medium: breakpoints.$medium
 .buttonText
     @include fonts.fontH5Bold
     color: colors.$fontColor_secondary
-    margin: 17px 30px
+    margin: 1.0625rem 1.875rem
 
 .RobotPositioningDivClass
     position: absolute
     z-index: 8
-    transform: translate(-197%, 72px)
+    transform: translate(-31.5rem, 4.5rem)
 
 .spacer1
-    padding-top:8px
-    width:1px
+    padding-top:.5rem
+    width:.0625rem
 
 .spacer2
-    padding-top:40px
-    width:1px
+    padding-top:2.5rem
+    width:.0625rem
     
 .spacer3
-    padding-top:110px
-    width:1px
+    padding-top:6.875rem
+    width:.0625rem
 
 .FirstGradientLine
     padding-left: 43%
-    width: 278px
+    width: 17.375rem
 
 .SecondGradientLine
     display: block
@@ -77,7 +77,13 @@ $medium: breakpoints.$medium
 .mobileView
     display: none
 
-@media (max-width: $small)
+@media (max-width: 1227px)
+    .RobotPositioningDivClass
+        position: absolute
+        z-index: 8
+        transform: translate(-18.5rem, 4.5rem)
+
+@media (max-width: 825px)
 
     .desktopView
         display: none
@@ -97,12 +103,12 @@ $medium: breakpoints.$medium
         @include fonts.fontMobileH5Regular
         color: colors.$fontColor_secondary
         text-align: center
-        padding: 0rem 0.2rem
-        padding-top: 0.2rem
+        padding: 0rem .2rem
+        padding-top: .2rem
 
     .FirstGradientLine
         padding-left: 41%
-        width: 170px
+        width: 10.625rem
         margin-top: -0.5rem
 
 
@@ -110,7 +116,7 @@ $medium: breakpoints.$medium
         display: none
 
     .spacer2
-        padding-top:37px
+        padding-top:2.3125rem
     
     .spacer3
         padding-top: 21.5rem

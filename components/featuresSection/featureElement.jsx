@@ -19,10 +19,10 @@ const FeatureElement = ({ item }) => {
                     <div className={cn(style.divFeatureElementTextContainer)}>
                         <span className={cn(style.divFeatureElementTitle)}>
                             {item.title}
-                            <GradientLine key={item.title} width={"iniherit"}  height="5px"/>    
+                            <GradientLine key={item.title} width={"iniherit"}  height=".3125rem"/>    
                         </span>
                     </div>
-                    <div style={{paddingTop:"8px" , paddingBottom: "24px"}}/>
+                    <div style={{paddingTop:".5rem" , paddingBottom: "1.5rem"}}/>
             </Col>
 
             <Col key = {item.title} span={24} className = {cn(style.MobileView)}>
@@ -36,13 +36,13 @@ const FeatureElement = ({ item }) => {
                             <span className={cn(style.divFeatureElementTitle)}>
                                 {item.titleMobile}
                                 <div className={cn(style.ThridGradientLine)}>
-                                    <GradientLine key={item.title} width={"183px"}   height="10px"/>     
+                                    <GradientLine key={item.title} width={"11.4375rem"}   height=".625rem"/>     
                                 </div>
                                 
                             </span>
                         </div>
                     </div>
-                    <div style={{paddingTop:"8px" , paddingBottom: "24px"}}/>
+                    <div style={{paddingTop:".5rem" , paddingBottom: "1.5rem"}}/>
             </Col>
             
             <Col span={24}>
@@ -66,11 +66,11 @@ const FeatureElement = ({ item }) => {
                                         <Image src={check} alt="check" />
                                     </div>
                                 </Col>
-                                <Col key={index} span={21} style={{paddingRight:"30px"}}>
+                                <Col key={index} span={21} style={{paddingRight:"1.875rem"}}>
                                     <span className={cn(style.divFeatureElementListText)}>{i}</span>
                                 </Col>
                             </Row>
-                            {index !== item.list.length - 1 && <div key={index} style={{paddingTop:"24px"}}/>}
+                            {index !== item.list.length - 1 && <div key={index} style={{paddingTop:"1.5rem"}}/>}
                             </>
                         )    
                     }

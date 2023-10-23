@@ -17,7 +17,7 @@ const FeaturesSection = () => {
           {line}
           <>
           {
-            index === 0 ? <><div className={style.FirstGradientLine}  ><GradientLine width={"247px"} height="7px" /></div></> :<><div className={style.SecondGradientLine} ><GradientLine width={"294px"} height="7px" /></div></>
+            index === 0 ? <><div className={style.FirstGradientLine}  ><GradientLine width={"15.4375rem"} height=".4375rem" /></div></> :<><div className={style.SecondGradientLine} ><GradientLine width={"18.375rem"} height=".4375rem" /></div></>
           }
           </>
         </React.Fragment>
@@ -61,7 +61,7 @@ const FeaturesSection = () => {
                             {FeaturesText.subTitle}
                         </span>
                     </div>
-                    <div style={{width:"1%" , paddingTop:"40px"}}/>
+                    <div style={{width:"1%" , paddingTop:"2.5rem"}}/>
                 </Col>
                 <Col span={24}>
                     <div className={cn(style.spacer1)}/>

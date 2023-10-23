@@ -13,19 +13,19 @@ const Flags = ()=>{
                 <div>
                     <Image src = {pk} className = {style.flagImage}/>
                 </div>
-                <div style={{paddingLeft : "12px"}}/>
+                <div style={{paddingLeft : ".75rem"}}/>
                 <div>
                     <Image src = {ae} className = {style.flagImage}/>
                 </div>
-                <div style={{paddingLeft : "12px"}}/>
+                <div style={{paddingLeft : ".75rem"}}/>
                 <div>
                     <Image src = {bd} className = {style.flagImage}/>
                 </div>
-                <div style={{paddingLeft : "12px"}}/>
+                <div style={{paddingLeft : ".75rem"}}/>
                 <div>
                     <Image src = {lk} className = {style.flagImage}/>
                 </div>
-                <div style={{paddingLeft : "12px"}}/>
+                <div style={{paddingLeft : ".75rem"}}/>
                 <div>
                     <Image src = {np} className = {style.flagImage}/>
                 </div>

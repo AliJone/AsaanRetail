@@ -25,7 +25,7 @@ const IntegrationSection = () => {
                     <span className = {cn(style.titleText)}>{IntegrationText.Title}</span>
                     
                     <div className = {cn(style.divGradientLineClass)}>
-                    <GradientLine width = "206px" height="7px"/>
+                    <GradientLine width = "inherit" height=".4375rem"/>
                     </div>
                     
                     <span className = {cn(style.subTitleText)}>{subTitleWithLineBreaks}</span>
@@ -36,7 +36,6 @@ const IntegrationSection = () => {
                 <Col span={24}>
                     <div className={style.divClass}>
                         <Image src={IntegrationImage} alt="Integration Image" />
-
                     </div>
                 </Col>
 

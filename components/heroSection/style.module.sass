@@ -4,6 +4,8 @@
 
 $small: breakpoints.$small
 $medium: breakpoints.$medium
+
+
 .heroSectionClass
     display: flex
     justify-content: center
@@ -22,6 +24,7 @@ $medium: breakpoints.$medium
     background-clip: text
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
+
     
     
 
@@ -56,9 +59,9 @@ $medium: breakpoints.$medium
     align-items: center
 
 .flagImage
-    width: 60px
-    height: 45px
-    border-radius: 5px
+    width: 3.75rem
+    height: 2.8125rem
+    border-radius: .3125rem
 
 .RowDivCenter
     display: flex
@@ -70,11 +73,11 @@ $medium: breakpoints.$medium
     
 
 .FieldClass
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+    box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.15)
     background-color: colors.$bgPrimary
     width: 73%
     display: flex
-    border-radius: 10px
+    border-radius: .625rem
     align-items: center
     height: 3.75rem
     margin-left:-0.7rem
@@ -92,14 +95,14 @@ $medium: breakpoints.$medium
 .FilledButtonText
     @include fonts.fontH5Bold
     color: colors.$fontColor_secondary
-    margin: 5px 25px 5px 25px
+    margin: .3125rem 1.5625rem .3125rem 1.5625rem
     
     
 .moveLeft
     margin-left: -0.5rem
 
 .moveRight
-    margin-left: 0.5rem
+    margin-left: .5rem
 
 .rightColumn
     display: flex
@@ -117,12 +120,21 @@ $medium: breakpoints.$medium
 .centering
     display: none
 
+.tabView
+    display: none
+
+
+
+@media (max-width: $medium)
+    .tabView
+        display: block
     
-@media (max-width: $small)
+    .divParentMobile
+        display: none
+    
     .divParent
         display: none
-    .divParentMobile
-        display: block
+
     .divLeftColumn
         padding-left: 0rem
         display: flex
@@ -130,7 +142,7 @@ $medium: breakpoints.$medium
 
     .TextClass
         padding-top: 2.5rem
-        padding-left: 0.5rem
+        padding-left: .5rem
         width: 100%
         display: flex
         justify-content: center
@@ -144,24 +156,99 @@ $medium: breakpoints.$medium
         margin-left: 0rem
 
     .flagImage
-        width: 50px
-        height: 35px
-        border-radius: 5px
+        width: 3.125rem
+        height: 2.1875rem
+        border-radius: .3125rem
     .TextClassSmall
         @include fonts.fontMobileH4Regular
         color: colors.$fontColor_primary
         text-align: center
 
     .FieldClass
-        // box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+        // box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.15)
         // background-color: colors.$bgPrimary
         width: 95%
-        transform: translateX( 0.3rem)
+        transform: translateX( .3rem)
         display: flex
-        // border-radius: 10px
+        // border-radius: .625rem
         justify-content: center
         justify-self: center
-        // border: 1px solid #000000
+        // border: .0625rem solid #000000
+        // align-items: center
+        // height: 3.75rem
+        // margin-left:-0.7rem
+
+    .centering
+        display: flex
+        justify-content: center
+        align-items: center
+        // background: red
+        width: 100%
+    
+        .TextClassSmall
+            @include fonts.fontMobileSmallRegular
+            color: #555555
+        
+    
+
+        
+    
+
+    
+@media (max-width: $small)
+
+    .tabView
+        display: none
+    
+    .mobView
+        display: flex
+    
+    .desktopView
+        display: none
+
+    .divParent
+        display: none
+    .divParentMobile
+        display: block
+    .divLeftColumn
+        padding-left: 0rem
+        display: flex
+        justify-content: center
+
+    .TextClass
+        padding-top: 2.5rem
+        padding-left: .5rem
+        width: 100%
+        display: flex
+        justify-content: center
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .flagRowDiv
+        width:100%
+        justify-content: center
+        margin-left: 0rem
+
+    .flagImage
+        width: 3.125rem
+        height: 2.1875rem
+        border-radius: .3125rem
+    .TextClassSmall
+        @include fonts.fontMobileH4Regular
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .FieldClass
+        // box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.15)
+        // background-color: colors.$bgPrimary
+        width: 95%
+        transform: translateX( .3rem)
+        display: flex
+        // border-radius: .625rem
+        justify-content: center
+        justify-self: center
+        // border: .0625rem solid #000000
         // align-items: center
         // height: 3.75rem
         // margin-left:-0.7rem

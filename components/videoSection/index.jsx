@@ -52,7 +52,7 @@ const VideoSection=()=>{
                 {TitleWithLineBreaks}
             </span>
                 
-            <span className = {cn(style.VideoSectionDivSubTitle,style.mobilepView)}>
+            <span className = {cn(style.VideoSectionDivSubTitle,style.mobileView)}>
                 {VideoSectionText.subTitle}
             </span>
 

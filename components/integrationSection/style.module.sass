@@ -6,13 +6,13 @@ $small : breakpoints.$small
 $medium : breakpoints.$medium
 
 .Body
-    // height:787px
+    // height:49.1875rem
     width: 100%
     background: colors.$bgSecondary
     display: flex
     justify-content: center
     align-items: center
-    padding-top:4.5rem 
+    padding-top:4.1rem 
 
 .divClass
     width: 100%
@@ -33,7 +33,7 @@ $medium : breakpoints.$medium
     text-align: center
 
 .subTitleText
-    margin-top: 0.9rem
+    margin-top: .9rem
     @include fonts.fontDesktopH5Regular
     color: colors.$fontColor_secondary
     text-align: center
@@ -42,18 +42,23 @@ $medium : breakpoints.$medium
 .divGradientLineClass
     display: flex
     justify-content: flex-end
-    width: 54.5%
-    transform: translate(3px,-4px)
+    width: 12.875rem
+    transform: translate(18rem,-0.25rem)
 
 .spacer
-    padding-top:60px
+    padding-top:3.75rem
     width:1%
+
+
+@media (max-width: 800px)
+    .divGradientLineClass
+        transform: translate(10rem,-0.25rem)
 
 @media (max-width: $small) 
     .Body
         padding-top: 4.2rem
     .divClass
-        transform: translate(0px, -10px)
+        transform: translate(0rem, -0.625rem)
     .titleText
         @include fonts.fontMobileH1Bold
         color: colors.$fontColor_secondary
@@ -66,10 +71,10 @@ $medium : breakpoints.$medium
     .divGradientLineClass
         display: flex
         justify-content: flex-start
-        width: 100%
-        transform: translate(90px,-70px)
+        width: 10.5rem
+        transform: translate(-3.5rem,-4.375rem)
     .spacer
-        padding-top: 55px
+        padding-top: 3.4375rem
         width: 1%
 
 

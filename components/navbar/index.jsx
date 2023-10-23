@@ -31,7 +31,7 @@ const NavBarExample = () => {
             menuItem: {
               selected: {
                 after: {
-                    borderBottom: "2px solid #37bf2d !important",
+                    borderBottom: ".125rem solid #37bf2d !important",
                 },
               },
             },
