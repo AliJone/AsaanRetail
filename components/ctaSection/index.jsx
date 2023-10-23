@@ -15,11 +15,13 @@ const CTASection = () =>{
           {line}
           <>
           {
-            index === 0 ? <div style={{paddingLeft:"43%"}} ><GradientLine width={"278px"} height="7px" /></div> :<div ><GradientLine width={"336px"} height="7px"/></div>
+            index === 0 ? <div className={cn(style.FirstGradientLine)} ><GradientLine width={"inherit"} height="7px" /></div> :<div className={cn(style.SecondGradientLine)} ><GradientLine width={"336px"} height="7px"/></div>
           }
           </>
         </React.Fragment>
       ));
+
+    
 
     const subTitleWithLineBreaks = CTASectionText.subTitle.split('\n').map((line, index) => (
     <React.Fragment key={index}>
@@ -35,9 +37,13 @@ const CTASection = () =>{
                 {TitleWithLineBreaks}
             </span>
             <div className={cn(style.spacer1)}/>
-            <span className ={cn(style.subTitleClass)}>
+            <span className ={cn(style.subTitleClass, style.desktopView)}>
                 {subTitleWithLineBreaks}
             </span>
+            <span className ={cn(style.subTitleClass,style.mobileView)}>
+                {CTASectionText.subTitle}
+            </span>
+
             <div className={cn(style.spacer2)}/>
             <div className={cn(style.buttonShadowClass)}>
                 <CustomFilledButton handleClick={()=>{}} children={<span className = {cn(style.buttonText)} > <CalendarOutlined /> Get Demo</span>} />

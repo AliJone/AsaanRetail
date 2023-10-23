@@ -115,6 +115,24 @@ $medium : breakpoints.$medium
 .MobileView
     display: none
 
+.MobileView2
+    display: none
+
+.makeItRow
+    display: flex
+    flex-direction: row
+
+.centering
+    display: flex
+    justify-content: center
+    align-items: center
+
+.spacerFeatureList
+    padding-top: 60px
+
+.spacerFeatureList2
+    padding-top: 60px
+
 
 @media (max-width: $small) 
     .DesktopView
@@ -122,10 +140,14 @@ $medium : breakpoints.$medium
     .MobileView
         display: block
 
+    .MobileView2
+        display: flex
+
     .titleText
         @include fonts.fontMobileH1Bold
         color: colors.$fontColor_primary
         text-align: center
+    
     .subTitleClass
         margin-top: 0rem
         @include fonts.fontMobileH5Regular
@@ -160,22 +182,64 @@ $medium : breakpoints.$medium
         justify-content: center
         align-items: center
 
-    .divFeatureElementTextContainer
-        max-width: max-content
-        // padding-left: 3px
-        display: flex
-        justify-content: center
-        width: 100%
-        text-align: center
+    
 
     .ThridGradientLine
         display: block
         width: 100%
-        transform: translate(5rem,-4rem)
+        transform: translate(-0.4rem,-4rem)
 
     .divFeatureElementTitle
         @include fonts.fontDesktopH2Bold
         text-align: center
+
+    .divFeatureElementListText
+        @include fonts.fontH4Regular
+        
+        
+
+
+    // .divFeatureElementTextContainer
+    //     max-width: max-content
+    //     // padding-left: 3px
+    //     display: flex
+    //     justify-content: center
+    //     width: 100%
+    //     text-align: center
+
+    .divFeatureElementTextContainer
+        display: flex
+        justify-content: center
+        // width: 100%
+        max-width: min-content
+        padding-left: 0px
+        padding-top:1rem 
+
+    .divFeatureElementIcon
+        display: flex
+        width: 100%
+        height: 60px
+        justify-content: center
+        align-items: center
+
+    .divFeatureElementIconCheck
+        padding-left: 20px
+
+
+    .verticalSpacer
+        padding-left: 0px
+        padding-top: 1.6rem
+        
+
+    
+
+    .spacerFeatureList
+        padding-top: 3.8rem
+    
+
+    .spacer2
+        padding-top: 43px
+
         // overflow-y: auto
         // scrollbar-width: none
         // margin-left: 20px

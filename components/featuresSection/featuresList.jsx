@@ -1,5 +1,6 @@
 import FeatureElement from './featureElement';
 import { FeatureList } from '../../strings';
+import cn from 'classnames';
 import style from './style.module.sass';
 
 const FeaturesList = () =>{
@@ -9,8 +10,8 @@ const FeaturesList = () =>{
                 FeatureList.map((item, index) => {
                     return(
                         <>
-                        <FeatureElement key={index} title={item.title} list={item.list} icon={item.icon} />
-                        {index !== FeatureList.length - 1 && <div key={index} style={{paddingTop:"60px"}}/>}
+                        <FeatureElement key={index} item={item} />
+                        {index !== FeatureList.length - 1 && <div key={index} className={cn(style.spacerFeatureList)}/>}
                         </>
                         
                     )

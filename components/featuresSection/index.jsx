@@ -2,10 +2,10 @@ import {Col, Row} from 'antd';
 
 import FeatureList from './featuresList';
 import Features from '../../images/svgs/features.svg';
+import FeaturesMobile from '../../images/svgs/FeaturesMobile.svg';
 import { FeaturesText } from '../../strings';
 import GradientLine from '../gradientLine';
 import Image from 'next/image';
-import LandingPageMobile from '../../images/svgs/landingPageMobile.svg';
 import React from 'react';
 import cn from 'classnames';
 import style from './style.module.sass';
@@ -65,7 +65,7 @@ const FeaturesSection = () => {
                 </Col>
                 <Col span={24}>
                     <div className={cn(style.spacer1)}/>
-                    <Row className={style.DesktopView}>
+                    <Row className={cn(style.DesktopView, style.makeItRow)}>
                         <Col span={13} className = {cn(style.divLeftColumn)}>
                             <Image src = {Features} alt = "Features" className={cn(style.divImageContainer)} />
                         </Col>
@@ -75,9 +75,9 @@ const FeaturesSection = () => {
                     </Row>
                     <Row className={style.MobileView}>
                         <Col span={24} className = {cn(style.divLeftColumn)}>
-                            <Image src = {LandingPageMobile} alt = "Features" className={cn(style.divImageContainer)} />
+                            <Image src = {FeaturesMobile} alt = "Features" className={cn(style.divImageContainer)} />
                         </Col>
-                        <Col span={24} >
+                        <Col span={24} className={cn(style.verticalSpacer)} >
                             <FeatureList/>
                         </Col>
                     </Row>

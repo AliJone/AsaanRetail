@@ -1,13 +1,10 @@
 @use "../../utils/colors"
-@use "../../utils/fonts"    
+@use "../../utils/fonts"  
+@use "../../utils/breakpoints"
 
+$small: breakpoints.$small
+$medium: breakpoints.$medium  
 
-
-
-    
-
-
-    
 .VideoSectionDiv
     display: flex
     justify-content: center
@@ -69,6 +66,9 @@
 .gradientLine
     padding-left:63%
     transform: translate(0.5%, -50%)
+    width:255px
+
+
 
 .spacer1
     padding-top: 18px
@@ -78,3 +78,44 @@
 .spacer2
     padding-top: 60px
     width:1%
+
+.mobileView
+    display: none
+
+.desktopView
+    display: block
+
+@media (max-width: $small)
+
+    .mobileView
+        display: block
+    
+    .desktopView
+        display: none
+
+    .spacer1
+        padding-top: 8px
+        width:1%
+
+    .VideoSectionDivTitle
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .VideoSectionDivSubTitle
+        @include fonts.fontDesktopH5Regular
+        color: colors.$fontColor_primary
+        text-align: center
+        padding: 0 1rem
+
+    .VideoPlayerDiv
+        height: 307px
+        width: 95%
+
+    .WatchNowButton
+        @include fonts.fontMobileBodyBold
+        padding: 18px
+        height: min-content
+        
+
+        

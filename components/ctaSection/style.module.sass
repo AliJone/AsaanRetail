@@ -1,5 +1,9 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
+@use "../../utils/breakpoints"
+
+$small: breakpoints.$small
+$medium: breakpoints.$medium
 
 .CTASectionDiv
     background: colors.$bgSecondary
@@ -59,4 +63,59 @@
 .spacer3
     padding-top:110px
     width:1px
+
+.FirstGradientLine
+    padding-left: 43%
+    width: 278px
+
+.SecondGradientLine
+    display: block
+
+.desktopView
+    display: block
+
+.mobileView
+    display: none
+
+@media (max-width: $small)
+
+    .desktopView
+        display: none
     
+    .mobileView
+        display: block
+
+    .CTASectionDiv
+        padding-top: 3.5rem
+    .titleClass
+        @include fonts.fontMobileH1Bold
+        line-height: 130%
+        color: colors.$fontColor_secondary
+        text-align: center
+
+    .subTitleClass
+        @include fonts.fontMobileH5Regular
+        color: colors.$fontColor_secondary
+        text-align: center
+        padding: 0rem 0.2rem
+        padding-top: 0.2rem
+
+    .FirstGradientLine
+        padding-left: 41%
+        width: 170px
+        margin-top: -0.5rem
+
+
+    .SecondGradientLine
+        display: none
+
+    .spacer2
+        padding-top:37px
+    
+    .spacer3
+        padding-top: 21.5rem
+
+    .RobotPositioningDivClass
+        position: absolute
+        z-index: 8
+        transform: translate(0%, 8.7rem)

@@ -1,10 +1,13 @@
 import UseCase from './images/svgs/UseCase.svg';
 import analytics from './images/svgs/icons/Analytics.svg';
+import analyticsMobile from './images/svgs/icons/RealtimeProcessingLogo.svg';
 import google from './images/svgs/logos/google.svg';
 import highfy from './images/svgs/logos/highfy.svg';
 import inventory from './images/svgs/icons/InventoryManagement.svg';
+import inventoryMobile from './images/svgs/icons/IntegrationLogo.svg';
 import linkedIn from './images/svgs/logos/linkedIn.svg';
 import orders from './images/svgs/icons/OrderManagement.svg';
+import ordersMobile from './images/svgs/icons/OrderprocessionLogo.svg';
 import orient from './images/svgs/logos/orient.svg';
 import peachmart from './images/svgs/logos/peachMart.svg';
 import stripe from './images/svgs/logos/stripe.svg';
@@ -102,7 +105,9 @@ const FeaturesText = {
 const FeatureList = [
     {
         icon: inventory,
+        iconMobile: inventoryMobile,
         title: "Inventory Management",
+        titleMobile: "Inventory Management",
         list: [
             "Centralize and manage your inventory across multiple sales channels.",
             "Real-time inventory updates ensure accurate stock levels and prevent overselling.",
@@ -111,7 +116,9 @@ const FeatureList = [
     },
     {
         icon: orders,
+        iconMobile: ordersMobile,
         title: "Orders Processing",
+        titleMobile: "Orders Processing",
         list: [
             "Automate and streamline your order fulfillment process.",
             "Easily process orders from multiple sales channels in one centralized system.",
@@ -120,7 +127,9 @@ const FeatureList = [
     },
     {
         icon: analytics,
+        iconMobile: analyticsMobile,
         title: "Real-Time Reporting",
+        titleMobile: "RealTime Reporting",
         list: [
             "Gain valuable insights into your Ecommerce performance.",
             "Access real-time reports on sales, revenue, and inventory levels.",
@@ -135,7 +144,7 @@ const CTASectionText = {
 }
 
 const VideoSectionText ={
-    Title : "Success in the Spotlight",
+    Title : "Success in the \nSpotlight",
     subTitle: "Explore Real-Life Success Stories of Businesses Empowered by \nAsaan Retail's Solutions."
 }
 

@@ -6,60 +6,71 @@ import check from '../../images/svgs/icons/check.svg';
 import cn from 'classnames';
 import style from './style.module.sass';
 
-const FeatureElement = ({ title, list, icon }) => {
+const FeatureElement = ({ item }) => {
     return(
-        <Row key = {title} gutter = {40}>
-            <Col key = {title} span={5} className = {cn(style.DesktopView)}>
-                <div key = {title} className={cn(style.divFeatureElementIcon)}>
-                    <Image key = {title} src={icon} alt="icon"/>
+        <Row key = {item.title} gutter = {40}>
+            <Col key = {item.title} span={5} className = {cn(style.DesktopView)}>
+                <div key = {item.title} className={cn(style.divFeatureElementIcon)}>
+                    <Image key = {item.title} src={item.icon} alt="icon"/>
                 </div>
             </Col>
-            <Col key = {title} span={19} className={cn(style.DesktopView)} >
+            <Col key = {item.title} span={19} className={cn(style.DesktopView)} >
 
                     <div className={cn(style.divFeatureElementTextContainer)}>
                         <span className={cn(style.divFeatureElementTitle)}>
-                            {title}
-                            <GradientLine key={title} width={"iniherit"}  height="5px"/>    
+                            {item.title}
+                            <GradientLine key={item.title} width={"iniherit"}  height="5px"/>    
                         </span>
                     </div>
                     <div style={{paddingTop:"8px" , paddingBottom: "24px"}}/>
             </Col>
 
-            <Col key = {title} span={24} className = {cn(style.MobileView)}>
-                <div key = {title} className={cn(style.divFeatureElementIcon)}>
-                    <Image key = {title} src={icon} alt="icon"/>
+            <Col key = {item.title} span={24} className = {cn(style.MobileView)}>
+                <div key = {item.title} className={cn(style.divFeatureElementIcon)}>
+                    <Image key = {item.title} src={item.iconMobile} alt="icon"/>
                 </div>
             </Col>
-            <Col key = {title} span={24} className={cn(style.MobileView)} >
-
-                    <div className={cn(style.divFeatureElementTextContainer)}>
-                        <span className={cn(style.divFeatureElementTitle)}>
-                            {title}
-                            <div className={cn(style.ThridGradientLine)}>
-                                <GradientLine key={title} width={"183px"}   height="10px"/>     
-                            </div>
-                            
-                        </span>
+            <Col key = {item.title} span={24} className={cn(style.MobileView)} >
+                    <div className={cn(style.centering)}>
+                        <div className={cn(style.divFeatureElementTextContainer)}>
+                            <span className={cn(style.divFeatureElementTitle)}>
+                                {item.titleMobile}
+                                <div className={cn(style.ThridGradientLine)}>
+                                    <GradientLine key={item.title} width={"183px"}   height="10px"/>     
+                                </div>
+                                
+                            </span>
+                        </div>
                     </div>
                     <div style={{paddingTop:"8px" , paddingBottom: "24px"}}/>
             </Col>
             
             <Col span={24}>
                 {
-                    list.map((item, index) => {
+                    item.list.map((i, index) => {
                         return(
                             <>
-                            <Row key={index} gutter = {0}>
+                            <Row key={index} gutter = {0} className={cn(style.DesktopView,style.makeItRow)} >
                                 <Col key={index} span={3}>
                                     <div className={cn(style.divFeatureElementIcon, style.divFeatureElementIconCheck)}>
                                         <Image src={check} alt="check" />
                                     </div>
                                 </Col>
                                 <Col key={index} span={21}>
-                                    <span className={cn(style.divFeatureElementListText)}>{item}</span>
+                                    <span className={cn(style.divFeatureElementListText)}>{i}</span>
                                 </Col>
                             </Row>
-                            {index !== list.length - 1 && <div key={index} style={{paddingTop:"24px"}}/>}
+                            <Row key={index} gutter = {30} className={cn(style.MobileView2)} >
+                                <Col key={index} span={3}>
+                                    <div className={cn(style.divFeatureElementIcon, style.divFeatureElementIconCheck)}>
+                                        <Image src={check} alt="check" />
+                                    </div>
+                                </Col>
+                                <Col key={index} span={21} style={{paddingRight:"30px"}}>
+                                    <span className={cn(style.divFeatureElementListText)}>{i}</span>
+                                </Col>
+                            </Row>
+                            {index !== item.list.length - 1 && <div key={index} style={{paddingTop:"24px"}}/>}
                             </>
                         )    
                     }

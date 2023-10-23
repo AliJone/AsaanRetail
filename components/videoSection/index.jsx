@@ -16,10 +16,16 @@ const VideoSection=()=>{
         setPlayVideo((prev)=>!prev);
     }
 
+    const TitleWithGradientLine = () => (
+        <>
+        {VideoSectionText.Title}
+          <div className={cn(style.gradientLine)} ><GradientLine width={"inherit"}  height="7px"/></div>
+        </>
+    )
     const TitleWithLineBreaks = VideoSectionText.Title.split('\n').map((line, index) => (
         <React.Fragment key={index}>
           {line}
-          <div className={cn(style.gradientLine)} ><GradientLine width={"255px"}  height="7px"/></div>
+          { index !== 0 ? <></>:<><br/></>}
         </React.Fragment>
       ));
 
@@ -37,12 +43,20 @@ const VideoSection=()=>{
 
 
             <div className={style.spacer1}/>
+
+            <span className = {cn(style.VideoSectionDivTitle, style.desktopView)}>
+                {<TitleWithGradientLine/>}
+            </span>
             
-            <span className = {style.VideoSectionDivTitle}>
+            <span className = {cn(style.VideoSectionDivTitle, style.mobileView)}>
                 {TitleWithLineBreaks}
             </span>
                 
-            <span className = {style.VideoSectionDivSubTitle}>
+            <span className = {cn(style.VideoSectionDivSubTitle,style.mobilepView)}>
+                {VideoSectionText.subTitle}
+            </span>
+
+            <span className = {cn(style.VideoSectionDivSubTitle,style.desktopView)}>
                 {subTitleWithLineBreaks}
             </span>
             
