@@ -5,6 +5,7 @@ import Features from '../../images/svgs/features.svg';
 import { FeaturesText } from '../../strings';
 import GradientLine from '../gradientLine';
 import Image from 'next/image';
+import LandingPageMobile from '../../images/svgs/landingPageMobile.svg';
 import React from 'react';
 import cn from 'classnames';
 import style from './style.module.sass';
@@ -16,7 +17,18 @@ const FeaturesSection = () => {
           {line}
           <>
           {
-            index === 0 ? <div className={style.FirstGradientLine}  ><GradientLine width={"247px"} height="7px" /></div> :<div className={style.SecondGradientLine} ><GradientLine width={"294px"} height="7px" /></div>
+            index === 0 ? <><div className={style.FirstGradientLine}  ><GradientLine width={"247px"} height="7px" /></div></> :<><div className={style.SecondGradientLine} ><GradientLine width={"294px"} height="7px" /></div></>
+          }
+          </>
+        </React.Fragment>
+      ));
+
+      const TitleWithLineBreaksMobile = FeaturesText.Title.split('\n').map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
+          <>
+          {
+            index === 0 ? <><br/></> :<></>
           }
           </>
         </React.Fragment>
@@ -34,24 +46,40 @@ const FeaturesSection = () => {
             <Row>
                 <Col span={24}>
                     <div className={cn(style.divTextClass)}>
-                        <span className={cn(style.titleText)}>
+                        <span className={cn(style.titleText,style.DesktopView)}>
                             {TitleWithLineBreaks}
                         </span>
-                        <span className={cn(style.subTitleClass)}>
+                        <span className={cn(style.titleText,style.MobileView)}>
+                            {TitleWithLineBreaksMobile}
+                        </span>
+
+                        <span className={cn(style.subTitleClass,style.DesktopView)}>
                             {subTitleWithLineBreaks}
+                        </span>
+
+                        <span className={cn(style.subTitleClass,style.MobileView)}>
+                            {FeaturesText.subTitle}
                         </span>
                     </div>
                     <div style={{width:"1%" , paddingTop:"40px"}}/>
                 </Col>
                 <Col span={24}>
                     <div className={cn(style.spacer1)}/>
-                    <Row>
-                    <Col span={13} className = {cn(style.divLeftColumn)}>
-                        <Image src = {Features} alt = "Features" className={cn(style.divImageContainer)} />
-                    </Col>
-                    <Col span={11} className={cn(style.verticalSpacer)}>
-                        <FeatureList/>
-                    </Col>
+                    <Row className={style.DesktopView}>
+                        <Col span={13} className = {cn(style.divLeftColumn)}>
+                            <Image src = {Features} alt = "Features" className={cn(style.divImageContainer)} />
+                        </Col>
+                        <Col span={11} className={cn(style.verticalSpacer)}>
+                            <FeatureList/>
+                        </Col>
+                    </Row>
+                    <Row className={style.MobileView}>
+                        <Col span={24} className = {cn(style.divLeftColumn)}>
+                            <Image src = {LandingPageMobile} alt = "Features" className={cn(style.divImageContainer)} />
+                        </Col>
+                        <Col span={24} >
+                            <FeatureList/>
+                        </Col>
                     </Row>
                 </Col>
                 <div className={cn(style.spacer2)}/>

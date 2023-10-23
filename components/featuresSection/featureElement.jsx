@@ -9,21 +9,37 @@ import style from './style.module.sass';
 const FeatureElement = ({ title, list, icon }) => {
     return(
         <Row key = {title} gutter = {40}>
-            <Col key = {title} span={5}>
+            <Col key = {title} span={5} className = {cn(style.DesktopView)}>
                 <div key = {title} className={cn(style.divFeatureElementIcon)}>
-                <Image key = {title} src={icon} alt="icon"/>
+                    <Image key = {title} src={icon} alt="icon"/>
                 </div>
             </Col>
-            <Col key = {title} span={19} >
+            <Col key = {title} span={19} className={cn(style.DesktopView)} >
 
                     <div className={cn(style.divFeatureElementTextContainer)}>
                         <span className={cn(style.divFeatureElementTitle)}>
                             {title}
-                            <GradientLine key={title} width={"iniherit"}  height="5px"/>
+                            <GradientLine key={title} width={"iniherit"}  height="5px"/>    
+                        </span>
+                    </div>
+                    <div style={{paddingTop:"8px" , paddingBottom: "24px"}}/>
+            </Col>
+
+            <Col key = {title} span={24} className = {cn(style.MobileView)}>
+                <div key = {title} className={cn(style.divFeatureElementIcon)}>
+                    <Image key = {title} src={icon} alt="icon"/>
+                </div>
+            </Col>
+            <Col key = {title} span={24} className={cn(style.MobileView)} >
+
+                    <div className={cn(style.divFeatureElementTextContainer)}>
+                        <span className={cn(style.divFeatureElementTitle)}>
+                            {title}
+                            <div className={cn(style.ThridGradientLine)}>
+                                <GradientLine key={title} width={"183px"}   height="10px"/>     
+                            </div>
                             
                         </span>
-                        
-                
                     </div>
                     <div style={{paddingTop:"8px" , paddingBottom: "24px"}}/>
             </Col>

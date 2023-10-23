@@ -1,5 +1,8 @@
 @use "../../utils/fonts"
 @use "../../utils/colors"
+
+$small: 680px
+$medium: 991px
     
 .HeaderClass
     display: flex
@@ -84,6 +87,8 @@
     flex-direction: row
     // align-items: center
     // justify-content: center
+
+
     
 .divButtonContainer
     display: flex
@@ -99,5 +104,35 @@
     width: 81px
     height: 4px
     position: relative
+
+.mobileNavBar
+    display: none
+
+.buttonAlignment
+    margin:0
+
+@media(max-width: $small)
+    .MenuDivClass
+        .divClassRow
+            display: none
+    .divClass2
+        display: none
+    .mobileNavBar
+        display: flex
+        justify-content: center
+        align-items: center
+        transform: translateX(2.2rem)
+        font-size:23px
+        // padding-left: 20px
+         
+    .LogoClass
+        display: flex
+        margin-left: -2.7rem
+        @include fonts.fontMobileH3Bold
+
+    .buttonAlignment
+        transform: translateX(0.7rem)
+    
+        
 
 

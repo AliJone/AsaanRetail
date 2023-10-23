@@ -1,7 +1,9 @@
 @use "../../utils/fonts"
 @use "../../utils/colors"
+@use "../../utils/breakpoints"
 
-
+$small: breakpoints.$small
+$medium: breakpoints.$medium
 .heroSectionClass
     display: flex
     justify-content: center
@@ -108,5 +110,74 @@
     height: 100%
     // padding-left: 2.5rem
     // margin-top: 3.5rem
+
+.divParentMobile
+    display: none
+
+.centering
+    display: none
+
     
+@media (max-width: $small)
+    .divParent
+        display: none
+    .divParentMobile
+        display: block
+    .divLeftColumn
+        padding-left: 0rem
+        display: flex
+        justify-content: center
+
+    .TextClass
+        padding-top: 2.5rem
+        padding-left: 0.5rem
+        width: 100%
+        display: flex
+        justify-content: center
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .flagRowDiv
+        width:100%
+        justify-content: center
+        margin-left: 0rem
+
+    .flagImage
+        width: 50px
+        height: 35px
+        border-radius: 5px
+    .TextClassSmall
+        @include fonts.fontMobileH4Regular
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .FieldClass
+        // box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+        // background-color: colors.$bgPrimary
+        width: 95%
+        transform: translateX( 0.3rem)
+        display: flex
+        // border-radius: 10px
+        justify-content: center
+        justify-self: center
+        // border: 1px solid #000000
+        // align-items: center
+        // height: 3.75rem
+        // margin-left:-0.7rem
+
+    .centering
+        display: flex
+        justify-content: center
+        align-items: center
+        // background: red
+        width: 100%
+    
+        .TextClassSmall
+            @include fonts.fontMobileSmallRegular
+            color: #555555
+        
+    
+
+        
     

@@ -1,3 +1,10 @@
+
+@use '../../utils/colors'
+@use '../../utils/breakpoints'
+
+$small: breakpoints.$small
+$medium: breakpoints.$medium
+  
 .CarouselClass
     display: flex
     flex-direction: row
@@ -11,7 +18,7 @@
     animation: LeftSlide 25s linear infinite
 
 
-    
+
 
 @keyframes LeftSlide 
   from 
@@ -22,3 +29,17 @@
 
     // 100%
     //     transform: translateX(-2560px)
+
+.image
+  width: auto
+  height: auto
+
+@media (max-width:$small) 
+  .CarouselClass
+    padding-bottom: 18px
+
+  .divAnimation
+    animation: LeftSlide 20s linear infinite
+
+  .image
+    padding: 0px 20px 

@@ -12,6 +12,7 @@ import CustomTextButton from '../buttons/textButton';
 import { Divider } from 'antd';
 import DropDownIcon from '../../images/svgs/icons/Icon_Drop_Down.svg'
 import Image from 'next/image';
+import MenuOutlined from '@ant-design/icons/MenuOutlined';
 import ProductsDropDown from '../dropDowns/products';
 import React from 'react';
 import ResourcesDropDown from '../dropDowns/resources';
@@ -114,14 +115,21 @@ const NavBarExample = () => {
                           </div>
                       </div>   
                   </div>
+                  <div className={style.divClassRow}>
                   <div className = {style.divClass2}>
                       <UserOutlined  className = {style.userLogoClass}/>
                       <Divider type="vertical" className={style.dividerClass} />
                       <CustomTextButton children={<span className={cn(style.NavButtonFonts)}>Get Demo</span>} handleClick = {handleClick}/>
-                      <CustomFilledButton children={<span className={cn(style.NavButtonFonts)} style={{color:'white'}}>Start Free Trial</span>} handleClick = {handleClick}/>
-                      {/* <Button>Sign up</Button> */}
 
                   </div>
+                    <div className={cn(style.buttonAlignment)}>
+                      <CustomFilledButton children={<span className={cn(style.NavButtonFonts)} style={{color:'white'}}>Start Free Trial</span>} handleClick = {handleClick}/>
+                    </div>
+                    <div className={cn(style.mobileNavBar)}>
+                      <MenuOutlined />
+                  </div>
+                  </div>
+                  
               </div>
           </Header>
           {current === 'Product' ? <ProductsDropDown/> : <></>}

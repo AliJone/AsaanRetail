@@ -1,5 +1,10 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
+@use "../../utils/breakpoints"
+    
+$small : breakpoints.$small
+$medium : breakpoints.$medium
+
 .Body
     // height:787px
     width: 100%
@@ -42,5 +47,29 @@
 .spacer
     padding-top:60px
     width:1%
+
+@media (max-width: $small) 
+    .Body
+        padding-top: 4.2rem
+    .divClass
+        transform: translate(0px, -10px)
+    .titleText
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_secondary
+        text-align: center
+    .subTitleText
+        margin-top: -0.6rem
+        @include fonts.fontMobileH5Regular
+        color: colors.$fontColor_secondary
+        text-align: center
+    .divGradientLineClass
+        display: flex
+        justify-content: flex-start
+        width: 100%
+        transform: translate(90px,-70px)
+    .spacer
+        padding-top: 55px
+        width: 1%
+
 
     
