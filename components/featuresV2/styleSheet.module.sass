@@ -1,0 +1,151 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+@use "../../utils/breakpoints"
+
+
+$small: breakpoints.$small
+
+.FeaturesV2Section
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: colors.$radialGradient
+
+.tagContainer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+
+
+
+.TitleContainer
+    width: 85.77%
+    margin: auto
+    display: flex
+    justify-content: center
+
+.TitleText
+    
+    @include fonts.fontDesktopH2Bold
+    color: colors.$fontColor_primary
+    text-align: center
+
+.convertToColumn
+    flex-direction: column
+    display: flex
+
+.convertToRow
+    flex-direction: row
+    display: flex
+
+.subTitleContainer
+    width: 45.97777%
+    margin: auto
+
+.subTitleText
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+    text-align: center
+
+.featureCardFrame
+    width: 86.133%
+    margin: auto
+    display: flex
+    align-items: flex-start
+    align-content: flex-start
+    gap: var(--Spacing-24, 1.5rem) 1.4375rem
+    flex-wrap: wrap
+    justify-content: center
+
+.featureCardIconDiv
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.featureCardTextDiv
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    text-align: left
+
+.featureCardTitle
+    @include fonts.fontDesktopH3Bold
+    color: colors.$fontColor_primary
+
+.featureCardSubTitle
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+
+.featureCardButton
+    @include fonts.fontDesktopH5Regular
+    color: rgba(0, 0, 0, 0.45)
+
+.spacer1
+    padding-top:2.5rem
+
+.spacer2
+    padding-top:1rem
+
+.spacer3
+    padding-top:2.23rem
+
+.spacer4
+    padding-top:1.56rem
+
+.featureCardContainer
+    width: 18.13rem
+    display: flex
+    padding: 2.5rem 3rem
+    flex-direction: column
+    align-items: flex-start
+
+    border-radius: 0.625rem
+    background: rgba(255, 255, 255, 0.80)
+    backdrop-filter: blur(1.125rem)
+    border: .25rem solid transparent
+
+    &:hover
+        background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box !important
+        border: .25rem solid transparent
+        border-radius: 0.625rem
+        
+        .featureCardButton
+            @include fonts.fontDesktopH5Regular
+            color: colors.$fontColor_primary
+
+
+@media (max-width: $small)
+    .TitleText
+        @include fonts.fontMobileH2Bold
+
+    .subTitleText
+        @include fonts.fontMobileH5Regular
+
+    .featureCardTitle
+        @include fonts.fontMobileH3Bold
+
+    .featureCardIconDiv
+        justify-content: center
+
+    .featureCardTextDiv
+        justify-content: center
+        text-align: center
+
+    .subTitleContainer
+        width: 100%
+        display: flex
+        justify-content: center
+        text-align: center
+
+    .featureCardContainer
+        padding: 2rem 3rem
+        width: 24.812rem
+    
+
+

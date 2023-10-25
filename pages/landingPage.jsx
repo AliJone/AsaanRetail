@@ -6,6 +6,7 @@ import CTASection from '../components/ctaSection';
 import Carousel from '../components/carousel';
 import FAQ from '../components/FAQ/FAQ';
 import FeaturesSection from '../components/featuresSection';
+import FeaturesV2 from '../components/featuresV2';
 import Footer from '../components/Footer/Footer';
 import HeroSection from '../components/heroSection';
 import IntegrationSection from '../components/integrationSection';
@@ -29,6 +30,8 @@ const page = () => {
                     <FeaturesSection />
                     <CTASection />
                     <VideoSection />
+
+                    <FeaturesV2/>
                     {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
                     <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} /> */}
                     
