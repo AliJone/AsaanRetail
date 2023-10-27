@@ -20,13 +20,22 @@ $small: breakpoints.$small
     align-items: center
     flex-direction: row
 
+.underlineDiv
+    width: 7.5rem
+    margin-left: -8rem
+    
+
+
 
 
 .TitleContainer
     width: 85.77%
     margin: auto
     display: flex
-    justify-content: center
+    // justify-content: center
+    align-items: center
+    display: flex
+    flex-direction: column
 
 .TitleText
     
@@ -45,6 +54,7 @@ $small: breakpoints.$small
 .subTitleContainer
     width: 45.97777%
     margin: auto
+    
 
 .subTitleText
     @include fonts.fontDesktopH5Regular
@@ -59,7 +69,7 @@ $small: breakpoints.$small
     align-content: flex-start
     gap: var(--Spacing-24, 1.5rem) 1.4375rem
     flex-wrap: wrap
-    justify-content: center
+    justify-content: space-between
 
 .featureCardIconDiv
     width: 100%
@@ -87,19 +97,27 @@ $small: breakpoints.$small
     color: rgba(0, 0, 0, 0.45)
 
 .spacer1
-    padding-top:2.5rem
+    width:1px
+    padding-top:2.1rem
 
 .spacer2
+    width:1px
     padding-top:1rem
 
 .spacer3
+    width:1px
     padding-top:2.23rem
 
 .spacer4
+    width:1px
     padding-top:1.56rem
 
+.spacer5
+    width: 1px
+    padding-top:1rem
+
 .featureCardContainer
-    width: 18.13rem
+    width: 17.93rem
     display: flex
     padding: 2.5rem 3rem
     flex-direction: column
@@ -119,6 +137,15 @@ $small: breakpoints.$small
             @include fonts.fontDesktopH5Regular
             color: colors.$fontColor_primary
 
+
+@media (max-width: 880px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: 3.5rem
+        margin-top: -4rem
+
+    .spacer5
+        padding-top: 5rem
 
 @media (max-width: $small)
     .TitleText
@@ -145,7 +172,50 @@ $small: breakpoints.$small
 
     .featureCardContainer
         padding: 2rem 3rem
-        width: 24.812rem
-    
+        width: 28.812rem
 
+    .featureCardFrame
+        width: 98%
 
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: -5rem
+        margin-top: 0rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 1rem
+
+@media (max-width: 623px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: 2.5rem
+        margin-top: -2.5rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 2.5rem
+
+@media (max-width: 483px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: 11rem
+        margin-top: -2.5rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 2.5rem
+
+@media (max-width: 318px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: -9rem
+        margin-top: -2.5rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 2.5rem    
+
+@media (max-width: 1426px)
+    .featureCardFrame
+        justify-content: center

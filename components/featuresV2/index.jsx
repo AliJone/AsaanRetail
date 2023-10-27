@@ -20,8 +20,13 @@ const FeaturesV2 = () =>{
             </div>
             <div className={cn(style.spacer2)}/>
             <div className={cn(style.TitleContainer)}>
-                <span className={cn(style.TitleText,style.convertToRow)}>Features to&nbsp;<span className={cn(style.convertToColumn)}>ignite<GradientLine width={"inherit"}/></span>&nbsp;business growth!</span>
+                <span className={cn(style.TitleText,style.convertToRow)}>Features to ignite business growth!</span>
+                <div className={cn(style.underlineDiv)}>
+                    <GradientLine width={"inherit"}/>
+                </div>
+                
             </div>
+            <div className={cn(style.spacer5)}/>
             <div className={cn(style.subTitleContainer, style.subTitleText)}>
                 <span >
                     Prevent inventory losses, increase delivery times, and reduce accounting errors - all in one place!
@@ -29,7 +34,7 @@ const FeaturesV2 = () =>{
             </div>
             <div className={cn(style.spacer3)}/>
             <div className={cn(style.featureCardFrame)}>
-                <FeatureCard icon={Accounting} title="Inventory Management" description="Manage your inventory, track your stock, and prevent losses with our inventory management system."/>
+                <FeatureCard icon={Accounting} title="Inventory Management" description="With Asaan Retail, multichannel inventory management is no more a hassle. "/>
                 <FeatureCard icon={Inventory} title="Inventory Management" description="Manage your inventory, track your stock, and prevent losses with our inventory management system."/>
                 <FeatureCard icon={Order} title="Inventory Management" description="Manage your inventory, track your stock, and prevent losses with our inventory management system."/>
                 <FeatureCard icon={Inventory} title="Inventory Management" description="Manage your inventory, track your stock, and prevent losses with our inventory management system."/>
