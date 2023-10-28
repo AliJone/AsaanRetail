@@ -33,6 +33,11 @@ const FeaturesV2 = () =>{
                 </span>
             </div>
             <div className={cn(style.spacer3)}/>
+            <div className = {cn(style.test)}>
+                <div className={cn(style.forBG)}>
+                    <span/>
+                </div>
+            </div>
             <div className={cn(style.featureCardFrame)}>
                 <FeatureCard icon={Accounting} title="Inventory Management" description="With Asaan Retail, multichannel inventory management is no more a hassle. "/>
                 <FeatureCard icon={Inventory} title="Inventory Management" description="Manage your inventory, track your stock, and prevent losses with our inventory management system."/>
