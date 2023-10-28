@@ -1,0 +1,191 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$issue: 970px
+$small: 680px
+
+.CTANew
+    padding: 4rem 0
+    align-items: center
+    display: flex
+    position: relative
+
+.CTABox
+    width: 71.3%
+    margin: auto
+    display: inline-flex
+    padding: 2rem var(--Size-48, 3rem)
+    align-items: center
+    border-radius: 0.625rem
+    border: 5px solid var(--Gradient-Dark, #3E9B1D)
+    background: rgba(255, 255, 255, 0.6)
+    -webkit-backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px)
+    flex-wrap: wrap-reverse
+    justify-content: space-around
+    gap: 2rem
+    position: relative
+    background: rgba(255, 255, 255, 0.60)
+    z-index: 2
+    // z-index: -50
+
+.CTABoxLeft, .CTABoxRight
+    content: ''
+    background-color: white  
+    border-radius: 50%
+    position: absolute
+    background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+    opacity: 0.8
+    z-index: 1
+    
+
+.CTABoxRight 
+    top: -4%
+    left: 6.45%
+    width: 14.25rem
+    height: 14.25rem
+    flex-shrink: 0
+
+
+.CTABoxLeft 
+    bottom: 1%
+    right: 7.3%
+    width: 12.0625rem
+    height: 12.0625rem
+    flex-shrink: 0
+
+
+.CTARight
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-40, 2.5rem)
+    width: 60%
+
+.Image1
+    // position: relative
+    width: 15.125rem
+    height: auto
+
+.Image2
+    margin-top: -121.5px
+    z-index: 1
+.Text
+    @include fonts.fontDesktopH2Bold
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+.Btn1
+    border-radius: 0.625rem
+    border: 2px solid var(--gradient-surface, #009241)
+
+    /* drop-shadow/button-secondary */
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02)
+
+.Btn2
+    border-radius: 0.625rem
+    border: 1px solid var(--gradient-surface, #009241)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+
+    /* drop-shadow/button-primary */
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
+
+.Buttons
+    display: flex
+    align-items: flex-start
+    gap: 1.3125rem
+    @include fonts.fontH5Bold
+    
+
+.CTALeft
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: flex-end
+
+.Btn1
+    border-radius: 0.625rem
+    border: 2px solid var(--gradient-surface, #009241)
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02)
+    display: flex
+    width: 11.875rem
+    height: 3.5rem
+    padding: 0.4rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+    color: #009241
+    background-color: transparent
+    @include fonts.fontH5Bold
+    
+    
+
+.Btn2
+    display: flex
+    width: 11.8125rem
+    height: 3.5rem
+    padding: 0.4rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+    border-radius: 0.625rem
+    border: 1px solid var(--gradient-surface, #009241)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
+    @include fonts.fontH5Bold
+
+
+
+
+
+@media (max-width: $issue)
+    .CTABox
+        justify-content: center
+        padding: 2rem 1rem
+
+    .CTARight
+        width: 100%
+        align-items: center
+        text-align: center
+
+    .CTABoxRight 
+        left: 4%
+
+
+    .CTABoxLeft 
+        right: 7%
+
+@media (max-width: $small)
+    .CTABoxRight 
+        left: -8%
+
+
+    .CTABoxLeft 
+        right: -8%
+    .CTABox
+        justify-content: center
+        padding: 2rem 1rem
+
+    .CTARight
+        width: 100%
+        align-items: center
+        text-align: center
+        @include fonts.fontMobileH2Bold
+    .Btn1
+        display: flex
+        height: 3.5rem !important
+        padding: 0.4rem 0.9375rem
+        justify-content: center
+        align-items: center
+        gap: 0.625rem
+        flex: 1 0 0
+        width: auto
+    .Btn2
+        display: flex
+        height: 3.5rem !important
+        padding: 0.4rem 0.9375rem
+        justify-content: center
+        align-items: center
+        gap: 0.625rem
+        flex: 1 0 0
+        width: auto
+    .Text
+        @include fonts.fontMobileH2Bold
