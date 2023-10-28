@@ -17,6 +17,9 @@ import VideoSection from '../components/videoSection';
 import Testimonials from '../components/Testimonials/Testimonials';
 import CTANew from '../components/CTA new/CTANew';
 import ThroughLense from '../components/ThroughLense/ThroughLense';
+import Tabs from '../components/TabsRetail/TabsRetail';
+import TextNAnimation from '../components/TextNAnimation/TextNAnimation';
+import Enterprise from '../components/Enterprise/Enterprise';
 
 const page = () => {
     return (
@@ -35,10 +38,14 @@ const page = () => {
                     <VideoSection /> */}
 
                     <FeaturesV2/>
+                    <TextNAnimation/>
+                    <Tabs/>
                     {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
                     <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} /> */}
                     <Testimonials />
                     <ThroughLense />
+                    {/* <Enterprise /> */}
+                    
                     <FAQ />
                     <CTANew />
                     {/* <CTA /> */}
