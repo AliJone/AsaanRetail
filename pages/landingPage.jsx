@@ -26,13 +26,13 @@ const page = () => {
                     overflowX: "hidden",
                     
                 }}>
-                    <NavigationBar/>
+                    {/* <NavigationBar/>
                     <HeroSection />
                     <Carousel imagesarray={CarouselImages} />
                     <IntegrationSection />
                     <FeaturesSection />
                     <CTASection />
-                    <VideoSection />
+                    <VideoSection /> */}
 
                     <FeaturesV2/>
                     {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
