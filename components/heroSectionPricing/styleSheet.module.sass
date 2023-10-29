@@ -399,6 +399,11 @@ $small: breakpoints.$small
 .desktopView
     display: flex
 
+@media (max-width: 777px)
+    .underLine
+        ::before
+            left: -16rem
+            top: 95%
 
 @media (max-width: $small)
     .mobileView
@@ -434,6 +439,7 @@ $small: breakpoints.$small
 
     .underLine
         ::before
+            left: 0rem
             width: 6.25rem
 
     .spacer2
@@ -444,6 +450,12 @@ $small: breakpoints.$small
     .spacer4
         padding-top: 4.1rem
 
+
+@media (max-width: 339px)
+    .underLine
+        ::before
+            left: -10.5rem
+            top: 95%
 
 
     
