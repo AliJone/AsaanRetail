@@ -16,11 +16,15 @@ function Footer() {
   return (
     <div className={styles.Footer}>
       <div className={styles.InfoSection}>
-        <div className={cn(styles.Description)}>
+        <div className={cn(styles.Description, styles.MobileView)}>
           <div className={styles.Logo}> <Image src={logo} /> </div>
           <div className={styles.Text}>We allow retailers and brands to scale and efficiently manage their business operations by equipping them with centralized inventory, fulfillment, and accounting management software for multi-channel commerce.</div>
         </div>
         <FooterLinks />
+        <div className={cn(styles.Description, styles.DesktopView)}>
+          <div className={styles.Logo}> <Image src={logo} /> </div>
+          <div className={styles.Text}>We allow retailers and brands to scale and efficiently manage their business operations by equipping them with centralized inventory, fulfillment, and accounting management software for multi-channel commerce.</div>
+        </div>
       </div>
       <div className={styles.Divider}>
         <Divider style={{ backgroundColor: "#FFF" }} />
