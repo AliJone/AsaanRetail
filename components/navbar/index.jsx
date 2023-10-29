@@ -12,6 +12,7 @@ import CustomTextButton from '../buttons/textButton';
 import { Divider } from 'antd';
 import DropDownIcon from '../../images/svgs/icons/Icon_Drop_Down.svg'
 import Image from 'next/image';
+import Logo from './assests/logo.svg';
 import MenuOutlined from '@ant-design/icons/MenuOutlined';
 import ProductsDropDown from '../dropDowns/products';
 import React from 'react';
@@ -91,7 +92,9 @@ const NavBarExample = () => {
           <Header className={headerClass}>
               <div className = {divClass}>
                   <div className={menuClass}>
-                      <div className = {logoClass}>Asaan Retail</div> 
+                      <div className = {logoClass}>
+                        <Image src = {Logo} alt="Asaan Retail"/>
+                      </div> 
                       <div className = {classNames(style.divClassRow)} >
                           <div className={style.divButtonContainer}>
                           <CustomNavButtons  children={<div className={cn(style.NavButtonFonts,style.DivCenter)}>Product <Image src={DropDownIcon} /></div>} handleClick={handleClickProduct}/>

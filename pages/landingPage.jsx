@@ -30,16 +30,18 @@ const page = () => {
                     overflowX: "hidden",
                     
                 }}>
-                    {/* <NavigationBar/>
+                    <NavigationBar/>
                     <HeroSection />
                     <Carousel imagesarray={CarouselImages} />
                     <IntegrationSection />
-                    <FeaturesSection />
-                    <CTASection />
-                    <VideoSection /> */}
-                    <VideoSectionNew/>
+                    {/* <FeaturesSection /> */}
+                    {/* <CTASection /> */}
+                    {/* <VideoSection /> */}
+                    
 
                     <FeaturesV2/>
+                    
+                    <VideoSectionNew/>
                     <TextNAnimation/>
                     <Tabs/>
                     {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
