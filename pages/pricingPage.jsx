@@ -1,5 +1,6 @@
 import { App } from "antd"
 import HeroSectionPricing from "../components/heroSectionPricing";
+import SpecificRequirementPayment from "../components/specificReqPayment";
 
 const page = () => {
 
@@ -11,7 +12,8 @@ const page = () => {
                     overflowX: "hidden",
                     
                 }}>
-                    <HeroSectionPricing/>
+                    {/* <HeroSectionPricing/> */}
+                    <SpecificRequirementPayment/>
                 </div>
                 
             </App>

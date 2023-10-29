@@ -1,0 +1,398 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+$small: breakpoints.$small
+
+//tabs
+.divTabsContainer
+    display: inline-flex
+    padding: 0.25rem  1.5rem
+    align-items: center
+    gap: 1rem
+    border-radius: 1.25rem
+    background:  #FFF
+        
+.Active
+    user-select: none
+    position: relative
+    color: #000000
+    ::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 0.25rem
+        flex-shrink: 0
+        background: #009241
+        top: 100%
+        left:0
+
+.inActive
+    user-select: none
+    color: rgba(0, 0, 0, 0.45)
+
+
+.tabFontActive
+    @include fonts.fontDesktopH5Bold
+
+.tabFontInActive
+    @include fonts.fontDesktopH5Regular
+
+@media (max-width: $small)
+    .tabFontActive
+        @include fonts.fontMobileH5Bold
+    .tabFontInActive
+        @include fonts.fontMobileH5Regular
+    .tabsTagFont
+        @include fonts.fontMobileBodyBold
+
+//counter
+
+.CounterDiv
+    display: flex
+    width: 4rem
+    padding: 0.1rem 0.2rem
+    justify-content: space-between
+    align-items: center
+    border-radius: 2.5rem
+    border: 0.5px solid var(--neutral-7, #8CA397)
+
+
+
+//selector
+.selectorDiv
+    display: flex
+    width: 100%
+    flex-direction: row
+    align-items: center
+    // gap: 1rem
+    padding: 0rem 0rem
+
+.selectorLeftPane
+    display: flex
+    width: 43.05%
+    height: max-content
+    padding: 2.5rem var(--Spacing-32, 2rem)
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-24, 1.5rem)
+    flex-shrink: 0
+    align-self: stretch
+
+    border-radius: 2.5rem 0rem 0rem 2.5rem
+    border-top: 4px solid var(--gradient-surface, #009241)
+    background: rgba(255, 255, 255, 0.6)
+    backdrop-filter: blur(3.5px)
+
+
+.selectorRightPane
+    display: flex
+    width: 43.05%
+    // height: 100%
+    padding: 2.5rem var(--Spacing-32, 2rem)
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: var(--Spacing-32, 2rem)
+    flex-shrink: 0
+
+    border-radius: 0rem 2.5rem 2.5rem 0rem
+    border-top: 4px solid var(--gradient-surface, #009241)
+    background: rgba(255, 255, 255, 0.8)
+    backdrop-filter: blur(3px)
+
+.convertToRow
+    display: flex
+    flex-direction: row
+    align-items: center
+    
+.manageDropDown
+    justify-content: flex-start
+    gap: 1rem
+    width: 100%
+
+.dropDown
+    display: flex
+    padding: 0.6rem 0.9rem
+    align-items: flex-start
+
+    border-radius: 1.25rem
+    border: 1.2px solid var(--neutral-5, #D9E0DC)
+    background: var(--neutral-1, #FFF)
+
+.textType
+    @include fonts.fontDesktopH5Regular
+    color: rgba(0, 0, 0, 0.85)
+
+.manageFeatures
+    justify-content: space-between
+    width: 100%
+
+.divFeatures
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+.textFeatures
+    @include fonts.fontDesktopH5Medium
+    color: rgba(0, 0, 0, 0.85)
+.textFeaturesDiv
+    gap: 0.5rem
+    display: flex
+    flex-direction: row
+    align-items: center
+
+.switchColor
+    background: var(--primary-6, #009241) !important
+
+.reciptDiv
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+    width: 100%
+
+.manageRecipt
+    justify-content: space-between
+    width: 100%
+
+.titleRecipt
+    @include fonts.fontDesktopH4Bold
+    color: rgba(0, 0, 0, 0.85)
+
+.textRecipt
+    @include fonts.fontDesktopH5Regular
+    color: rgba(0, 0, 0, 0.45)
+
+.totalAmountDiv
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: var(--Spacing-24, 1.5rem)
+
+    align-self: stretch
+
+.manageTotalAmount
+    justify-content: space-between
+    width: 100%
+
+.divider
+    width: 100%
+    height: 0.5px
+    margin: 0rem 0rem
+    background:  #00000044
+
+.spacerSelector1
+    padding-top: 3.95rem
+
+@media (max-width: 900px)
+    .selectorDiv
+        justify-content: center
+        flex-wrap: wrap
+
+    .selectorLeftPane
+        width: 100%
+        border-radius: 2.5rem 2.5rem 2.5rem 2.5rem
+    
+    .selectorRightPane
+        width: 100%
+        border-radius: 2.5rem 2.5rem 2.5rem 2.5rem
+
+@media (max-width: $small) 
+    .selectorLeftPane
+        width: 90%
+        border-radius: 2.5rem 2.5rem 2.5rem 2.5rem
+
+    .textType
+        @include fonts.fontH4Regular
+
+    .textFeatures
+        @include fonts.fontH4Regular
+
+    .textRecipt
+        @include fonts.fontH4Regular
+
+    .titleRecipt
+        @include fonts.fontH3Bold
+        
+        
+        
+
+
+    
+
+
+
+
+//mainSection
+.customizePaymentSection
+    width: 100%
+    justify-content: center
+    align-items: center
+    display: flex
+    flex-direction: column
+    background: colors.$radialGradient
+
+.textFrame
+    display: flex
+    width: 86.11%
+    padding: 0.5rem 0rem
+
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+
+    
+
+.titleText
+    @include fonts.fontDesktopH2Bold
+    text-align: center
+    color: colors.$fontColor_primary
+
+.subTitleText
+    @include fonts.fontDesktopH5Regular
+    text-align: center
+    color: rgba(0, 0, 0, 0.85)
+
+
+.underLine
+    position: relative
+    ::before
+        content: ""
+        position: absolute
+        width: 10.5rem
+        height: 0.5rem
+        flex-shrink: 0
+        border-radius: 1.25rem
+        background: colors.$linearGradientLine
+        top: 90%
+
+
+
+.tabsFrame
+    display: flex
+    width: 100%
+    justify-content: center
+
+.selectorsFrame
+    width: 86.11%
+    display: flex
+
+.bgDiv
+    position: relative
+    overflow: hidden
+    display: flex 
+    width: 100%
+    justify-content: center 
+
+.bgDiv2
+    position: relative
+    
+
+
+.lowerCircle
+    position: absolute
+    
+    width: 19.75rem
+    height: 19.75rem
+    flex-shrink: 0
+
+    fill: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(16, 176, 87, 0.48) 24.6%, rgba(59, 255, 146, 0.62) 86.5%)
+
+    border-radius: 19.75rem
+    opacity: 0.8
+    background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+    margin-left: -9%
+    margin-top: 15rem
+    z-index: 0
+
+
+.upperCircle
+    
+    position: absolute
+    
+    width: 12.75rem
+    height: 12.75rem
+    flex-shrink: 0
+
+    fill: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(16, 176, 87, 0.48) 24.6%, rgba(59, 255, 146, 0.62) 86.5%)
+
+    border-radius: 19.75rem
+    opacity: 0.8
+    background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+    transform: translate( 0% , 50%)
+    z-index: 0
+    margin-left: 20rem
+    margin-top: -10rem
+
+.forBG
+    height:0px
+    width:1px
+    z-index: 0
+    position: relative
+    // overflow: hidden   
+    ::after
+        content: ""
+        position: absolute
+        
+        width: 12.75rem
+        height: 12.75rem
+        flex-shrink: 0
+
+        fill: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(16, 176, 87, 0.48) 24.6%, rgba(59, 255, 146, 0.62) 86.5%)
+
+        border-radius: 19.75rem
+        opacity: 0.8
+        background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+        margin-left: 30rem
+        margin-top: -5rem
+        z-index: 1
+
+
+
+
+
+.spacer1
+    padding-top: 2.5rem
+
+.spacer2
+    padding-top: 2.5rem
+
+.mobileView
+    display: none
+
+.desktopView
+    display: flex
+
+@media (max-width: 372px )
+    .underLine
+        ::before
+            // width: rem
+            margin-left: -9.5rem
+            top: 100%
+
+
+
+@media (max-width: $small)
+    .mobileView
+        display: flex
+
+    .desktopView
+        display: none
+
+    .titleText
+        @include fonts.fontMobileH2Bold
+    
+    .subTitleText
+        @include fonts.fontMobileH5Regular
+
+    .underLine
+        ::before
+            width: 7.5rem
+
+    
+
+
