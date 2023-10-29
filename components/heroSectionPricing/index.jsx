@@ -91,6 +91,8 @@ const HeroSectionPricing = () => {
                 </div>
 
             </div>
+
+            <div className = {cn(style.spacer5)}/>
         </>
     )
 }

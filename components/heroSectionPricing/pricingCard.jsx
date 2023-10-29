@@ -50,6 +50,8 @@ const PricingCard = ({ title, subtitle, price, features , type }) => {
 
                 </div>
 
+                <div className = {cn(style.spacerCard1)}/>
+
 
             </div>
 

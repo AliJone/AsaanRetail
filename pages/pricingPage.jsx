@@ -12,7 +12,7 @@ const page = () => {
                     overflowX: "hidden",
                     
                 }}>
-                    {/* <HeroSectionPricing/> */}
+                    <HeroSectionPricing/>
                     <SpecificRequirementPayment/>
                 </div>
                 
