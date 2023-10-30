@@ -1,10 +1,4 @@
 import { Button, Layout, Menu } from 'antd';
-import {
-  DownOutlined,
-  HomeOutlined,
-  SettingOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
 
 import CustomFilledButton from '../buttons/filledButton';
 import CustomNavButtons from '../buttons/navButtons';
@@ -18,6 +12,7 @@ import ProductsDropDown from '../dropDowns/products';
 import React from 'react';
 import ResourcesDropDown from '../dropDowns/resources';
 import SolutionsDropDown from '../dropDowns/solutions';
+import {UserOutlined} from '@ant-design/icons';
 import classNames from 'classnames';
 import cn from 'classnames';
 import style from './style.module.sass';

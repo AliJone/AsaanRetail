@@ -11,6 +11,7 @@ import FeaturesSection from '../components/featuresSection';
 import FeaturesV2 from '../components/featuresV2';
 import Footer from '../components/Footer/Footer';
 import HeroSection from '../components/heroSection';
+import HeroSectionLanding from '../components/heroSectionLandpage';
 import IntegrationSection from '../components/integrationSection';
 import NavigationBar from "../components/navbar";
 import Tabs from '../components/TabsRetail/TabsRetail';
@@ -31,9 +32,11 @@ const page = () => {
                     
                 }}>
                     <NavigationBar/>
-                    <HeroSection />
+                    <HeroSectionLanding/>
+                    {/* <HeroSection /> */}
                     <Carousel imagesarray={CarouselImages} />
                     <IntegrationSection />
+                    
                     {/* <FeaturesSection /> */}
                     {/* <CTASection /> */}
                     {/* <VideoSection /> */}
