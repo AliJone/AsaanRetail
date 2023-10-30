@@ -107,7 +107,35 @@ function TabsRetail() {
             <div className={styles.SubTitle}>Explore how Asaan Retail works for every industries</div>
           </div>
           <div className={styles.Body}>
-            <Tabs defaultActiveKey="1" centered>
+            <Tabs className={styles.DekstopView} defaultActiveKey="1"  centered>
+              {tabsData.map((tab, index) => (
+                <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
+                  <div className={styles.TabPane}>
+                    <div className={styles.LeftPane}>
+                      <div className={styles.Title}>{tab.content.title}</div>
+                      <div className={styles.SubTitle}>{tab.content.subTitle}</div>
+                      <div className={styles.Offering}>
+                        <div className={styles.OfferingHeading}>{tab.content.offeringHead}</div>
+                        <div className={styles.OfferingData}>
+                          {tab.content.offerings.map(offering => (
+                            <Offering svgPath={offering.svgPath} name={offering.name} key={offering.name} />
+                          ))}
+                        </div>
+                      </div>
+                      <div className={styles.LearnMore}>
+                        <Link href={tab.content.learnMoreLink}>
+                          Learn More <span className={styles.Arrow}>→</span>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className={styles.RightPane}>
+                      <Image src={tab.content.image} />
+                    </div>
+                  </div>
+                </Tabs.TabPane>
+              ))}
+            </Tabs>
+            <Tabs className={styles.MobileView} defaultActiveKey="1"  >
               {tabsData.map((tab, index) => (
                 <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
                   <div className={styles.TabPane}>

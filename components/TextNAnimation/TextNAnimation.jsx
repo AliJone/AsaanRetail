@@ -14,6 +14,7 @@ function TextNAnimation() {
   return (
     <>
       <div className={styles.BG}>
+      <div className={styles.BGBefore}></div>
         <div className={styles.Container}>
           <div className={styles.Left}>
             <div className={styles.Text}>
@@ -24,6 +25,7 @@ function TextNAnimation() {
           </div>
           <div className={styles.Right}>Animation PlaceHolder</div>
         </div>
+      <div className={styles.BGAfter}></div>
       </div>
     </>
   );
