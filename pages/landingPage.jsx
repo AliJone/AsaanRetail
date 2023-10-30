@@ -43,9 +43,10 @@ const page = () => {
                     
 
                     <FeaturesV2/>
+                    <TextNAnimation/>
                     
                     <VideoSectionNew/>
-                    <TextNAnimation/>
+                    {/* <TextNAnimation/> */}
                     <Tabs/>
                     {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
                     <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} /> */}
