@@ -23,7 +23,7 @@ function Footer() {
         <FooterLinks />
       </div>
       <div className={styles.Divider}>
-        <Divider style={{ backgroundColor: "#FFF" }} />
+        <Divider style={{ backgroundImage:"linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%)", height:"2px" }} />
       </div>
       <div className={styles.Extra}>
         <div className={cn(styles.Copyright, styles.fontDesktopBodyMedium)}>
