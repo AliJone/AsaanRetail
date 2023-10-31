@@ -6,8 +6,27 @@ import Image from 'next/image';
 import QuestionMark from './assests/QuestionCircle.svg'
 import cn from 'classnames';
 import style from './styleSheet.module.sass';
+import { useState } from 'react';
 
 const Selector = ({handletype,type}) =>{
+
+    const [price,setPrice] = useState('20,000')
+
+    const handleChange =(type) =>{
+        handletype(type);
+        if(type === 'Monthly')
+        {
+            setPrice('20,000')
+        }
+        if(type === 'Yearly')
+        {
+            setPrice('120,000')
+        }
+        if(type === 'Quaterly')
+        {
+            setPrice('60,000')
+        }
+    }
     
     return(
         <>
@@ -21,7 +40,7 @@ const Selector = ({handletype,type}) =>{
                         bordered = {false}
                         defaultValue= {type}
                         style={{ width: "50%" }}
-                        onChange={handletype}
+                        onChange={handleChange}
                         options={[
                             { value: 'Monthly', label: 'Monthly' },
                             { value: 'Quaterly', label: 'Quaterly' },
@@ -33,7 +52,7 @@ const Selector = ({handletype,type}) =>{
                     <div className={cn(style.divFeatures)}>
                         <div className = {cn(style.convertToRow,style.manageFeatures)}>
                             <div className={cn(style.textFeaturesDiv)}>
-                                <span className = {cn(style.textFeatures)}>Orders/Month</span>
+                                <span className = {cn(style.textFeatures)}>Orders/{type}</span>
                                 <Image src = {QuestionMark} alt={'QuestionMark'}/>
                             </div>
                             <Counter/>
@@ -89,12 +108,12 @@ const Selector = ({handletype,type}) =>{
                     <div className={cn(style.reciptDiv)}>
                         <div className={cn(style.manageRecipt , style.convertToRow)}>
                             <span className={cn(style.titleRecipt)}>Total</span> 
-                            <span className={cn(style.titleRecipt)}>Monthly</span>
+                            <span className={cn(style.titleRecipt)}>{type}</span>
                         </div>
 
                         <div className={cn(style.manageRecipt , style.convertToRow)}>
-                            <span className={cn(style.textRecipt)}>Order/Monthly</span> 
-                            <span className={cn(style.textRecipt)}>20,000</span>
+                            <span className={cn(style.textRecipt)}>Order/{type}</span> 
+                            <span className={cn(style.textRecipt)}>{price}</span>
                         </div>
 
                         <div className={cn(style.manageRecipt , style.convertToRow)}>

@@ -3,7 +3,7 @@ import style from './styleSheet.module.sass';
 
 const Tag = (props) => {
     return(
-        <span className={cn(style.tagClass,style.tagFont)}>
+        <span className={props.alternative != undefined? cn(style.tagClass1,style.tagFont) :cn(style.tagClass,style.tagFont)}>
             {props.text}
         </span>
         

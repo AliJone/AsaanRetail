@@ -12,9 +12,46 @@ $medium : breakpoints.$medium
     display: flex
     justify-content: center
     align-items: center
-    padding-top:4.1rem 
+    padding-top:2rem 
     z-index: 1
     position: relative
+
+.tagDiv
+    display: flex
+    justify-content: center
+    align-items: center
+
+.upperContainer
+    display: flex
+    width: 86.11%
+    margin: auto
+    padding: 0.5rem 0rem
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+
+.underLine
+    position: relative
+    ::before
+        content: ""
+        position: absolute
+        width: 20.5rem
+        height: 0.5rem
+        flex-shrink: 0
+        border-radius: 1.25rem
+        background: colors.$linearGradientLine
+        top: 90%
+
+
+.iconDiv
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.buttonTextClass
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_secondary
 
 .divClass
     width: 100%
@@ -34,6 +71,13 @@ $medium : breakpoints.$medium
     color: colors.$fontColor_secondary
     text-align: center
 
+.subTitleTextContainer
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    width: 57%
+
 .subTitleText
     margin-top: .9rem
     @include fonts.fontDesktopH5Regular
@@ -41,28 +85,55 @@ $medium : breakpoints.$medium
     text-align: center
 
 
-.divGradientLineClass
+.imageClass
+    width: 86.11%
+    height: auto
+    margin: auto
+
+.imageContainer
+    width: 100%
     display: flex
-    justify-content: flex-end
-    width: 12.875rem
-    transform: translate(18rem,-0.25rem)
+    justify-content: center
+    align-items: center
 
 .spacer
     padding-top:3.75rem
     width:1%
 
 
-@media (max-width: 800px)
-    .divGradientLineClass
-        transform: translate(10rem,-0.25rem)
+
+
+@media (max-width: 1187px)
+    .underLine
+        ::before
+            margin-left: -47.5rem
+            top: 95%
+@media (max-width: 1005px)
+    .underLine
+        ::before
+            margin-left: -43.7rem
+            top: 95%
+
+@media (max-width: 869px)
+    .underLine
+        ::before
+            margin-left: -41.7rem
+            top: 95%
+
+@media (max-width: 810px)
+    .underLine
+        ::before
+            margin-left: 0rem
+            top: 95%
+
+    
 
 @media (max-width: $small) 
     .Body
         padding-top: 4.2rem
-    .divClass
-        transform: translate(0rem, -0.625rem)
+    
     .titleText
-        @include fonts.fontMobileH1Bold
+        @include fonts.fontMobileH2Bold
         color: colors.$fontColor_secondary
         text-align: center
     .subTitleText
@@ -70,14 +141,49 @@ $medium : breakpoints.$medium
         @include fonts.fontMobileH5Regular
         color: colors.$fontColor_secondary
         text-align: center
-    .divGradientLineClass
+
+    .subTitleTextContainer
         display: flex
-        justify-content: flex-start
-        width: 10.5rem
-        transform: translate(-3.5rem,-4.375rem)
+        justify-content: center
+        align-items: center
+        text-align: center
+        width: 100%
+
+    .upperContainer
+        width:86.3%
+
+    .underLine
+        ::before
+            margin-left: 0rem
+            width:11.3rem
+            top: 95%
+    
     .spacer
         padding-top: 3.4375rem
         width: 1%
 
+@media (max-width: 648px)
+    .underLine
+        ::before
+            margin-left: -25.75rem
+            top: 95%
 
+@media (max-width: 550px)
+    .underLine
+        ::before
+            margin-left: -23.75rem
+            top: 95%
+
+
+@media (max-width: 477px)
+    .underLine
+        ::before
+            margin-left: -22.75rem
+            top: 95%
+
+@media (max-width: 445px)
+    .underLine
+        ::before
+            margin-left: 0rem
+            top: 95%
     
