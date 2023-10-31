@@ -13,7 +13,6 @@ $medium: 991px
     align-self: stretch
     /* style  */
     border-radius: var(--tallyCount, 0rem)
-    background-color: rgba(25, 25, 25, 1)
 
 .InfoSection
     // Layout 
@@ -40,7 +39,10 @@ $medium: 991px
     display: flex
     align-items: center
     gap: 0.25rem
-    color: var(--neutral-5, #D9E0DC)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
     cursor: pointer
 
 .SubTitleBlock
@@ -50,7 +52,7 @@ $medium: 991px
     gap: 0.625rem
 
 .SubTitle
-    color: var(--neutral-7, #8CA397)
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
     display: flex
     padding: 4px 0px
     align-items: center
@@ -77,7 +79,7 @@ $medium: 991px
     gap: 0.625rem
     flex: 1 0 0
     align-self: stretch
-    color: var(--character-primary-inverse, #FFF)
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
     font-family: Roboto
     font-size: 1rem
     font-style: normal
@@ -177,28 +179,28 @@ $medium: 991px
 // VERY IMPORTANT FOR GIMMIKS AROUND DIVS
 
 // .card {
-//     width: 500px;  /* adjust as needed */
-//     height: 200px;  /* adjust as needed */
-//     background-color: green;
-//     position: relative;
+//     width: 500px  /* adjust as needed */
+//     height: 200px  /* adjust as needed */
+//     background-color: green
+//     position: relative
 //     /* ... any other styles ... */
 // }
 
 // .card::before, .card::after {
-//     content: '';
-//     width: 100px;  /* adjust as needed */
-//     height: 100px;  /* adjust as needed */
-//     background-color: white;  /* adjust to the background color of your container or page */
-//     border-radius: 50%;
-//     position: absolute;
+//     content: ''
+//     width: 100px  /* adjust as needed */
+//     height: 100px  /* adjust as needed */
+//     background-color: white  /* adjust to the background color of your container or page */
+//     border-radius: 50%
+//     position: absolute
 // }
 
 // .card::before {
-//     top: -50px;  /* half the height */
-//     left: -50px;  /* half the width */
+//     top: -50px  /* half the height */
+//     left: -50px  /* half the width */
 // }
 
 // .card::after {
-//     bottom: -50px;  /* half the height */
-//     right: -50px;  /* half the width */
+//     bottom: -50px  /* half the height */
+//     right: -50px  /* half the width */
 // }
