@@ -4,16 +4,16 @@ import { App } from 'antd';
 import CTA from '../components/CTA/CTA';
 import CTANew from '../components/CTA new/CTANew';
 import CTASection from '../components/ctaSection';
-import Carousel from '../components/carousel';
+import Carousel from '../components/Carousel';
 import Enterprise from '../components/Enterprise/Enterprise';
 import FAQ from '../components/FAQ/FAQ';
 import FeaturesSection from '../components/featuresSection';
-import FeaturesV2 from '../components/featuresV2';
+import FeaturesV2 from '../components/FeaturesV2';
 import Footer from '../components/Footer/Footer';
-import HeroSection from '../components/heroSection';
-import HeroSectionLanding from '../components/heroSectionLandpage';
-import IntegrationSection from '../components/integrationSection';
-import NavigationBar from "../components/navbar";
+import HeroSection from '../components/HeroSection';
+import HeroSectionLanding from '../components/HeroSectionLandpage';
+import IntegrationSection from '../components/IntegrationSection';
+import NavigationBar from "../components/Navbar";
 import Tabs from '../components/TabsRetail/TabsRetail';
 import Testimonials from '../components/Testimonials/Testimonials';
 import TextNAnimation from '../components/TextNAnimation/TextNAnimation';
@@ -21,7 +21,7 @@ import ThroughLense from '../components/ThroughLense/ThroughLense';
 import UseCaseSection1 from '../components/usecaseSection1';
 import UseCaseSection2 from '../components/usecaseSection2';
 import VideoSection from '../components/videoSection';
-import VideoSectionNew from '../components/videoSectionNew';
+import VideoSectionNew from '../components/VideoSectionNew';
 
 const page = () => {
     return (

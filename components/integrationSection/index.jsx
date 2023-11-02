@@ -2,12 +2,12 @@ import {Col, Row} from 'antd';
 
 import{ArrowRightOutlined} from '@ant-design/icons';
 import { Button } from "antd";
-import GradientLine from '../gradientLine/index.jsx';
+import GradientLine from '../GradientLine/index.jsx';
 import Image from 'next/image.js';
 import IntegrationImage from '../../images/svgs/integrationSection.svg';
 import  {IntegrationText} from '../../strings.jsx';
 import React from 'react';
-import Tag from "../tag";
+import Tag from "../Tag/index.jsx";
 import cn from 'classnames';
 import style from './style.module.sass';
 

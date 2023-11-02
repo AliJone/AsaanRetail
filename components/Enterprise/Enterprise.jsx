@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 
-import styles from './styles.module.sass';
-import GradientLine from '../gradientLine';
 import { Button } from 'antd';
 import { CalendarOutlined } from '@ant-design/icons';
-
+import GradientLine from '../GradientLine';
+import Image from 'next/image';
 import cn from 'classnames';
-
+import styles from './styles.module.sass';
 
 function Enterprise() {
 

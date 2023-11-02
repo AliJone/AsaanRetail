@@ -3,6 +3,10 @@
   cursor: default;
 } 
 
+.ant-input-number-disabled .ant-input-number-input{
+  text-align: center;
+}
+
 .ant-switch.ant-switch-checked:not(.ant-switch-disabled) {
   background: var(--primary-6, #009241)
 }

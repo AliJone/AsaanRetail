@@ -3,7 +3,7 @@ import { Col, Row } from "antd";
 import CustomFilledButton from "../../buttons/filledButton";
 import GenericDropDown from "../genericDropDown";
 import Image from "next/image"
-import ImageWithBGGradient from "../../imageWithBGGradient";
+import ImageWithBGGradient from "../../ImageWithBGGradient";
 import IntegrationTile from "./integrationTile";
 import SalesOrders from "../../../images/svgs/salesOrders.svg";
 import Tiles from "./tiles";

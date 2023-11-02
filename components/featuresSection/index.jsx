@@ -4,7 +4,7 @@ import FeatureList from './featuresList';
 import Features from '../../images/svgs/features.svg';
 import FeaturesMobile from '../../images/svgs/FeaturesMobile.svg';
 import { FeaturesText } from '../../strings';
-import GradientLine from '../gradientLine';
+import GradientLine from '../GradientLine';
 import Image from 'next/image';
 import React from 'react';
 import cn from 'classnames';

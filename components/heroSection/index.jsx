@@ -1,15 +1,15 @@
 import {Col, Row} from 'antd';
 
 import CustomFilledButton from '../buttons/filledButton/index.jsx';
-import Flags from './flags';
-import GradientLine from '../gradientLine';
+import Flags from './flags.jsx';
+import GradientLine from '../GradientLine/index.jsx';
 import Image from 'next/image';
 import InputField from '../InputField/index.jsx';
 import IntegrationPage from "../../images/svgs/features.svg"
 import LandingPage from '../../images/svgs/LandingPage.svg'
 import LandingPageMobile from '../../images/svgs/LandingPageMobile.svg'
-import { LandingPageText } from '../../strings';
-import TextDiv from './textdiv';
+import { LandingPageText } from '../../strings.jsx';
+import TextDiv from './textdiv.jsx';
 import cn from 'classnames';
 import style from './style.module.sass';
 

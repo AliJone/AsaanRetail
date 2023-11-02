@@ -1,7 +1,7 @@
 import { App } from "antd"
-import HeroSectionPricing from "../components/heroSectionPricing";
-import PriceTable from '../components/priceTablePricing/PriceTable';
-import SpecificRequirementPayment from "../components/specificReqPayment";
+import HeroSectionPricing from "../components/HeroSectionPricing";
+import PriceTable from '../components/PriceTablePricing/PriceTable';
+import SpecificRequirementPayment from "../components/SpecificReqPayment";
 
 const page = () => {
 

@@ -1,5 +1,5 @@
-import CustomFilledButton from "../buttons/filledButton";
-import Flags from "./flags";
+import CustomFilledButton from "../buttons/filledButton/index.jsx";
+import Flags from "./flags.jsx";
 import Image from "next/image";
 import InputField from '../InputField/index.jsx';
 import cn from "classnames";
