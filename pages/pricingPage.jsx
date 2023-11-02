@@ -1,7 +1,7 @@
 import { App } from "antd"
 import HeroSectionPricing from "../components/heroSectionPricing";
+import PriceTable from '../components/priceTablePricing/PriceTable';
 import SpecificRequirementPayment from "../components/specificReqPayment";
-
 
 const page = () => {
 
@@ -15,6 +15,7 @@ const page = () => {
                 }}>
                     <HeroSectionPricing/>
                     <SpecificRequirementPayment/>
+                    <PriceTable/>
                 </div>
                 
             </App>

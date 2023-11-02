@@ -1,0 +1,341 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+$small: breakpoints.$small
+$medium: breakpoints.$medium
+
+// main section
+
+.heroSection
+    width: 100%
+    background: colors.$radialGradient
+    display: flex
+    flex-direction: column
+    
+.divTitleContainer
+    width: 86.11%
+    margin: auto
+    text-align: center
+
+.titleText
+    @include fonts.fontDesktopH1Bold
+    text-align: center
+
+.underLine
+    position: relative
+    ::before
+        content: ""
+        position: absolute
+        width: 8.45rem
+        height: 0.5rem
+        flex-shrink: 0
+        border-radius: 1.25rem
+        background: colors.$linearGradientLine
+        top: 90%
+
+.subTitleContainer
+    width: 86.11%
+    text-align: center
+    margin: auto
+
+.subTitleText
+    @include fonts.fontDesktopH4Regular
+    text-align: center
+
+@media (max-width: $small)
+    .mobileView
+        display: flex
+
+    .desktopView
+        display: none
+
+    .heroSection
+        justify-content: center
+
+    .titleText
+        @include fonts.fontMobileH1Bold
+    .subTitleText
+        @include fonts.fontMobileH4Regular
+
+    .subTitleContainer
+        width: 90%
+
+    .divTitleContainer
+        width: 90%
+
+    .underLine
+        ::before
+            left: 0rem
+            width: 5.5rem
+
+    .spacer2
+        padding-top: 0rem
+
+    .spacer3
+        padding-top: 1.5rem
+
+    .spacer4
+        padding-top: 4.1rem
+
+@media (max-width: 597px)
+    .underLine
+        ::before
+            left: 0rem
+            width: 5.5rem
+
+// tiers container
+
+.divTiersContainer
+    width: 86.11%
+    height: 11.5rem
+    margin: auto
+    display: flex
+    align-items: flex-start
+    border-radius: 1.25rem
+    background: #191919
+
+.tierContainer
+    width: 25.4%
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 0.5rem
+    flex: 1 0 0
+    align-self: stretch
+
+.tierContainerType
+    @include fonts.fontDesktopH4Bold
+    width: 94.92%
+    text-align: center
+    color: var(--character-primary-inverse, #FFF)
+
+.tierContainerPrice1
+    width: 94.92%
+    text-align: center
+    color: var(--character-primary-inverse, #FFF)
+    @include fonts.fontDesktopH4Bold
+
+.tierContainerPrice2
+    width: 94.92%
+    text-align: center
+    color: var(--character-primary-inverse, #FFF)
+    @include fonts.fontDesktopH5Regular
+
+.tierContainerButton
+    width: 94.92%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.tierContainerCTA
+    display: flex
+    width: 59.86%
+    height: 3.5rem
+    padding: 0.5rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+    color: var(--character-primary-inverse, #FFF)
+
+    border-radius: 0.625rem
+    border: 1px solid var(--gradient-surface, #009241)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+
+    /* Website Shadow - Green */
+    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(1.0355486869812012px)
+
+    @include fonts.fontDesktopH5Bold
+
+.tierContainerFiller
+    display: flex
+    width: 22.3%
+    padding: 1.5rem 0.5rem
+    align-items: center
+    gap: 0.16738rem
+    flex-shrink: 0
+    align-self: stretch
+
+.desktopView
+    display: none
+
+@media (max-width: $medium)
+
+    .tierContainerType
+        @include fonts.fontDesktopH5Bold
+
+    .tierContainerPrice1
+        @include fonts.fontDesktopH5Bold
+
+    .tierContainerPrice2
+        @include fonts.fontDesktopH5Regular
+        font-size: 1.1125rem
+
+    .tierContainerCTA
+        width: 79.86%
+        @include fonts.fontDesktopH6Bold
+
+@media (max-width: $small)
+    .mobileView
+        display: none
+
+    .desktopView
+        display: flex
+
+    .divTiersContainer
+        height: 7.4375rem
+    
+    .tierContainer
+        // width: 25.4%
+        // height: auto
+        // display: flex
+        flex-direction: row
+        // justify-content: center
+        // align-items: center
+        gap: 0rem
+    
+    .tierContainerType
+        @include fonts.fontMobileH5Regular
+        font-size: 1.2875rem
+        text-align: left
+
+    .tierContainerPrice1
+        width: 94.92%
+        color: var(--character-primary-inverse, #FFF)
+        @include fonts.fontMobileH2Bold
+
+    .tierContainerPrice2
+        width: 94.92%
+        text-align: center
+        color: var(--character-primary-inverse, #FFF)
+        @include fonts.fontMobileH2Bold
+        font-size: 1.6625rem
+
+    .tierContainerButton
+        width: 94.92%
+
+    .tierContainerCTA
+        display: flex
+        width: 90%
+        height: 3.5rem
+        padding: 0.5rem 0.9375rem
+        justify-content: center
+        align-items: center
+        gap: 0.625rem
+
+    .innerTierContainer
+        width: 87.76%
+        height: 100%
+        display: flex
+        align-items: center
+        gap: 0.5rem
+
+// table
+
+.tableContainer
+    width: 86.11%
+    margin: auto
+
+.table
+    width: 100%
+    // height: 87rem
+
+.row
+    width: 100%
+    display: flex
+    padding: 1.7rem 0rem
+    align-items: flex-start
+    align-self: stretch
+    border-bottom: 1px solid black
+    // background-color: lightblue
+
+.rowTitle1
+    @include fonts.fontDesktopH5Medium
+    // background-color: red
+    width: 24.76%
+    padding: 0rem 1rem
+    align-items: center
+    gap: 0.16738rem
+    flex: 1 0 0
+    line-height: 100%
+
+.rowElement1
+    @include fonts.fontDesktopH5Regular
+
+    width: 25.08%
+    padding: 0rem 0.8rem
+    display: flex
+    justify-content: center
+    // align-items: center
+    gap: 0.16738rem
+    flex: 1 0 0
+    // background-color: green
+    line-height: 100%
+
+.blackRowContainer
+    width: 100%
+    height: 1rem
+    display: flex
+    padding: 1.7rem 0rem
+    // border-bottom: 1px solid black
+    // background-color: red
+    align-items: center
+
+.blackRowCategory
+    @include fonts.fontDesktopH4Bold
+    font-size: 1.5rem
+
+    width: 100%
+    color: var(--character-primary-inverse, #FFF)
+    border-radius: 1.25rem
+    background: #191919
+    padding: 1rem 1rem
+    display: flex
+    align-items: center
+    // height: 3rem
+
+.rowTitle2
+    @include fonts.fontDesktopH5Medium
+    width: 24.758%
+    padding: 0rem 1rem
+    align-items: center
+    gap: 0.16738rem
+    flex: 1 0 0
+    line-height: 110%
+    // background-color: blue
+
+.rowElement2
+    @include fonts.fontDesktopH5Regular
+
+    width: 14.71%
+    // padding: 0rem 0.8rem
+    display: flex
+    justify-content: center
+    // align-items: center
+    gap: 0.16738rem
+    // flex: 1 0 0
+    line-height: 100%
+    align-self: stretch
+    // background-color: green
+
+// util
+
+.spacer1
+    padding-top: 3rem
+
+.spacer2
+    padding-top: 0.3rem
+
+.spacer3
+    padding-top:3rem
+
+.spacer4
+    padding-top: 2.3rem
+
+    .underLine
+        ::before
+            left: -10.5rem
+            top: 95%

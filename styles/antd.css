@@ -2,3 +2,11 @@
   text-align: center;
   cursor: default;
 } 
+
+.ant-switch.ant-switch-checked:not(.ant-switch-disabled) {
+  background: var(--primary-6, #009241)
+}
+
+.ant-switch.ant-switch-checked:hover :not(.ant-switch-disabled) {
+  background: var(--primary-6, #009241)
+}
