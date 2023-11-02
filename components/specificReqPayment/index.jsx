@@ -26,8 +26,9 @@ const CustomizePayment = () => {
 
     return (
         <div className={cn(style.customizePaymentSection)}>
+            <div className ={cn(style.spacer1)}/>
             <div className={cn(style.textFrame)}>
-                <Tag text="Cutomize"/>
+                <Tag text="Customize"/>
 
                 <span className={cn(style.titleText)}>
                     {Title}
