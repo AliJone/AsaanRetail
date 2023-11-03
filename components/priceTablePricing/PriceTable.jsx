@@ -1,9 +1,11 @@
 import { Button } from "antd";
-import Check from './assets/check.svg'
+import Check from "./assets/check.svg";
 import Image from "next/image";
 import QuestionCircleimg from "./assets/QuestionCircle.svg";
 import cn from "classnames";
 import styles from "./styles.module.sass";
+import { useState } from "react";
+import Tag from "../tag";
 
 const tiers = [
   { type: "Standard", price: "Rs 12,000" },
@@ -152,12 +154,25 @@ const features = [
   },
 ];
 
+// const [tabNumber, setTabNumber] = useState(1);
+
+// const handleTabClick = (tabNumber) => {
+//   setTabNumber(tabNumber);
+// };
+
 function QuestionCircle() {
-  return <Image src={QuestionCircleimg}  alt="abc" />;
+  return (
+    <Image
+      className={styles.tableMobileView}
+      style={{ marginLeft: "0.3rem" }}
+      src={QuestionCircleimg}
+      alt="❔"
+    />
+  );
 }
 
 function Checkmark() {
-  return <Image src={Check} alt="abc" />;
+  return <Image src={Check} alt="✔️" className={styles.checkMark} />;
 }
 
 function FeatureComparisonTable() {
@@ -170,9 +185,25 @@ function FeatureComparisonTable() {
               {feature.name}
               <QuestionCircle />
             </td>
-            <td className={styles.rowElement1}>{feature.column1}</td>
+            <td
+              className={cn(
+                styles.rowElement1,
+                styles.tabletView,
+                styles.tableMobileView
+              )}
+            >
+              {feature.column1}
+            </td>
             <td className={styles.rowElement1}>{feature.column2}</td>
-            <td className={styles.rowElement1}>{feature.column3}</td>
+            <td
+              className={cn(
+                styles.rowElement1,
+                styles.tabletView,
+                styles.tableMobileView
+              )}
+            >
+              {feature.column3}
+            </td>
           </tr>
         ))}
 
@@ -182,12 +213,29 @@ function FeatureComparisonTable() {
 
         {features.slice(4, 8).map((feature, index) => (
           <tr key={index} className={styles.row}>
-            <td className={styles.rowTitle2}>{feature.name}</td>
-            <td className={styles.rowElement2}>{feature.column1}</td>
+            <td className={styles.rowTitle2}>
+              {feature.name}
+              <QuestionCircle />
+            </td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column1}
+            </td>
             <td className={styles.rowElement2}>{feature.column2}</td>
-            <td className={styles.rowElement2}>{feature.column3}</td>
-            <td className={styles.rowElement2}>{feature.column4}</td>
-            <td className={styles.rowElement2}>{feature.column5}</td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column3}
+            </td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column4}
+            </td>
+            <td
+              className={cn(
+                styles.rowElement2,
+                styles.tabletView,
+                styles.tableMobileView
+              )}
+            >
+              {feature.column5}
+            </td>
           </tr>
         ))}
 
@@ -197,12 +245,29 @@ function FeatureComparisonTable() {
 
         {features.slice(9, 14).map((feature, index) => (
           <tr key={index} className={styles.row}>
-            <td className={styles.rowTitle2}>{feature.name}</td>
-            <td className={styles.rowElement2}>{feature.column1}</td>
+            <td className={styles.rowTitle2}>
+              {feature.name}
+              <QuestionCircle />
+            </td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column1}
+            </td>
             <td className={styles.rowElement2}>{feature.column2}</td>
-            <td className={styles.rowElement2}>{feature.column3}</td>
-            <td className={styles.rowElement2}>{feature.column4}</td>
-            <td className={styles.rowElement2}>{feature.column5}</td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column3}
+            </td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column4}
+            </td>
+            <td
+              className={cn(
+                styles.rowElement2,
+                styles.tabletView,
+                styles.tableMobileView
+              )}
+            >
+              {feature.column5}
+            </td>
           </tr>
         ))}
 
@@ -212,12 +277,29 @@ function FeatureComparisonTable() {
 
         {features.slice(15, 18).map((feature, index) => (
           <tr key={index} className={styles.row}>
-            <td className={styles.rowTitle2}>{feature.name}</td>
-            <td className={styles.rowElement2}>{feature.column1}</td>
+            <td className={styles.rowTitle2}>
+              {feature.name}
+              <QuestionCircle />
+            </td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column1}
+            </td>
             <td className={styles.rowElement2}>{feature.column2}</td>
-            <td className={styles.rowElement2}>{feature.column3}</td>
-            <td className={styles.rowElement2}>{feature.column4}</td>
-            <td className={styles.rowElement2}>{feature.column5}</td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column3}
+            </td>
+            <td className={cn(styles.rowElement2, styles.tableMobileView)}>
+              {feature.column4}
+            </td>
+            <td
+              className={cn(
+                styles.rowElement2,
+                styles.tabletView,
+                styles.tableMobileView
+              )}
+            >
+              {feature.column5}
+            </td>
           </tr>
         ))}
       </tbody>
@@ -260,6 +342,55 @@ function TierContainer({ type, price }) {
   );
 }
 
+const Tabs = (props) => {
+  return (
+    <>
+      <div className={cn(styles.divTabsContainer)}>
+        <div
+          onClick={() => {
+            props.handleClick(1);
+          }}
+        >
+          <span
+            className={
+              props.tabNumber == 1
+                ? cn(styles.Active, styles.tabFontActive)
+                : cn(styles.inActive, styles.tabFontInActive)
+            }
+          >
+            Standard
+            <span />
+          </span>
+        </div>
+        <div onClick={() => props.handleClick(2)}>
+          <span
+            className={
+              props.tabNumber == 2
+                ? cn(styles.Active, styles.tabFontActive)
+                : cn(styles.inActive, styles.tabFontInActive)
+            }
+          >
+            Professional
+            <span />
+          </span>
+        </div>
+        <div onClick={() => props.handleClick(3)}>
+          <span
+            className={
+              props.tabNumber == 3
+                ? cn(styles.Active, styles.tabFontActive)
+                : cn(styles.inActive, styles.tabFontInActive)
+            }
+          >
+            Pro
+            <span />
+          </span>
+        </div>
+      </div>
+    </>
+  );
+};
+
 function PriceTable() {
   return (
     <>
@@ -294,6 +425,12 @@ function PriceTable() {
             <TierContainer key={index} type={tier.type} price={tier.price} />
           ))}
         </div>
+
+        <div className={cn(styles.tabsFrame)}>
+          <Tabs tabNumber={1} handleClick={() => {}} />
+        </div>
+
+        <div className={cn(styles.spacer4)} />
 
         <div className={cn(styles.divTiersContainer, styles.desktopView)}>
           <TierContainer type={tiers[0].type} price={tiers[0].price} />
