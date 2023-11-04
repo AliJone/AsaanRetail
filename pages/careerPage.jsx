@@ -1,4 +1,7 @@
 import { App } from "antd";
+import HeroSectionApplication from "../components/HeroSectionApplication";
+import HeroSectionCareer from "../components/HeroSectionCareer";
+import InspiredWorkspace from "../components/InspiredWorkspace";
 import NavigationBar from "../components/Navbar";
 
 const page = () =>{
@@ -10,6 +13,10 @@ const page = () =>{
                 
             }}>
                 <NavigationBar/>
+                
+                {/* <HeroSectionCareer/> */}
+                {/* <InspiredWorkspace/> */}
+                <HeroSectionApplication/>
                 
             </div>
         </App>

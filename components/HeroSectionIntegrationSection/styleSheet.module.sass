@@ -1,0 +1,91 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+.heroSection
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: colors.$radialGradient
+
+.heroSectionBG
+    width: 100%
+    padding-top: 6.88rem
+    padding-bottom: 8rem
+    background-image: url('./assests/background.svg')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+
+.textContainer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 1.5rem
+
+.titleContainer
+    width: 53.2%
+    margin: auto
+    text-align: center
+
+.titleText
+    @include fonts.fontDesktopTitle4Bold
+    color: colors.$fontColor_primary
+
+.subTitleContainer
+    width: 53.2%
+    margin: auto
+    text-align: center
+
+.subTitleText
+    @include fonts.fontDesktopH4Regular
+    color: colors.$fontColor_primary
+    
+    
+
+.underLine
+    position: relative
+    ::before
+        content: ""
+        position: absolute
+        width: 24.75rem
+        height: 0.5rem
+        flex-shrink: 0
+        border-radius: 1.25rem
+        background: colors.$linearGradientLine
+        top: 90%
+
+.textFieldContainer
+    width: 38.88%
+    margin: auto
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 1rem
+
+.textFieldCard
+    width: 100%
+    padding:0.75rem 0.312rem
+    background: colors.$bgPrimary
+
+.greyText
+    @include fonts.fontDesktopBodyRegular
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+
+.buttonText
+    @include fonts.fontH5Bold
+    color: colors.$fontColor_secondary
+
+
+.buttonContainer
+    width: 33.74857142857143%
+    margin: auto
+    
+
+
+    
