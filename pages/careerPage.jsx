@@ -1,5 +1,6 @@
 import { App } from "antd";
 import NavigationBar from "../components/Navbar";
+import ApplicationFormFeilds from "../components/ApplicationFormFeilds/ApplicationFormFeilds";
 
 const page = () =>{
     return(
@@ -10,7 +11,7 @@ const page = () =>{
                 
             }}>
                 <NavigationBar/>
-                
+                <ApplicationFormFeilds/>
             </div>
         </App>
         </>

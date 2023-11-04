@@ -1,0 +1,75 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$small: 680px
+$medium: 960px
+
+.formContainer 
+  width: 86.1%
+  margin: auto
+  margin-top: 2.31rem !important
+
+  .ant-form-item 
+    margin-bottom: 1.5rem 
+
+  .heading 
+    color: var(--character-primary-85, rgba(0, 0, 0, 0.85))
+    @include fonts.fontDesktopH3Bold
+
+.Right
+    width:44.35%
+.Left
+    width:44.35%
+.Container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.ant-form-vertical .ant-form-item-label 
+  padding: 0
+
+.ant-upload 
+  .ant-btn 
+    margin-top: 0.5rem 
+  
+
+.ant-btn-primary 
+
+.Container label
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    font-family: Roboto
+    font-size: 1.05rem
+    font-style: normal
+    font-weight: 400
+    line-height: 1.65rem
+.Container textarea
+    max-height: 6.7rem
+.Allowed
+    margin-top: 1rem
+.Submit
+    text-align: center
+    text-align: -webkit-center
+    margin-top: 2.69rem
+
+.SubmitButton
+    display: flex
+    margin-top: 0.5rem
+    width: 11.8125rem
+    height: 3.5rem
+    padding: 0.4rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+    border-radius: 0.625rem
+    border: 1px solid var(--gradient-surface, #009241)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
+    color: var(--character-primary-inverse, #FFF)
+    text-align: center
+    @include fonts.fontDesktopH5Bold
+
+@media (max-width: $small)
+    .Right, .Left
+        width: 100%
+    .Container
+        
