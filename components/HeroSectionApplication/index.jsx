@@ -1,3 +1,4 @@
+import ApplicationFormFeilds from '../ApplicationFormFeilds/ApplicationFormFeilds';
 import Card from './headingCard';
 import cn from 'classnames';
 import style from './styleSheet.module.sass';
@@ -70,7 +71,11 @@ const HeroSection = () =>{
                     <div className={cn(style.spacer2)} />
 
                 </div>
+
+                <ApplicationFormFeilds/>
+
             </div>
+
         </>
     )
 }

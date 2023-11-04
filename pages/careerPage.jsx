@@ -17,7 +17,7 @@ const page = () =>{
                 {/* <HeroSectionCareer/> */}
                 {/* <InspiredWorkspace/> */}
                 <HeroSectionApplication/>
-                <ApplicationFormFeilds/>
+                {/* <ApplicationFormFeilds/> */}
             </div>
         </App>
         </>
