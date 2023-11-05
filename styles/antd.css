@@ -14,3 +14,28 @@
 .ant-switch.ant-switch-checked:hover :not(.ant-switch-disabled) {
   background: var(--primary-6, #009241)
 }
+
+
+
+.ant-carousel .slick-dots-bottom{
+  bottom: -14px;
+  gap:0.8rem
+}
+
+.ant-carousel .slick-dots li button{
+  border-radius: 0.1125rem;
+  opacity: 0.3;
+  background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%));
+  display: flex;
+  padding: 0.16875rem 0.89994rem;
+  align-items: center;
+}
+
+.ant-carousel .slick-dots li.slick-active button{
+  border-radius: 0.1125rem;
+  background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%));
+  display: flex;
+  padding: 0.16875rem 1.34994rem;
+  align-items: center;
+  opacity: 1;
+}

@@ -1,0 +1,62 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+
+.manyMoreSection
+    width: 100%
+    padding-bottom: 2.5rem
+    // display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    gap: 2.5rem
+
+.textContiner
+    width: 86.955%
+    display: flex
+    justify-content: flex-start
+    margin: auto
+
+.titleText
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+
+.titeColorChangeText
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_tertiary
+    
+
+.frameCards
+    width: 86.955%
+    margin: auto
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    align-content: flex-start
+    gap: 2rem var(--Size-32, 2rem)
+    // flex-wrap: wrap
+
+.cardLayout
+    display: flex
+    padding: 2.5rem 3rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.625rem
+    border-radius: 0.625rem
+    background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box
+    border: 4px solid transparent
+    // background: rgba(255, 255, 255, 0.80)
+    backdrop-filter: blur(18px)
+    width: 24.8125rem
+
+.cardTitleText
+    @include fonts.fontDesktopH3Bold
+    color: colors.$fontColor_primary
+
+.cardSubTitleText
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+
+.spacer1
+    padding-top: 2.4rem
