@@ -2,6 +2,7 @@
 @use '../../utils/fonts'
 @use '../../utils/breakpoints'
 
+$small : breakpoints.$small
 
 .manyMoreSection
     width: 100%
@@ -60,3 +61,11 @@
 
 .spacer1
     padding-top: 2.4rem
+
+@media (max-width: 1025px)
+    .frameCards
+        flex-wrap: wrap
+
+@media (max-width: $small)
+    .manyMoreSection
+        display: none

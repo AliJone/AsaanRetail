@@ -60,15 +60,6 @@ const ManyMore =()=>{
                     </div>
                 </Carousel>
                 </div>
-                {/* <div className={cn(style.frameCards)}>
-                    {cardContent.map((item, index) => {
-                        return(
-                            <CardManyMore title={item['title']} description={item['description']} />
-                        );
-                        
-                    })}
-
-                </div> */}
             </div>
         </>
     );
