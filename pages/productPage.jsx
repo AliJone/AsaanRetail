@@ -11,6 +11,7 @@ import PriceTable from "../components/PriceTablePricing/PriceTable";
 import SpecificRequirementPayment from "../components/SpecificReqPayment";
 import Testimonials from "../components/Testimonials/Testimonials";
 import ThroughLense from "../components/ThroughLense/ThroughLense";
+import ImageTextGrid from "../components/ImageTextGrid";
 
 const page = () => {
   return (
@@ -22,6 +23,9 @@ const page = () => {
           }}
         >
           <NavigationBar />
+
+          <ImageTextGrid />
+
           <ManyMore />
           {/* <InventoryManagement/>
                     <Testimonials />
