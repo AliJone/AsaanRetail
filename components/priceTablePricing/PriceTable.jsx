@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import Check from './assets/check.svg'
+import Check from "./assets/check.svg";
 import Image from "next/image";
 import QuestionCircleimg from "./assets/QuestionCircle.svg";
 import cn from "classnames";
@@ -153,7 +153,7 @@ const features = [
 ];
 
 function QuestionCircle() {
-  return <Image src={QuestionCircleimg}  alt="abc" />;
+  return <Image src={QuestionCircleimg} alt="abc" />;
 }
 
 function Checkmark() {
