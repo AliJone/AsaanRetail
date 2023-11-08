@@ -4,6 +4,7 @@ import Enterprise from "../components/Enterprise/Enterprise";
 import FAQ from "../components/FAQ/FAQ";
 import Footer from "../components/Footer/Footer";
 import HeroSectionPricing from "../components/HeroSectionPricing";
+import ImageTextGrid from "../components/ImageTextGrid";
 import InventoryManagement from "../components/InventoryManagement/InventoryManagement";
 import ManyMore from "../components/ManyMore";
 import NavigationBar from "../components/Navbar";
@@ -11,7 +12,6 @@ import PriceTable from "../components/PriceTablePricing/PriceTable";
 import SpecificRequirementPayment from "../components/SpecificReqPayment";
 import Testimonials from "../components/Testimonials/Testimonials";
 import ThroughLense from "../components/ThroughLense/ThroughLense";
-import ImageTextGrid from "../components/ImageTextGrid";
 
 const page = () => {
   return (
@@ -27,11 +27,11 @@ const page = () => {
           <ImageTextGrid />
 
           <ManyMore />
-          {/* <InventoryManagement/>
+          <InventoryManagement/>
                     <Testimonials />
                     <FAQ />
                     <CTANew />
-                    <Footer /> */}
+                    <Footer />
         </div>
       </App>
     </>

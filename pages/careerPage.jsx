@@ -16,10 +16,10 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <OpenRoles />
-          {/* <HeroSectionCareer /> */}
-          {/* <InspiredWorkspace/> */}
-          <HeroSectionApplication />
+          {/* <OpenRoles /> */}
+          <HeroSectionCareer />
+          <InspiredWorkspace/>
+          {/* <HeroSectionApplication /> */}
           {/* <ApplicationFormFeilds/> */}
         </div>
       </App>
