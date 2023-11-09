@@ -16,9 +16,9 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          {/* <OpenRoles /> */}
-          {/* <HeroSectionCareer /> */}
-          {/* <InspiredWorkspace/> */}
+          <OpenRoles />
+          <HeroSectionCareer />
+          <InspiredWorkspace/>
           <HeroSectionApplication />
           <ApplicationFormFeilds/>
         </div>
