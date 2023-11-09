@@ -2,7 +2,7 @@
 @use "../../utils/fonts"
 
 $issue: 970px
-$small: 430px
+$small: 746px
 
 .BG
     color: white
@@ -152,6 +152,49 @@ $small: 430px
     color: var(--character-title-85, rgba(0, 0, 0, 0.85))
     @include fonts.fontDesktopBodyRegular
     
+  
 
 @media (max-width: $small)
+    .Container
+        flex-direction: column
+        align-items: center
+    .Menu
+        width: 100%
+        align-items: flex-start
+    .Search
+        width: 100%
+    .CategoriesTitle
+        display: none
+    .Categories
+        flex-direction: row
+        flex-wrap: wrap
+    .Button
+        width: auto
+    .Button
+        button
+            display: flex
+            height: 2rem
+            justify-content: center
+            align-items: center
+            border-radius: 0.5rem
+            @include fonts.fontMobileBodyRegular
+            
+    .Selected
+        button
+            @include fonts.fontMobileBodyBold
+            
+    .Data
+        width: 100%
+    .CatBoxCard
+        width: 100%
+        height: auto
+    .Search
+        @include fonts.fontDesktopH4Medium
+    .CatBoxTitle
+        @include fonts.fontMobileH3Bold
+    .CatBoxCardDataTitle
+        @include fonts.fontMobileH4Bold
+    .CatBoxCardDataSubTitle
+        @include fonts.fontMobileBodyRegular
     
+        
