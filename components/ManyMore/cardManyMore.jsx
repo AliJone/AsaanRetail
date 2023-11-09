@@ -5,10 +5,10 @@ const CardManyMore = ({ title, description}) => {
     return(
         <>
             <div className ={cn(style.cardLayout)}>
-                <div>
+                <div >
                     <span className={cn(style.cardTitleText)}>{title}</span>
                 </div>
-                <div>
+                <div className={cn(style.cardSubText)}>
                     <span className={cn(style.cardSubTitleText)}>{description}</span>
                 </div>
             </div>
