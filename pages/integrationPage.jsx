@@ -1,6 +1,7 @@
 import { App } from "antd";
 import HeroSectionIntegrationSection from "../components/HeroSectionIntegrationSection";
 import NavigationBar from "../components/Navbar";
+import IntegrationMenu from "../components/IntegrationMenu/IntegrationMenu";
 
 const page = () =>{
     return(
@@ -12,7 +13,7 @@ const page = () =>{
             >
                 <NavigationBar/>
                 <HeroSectionIntegrationSection/>
-
+                <IntegrationMenu />
             </div>
 
         </App>
