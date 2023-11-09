@@ -28,7 +28,7 @@ const ManyMore =()=>{
                 </div>
                 <div className = {cn(style.spacer1)}/>
                 <div>
-                <Carousel autoplay>
+                <Carousel className={cn(style.CarouselClass)} autoplay>
                     <div>
                         <div className={cn(style.frameCards)}>
                             {cardContent.map((item, index) => {
