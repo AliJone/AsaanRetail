@@ -3,6 +3,9 @@
 @use '../../utils/breakpoints'
 
 
+
+$small : breakpoints.$small
+
 .heroSection
     width: 100%
     display: flex
@@ -94,4 +97,18 @@
 
 .spacer2
     padding-top:2.13rem
+
+@media (max-width: $small)
+    .textFrame
+        flex-wrap: wrap
+        justify-content: center
+
+    .responsibiltyContainer
+        width: 100%
+        // padding: 2.5rem 0rem
+        // align-items: center
+        // gap: 2.5rem
+
+
+    
     

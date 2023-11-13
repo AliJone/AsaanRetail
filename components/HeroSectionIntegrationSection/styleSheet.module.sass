@@ -2,6 +2,8 @@
 @use '../../utils/fonts'
 @use '../../utils/breakpoints'
 
+$small : breakpoints.$small
+
 .heroSection
     width: 100%
     display: flex
@@ -48,15 +50,17 @@
 
 .underLine
     position: relative
-    ::before
-        content: ""
-        position: absolute
-        width: 24.75rem
-        height: 0.5rem
-        flex-shrink: 0
-        border-radius: 1.25rem
-        background: colors.$linearGradientLine
-        top: 90%
+    display: inline-flex
+    
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
 
 .textFieldContainer
     width: 38.88%
@@ -83,8 +87,80 @@
 
 
 .buttonContainer
-    width: 33.74857142857143%
+    // width: 33.74857142857143%
     margin: auto
+
+
+
+.carouselContainer
+    display: none
+
+  
+.CarouselClass
+    display: flex
+    flex-direction: row
+    gap: 1rem
+    // justify-content: space-evenly
+    width:200%
+    margin: 0 auto
+    // padding-bottom: 2.1875rem
+
+
+.divAnimation
+    animation: LeftSlide 25s linear infinite
+
+
+
+
+@keyframes LeftSlide 
+  from 
+    transform: translateX(0%)
+  
+  to 
+    transform: translateX(-11.36%)
+
+    // 100%
+    //     transform: translateX(-160rem)
+
+.image
+  width: auto
+  height: auto
+
+
+@media (max-width: $small)
+    .heroSectionBG
+        background: none
+
+    .titleContainer
+        margin: auto
+        width: 90%
+
+    .subTitleContainer
+        width: 90%
+
+    .titleText
+        @include fonts.fontMobileH1Bold
+
+    .subTitleText
+        @include fonts.fontMobileH5Regular
+
+    .textFieldContainer
+        width: 90%
+
+    .textFieldCard
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+        border-radius: 0.625rem
+        border: 2px solid var(--neutral-1, #FFF)
+        background: #FFF
+
+    .buttonContainer
+        width: -webkit-fill-available
+
+    .carouselContainer
+        padding-top: 3rem
+        display: block
+
+        
     
 
 
