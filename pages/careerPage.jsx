@@ -5,6 +5,7 @@ import HeroSectionCareer from "../components/HeroSectionCareer";
 import InspiredWorkspace from "../components/InspiredWorkspace";
 import NavigationBar from "../components/Navbar";
 import OpenRoles from "../components/OpenRoles";
+import LifeAtAsaanRetail from "../components/LifeAtAR";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
           }}
         >
           <NavigationBar />
+          <LifeAtAsaanRetail />
           <OpenRoles />
           {/* <HeroSectionCareer /> */}
           {/* <InspiredWorkspace/> */}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import WeirdIcon from "./assets/Icon.svg";
 import ForwardIcon from "./assets/Icon2.svg";
 import TriangleIcon from "./assets/TriangleIcon.svg";
+import TickMark from "./assets/TickMark.svg";
 
 import { Button } from "antd";
 
@@ -42,39 +43,53 @@ function OpenRoles() {
       <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} />
 
       <div className={styles.sectionTitle}>
-        <span className={styles.titleText}>
+        <span>
           Open
-          <span className={cn(styles.titleDiv, styles.underLine)}>
+          <span className={cn(styles.underLine)}>
             <span /> roles
           </span>
           ⚡
         </span>
+
+        <div className={styles.filterChipsContainer}>
+          <div className={styles.filterChip}>Engineering</div>
+          <div className={styles.filterChip}>Design</div>
+          <div className={styles.filterChip}>Sales</div>
+
+          <div className={styles.activeFilterChip}>
+            <Image src={TickMark} className={styles.tickMark} />
+            Support
+          </div>
+        </div>
       </div>
 
-      {jobData.map((job) => (
-        <div className={styles.jobCard}>
-          <div className={styles.jobInnerCard}>
-            <Image src={WeirdIcon} alt="placeholder icon" />
+      <>
+        {jobData.map((job) => (
+          <div className={styles.jobCard}>
+            <div className={styles.jobInnerCard}>
+              <Image src={WeirdIcon} alt="icon" />
 
-            <div className={styles.jobTitleDescContainer}>
-              <div className={styles.jobTitle}>{job.title}</div>
+              <div className={styles.jobTitleDescContainer}>
+                <div className={styles.jobTitle}>{job.title}</div>
 
-              <div className={styles.jobDescription}>{job.description}</div>
+                <div className={styles.jobDescription}>{job.description}</div>
+              </div>
+
+              <div className={styles.jobTypeLocationContainer}>
+                <div className={styles.jobType}>{job.type}</div>
+                <div className={styles.jobLocation}>&#183; {job.location}</div>
+              </div>
             </div>
 
-            <div className={styles.jobTypeLocationContainer}>
-              <div className={styles.jobType}>{job.type}</div>
-              <div className={styles.jobLocation}>&#183; {job.location}</div>
-            </div>
+            <Image
+              src={ForwardIcon}
+              alt="forward icon"
+              className={styles.forwardIcon}
+              onClick={handleJobClick}
+            />
           </div>
-
-          <Image
-            src={ForwardIcon}
-            alt="forward icon"
-            onClick={handleJobClick}
-          />
-        </div>
-      ))}
+        ))}
+      </>
 
       <Button className={styles.SubmitButton}>Load more</Button>
     </div>

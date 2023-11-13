@@ -13,13 +13,18 @@ $medium: breakpoints.$medium
     display: flex
     flex-direction: column
     
+.tag
+    width: 15.77%
+    margin-top: 2rem
+
 .divTitleContainer
     width: 86.11%
     margin: auto
     text-align: center
+    margin-top: 1rem
 
 .titleText
-    @include fonts.fontDesktopH1Bold
+    @include fonts.fontDesktopH2Bold
     text-align: center
 
 .underLine
@@ -27,7 +32,7 @@ $medium: breakpoints.$medium
     ::before
         content: ""
         position: absolute
-        width: 8.45rem
+        width: 5.85rem
         height: 0.5rem
         flex-shrink: 0
         border-radius: 1.25rem
@@ -38,9 +43,10 @@ $medium: breakpoints.$medium
     width: 86.11%
     text-align: center
     margin: auto
+    margin-top: 1rem
 
 .subTitleText
-    @include fonts.fontDesktopH4Regular
+    @include fonts.fontDesktopH5Regular
     text-align: center
 
 @media (max-width: $small)
@@ -87,9 +93,10 @@ $medium: breakpoints.$medium
 // tiers container
 
 .divTiersContainer
-    width: 86.11%
+    width: 87.11%
     height: 11.5rem
     margin: auto
+    margin-top: 0.3rem
     display: flex
     align-items: flex-start
     border-radius: 1.25rem
@@ -105,9 +112,10 @@ $medium: breakpoints.$medium
     gap: 0.5rem
     flex: 1 0 0
     align-self: stretch
+    padding: 0% 0.645%
 
 .tierContainerType
-    @include fonts.fontDesktopH4Bold
+    @include fonts.fontDesktopH5Bold
     width: 94.92%
     text-align: center
     color: var(--character-primary-inverse, #FFF)
@@ -132,7 +140,7 @@ $medium: breakpoints.$medium
 
 .tierContainerCTA
     display: flex
-    width: 59.86%
+    width: 11.785rem
     height: 3.5rem
     padding: 0.5rem 0.9375rem
     justify-content: center
@@ -162,8 +170,7 @@ $medium: breakpoints.$medium
 .desktopView
     display: none
 
-@media (max-width: $medium)
-
+@media (max-width: 1110px)
     .tierContainerType
         @include fonts.fontDesktopH5Bold
 
@@ -178,7 +185,8 @@ $medium: breakpoints.$medium
         width: 79.86%
         @include fonts.fontDesktopH6Bold
 
-@media (max-width: $small)
+@media (max-width: $medium)
+
     .mobileView
         display: none
 
@@ -187,14 +195,10 @@ $medium: breakpoints.$medium
 
     .divTiersContainer
         height: 7.4375rem
-    
+        margin-bottom: 1.5rem
+
     .tierContainer
-        // width: 25.4%
-        // height: auto
-        // display: flex
         flex-direction: row
-        // justify-content: center
-        // align-items: center
         gap: 0rem
     
     .tierContainerType
@@ -204,27 +208,18 @@ $medium: breakpoints.$medium
 
     .tierContainerPrice1
         width: 94.92%
-        color: var(--character-primary-inverse, #FFF)
         @include fonts.fontMobileH2Bold
+        font-size: 1.6625rem
 
     .tierContainerPrice2
         width: 94.92%
         text-align: center
-        color: var(--character-primary-inverse, #FFF)
         @include fonts.fontMobileH2Bold
         font-size: 1.6625rem
 
     .tierContainerButton
         width: 94.92%
-
-    .tierContainerCTA
-        display: flex
-        width: 90%
-        height: 3.5rem
-        padding: 0.5rem 0.9375rem
-        justify-content: center
-        align-items: center
-        gap: 0.625rem
+        margin-right: -2rem
 
     .innerTierContainer
         width: 87.76%
@@ -233,34 +228,116 @@ $medium: breakpoints.$medium
         align-items: center
         gap: 0.5rem
 
-// table
+@media (max-width: 480px)
 
+    .tierContainerType
+        @include fonts.fontMobileH5Regular
+        font-size: 1.0875rem
+
+    .tierContainerPrice1
+        @include fonts.fontMobileH3Bold
+        font-size: 1.3rem
+
+    .tierContainerPrice2
+        @include fonts.fontMobileH3Bold
+        font-size: 1.3rem
+        
+    .tierContainerButton
+        margin-right: -1rem
+
+    .tierContainerCTA
+        height: 3.2rem
+
+//tabs
+.divTabsContainer
+    display: inline-flex
+    padding: 0.25rem  1.5rem
+    align-items: center
+    gap: 1rem
+    border-radius: 1.25rem
+    background:  #FFF
+
+.tabsFrame
+    .divTabsContainer
+        div
+            cursor: pointer
+
+.tabsFrame
+    display: none
+
+.Active
+    user-select: none
+    position: relative
+    color: #000000
+    ::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 0.25rem
+        flex-shrink: 0
+        background: #009241
+        top: 100%
+        left:0
+
+.tabFontActive
+    @include fonts.fontDesktopH5Bold
+
+.inActive
+    user-select: none
+    color: rgba(0, 0, 0, 0.45)
+
+.tabFontInActive
+    @include fonts.fontDesktopH5Regular
+
+@media (max-width: $medium)
+    .tabsFrame
+        display: flex
+        width: 100%
+        justify-content: center
+
+@media (max-width: $small)
+    .tabFontActive
+        @include fonts.fontMobileH5Bold
+    .tabFontInActive
+        @include fonts.fontMobileH5Regular
+    .tabsTagFont
+        @include fonts.fontMobileBodyBold
+
+// table
 .tableContainer
-    width: 86.11%
+    width: 87.11%
     margin: auto
 
 .table
     width: 100%
-    // height: 87rem
 
 .row
     width: 100%
     display: flex
-    padding: 1.7rem 0rem
-    align-items: flex-start
+    padding: 1.45rem 0rem
+    padding-bottom: 1.95rem
+    align-items: center
     align-self: stretch
     border-bottom: 1px solid black
-    // background-color: lightblue
+
+.row 
+  &:nth-child(3),
+  &:nth-child(8),
+  &:nth-child(14), 
+  &:nth-child(18)
+    border-bottom: none
 
 .rowTitle1
     @include fonts.fontDesktopH5Medium
-    // background-color: red
     width: 24.76%
-    padding: 0rem 1rem
+    padding: 0rem 0.8rem
     align-items: center
     gap: 0.16738rem
     flex: 1 0 0
     line-height: 100%
+    // background: red
+    z-index: 1
+    white-space: nowrap
 
 .rowElement1
     @include fonts.fontDesktopH5Regular
@@ -269,11 +346,10 @@ $medium: breakpoints.$medium
     padding: 0rem 0.8rem
     display: flex
     justify-content: center
-    // align-items: center
     gap: 0.16738rem
     flex: 1 0 0
-    // background-color: green
     line-height: 100%
+    // background-color: green
 
 .blackRowContainer
     width: 100%
@@ -295,7 +371,6 @@ $medium: breakpoints.$medium
     padding: 1rem 1rem
     display: flex
     align-items: center
-    // height: 3rem
 
 .rowTitle2
     @include fonts.fontDesktopH5Medium
@@ -305,21 +380,82 @@ $medium: breakpoints.$medium
     gap: 0.16738rem
     flex: 1 0 0
     line-height: 110%
-    // background-color: blue
+    white-space: nowrap
 
 .rowElement2
     @include fonts.fontDesktopH5Regular
 
     width: 14.71%
-    // padding: 0rem 0.8rem
     display: flex
     justify-content: center
-    // align-items: center
     gap: 0.16738rem
-    // flex: 1 0 0
     line-height: 100%
     align-self: stretch
-    // background-color: green
+
+.checkMark
+    width: 1.7rem
+    height: 1.7rem //3rem?
+    // object-fit: cover
+    // display: none
+
+@media  (min-width: 1230px) and (max-width: 1380px)
+    .checkMark
+        margin-right: 0.85rem
+
+@media  (min-width: 1110px) and (max-width: 1230px)
+    .checkMark
+        margin-left: 0rem
+
+@media (max-width: 1110px)
+    .rowTitle1
+        @include fonts.fontDesktopH6Medium
+    .rowElement1
+        @include fonts.fontDesktopH6Regular
+    .row
+        padding: 1.45rem 0rem
+
+    .row 
+        &:nth-child(1)
+            .rowElement1
+                &:nth-child(2)
+                    margin-left: 1rem
+
+    .blackRowCategory
+        @include fonts.fontDesktopH4Bold
+        font-size: 1.3rem    
+    .checkMark
+        margin-right: 0.5rem
+
+@media (max-width: $medium)
+    .tableMobileView
+        display: none
+
+    .rowTitle1
+        @include fonts.fontMobileH5Regular
+
+    .rowElement1
+        @include fonts.fontMobileH5Regular
+        justify-content: right
+        padding-right: 2.3rem
+
+    .blackRowCategory
+        @include fonts.fontDesktopH5Bold
+
+    .checkMark
+        width: 1.8rem
+        height: 1.7rem
+        margin-right: -0.5rem
+
+    .inActiveTier
+        display: none
+
+@media (max-width: 430px)
+
+    .rowTitle1
+        @include fonts.fontMobileH6Regular
+
+    .rowElement1
+        @include fonts.fontMobileH6Regular
 
 // util
 

@@ -1,11 +1,28 @@
 import React from "react";
 import styles from "./styles.module.sass";
 import { Button } from "antd";
+import Image from "next/image";
+
+// const data = [
+//   {
+//     title: "Inventory Audit <br /> Feature",
+//     leadingSubtitle: "Accuracy is Key with Asaan Retail:",
+//     listPointers: [
+//       "Quickly resolve discrepancies.",
+//       "Maintain trust with precise records.",
+//       "Streamline auditing for accuracy.",
+//     ],
+//     trailingSubtitle:
+//       "The era of spreadsheets is behind you.<br />Choose Asaan Retail for accurate inventory.",
+//   },
+// ];
 
 function ImageTextGrid() {
   return (
     <div className={styles.imageTextSection}>
       <div className={styles.gridContainer}>
+        {/* // */}
+
         <div className={styles.textContainer}>
           <div>
             <span className={styles.underLine}>
@@ -31,14 +48,10 @@ function ImageTextGrid() {
         </div>
 
         <div className={styles.image}>
-          <img src="" alt="Image" />
+          <Image src="" alt="Image" width={40} height={40} />
         </div>
 
         {/* --------------------- */}
-
-        <div className={styles.image}>
-          <img src="" alt="Image" />
-        </div>
 
         <div className={styles.textContainer}>
           <div>
@@ -62,6 +75,10 @@ function ImageTextGrid() {
           </div>
 
           <Button className={styles.CTAButton}>Start Free Trial</Button>
+        </div>
+
+        <div className={styles.image}>
+          <Image src="" alt="Image" />
         </div>
 
         {/* --------------------- */}
@@ -93,7 +110,7 @@ function ImageTextGrid() {
         </div>
 
         <div className={styles.image}>
-          <img src="" alt="Image" />
+          <Image src="" alt="Image" />
         </div>
       </div>
     </div>

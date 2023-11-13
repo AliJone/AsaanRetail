@@ -12,6 +12,7 @@ import SpecificRequirementPayment from "../components/SpecificReqPayment";
 import Testimonials from "../components/Testimonials/Testimonials";
 import ThroughLense from "../components/ThroughLense/ThroughLense";
 import ImageTextGrid from "../components/ImageTextGrid";
+import LifeAtAsaanRetail from "../components/LifeAtAR";
 
 const page = () => {
   return (

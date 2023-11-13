@@ -1,16 +1,6 @@
 @use '../../utils/colors'
 @use '../../utils/fonts'
 @use '../../utils/breakpoints'
-    
-.mainSection
-    width: 100%
-    background: colors.$radialGradient
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    gap: 2.5rem
-    position: relative
 
 .underLine
     position: relative
@@ -24,29 +14,72 @@
         background: colors.$linearGradientLine
         top: 90%
         left: 1rem
+    
+.mainSection
+    width: 100%
+    background: colors.$radialGradient
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    position: relative
 
 .sectionTitle
     @include fonts.fontDesktopH1Bold
-
     width: 86.76%
-    padding-top: 1.1rem
+    padding-top: 0.9rem
     padding-bottom: 1rem
     margin-top: 4rem
     position: relative
     z-index: 2
+    display: flex
+    flex-direction: column
 
 .triangleIcon
     position: absolute 
     top: 0 
     right: 86.8%
     transform: translateX(-60%)
-    transform: translateY(20%) 
+    transform: translateY(19%) 
     z-index: 1
+
+.filterChipsContainer
+    display: inline-flex
+    align-items: flex-start
+    align-content: flex-start
+    gap: 1rem
+    flex-wrap: wrap
+    margin-top: 2.3rem
+    margin-bottom: 1.8rem
+    margin-left: 0.6rem
+
+.filterChip
+    @include fonts.fontDesktopH5Regular
+    display: flex
+    padding: 0.1rem 0.92rem
+    justify-content: center
+    align-items: center
+    border-radius: 0.5rem
+    border: 1px solid var(--m-3-sys-light-outline, #79747E)
+
+.activeFilterChip
+    @include fonts.fontDesktopH5Regular
+    color: var(--character-primary-inverse, #FFF)
+    display: flex
+    padding: 0.15rem 0.92rem 
+    justify-content: center
+    align-items: center
+    border-radius: 0.5rem
+    background: var(--primary-6, #009241)
+
+.tickMark
+    margin-left: -5px
+    padding-right: 0.5rem
 
 .jobCard
     display: flex
     width: 81%
-    
+    margin-bottom: 2.5rem
     padding: 1.5rem 2.5rem
     align-items: center
     gap: 0.625rem
@@ -109,6 +142,52 @@
     text-align: center
     @include fonts.fontDesktopH5Bold
   
+@media(max-width: 830px)
+    .sectionTitle
+        @include fonts.fontMobileH1Bold
+        line-height: 120% 
+        margin-top: 1rem
+        padding-bottom: 0
 
+    .jobCard
+        display: flex
+        width: 72.5%
+        margin-bottom: 1.5rem
+
+    .jobInnerCard
+        align-items: center
+
+    .jobTitle
+        @include fonts.fontDesktopH4Bold
+        text-align: center
+
+    .jobDescription
+        text-align: center
+
+    .jobTypeLocationContainer
+        flex-direction: column
+
+    .filterChipsContainer
+        margin-left: 0rem
+    
+    .filterChip
+        @include fonts.fontMobileH5Regular
+        padding: 0.1rem 0.92rem
+        
+    .activeFilterChip
+        @include fonts.fontMobileH5Regular
+
+    .forwardIcon
+        display: none
+    
+    .underLine
+        position: relative
+        ::before
+            width: 5rem
+
+    .triangleIcon, .SubmitButton
+        display: none
+
+        
 
 

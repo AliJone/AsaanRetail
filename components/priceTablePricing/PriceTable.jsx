@@ -4,6 +4,8 @@ import Image from "next/image";
 import QuestionCircleimg from "./assets/QuestionCircle.svg";
 import cn from "classnames";
 import styles from "./styles.module.sass";
+import { useState } from "react";
+import Tag from "../tag";
 
 const tiers = [
   { type: "Standard", price: "Rs 12,000" },
@@ -14,153 +16,130 @@ const tiers = [
 const features = [
   {
     name: "Sales Orders/Month",
-    column1: "50",
-    column2: "200",
-    column3: "500",
+    standard: "50",
+    professional: "200",
+    pro: "500",
   },
   {
     name: "Manage Company Portfolio",
-    column1: "",
-    column2: Checkmark(),
-    column3: Checkmark(),
+    standard: "",
+    professional: Checkmark(),
+    pro: Checkmark(),
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Organization Management",
-    column1: "",
-    column2: "",
-    column3: "",
-    column4: "",
-    column5: "",
+    standard: "",
+    professional: "",
+    pro: "",
   },
   {
     name: "Manage Company Portfolio",
-    column1: "",
-    column2: Checkmark(),
-    column3: Checkmark(),
-    column4: Checkmark(),
-    column5: Checkmark(),
+    standard: "",
+    professional: Checkmark(),
+    pro: Checkmark(),
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Integrations",
-    column1: "",
-    column2: "",
-    column3: "",
-    column4: "",
-    column5: "",
+    standard: "",
+    professional: "",
+    pro: "",
   },
   {
     name: "Manage Company Portfolio",
-    column1: "",
-    column2: Checkmark(),
-    column3: Checkmark(),
-    column4: Checkmark(),
-    column5: Checkmark(),
+    standard: "",
+    professional: Checkmark(),
+    pro: Checkmark(),
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Integrations",
-    column1: "",
-    column2: "",
-    column3: "",
-    column4: "",
-    column5: "",
+    standard: "",
+    professional: "",
+    pro: "",
   },
   {
     name: "Manage Company Portfolio",
-    column1: "",
-    column2: Checkmark(),
-    column3: Checkmark(),
-    column4: Checkmark(),
-    column5: Checkmark(),
+    standard: "",
+    professional: Checkmark(),
+    pro: Checkmark(),
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
   {
     name: "Manage Team Members",
-    column1: "1",
-    column2: "2",
-    column3: "2",
-    column4: "2",
-    column5: "5",
+    standard: "1",
+    professional: "2",
+    pro: "2",
   },
 ];
 
 function QuestionCircle() {
-  return <Image src={QuestionCircleimg} alt="abc" />;
+  return (
+    <Image
+      className={styles.tableMobileView}
+      style={{ marginLeft: "0.3rem" }}
+      src={QuestionCircleimg}
+      alt="❔"
+    />
+  );
 }
 
 function Checkmark() {
-  return <Image src={Check} alt="abc" />;
+  return <Image src={Check} alt="✔️" className={styles.checkMark} />;
 }
 
-function FeatureComparisonTable() {
+function FeatureComparisonTable({ tabNumber }) {
   return (
     <table className={styles.table}>
       <tbody>
@@ -170,9 +149,13 @@ function FeatureComparisonTable() {
               {feature.name}
               <QuestionCircle />
             </td>
-            <td className={styles.rowElement1}>{feature.column1}</td>
-            <td className={styles.rowElement1}>{feature.column2}</td>
-            <td className={styles.rowElement1}>{feature.column3}</td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.standard}
+            </td>
+            <td className={styles.rowElement1}>{feature.professional}</td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.pro}
+            </td>
           </tr>
         ))}
 
@@ -182,12 +165,17 @@ function FeatureComparisonTable() {
 
         {features.slice(4, 8).map((feature, index) => (
           <tr key={index} className={styles.row}>
-            <td className={styles.rowTitle2}>{feature.name}</td>
-            <td className={styles.rowElement2}>{feature.column1}</td>
-            <td className={styles.rowElement2}>{feature.column2}</td>
-            <td className={styles.rowElement2}>{feature.column3}</td>
-            <td className={styles.rowElement2}>{feature.column4}</td>
-            <td className={styles.rowElement2}>{feature.column5}</td>
+            <td className={styles.rowTitle1}>
+              {feature.name}
+              <QuestionCircle />
+            </td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.standard}
+            </td>
+            <td className={styles.rowElement1}>{feature.professional}</td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.pro}
+            </td>
           </tr>
         ))}
 
@@ -197,12 +185,17 @@ function FeatureComparisonTable() {
 
         {features.slice(9, 14).map((feature, index) => (
           <tr key={index} className={styles.row}>
-            <td className={styles.rowTitle2}>{feature.name}</td>
-            <td className={styles.rowElement2}>{feature.column1}</td>
-            <td className={styles.rowElement2}>{feature.column2}</td>
-            <td className={styles.rowElement2}>{feature.column3}</td>
-            <td className={styles.rowElement2}>{feature.column4}</td>
-            <td className={styles.rowElement2}>{feature.column5}</td>
+            <td className={styles.rowTitle1}>
+              {feature.name}
+              <QuestionCircle />
+            </td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.standard}
+            </td>
+            <td className={styles.rowElement1}>{feature.professional}</td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.pro}
+            </td>
           </tr>
         ))}
 
@@ -212,12 +205,17 @@ function FeatureComparisonTable() {
 
         {features.slice(15, 18).map((feature, index) => (
           <tr key={index} className={styles.row}>
-            <td className={styles.rowTitle2}>{feature.name}</td>
-            <td className={styles.rowElement2}>{feature.column1}</td>
-            <td className={styles.rowElement2}>{feature.column2}</td>
-            <td className={styles.rowElement2}>{feature.column3}</td>
-            <td className={styles.rowElement2}>{feature.column4}</td>
-            <td className={styles.rowElement2}>{feature.column5}</td>
+            <td className={styles.rowTitle1}>
+              {feature.name}
+              <QuestionCircle />
+            </td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.standard}
+            </td>
+            <td className={styles.rowElement1}>{feature.professional}</td>
+            <td className={cn(styles.rowElement1, styles.tableMobileView)}>
+              {feature.pro}
+            </td>
           </tr>
         ))}
       </tbody>
@@ -260,11 +258,68 @@ function TierContainer({ type, price }) {
   );
 }
 
+const Tabs = (props) => {
+  return (
+    <>
+      <div className={cn(styles.divTabsContainer)}>
+        <div
+          onClick={() => {
+            props.handleClick(1);
+          }}
+        >
+          <span
+            className={
+              props.tabNumber == 1
+                ? cn(styles.Active, styles.tabFontActive)
+                : cn(styles.inActive, styles.tabFontInActive)
+            }
+          >
+            Standard
+            <span />
+          </span>
+        </div>
+        <div onClick={() => props.handleClick(2)}>
+          <span
+            className={
+              props.tabNumber == 2
+                ? cn(styles.Active, styles.tabFontActive)
+                : cn(styles.inActive, styles.tabFontInActive)
+            }
+          >
+            Professional
+            <span />
+          </span>
+        </div>
+        <div onClick={() => props.handleClick(3)}>
+          <span
+            className={
+              props.tabNumber == 3
+                ? cn(styles.Active, styles.tabFontActive)
+                : cn(styles.inActive, styles.tabFontInActive)
+            }
+          >
+            Pro
+            <span />
+          </span>
+        </div>
+      </div>
+    </>
+  );
+};
+
 function PriceTable() {
+  const [tabNumber, setTabNumber] = useState(1);
+
+  const handleTabClick = (tabNumber) => {
+    setTabNumber(tabNumber);
+  };
+
   return (
     <>
       <div className={styles.heroSection}>
         <div className={styles.spacer1} />
+
+        {/* <Tag text="Compare plans" className={styles.tag} /> */}
 
         <div className={styles.divTitleContainer}>
           <span className={styles.titleText}>
@@ -277,7 +332,7 @@ function PriceTable() {
           </span>
         </div>
 
-        <div className={styles.spacer2} />
+        {/* <div className={styles.spacer} /> */}
 
         <div className={styles.subTitleContainer}>
           <span className={styles.subTitleText}>
@@ -295,14 +350,23 @@ function PriceTable() {
           ))}
         </div>
 
-        <div className={cn(styles.divTiersContainer, styles.desktopView)}>
-          <TierContainer type={tiers[0].type} price={tiers[0].price} />
+        <div className={cn(styles.tabsFrame)}>
+          <Tabs tabNumber={tabNumber} handleClick={handleTabClick} />
         </div>
 
-        <div className={styles.spacer4} />
+        <div className={cn(styles.spacer4)} />
+
+        <div className={cn(styles.divTiersContainer, styles.desktopView)}>
+          <TierContainer
+            type={tiers[tabNumber - 1].type}
+            price={tiers[tabNumber - 1].price}
+          />
+        </div>
+
+        {/* <div className={styles.spacer4} /> */}
 
         <div className={styles.tableContainer}>
-          <FeatureComparisonTable />
+          <FeatureComparisonTable tabNumber={tabNumber} />
         </div>
       </div>
     </>
