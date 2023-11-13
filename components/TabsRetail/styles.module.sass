@@ -1,12 +1,13 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
 
-$issue: 950px
+$issue: 1251px
 $small: 680px
 
 .BG
     padding: 3rem 0
-
+.TabsMain
+    min-height: 37.3rem
 .ButtonAntd
     border-radius: 1.03125rem
     border: 2.2px solid var(--Gradient-Dark, #3E9B1D)
@@ -28,12 +29,12 @@ $small: 680px
     margin: auto
     text-align: center
 .SubTitle
-    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    color: var(--character-mark, #000)
     font-family: Roboto
-    font-size: 1.3125rem
+    font-size: 1.125rem
     font-style: normal
     font-weight: 400
-    line-height: 120% /* 1.575rem */
+    line-height: 150%
 .Container
     width: 86.1%
     margin: auto
@@ -67,6 +68,7 @@ $small: 680px
     flex-direction: column
     align-items: flex-start
     gap: var(--Spacing-24, 1.5rem)
+    flex: 0 0 40%
 
 .Offering
     display: flex
@@ -95,18 +97,39 @@ $small: 680px
 .MobileView
     display: none
 
+.underLine
+    position: relative
+    display: inline-flex
+
+.featureCardButton
+    @include fonts.fontDesktopH5Regular
+    color: rgba(0, 0, 0, 0.45)
+
+.underLine::after
+    content: ""
+    position: absolute
+    width: 93%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
+
 @media (max-width: $issue)
     .TabPane
         flex-wrap: wrap-reverse
     .LeftPane
         align-items: center
         text-align: center
+        flex: 0 0 100%
     .Offering
         align-items: center
+    .TabsMain
+        height: auto
+    .Heading
+        width: 80%
         
 @media (max-width: $small)
-    .LeftPane
-        display: none
     .ButtonAntd
         @include fonts.fontMobileSmallRegular
     .Title
@@ -119,4 +142,6 @@ $small: 680px
         display: block
     .TabPane
         padding: 0.5rem
+    .Heading
+        width: 80%
         

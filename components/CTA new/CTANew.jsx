@@ -16,7 +16,7 @@ function CTANew() {
         <div className={styles.CTABoxRight}> </div>
         <div className={styles.CTABox}>
           <div className={styles.CTARight}>
-            <div className={styles.Text}>Start <span style={{ color: "var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))" }}> 14 days </span>  free trial or book a demo with us</div>
+            <div className={styles.Text}>Start <span className={styles.GradientSurface}> 14 days </span>  free trial or book a demo with us</div>
             <div className={styles.Buttons}>
               <Button
                 type="primary"

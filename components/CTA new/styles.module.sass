@@ -134,7 +134,11 @@ $small: 680px
     @include fonts.fontH5Bold
 
 
-
+.GradientSurface
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
 
 @media (max-width: $issue)
@@ -153,6 +157,11 @@ $small: 680px
 
     .CTABoxLeft 
         right: 7%
+@media (max-width: 1090px)
+    .CTARight
+        width: 100%
+        text-align: center
+        align-items: center
 
 @media (max-width: $small)
     .CTABoxRight 
