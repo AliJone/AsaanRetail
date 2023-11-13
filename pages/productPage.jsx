@@ -1,18 +1,13 @@
 import { App } from "antd";
 import CTANew from "../components/CTA new/CTANew";
-import Enterprise from "../components/Enterprise/Enterprise";
 import FAQ from "../components/FAQ/FAQ";
 import Footer from "../components/Footer/Footer";
-import HeroSectionPricing from "../components/HeroSectionPricing";
 import ImageTextGrid from "../components/ImageTextGrid";
 import InventoryManagement from "../components/InventoryManagement/InventoryManagement";
 import ManyMore from "../components/ManyMore";
 import NavigationBar from "../components/Navbar";
-import SpecificRequirementPayment from "../components/SpecificReqPayment";
 import Testimonials from "../components/Testimonials/Testimonials";
-import ThroughLense from "../components/ThroughLense/ThroughLense";
 import ImageTextGrid from "../components/ImageTextGrid";
-import LifeAtAsaanRetail from "../components/LifeAtAR";
 
 const page = () => {
   return (
