@@ -1,0 +1,136 @@
+@use "../../utils/fonts"
+@use "../../utils/colors"
+
+$small: 42.5rem
+$medium: 61.9375rem
+    
+.HeaderClass
+    display: flex
+    justify-content: center
+    padding: 0 0
+    background-color: rgb(255, 255, 255)
+    
+    height: 5rem
+    top:0
+    width: 100%
+
+.NavButtonFonts
+    @include fonts.fontNavBar
+    color: colors.$fontColor_primary
+    
+
+.DivCenter
+    display: flex
+    justify-content: center
+    align-items: center
+
+.DivClass
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    padding: 0 0
+    // margin-left:.5rem
+    
+    background-color: rgb(255, 255, 255)
+    // box-shadow: 0 0 .625rem 0 rgb(182, 182, 182)
+    z-index: 100
+    // position: fixed
+    width: 100%
+    top: 0
+    height: inherit
+    // border-bottom: .0625rem solid#aeaeae0
+    
+.MenuDivClass
+    display: flex
+    // justify-self: left
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    overflow: auto
+    // width: 100%
+    // width: auto
+
+
+.LogoClass
+    @include fonts.fontbold
+    display: inline
+    margin: 0 0 0 0
+    justify-self: left
+    align-self: center
+    
+.userLogoClass
+    font-size: 1.25rem
+    
+.dividerClass
+    display: flex
+    align-items: center
+    gap: .625rem
+    align-self: stretch
+    height: auto
+    
+.divClass2
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 0 .5rem 0 0rem
+
+
+.divClassRow
+    display: flex
+    flex-direction: row
+    // align-items: center
+    // justify-content: center
+
+
+    
+.divButtonContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    height:100%
+    // justify-content: center
+
+
+.barColor
+    background: linear-gradient(90deg, #5FFF27 0.02%, rgba(237, 251, 239, 0.68) 61.33%, rgba(204, 240, 58, 0.68) 98.45%)
+    border-radius: 1.25rem
+    width: 5.0625rem
+    height: .25rem
+    position: relative
+
+.mobileNavBar
+    display: none
+
+.buttonAlignment
+    margin:0
+
+    
+
+@media(max-width: 873px)
+    .MenuDivClass
+        overflow: unset
+        .divClassRow
+            display: none
+    .divClass2
+        display: none
+    .mobileNavBar
+        display: flex
+        justify-content: center
+        align-items: center
+        transform: translateX(2.2rem)
+        font-size:1.4375rem
+        // padding-left: 1.25rem
+         
+    .LogoClass
+        display: flex
+        margin-left: -2.7rem
+        @include fonts.fontMobileH3Bold
+
+    .buttonAlignment
+        transform: translateX(.7rem)
+    
+        
+
+

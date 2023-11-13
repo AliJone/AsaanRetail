@@ -1,0 +1,22 @@
+@use "../../utils/fonts"
+@use "../../utils/colors"
+
+.imageClass
+    display: flex,
+    justify-content: center,
+    align-items: center,
+    
+.contentClassSetting
+    display: flex,
+    justify-content: center,
+    align-items: flex-start,
+    flex-direction: column,
+    
+.titleClass
+    @include fonts.fontboldh4
+    color: colors.$fontColor_secondary
+
+.contentClass
+    @include fonts.fontbodyRegular
+    color: colors.$fontColor_secondary
+    

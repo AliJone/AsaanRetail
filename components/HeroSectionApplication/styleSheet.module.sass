@@ -1,0 +1,114 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+
+
+$small : breakpoints.$small
+
+.heroSection
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding-top: 5.94rem
+
+.cardLayout
+    display: flex
+    width: 86.1111%
+    padding: 2.5rem 2rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+    border-radius: 1.25rem
+    background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box
+    margin: auto
+    border: 2.2px solid transparent
+
+.cardTitleContainer
+    width: 100%
+    display: flex
+    justify-content: flex-start
+
+.cardTitleText
+    @include fonts.fontDesktopH4Bold
+    color: colors.$fontColor_primary
+
+.textFrame
+    width: 86.1111%
+    display: flex
+    align-items: flex-start
+    gap: 1.25rem
+
+.responsibiltyContainer
+    display: flex
+    width: 57.58%
+    padding: 2.5rem 0rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 2.5rem
+    flex-shrink: 0
+
+.responsibiltyCard
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    gap: 1.5rem
+    align-self: stretch
+
+.responsibiltyCardTitle
+    @include fonts.fontDesktopH4Bold
+    color: colors.$fontColor_primary
+
+.responsibiltyCardBullet
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+
+.ulClass
+    margin: 0
+    padding-left: 1.8rem
+
+.jobContainer
+    display: flex
+    padding: 2.5rem 1.5rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 2.5rem
+    flex: 1 0 0
+
+.jobCard
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+.jobCardTitle
+    @include fonts.fontDesktopH4Bold
+    color: colors.$fontColor_primary
+
+.jobCardSubTitle
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+    
+.spacer1
+    padding-top: 3rem
+
+.spacer2
+    padding-top:2.13rem
+
+@media (max-width: $small)
+    .textFrame
+        flex-wrap: wrap
+        justify-content: center
+
+    .responsibiltyContainer
+        width: 100%
+        // padding: 2.5rem 0rem
+        // align-items: center
+        // gap: 2.5rem
+
+
+    
+    

@@ -1,0 +1,51 @@
+@use '../../utils/fonts'
+@use '../../utils/colors'
+@use '../../utils/breakpoints'
+
+$small: breakpoints.$small
+
+
+
+.tagClass
+    
+    background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box
+    border-radius: 1.03125rem
+    border: 2.2px solid transparent
+    padding: 0.30313rem 1.2375rem
+    gap: 0.30938rem
+
+.tagClass1
+    
+    background: linear-gradient(black, black) padding-box,colors.$linearGradientText border-box
+    border-radius: 1.03125rem
+    border: 2.2px solid transparent
+    padding: 0.30313rem 1.2375rem
+    gap: 0.30938rem
+    color: colors.$fontColor_secondary
+    
+    
+    
+
+//     display: flex;
+// padding: 0.10313rem 1.2375rem;
+// align-items: center;
+// gap: 0.30938rem;
+    
+
+
+
+.tagFont
+    @include fonts.fontBodyMedium
+    font-size: 1.5rem
+
+
+@media (max-width: $small)
+    .tagClass
+        padding: 0.20313rem 1.5375rem
+    .tagFont
+        @include fonts.fontMobileSmallRegular
+        font-size: 1.1rem
+
+
+
+    

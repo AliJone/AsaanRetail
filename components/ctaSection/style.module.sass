@@ -1,0 +1,127 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+@use "../../utils/breakpoints"
+
+$small: breakpoints.$small
+$medium: breakpoints.$medium
+
+.CTASectionDiv
+    background: colors.$bgSecondary
+    // height: 30.125rem
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-top:4.1rem
+
+.textContainerClass
+    text-align: center
+    height: min-content
+
+.titleClass
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_secondary
+    text-align: center
+
+.subTitleClass
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_secondary
+    text-align: center
+
+.buttonShadowClass
+    box-shadow: 0rem .2589rem 3.1066rem 0rem rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(.0647rem)
+    border-radius: 22.5rem
+    width: min-content
+
+.buttonPositioningDivClass
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    overflow: hidden
+
+.buttonText
+    @include fonts.fontH5Bold
+    color: colors.$fontColor_secondary
+    margin: 1.0625rem 1.875rem
+
+.RobotPositioningDivClass
+    position: absolute
+    z-index: 8
+    transform: translate(-31.5rem, 4.5rem)
+
+.spacer1
+    padding-top:.5rem
+    width:.0625rem
+
+.spacer2
+    padding-top:2.5rem
+    width:.0625rem
+    
+.spacer3
+    padding-top:6.875rem
+    width:.0625rem
+
+.FirstGradientLine
+    padding-left: 43%
+    width: 17.375rem
+
+.SecondGradientLine
+    display: block
+
+.desktopView
+    display: block
+
+.mobileView
+    display: none
+
+@media (max-width: 1227px)
+    .RobotPositioningDivClass
+        position: absolute
+        z-index: 8
+        transform: translate(-18.5rem, 4.5rem)
+
+@media (max-width: 825px)
+
+    .desktopView
+        display: none
+    
+    .mobileView
+        display: block
+
+    .CTASectionDiv
+        padding-top: 3.5rem
+    .titleClass
+        @include fonts.fontMobileH1Bold
+        line-height: 130%
+        color: colors.$fontColor_secondary
+        text-align: center
+
+    .subTitleClass
+        @include fonts.fontMobileH5Regular
+        color: colors.$fontColor_secondary
+        text-align: center
+        padding: 0rem .2rem
+        padding-top: .2rem
+
+    .FirstGradientLine
+        padding-left: 41%
+        width: 10.625rem
+        margin-top: -0.5rem
+
+
+    .SecondGradientLine
+        display: none
+
+    .spacer2
+        padding-top:2.3125rem
+    
+    .spacer3
+        padding-top: 21.5rem
+
+    .RobotPositioningDivClass
+        position: absolute
+        z-index: 8
+        transform: translate(0%, 8.7rem)

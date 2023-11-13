@@ -1,0 +1,29 @@
+@use "../../../utils/colors"
+@use "../../../utils/fonts"
+
+.backGround
+    border-radius: 52px
+    border: 1.3px solid var(--primary-6, colors.$color)
+    background: var(--primary-6, colors.$color)
+    box-shadow: 0px 5.38485px 64.61824px 0px rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(1.3462133407592773px)
+    width: fit-content
+    
+.classText
+    @include fonts.fontboldh2
+    color: var(--primary-1, colors.$fontColor_secondary)
+
+.divClass
+    border-radius: 20px
+    border: 3px solid var(--Text-Shadow, #3E9B1D)
+
+.divAnimation
+    animation: dropdown 1s ease-out
+    
+@keyframes dropdown
+  from 
+    transform: translateY(-100%)
+  
+  to 
+    transform: translateY(0%)
+

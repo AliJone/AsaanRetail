@@ -1,0 +1,133 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$small: 680px
+$medium: 960px
+
+.Box
+    display: inline-flex
+    padding: var(--Spacing-40, 2.5rem) 3rem
+    align-items: flex-start
+    gap: 0.625rem
+    border-radius: 0.625rem
+    background: rgba(255, 255, 255, 0.80)
+    backdrop-filter: blur(18px)
+
+.BG
+    border-radius: var(--tallyCount, 0rem)
+    background: var(--background-light, radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #FFF)
+    padding: 5rem 0
+    
+.Container
+    width: 85.76%
+    margin: auto
+    display: flex
+    gap: 3.25rem
+    flex-direction: column
+
+.Heading
+    display: flex
+    width: 100%
+    padding: 1rem var(--tallyCount, 0rem)
+    flex-direction: column
+    // align-items: center
+    gap: 1rem
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    line-height: 100% !important
+    @include fonts.fontDesktopH1Bold
+
+.gradientUnderline
+    position: relative
+
+.gradientUnderline::before 
+    content: ""
+    position: absolute
+    top: 100%
+    width: 100%
+    left: 0
+    background: colors.$linearGradientLine
+    border-radius: 20px
+    height: 8px
+
+.Body
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1.5rem
+    // flex-wrap: wrap
+
+.Col
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    justify-content: center
+    align-items: center
+
+.Col1
+    margin-top: 5.75rem
+
+.BoxContainer
+    display: flex
+    padding: var(--tallyCount, 0rem)
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+.Logo
+    width: 3rem
+    height: 3rem
+
+.Title
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    @include fonts.fontDesktopH3Bold
+
+.SubTitle
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    @include fonts.fontDesktopH5Regular
+
+.Link
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+    margin-top: 0.25rem
+    @include fonts.fontDesktopH5Regular
+
+.Box 
+  &:hover 
+    border: 4px solid var(--Gradient-Dark, #3E9B1D)
+    cursor: pointer
+    .arrow 
+      margin-left: 10px 
+    .Link
+        background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+
+
+.arrow 
+  // Initial state of the arrow
+  display: inline-block
+  margin-left: 0
+  transition: margin-left 0.3s ease // Smooth transition for the margin change
+
+    
+
+
+@media (max-width: $medium)
+    .Body
+        flex-wrap: wrap
+    .Col1
+        margin-top: 0rem
+@media (max-width: $small)
+    .Heading
+        align-items: center
+        text-align: center
+        @include fonts.fontMobileH2Bold
+    .Title
+        @include fonts.fontMobileH3Bold
+    .SubTitle
+        @include fonts.fontMobileH5Regular
+    .Link
+        @include fonts.fontMobileH5Bold
+
+        

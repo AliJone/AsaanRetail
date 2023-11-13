@@ -31,3 +31,9 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Ignore the ".next" directory
+/.next
+
+# Ignore the "package-lock.json" file
+/package-lock.json

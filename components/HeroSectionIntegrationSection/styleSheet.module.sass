@@ -1,0 +1,167 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+$small : breakpoints.$small
+
+.heroSection
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    background: colors.$radialGradient
+
+.heroSectionBG
+    width: 100%
+    padding-top: 6.88rem
+    padding-bottom: 8rem
+    background-image: url('./assests/background.svg')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+
+.textContainer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 1.5rem
+
+.titleContainer
+    width: 53.2%
+    margin: auto
+    text-align: center
+
+.titleText
+    @include fonts.fontDesktopTitle4Bold
+    color: colors.$fontColor_primary
+
+.subTitleContainer
+    width: 53.2%
+    margin: auto
+    text-align: center
+
+.subTitleText
+    @include fonts.fontDesktopH4Regular
+    color: colors.$fontColor_primary
+    
+    
+
+.underLine
+    position: relative
+    display: inline-flex
+    
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
+
+.textFieldContainer
+    width: 38.88%
+    margin: auto
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 1rem
+
+.textFieldCard
+    width: 100%
+    padding:0.75rem 0.312rem
+    background: colors.$bgPrimary
+
+.greyText
+    @include fonts.fontDesktopBodyRegular
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+
+.buttonText
+    @include fonts.fontH5Bold
+    color: colors.$fontColor_secondary
+
+
+.buttonContainer
+    // width: 33.74857142857143%
+    margin: auto
+
+
+
+.carouselContainer
+    display: none
+
+  
+.CarouselClass
+    display: flex
+    flex-direction: row
+    gap: 1rem
+    // justify-content: space-evenly
+    width:200%
+    margin: 0 auto
+    // padding-bottom: 2.1875rem
+
+
+.divAnimation
+    animation: LeftSlide 25s linear infinite
+
+
+
+
+@keyframes LeftSlide 
+  from 
+    transform: translateX(0%)
+  
+  to 
+    transform: translateX(-11.36%)
+
+    // 100%
+    //     transform: translateX(-160rem)
+
+.image
+  width: auto
+  height: auto
+
+
+@media (max-width: $small)
+    .heroSectionBG
+        background: none
+
+    .titleContainer
+        margin: auto
+        width: 90%
+
+    .subTitleContainer
+        width: 90%
+
+    .titleText
+        @include fonts.fontMobileH1Bold
+
+    .subTitleText
+        @include fonts.fontMobileH5Regular
+
+    .textFieldContainer
+        width: 90%
+
+    .textFieldCard
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+        border-radius: 0.625rem
+        border: 2px solid var(--neutral-1, #FFF)
+        background: #FFF
+
+    .buttonContainer
+        width: -webkit-fill-available
+
+    .carouselContainer
+        padding-top: 3rem
+        display: block
+
+        
+    
+
+
+    

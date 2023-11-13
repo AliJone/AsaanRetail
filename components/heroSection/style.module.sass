@@ -1,0 +1,270 @@
+@use "../../utils/fonts"
+@use "../../utils/colors"
+@use "../../utils/breakpoints"
+
+$small: breakpoints.$small
+$medium: breakpoints.$medium
+
+
+.heroSectionClass
+    display: flex
+    justify-content: center
+    align-items: centers
+    background: colors.$radialGradient
+    overflow: hidden
+
+.textButtonClass
+    @include fonts.fontbold
+    text-align: center
+    
+
+.ColorText
+    @include fonts.fontHeadingLandingPage
+    background: colors.$linearGradientText
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+    
+    
+
+
+.NonColorText
+    @include fonts.fontHeadingLandingPage
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+
+.divLeftColumn
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+    height: 100%
+    padding-left:6.7rem 
+
+.divParent
+    display: flex
+    justify-content: space-evenly
+    align-items: flex-start
+    margin-top: 3.5rem
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    
+.flagRowDiv
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    margin-left: -0.5rem
+    align-items: center
+
+.flagImage
+    width: 3.75rem
+    height: 2.8125rem
+    border-radius: .3125rem
+
+.RowDivCenter
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width:100%
+    margin-left: -4.6rem
+    
+
+.FieldClass
+    box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.15)
+    background-color: colors.$bgPrimary
+    width: 73%
+    display: flex
+    border-radius: .625rem
+    align-items: center
+    height: 3.75rem
+    margin-left:-0.7rem
+
+.TextClass
+    margin-left: -0.5rem
+    @include fonts.fontBodyH3Regular
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+
+.TextClassSmall
+    @include fonts.fontBodyRegularGrey
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+    
+
+.FilledButtonText
+    @include fonts.fontH5Bold
+    color: colors.$fontColor_secondary
+    margin: .3125rem 1.5625rem .3125rem 1.5625rem
+    
+    
+.moveLeft
+    margin-left: -0.5rem
+
+.moveRight
+    margin-left: .5rem
+
+.rightColumn
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+    height: 100%
+    // padding-left: 2.5rem
+    // margin-top: 3.5rem
+
+.divParentMobile
+    display: none
+
+.centering
+    display: none
+
+.tabView
+    display: none
+
+
+
+@media (max-width: $medium)
+    .tabView
+        display: block
+    
+    .divParentMobile
+        display: none
+    
+    .divParent
+        display: none
+
+    .divLeftColumn
+        padding-left: 0rem
+        display: flex
+        justify-content: center
+
+    .TextClass
+        padding-top: 2.5rem
+        padding-left: .5rem
+        width: 100%
+        display: flex
+        justify-content: center
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .flagRowDiv
+        width:100%
+        justify-content: center
+        margin-left: 0rem
+
+    .flagImage
+        width: 3.125rem
+        height: 2.1875rem
+        border-radius: .3125rem
+    .TextClassSmall
+        @include fonts.fontMobileH4Regular
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .FieldClass
+        // box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.15)
+        // background-color: colors.$bgPrimary
+        width: 95%
+        transform: translateX( .3rem)
+        display: flex
+        // border-radius: .625rem
+        justify-content: center
+        justify-self: center
+        // border: .0625rem solid #000000
+        // align-items: center
+        // height: 3.75rem
+        // margin-left:-0.7rem
+
+    .centering
+        display: flex
+        justify-content: center
+        align-items: center
+        // background: red
+        width: 100%
+    
+        .TextClassSmall
+            @include fonts.fontMobileSmallRegular
+            color: #555555
+        
+    
+
+        
+    
+
+    
+@media (max-width: $small)
+
+    .tabView
+        display: none
+    
+    .mobView
+        display: flex
+    
+    .desktopView
+        display: none
+
+    .divParent
+        display: none
+    .divParentMobile
+        display: block
+    .divLeftColumn
+        padding-left: 0rem
+        display: flex
+        justify-content: center
+
+    .TextClass
+        padding-top: 2.5rem
+        padding-left: .5rem
+        width: 100%
+        display: flex
+        justify-content: center
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .flagRowDiv
+        width:100%
+        justify-content: center
+        margin-left: 0rem
+
+    .flagImage
+        width: 3.125rem
+        height: 2.1875rem
+        border-radius: .3125rem
+    .TextClassSmall
+        @include fonts.fontMobileH4Regular
+        color: colors.$fontColor_primary
+        text-align: center
+
+    .FieldClass
+        // box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.15)
+        // background-color: colors.$bgPrimary
+        width: 95%
+        transform: translateX( .3rem)
+        display: flex
+        // border-radius: .625rem
+        justify-content: center
+        justify-self: center
+        // border: .0625rem solid #000000
+        // align-items: center
+        // height: 3.75rem
+        // margin-left:-0.7rem
+
+    .centering
+        display: flex
+        justify-content: center
+        align-items: center
+        // background: red
+        width: 100%
+    
+        .TextClassSmall
+            @include fonts.fontMobileSmallRegular
+            color: #555555
+        
+    
+
+        
+    

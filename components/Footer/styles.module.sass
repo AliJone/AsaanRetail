@@ -1,0 +1,206 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$small: 680px
+$medium: 991px
+
+.Footer
+    display: flex
+    padding: 4rem 6.25rem
+    flex-direction: column
+    align-items: center
+    gap: 2rem
+    align-self: stretch
+    /* style  */
+    border-radius: var(--tallyCount, 0rem)
+
+.InfoSection
+    // Layout 
+    display: flex
+    // width: 77.375rem
+    // height: 17.25rem
+    align-items: flex-start
+    gap: 3.5rem var(--Spacing-56, 3.5rem)
+    flex-wrap: wrap
+
+.VerticalContent
+    display: flex
+    align-items: flex-start
+    gap: 4rem
+    align-self: stretch
+
+.SingleVerticalSection
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.625rem
+
+.Title
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    cursor: pointer
+
+.SubTitleBlock
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.625rem
+
+.SubTitle
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    display: flex
+    padding: 4px 0px
+    align-items: center
+    gap: 10px
+    border-radius: 2px
+    cursor: pointer
+
+.Description
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1.5rem
+    flex: 1 0 0
+    align-self: stretch
+
+.logo
+    width: 5.25rem
+    height: 3.60938rem
+
+.Text
+    display: flex
+    padding: 0.25rem 0rem
+    align-items: flex-start
+    gap: 0.625rem
+    flex: 1 0 0
+    align-self: stretch
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    font-family: Roboto
+    font-size: 1rem
+    font-style: normal
+    font-weight: 400
+    line-height: 170% 
+
+.Divider
+    width: 100%
+
+.Extra
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    row-gap: 2rem
+    align-self: stretch
+    flex-wrap: wrap
+
+.Copyright
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    color: var(--neutral-7, #8CA397)
+
+.ExtraNSocials
+    display: flex
+    align-items: center
+    gap: 1.5rem
+    flex-wrap: wrap
+
+.ExtraLinks
+    display: flex
+    padding: 0.25rem 0rem
+    align-items: center
+    gap: 0.625rem
+    color: var(--neutral-7, #8CA397)
+
+.ExtraLinks
+    a
+        color: inherit
+
+.Socials
+    display: flex
+    align-items: center
+    gap: 1.5rem
+
+.MobileView
+    display: none
+.TabView
+    display: none 
+.DesktopView
+    display: block
+
+@media (max-width: $medium)
+    .TabView
+        display: block
+    .Extra
+        gap: 1rem
+    .MobileView
+        display: none
+    .TabView
+        display: block 
+    .DesktopView
+        display: none
+
+@media (max-width: $small)
+    .Footer
+        padding: 1.5rem 1.5rem
+    
+    .VerticalContent
+        gap: 1.5rem
+        flex-wrap: wrap
+
+    .MobileView
+        display: block
+
+    .tabView
+        display: none
+
+    .MobileView
+        display: block
+    .TabView
+        display: none 
+    .DesktopView
+        display: none
+
+    .ExtraNSocials
+        justify-content: center
+
+    .Extra
+        text-align: center
+
+
+
+
+
+// VERY IMPORTANT FOR GIMMIKS AROUND DIVS
+
+// .card {
+//     width: 500px  /* adjust as needed */
+//     height: 200px  /* adjust as needed */
+//     background-color: green
+//     position: relative
+//     /* ... any other styles ... */
+// }
+
+// .card::before, .card::after {
+//     content: ''
+//     width: 100px  /* adjust as needed */
+//     height: 100px  /* adjust as needed */
+//     background-color: white  /* adjust to the background color of your container or page */
+//     border-radius: 50%
+//     position: absolute
+// }
+
+// .card::before {
+//     top: -50px  /* half the height */
+//     left: -50px  /* half the width */
+// }
+
+// .card::after {
+//     bottom: -50px  /* half the height */
+//     right: -50px  /* half the width */
+// }

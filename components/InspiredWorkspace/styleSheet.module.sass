@@ -1,0 +1,203 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+@use "../../utils/breakpoints"
+
+
+$small: breakpoints.$small
+
+.FeaturesV2Section
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding-top: 8rem
+    padding-bottom: 8rem
+
+    // background: colors.$radialGradient
+
+
+.featureCardFrame
+    width: 86.133%
+    margin: auto
+    display: flex
+    align-items: flex-start
+    align-content: flex-start
+    gap: var(--Spacing-24, 1.5rem) 1.4375rem
+    flex-wrap: wrap
+    justify-content: space-between
+    z-index: 1
+
+
+.featureCardContainer
+    width: 22.1rem
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap:1.5rem
+    
+
+.featureCardTitleContaier
+    width: 100%
+    text-align: left
+    // position: relative
+    position: static
+    z-index: 1
+    
+    ::before
+        content: ""
+        position: absolute
+        
+        width: 2.75rem
+        height: 2.75rem
+        flex-shrink: 0
+
+        border-radius: 2.75rem
+        opacity: 0.8
+        background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+        margin-left: -0.9rem
+        margin-top: -0.7rem
+        z-index: -1
+
+.featureCardSubtitleTextContainer
+    width: 90%
+    text-align: left
+    
+    
+
+
+
+.featureCardTitle
+    @include fonts.fontDesktopH2Bold
+    color: colors.$fontColor_primary
+
+.featureCardSubTitle
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+
+.spacer1
+    width:1px
+    padding-top:2.5rem
+
+.spacer2
+    width:1px
+    padding-top:1rem
+
+.spacer3
+    width:1px
+    padding-top:2.23rem
+
+.spacer4
+    width:1px
+    padding-top:1.56rem
+
+.spacer5
+    width: 1px
+    padding-top:1rem
+
+
+
+
+
+@media (max-width: 880px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: 3.5rem
+        margin-top: -4rem
+
+    .spacer5
+        padding-top: 5rem
+
+@media (max-width: $small)
+
+    .FeaturesV2Section
+        background: colors.$radialGradient
+    .TitleText
+        @include fonts.fontMobileH2Bold
+
+    .subTitleText
+        @include fonts.fontMobileH5Regular
+
+    .featureCardTitle
+        @include fonts.fontMobileH3Bold
+
+    .featureCardIconDiv
+        justify-content: center
+
+    .featureCardTextDiv
+        justify-content: center
+        text-align: center
+
+    .subTitleContainer
+        width: 100%
+        display: flex
+        justify-content: center
+        text-align: center
+
+    .featureCardContainer
+        padding: 1.5rem
+        width: 28.812rem
+
+    .featureCardFrame
+        width: 98%
+
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: -5rem
+        margin-top: 0rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 1rem
+
+
+    .forBG
+        // position: relative
+        // overflow: hidden
+        
+        ::before
+            // display: none
+            margin-left: 21.5%
+            margin-top: 60%
+            // margin-right: 10%
+
+        ::after
+            // position: absolute
+            margin-left:44% 
+            margin-top: 20%
+            // margin-right: 
+
+
+@media (max-width: 623px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: 2.5rem
+        margin-top: -2.5rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 2.5rem
+
+@media (max-width: 483px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: 11rem
+        margin-top: -2.5rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 2.5rem
+
+@media (max-width: 318px)
+    .underlineDiv
+        // width: 5.5rem
+        margin-left: -9rem
+        margin-top: -2.5rem
+        width: 5.5rem
+
+    .spacer5
+        padding-top: 2.5rem    
+
+@media (max-width: 1426px)
+    .featureCardFrame
+        justify-content: center

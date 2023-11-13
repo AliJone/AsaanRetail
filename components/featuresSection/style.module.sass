@@ -1,0 +1,301 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+@use "../../utils/breakpoints"
+
+$small : breakpoints.$small
+$medium : breakpoints.$medium
+
+.featuresSectionDiv
+    width: 100%
+    // height: 52.1875rem
+    display: flex
+    justify-content: center
+    align-items: center
+    background: colors.$radialGradient
+    padding-top: 4.5rem
+
+.titleText
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+    text-align: center
+
+.divTextClass
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.subTitleClass
+    margin-top: .75rem
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+    text-align: center
+
+.divLeftColumn
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    width: 100%
+    // margin-left: 1.25rem
+
+.divImageContainer
+    border-radius: .625rem
+    box-shadow: 0rem .2589rem 3.1066rem 0rem rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(.0647rem)
+
+
+// featureList sass
+
+.scrollableList
+    display: flex
+    flex-direction: column
+    
+    max-width: 31.5625rem
+    max-height: 28.0625rem
+    overflow-y: auto
+    scrollbar-width: none
+    -ms-overflow-style: none
+    &::-webkit-scrollbar
+        display: none
+    overflow-x: hidden
+
+// feature Element sass
+.divFeatureElementTextContainer
+    max-width: min-content
+    padding-left: .1875rem
+    
+
+.divFeatureElementTitle
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+    text-align: left
+      
+
+.divFeatureElementListText
+    @include fonts.fontH4Regular
+    color: colors.$fontColor_primary
+    text-align: left
+
+.divFeatureElementIcon
+    display: flex
+    width: 100%
+    height: 100%
+    justify-content: flex-start
+    align-items: flex-start
+
+.divFeatureElementIconCheck
+    padding-left: 1.25rem
+    
+.FirstGradientLine
+    padding-left: 14%
+    margin-top:-0.4813rem
+    margin-left:-0.9375rem
+    
+.SecondGradientLine
+    padding-left: 43%
+    margin-top:.125rem
+
+.spacer1
+    padding-top: 1.25rem
+    width: 1%
+
+.verticalSpacer
+    padding-left: 2.5rem
+
+.spacer2
+    padding-top: 3.75rem
+    width: 1%
+
+.ThridGradientLine
+    display: none
+
+.DesktopView
+    display: block
+
+.MobileView
+    display: none
+
+.MobileView2
+    display: none
+
+.makeItRow
+    display: flex
+    flex-direction: row
+
+.centering
+    display: flex
+    justify-content: center
+    align-items: center
+
+.spacerFeatureList
+    padding-top: 3.75rem
+
+.spacerFeatureList2
+    padding-top: 3.75rem
+
+
+@media (max-width: $small) 
+    .DesktopView
+        display: none
+    .MobileView
+        display: block
+
+    .MobileView2
+        display: flex
+
+    .titleText
+        @include fonts.fontMobileH1Bold
+        color: colors.$fontColor_primary
+        text-align: center
+    
+    .subTitleClass
+        margin-top: 0rem
+        @include fonts.fontMobileH5Regular
+        color: colors.$fontColor_primary
+        text-align: center
+        
+    .FirstGradientLine
+        display: none
+    
+    .SecondGradientLine
+        display: none
+
+    .featuresSectionDiv
+        padding-top: 4.2rem
+    
+    .divLeftColumn
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        margin-top: 1.5rem
+
+
+    .scrollableList
+        display: flex
+        flex-direction: column
+        max-height: 100%
+        overflow-y: auto
+        height: min-content
+        width: 100%
+
+    .divFeatureElementIcon
+        justify-content: center
+        align-items: center
+
+    
+
+    .ThridGradientLine
+        display: block
+        width: 100%
+        transform: translate(-0.4rem,-4rem)
+
+    .divFeatureElementTitle
+        @include fonts.fontDesktopH2Bold
+        text-align: center
+
+    .divFeatureElementListText
+        @include fonts.fontH4Regular
+        
+        
+
+
+    // .divFeatureElementTextContainer
+    //     max-width: max-content
+    //     // padding-left: .1875rem
+    //     display: flex
+    //     justify-content: center
+    //     width: 100%
+    //     text-align: center
+
+    .divFeatureElementTextContainer
+        display: flex
+        justify-content: center
+        // width: 100%
+        max-width: min-content
+        padding-left: 0rem
+        padding-top:1rem 
+
+    .divFeatureElementIcon
+        display: flex
+        width: 100%
+        height: 3.75rem
+        justify-content: center
+        align-items: center
+
+    .divFeatureElementIconCheck
+        padding-left: 1.25rem
+
+
+    .verticalSpacer
+        display: flex
+        width: 100%
+        justify-content: center
+
+        padding-left: 0rem
+        padding-top: 1.6rem
+        
+
+    
+
+    .spacerFeatureList
+        padding-top: 3.8rem
+    
+
+    .spacer2
+        padding-top: 2.6875rem
+
+        // overflow-y: auto
+        // scrollbar-width: none
+        // margin-left: 1.25rem
+    // .divImageContainer
+    //     border-radius: .625rem
+    //     box-shadow: 0rem .2589rem 3.1066rem 0rem rgba(227, 203, 127, 0.30)
+    //     backdrop-filter: blur(.0647rem)
+    // .divFeatureElementTextContainer
+    //     max-width: min-content
+    //     padding-left: .1875rem
+    // .divFeatureElementTitle
+    //     @include fonts.fontMobileH1Bold
+    //     color: colors.$fontColor_primary
+    //     text-align: left
+    // .divFeatureElementListText
+    //     @include fonts.fontboldh4
+    //     color: colors.$fontColor_primary
+    //     text-align: left
+    // .divFeatureElementIcon
+    //     display: flex
+    //     width: 100%
+    //     height: 100%
+    //     justify-content: flex-start
+    //     align-items: flex-start
+    // .divFeatureElementIconCheck
+    //     padding-left: 1.25rem
+    // .FirstGradientLine
+    //     padding-left: 14%
+    //     margin-top:-0.4813rem
+    //     margin-left:-0.9375rem
+    // .SecondGradientLine
+    //     padding-left: 43%
+    //     margin-top:.125rem
+    // .spacer1
+    //     padding-top: 1.25rem
+    //     width: 1%
+    // .verticalSpacer
+    //     padding-left: 2.5rem
+    // .spacer2
+    //     padding-top: 3.75rem
+    //     width: 1%
+    // .scrollableList
+    //     display: flex
+    //     flex-direction: column
+    //     max-width: 31.5625rem
+    //     max-height: 28.0625rem
+    //     overflow-y: auto
+    //     scrollbar-width: none
+    //     -ms-overflow-style: none
+    //     &::-webkit-scrollbar
+    //         display: none
+    //     overflow-x: hidden
+    // .featuresSectionDiv
+    //     width: 100%

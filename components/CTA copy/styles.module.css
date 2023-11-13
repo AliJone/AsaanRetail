@@ -1,0 +1,125 @@
+.CTA {
+    /* Layout */
+    display: flex;
+    height: 42.125rem;
+    /* width: 70.625rem; */
+    padding: var(--Spacing-64, 4rem) 6.25rem;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--Spacing-32, 2rem);
+    align-self: stretch;
+
+    /* style  */
+    border-radius: var(--tallyCount, 0rem);
+    background-color: rgba(25, 25, 25, 1);
+
+}
+
+.MainLayoutBlock {
+    /* Layout */
+    display: flex;
+    padding: 4rem 1.5rem 4rem 13.9375rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+
+    /* Style  */
+    border-radius: 1.25rem;
+    border-top: 2px solid var(--primary-6, #009241);
+    border-bottom: 2px solid var(--primary-6, #009241);
+
+    /* Website Shadow - Green */
+    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30);
+    backdrop-filter: blur(1.0355486869812012px);
+}
+
+.Title {
+    color: var(--character-primary-inverse, #FFF);
+    text-align: center;
+
+}
+
+.Desktop_H1_Bold {
+    font-family: Roboto;
+    font-size: 3.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    /* 4.575rem */
+}
+.Desktop_H3_Medium {
+    color: var(--character-primary-inverse, #FFF);
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 133.333% */
+}
+
+.Image{
+    /* Layout  */
+    /* width: 22.75rem;
+    height: 26.8125rem; */
+
+    /* Position  */
+    position: absolute;
+left: -6.875rem;
+bottom: -4.6875rem;
+
+/* Style  */
+border-radius: 1.25rem;
+}
+
+.DescLayoutBlock{
+/* Layout  */
+display: flex;
+padding: var(--tallyCount, 0rem);
+flex-direction: column;
+align-items: center;
+gap: 2.5rem;
+align-self: stretch;
+
+/* Style  */
+border-radius: var(--tallyCount, 0rem);
+
+}
+
+.Checkboxes{
+    /* Layout  */
+    display: flex;
+padding: var(--tallyCount, 0rem);
+justify-content: center;
+align-items: flex-start;
+gap: 4rem;
+align-self: stretch;
+
+/* Style  */
+border-radius: var(--tallyCount, 0rem);
+}
+
+.CheckboxesGroup{
+    /* Layout  */
+    display: flex;
+padding: var(--tallyCount, 0rem);
+flex-direction: column;
+align-items: flex-start;
+gap: 2rem;
+
+/* Style  */
+border-radius: var(--tallyCount, 0rem);
+}
+
+.Check{
+    /* Layout  */
+    display: flex;
+padding: var(--tallyCount, 0rem);
+align-items: center;
+gap: 0.5rem;
+}
+
+.CheckIcon{
+    /* Layout  */
+    width: 2.25rem;
+height: 2.25rem;
+
+}
+

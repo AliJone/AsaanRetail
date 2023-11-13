@@ -1,0 +1,41 @@
+
+@use '../../utils/colors'
+@use '../../utils/breakpoints'
+
+$small: breakpoints.$small
+$medium: breakpoints.$medium
+  
+.CarouselClass
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    width:200%
+    margin: 0 auto
+    padding-bottom: 2.1875rem
+
+
+.divAnimation
+    animation: LeftSlide 25s linear infinite
+
+
+
+
+@keyframes LeftSlide 
+  from 
+    transform: translateX(0%)
+  
+  to 
+    transform: translateX(-48.36%)
+
+    // 100%
+    //     transform: translateX(-160rem)
+
+.image
+  width: auto
+  height: auto
+
+@media (max-width:$small) 
+  .CarouselClass
+    display: none
+
+  

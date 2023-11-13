@@ -1,0 +1,52 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$issue: 1145px
+$small: 680px
+
+.BG
+    background: var(--background-dark, radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #191919)
+    background-image: url("./assets/images/BG.png")
+    background-size: cover
+.Container
+    width: 86.6%
+    padding: 2.5rem 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    flex-wrap: wrap
+    gap: 2.5rem
+    margin: auto
+.ContainerLeft
+    display: flex
+    gap: 1rem
+    flex-direction: column
+    color: var(--character-primary-inverse, #FFF)
+    width: 30%
+.Heading
+    @include fonts.fontDesktopH1Bold
+.SubHeading
+    @include fonts.fontDesktopH5Regular
+.MobileView
+    display: none
+
+
+
+@media (max-width: $issue)
+    .Container
+        justify-content: center
+        text-align: center
+    .ContainerLeft
+        width: 100%
+@media (max-width: $small)
+    .MobileView
+        display: block
+    .DesktopView
+        display: none
+    .Heading
+        @include fonts.fontMobileH1Bold
+    .SubHeading
+        @include fonts.fontMobileH5Regular
+        
+    

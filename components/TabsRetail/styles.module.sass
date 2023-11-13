@@ -1,0 +1,122 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$issue: 950px
+$small: 680px
+
+.BG
+    padding: 3rem 0
+
+.ButtonAntd
+    border-radius: 1.03125rem
+    border: 2.2px solid var(--Gradient-Dark, #3E9B1D)
+    display: flex
+    padding: 0.10313rem 1.2375rem
+    align-items: center
+    gap: 0.30938rem
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    @include fonts.fontBodyMedium
+.Title
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    @include fonts.fontDesktopH2Bold
+.Heading
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+    width: 57%
+    margin: auto
+    text-align: center
+.SubTitle
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    font-family: Roboto
+    font-size: 1.3125rem
+    font-style: normal
+    font-weight: 400
+    line-height: 120% /* 1.575rem */
+.Container
+    width: 86.1%
+    margin: auto
+    display: flex
+    gap: 2.5rem
+    flex-direction: column
+.Body
+    border-radius: var(--Spacing-40, 2.5rem)
+    border-top: 4px solid var(--gradient-surface, #009241)
+    background: var(--neutral-1, #FFF)
+
+    /* Website Shadow - Green */
+    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(1.0355486869812012px)
+    padding: 0.5rem 0rem
+
+.TabPane
+    padding: 2rem 
+    display: flex
+    justify-content: space-between
+    gap: 2.5rem
+    align-items: center
+
+.RightPane img
+    width: 100%
+    margin: auto
+    height: auto
+
+.LeftPane
+    display: inline-flex
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-24, 1.5rem)
+
+.Offering
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+.OfferingHeading
+    color: var(--character-mark, #000)
+    @include fonts.fontDesktopH4Medium
+
+.Name
+    color: var(--character-mark, #000)
+    @include fonts.fontDesktopH5Regular
+
+.OfferingData
+    display: flex
+    align-items: flex-start
+    gap: 0.75rem
+
+.Data1
+    display: flex
+    align-items: center
+    gap: 0.625rem
+
+.MobileView
+    display: none
+
+@media (max-width: $issue)
+    .TabPane
+        flex-wrap: wrap-reverse
+    .LeftPane
+        align-items: center
+        text-align: center
+    .Offering
+        align-items: center
+        
+@media (max-width: $small)
+    .LeftPane
+        display: none
+    .ButtonAntd
+        @include fonts.fontMobileSmallRegular
+    .Title
+        @include fonts.fontMobileH2Bold
+    .SubTitle
+        @include fonts.fontMobileH5Regular
+    .DekstopView
+        display: none
+    .MobileView
+        display: block
+    .TabPane
+        padding: 0.5rem
+        
