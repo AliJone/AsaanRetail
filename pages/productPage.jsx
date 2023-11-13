@@ -7,7 +7,6 @@ import InventoryManagement from "../components/InventoryManagement/InventoryMana
 import ManyMore from "../components/ManyMore";
 import NavigationBar from "../components/Navbar";
 import Testimonials from "../components/Testimonials/Testimonials";
-import ImageTextGrid from "../components/ImageTextGrid";
 
 const page = () => {
   return (
