@@ -6,8 +6,6 @@ import InspiredWorkspace from "../components/InspiredWorkspace";
 import NavigationBar from "../components/Navbar";
 import OpenRoles from "../components/OpenRoles";
 import LifeAtAsaanRetail from "../components/LifeAtAR";
-import Testimonials from "../components/Testimonials/Testimonials";
-import FAQ from "../components/FAQ/FAQ";
 import CTANew from "../components/CTA new/CTANew";
 import Footer from "../components/Footer/Footer";
 
@@ -21,19 +19,13 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionCareer />
+          {/* <HeroSectionCareer />
           <InspiredWorkspace/>
           <LifeAtAsaanRetail />
-          <OpenRoles />
-          {/* <HeroSectionApplication />
-          <ApplicationFormFeilds/> */}
-           <Testimonials />
-          {/* <ThroughLense /> */}
-          {/* <Enterprise /> */}
-
-          <FAQ />
+          <OpenRoles /> */}
+          <HeroSectionApplication />
+          {/* <ApplicationFormFeilds/> */}
           <CTANew />
-          {/* <CTA /> */}
           <Footer />
         </div>
       </App>

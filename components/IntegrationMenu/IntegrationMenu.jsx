@@ -20,7 +20,7 @@ import FPBRPOS from './assets/images/FPBRPOS.png';
 
 const initialPlatforms = [
   {
-    category: 'Market Places',
+    category: 'Marketplaces',
     platforms: [
       {
         name: 'Daraz',

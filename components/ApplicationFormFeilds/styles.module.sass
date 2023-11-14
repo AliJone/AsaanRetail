@@ -34,7 +34,15 @@ $medium: 960px
   
 
 .ant-btn-primary 
-
+.Labels
+    label
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85)) !important
+        /* Body/regular */
+        font-family: Roboto !important
+        font-size: 0.875rem !important
+        font-style: normal !important
+        font-weight: 400 !important
+        line-height: 1.375rem !important 
 .Container label
     color: var(--character-title-85, rgba(0, 0, 0, 0.85))
     font-family: Roboto
@@ -43,9 +51,16 @@ $medium: 960px
     font-weight: 400
     line-height: 1.65rem
 .Container textarea
-    max-height: 6.7rem
+    height: 6.7rem
 .Allowed
     margin-top: 1rem
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+    /* Body/regular */
+    font-family: Roboto
+    font-size: 0.875rem
+    font-style: normal
+    font-weight: 400
+    line-height: 1.375rem
 .Submit
     text-align: center
     text-align: -webkit-center
@@ -55,12 +70,12 @@ $medium: 960px
     display: flex
     margin-top: 0.5rem
     width: 11.8125rem
-    height: 3.5rem
-    padding: 0.4rem 0.9375rem
+    height: 3.5rem !important
+    padding: 0.4rem 0.9375rem !important
     justify-content: center
     align-items: center
     gap: 0.625rem
-    border-radius: 0.625rem
+    border-radius: 0.625rem !important
     border: 1px solid var(--gradient-surface, #009241)
     background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
     box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
