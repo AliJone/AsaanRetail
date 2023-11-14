@@ -18,9 +18,7 @@ const page = () => {
           }}
         >
           <NavigationBar />
-
           <ImageTextGrid />
-
           <ManyMore />
           <InventoryManagement />
           <Testimonials />
