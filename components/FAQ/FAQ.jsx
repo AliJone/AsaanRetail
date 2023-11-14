@@ -17,6 +17,7 @@ function FAQ() {
     background: 'white',
     borderRadius: 4,
     border: 'none',
+    borderLeft: "4px solid var(--gradient-surface, #009241) !important"
   };
 
   return (
@@ -83,6 +84,7 @@ function FAQ() {
         <div className={styles.Body}>
           <Collapse
             bordered={false}
+            expandIconPosition="right"
             // onChange={handleCollapseChange}
             defaultActiveKey={['1']}
             expandIcon={({ isActive }) => <PlusOutlined rotate={isActive ? 45 : 0} />}

@@ -39,3 +39,28 @@
   align-items: center;
   opacity: 1;
 }
+
+.ant-tabs-tab div{
+  color: var(--character-mark, #000);
+  font-family: Roboto;
+font-size: 1.3125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+}
+
+.ant-tabs-tab-active div {
+  color: var(--primary-6, #009241) !important;
+  font-weight: 500;
+  
+}
+:where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-btn:focus:not(:focus-visible), :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:focus:not(:focus-visible), :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-btn:active, :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:active {
+  color: var(--primary-6, #009241) !important;
+}
+
+.ant-tabs > div:first-child{
+  padding: 0px 10px;
+}
+.ant-tabs-ink-bar {
+  background: var(--primary-6, #009241) !important;
+}

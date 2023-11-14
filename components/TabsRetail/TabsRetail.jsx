@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 
+import cn from 'classnames'
+
 import styles from './styles.module.sass'
 import { Tabs, Button } from 'antd';
 
@@ -15,7 +17,9 @@ import Woo from './assets/images/Woo.png'
 
 function Offering({ svgPath, name }) {
   return (
-    <div className={styles.Data1}>
+    <div className={styles.Data1}
+    style={{ gap: name === "" ? "0" : "0.625rem" }}
+    >
       <Image src={svgPath} />
       <div className={styles.Name}>
         {name}
@@ -103,11 +107,12 @@ function TabsRetail() {
         <div className={styles.Container}>
           <div className={styles.Heading}>
             <Button className={styles.ButtonAntd}>Solutions</Button>
-            <div className={styles.Title}>From retail to ecommerce, Asaan Retail for everyone </div>
+            <div className={styles.Title}>From retail to <span className={cn(styles.underLine)}>
+            ecommerce , </span>  Asaan Retail for everyone </div>
             <div className={styles.SubTitle}>Explore how Asaan Retail works for every industries</div>
           </div>
           <div className={styles.Body}>
-            <Tabs className={styles.DekstopView} defaultActiveKey="1"  centered>
+            <Tabs className={cn(styles.DekstopView, styles.TabsMain)}  defaultActiveKey="1"  centered>
               {tabsData.map((tab, index) => (
                 <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
                   <div className={styles.TabPane}>
@@ -122,11 +127,9 @@ function TabsRetail() {
                           ))}
                         </div>
                       </div>
-                      <div className={styles.LearnMore}>
-                        <Link href={tab.content.learnMoreLink}>
-                          Learn More <span className={styles.Arrow}>→</span>
-                        </Link>
-                      </div>
+                      <Button  type="text" onClick = {()=>{}} style={{padding:"0px"}}>
+                    <span className={cn(styles.featureCardButton)}>Learn More &gt;</span>
+                </Button>
                     </div>
                     <div className={styles.RightPane}>
                       <Image src={tab.content.image} />
@@ -150,11 +153,9 @@ function TabsRetail() {
                           ))}
                         </div>
                       </div>
-                      <div className={styles.LearnMore}>
-                        <Link href={tab.content.learnMoreLink}>
-                          Learn More <span className={styles.Arrow}>→</span>
-                        </Link>
-                      </div>
+                      <Button  type="text" onClick = {()=>{}} style={{padding:"0px"}}>
+                    <span className={cn(styles.featureCardButton)}>Learn More &gt;</span>
+                </Button>
                     </div>
                     <div className={styles.RightPane}>
                       <Image src={tab.content.image} />
