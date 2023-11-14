@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from 'next/router';
 import cn from "classnames";
 import styles from "./styles.module.sass";
 import Image from "next/image";
@@ -33,11 +34,16 @@ const jobData = [
   },
 ];
 
-function handleJobClick() {
-  // navigate to job appli form
-}
+
 
 function OpenRoles() {
+  const router = useRouter();
+  
+function handleJobClick() {
+  
+  // Navigate to /careerPage1
+  router.push('/careerPage1');
+}
   return (
     <div className={styles.mainSection}>
       <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} />
@@ -65,7 +71,7 @@ function OpenRoles() {
 
       <>
         {jobData.map((job) => (
-          <div className={styles.jobCard}>
+          <div className={styles.jobCard} onClick={handleJobClick}>
             <div className={styles.jobInnerCard}>
               <Image src={WeirdIcon} alt="icon" />
 
@@ -85,7 +91,7 @@ function OpenRoles() {
               src={ForwardIcon}
               alt="forward icon"
               className={styles.forwardIcon}
-              onClick={handleJobClick}
+              
             />
           </div>
         ))}
