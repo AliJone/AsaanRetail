@@ -9,7 +9,6 @@ const Carousel = ({imagesarray})=>{
         <div className={cn(style.divContainer)}>
         <div className={cn(style.blurLeft)} />
         <div className ={cn(style.CarouselClass,style.divAnimation)} >
-            <div className = {cn(style)}/>
             {
                 imagesarray.map((image,index)=>{
                     return (
@@ -19,16 +18,7 @@ const Carousel = ({imagesarray})=>{
                     )
                 })
             }
-            {
-                imagesarray.map((image,index)=>{
-                    return (
-                        <div className={style.image}>
-                            <Image key={index} src = {image} />
-                        </div>
-                    )
-                })
-            }
-            <div className = {cn(style)}/>
+            
         </div>
         <div className={cn(style.blurRight)}/>
         </div>

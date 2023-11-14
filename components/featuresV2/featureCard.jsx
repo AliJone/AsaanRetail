@@ -22,7 +22,7 @@ const FeatureCard = ({icon, title, description}) => {
             <div className={cn(style.featureCardIconDiv)}>
                 <Button  type="text" onClick = {()=>{}} style={{padding:"0px"}}>
                     {/* <span className={cn(style.featureCardButton)}>Learn More &gt;</span> */}
-                    <div className={style.Link} > Learn More <span className={style.arrow}> &gt; </span></div>
+                    <div className={style.Link} >Learn More <span className={style.arrow}> &gt; </span></div>
                 </Button>
             </div>
             

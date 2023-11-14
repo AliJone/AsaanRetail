@@ -20,7 +20,7 @@ const FeaturesV2 = () =>{
             </div>
             <div className={cn(style.spacer2)}/>
             <div className={cn(style.TitleContainer)}>
-                <span className={cn(style.TitleText,style.convertToRow)}>Features to ignite business growth!</span>
+                <span className={cn(style.convertToRow)}><h2 className={cn(style.TitleText)}>Features to ignite business growth!</h2></span>
                 <div className={cn(style.underlineDiv)}>
                     <GradientLine width={"inherit"}/>
                 </div>
@@ -29,7 +29,9 @@ const FeaturesV2 = () =>{
             <div className={cn(style.spacer5)}/>
             <div className={cn(style.subTitleContainer, style.subTitleText)}>
                 <span >
+                    <p>
                     Prevent inventory losses, increase delivery times, and reduce accounting errors - all in one place!
+                    </p>
                 </span>
             </div>
             <div className={cn(style.spacer3)}/>

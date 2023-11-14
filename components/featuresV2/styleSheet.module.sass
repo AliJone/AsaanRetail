@@ -5,6 +5,8 @@
 
 $small: breakpoints.$small
 
+
+
 .FeaturesV2Section
     width: 100%
     display: flex
@@ -13,9 +15,11 @@ $small: breakpoints.$small
     flex-direction: column
     background: colors.$radialGradient
 
-    
-    
-    
+    p
+        margin: 0
+
+    h1
+        margin: 0
 
     // ::after
     //     content: ""
@@ -32,6 +36,7 @@ $small: breakpoints.$small
     justify-content: center
     align-items: center
     flex-direction: row
+
     
 
 .underlineDiv
@@ -53,10 +58,10 @@ $small: breakpoints.$small
     
 
 .TitleText
-    
     @include fonts.fontDesktopH2Bold
     color: colors.$fontColor_primary
     text-align: center
+    margin: 0
 
 .convertToColumn
     flex-direction: column
@@ -182,6 +187,12 @@ $small: breakpoints.$small
     color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
     margin-top: 0.25rem
     @include fonts.fontDesktopH5Regular
+
+.arrow 
+  // Initial state of the arrow
+  display: inline-block
+  margin-left: 0
+  transition: margin-left 0.3s ease 
 
 .featureCardContainer
     width: 17.93rem
