@@ -178,6 +178,11 @@ $small: breakpoints.$small
     padding-top:1rem
 
 
+.Link
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+    margin-top: 0.25rem
+    @include fonts.fontDesktopH5Regular
+
 .featureCardContainer
     width: 17.93rem
     display: flex
@@ -194,6 +199,14 @@ $small: breakpoints.$small
         background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box !important
         border: .25rem solid transparent
         border-radius: 0.625rem
+        cursor: pointer
+        .arrow 
+            margin-left: 10px 
+        .Link
+            background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
         
         .featureCardButton
             @include fonts.fontDesktopH5Regular

@@ -173,15 +173,18 @@ $small : breakpoints.$small
 
 .underLine
     position: relative
-    ::before
-        content: ""
-        position: absolute
-        width: 9.75rem
-        height: 0.5rem
-        flex-shrink: 0
-        border-radius: 1.25rem
-        background: colors.$linearGradientLine
-        top: 90%
+    display: inline-flex
+    
+
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
 
 .underLine2
     position: relative
@@ -228,6 +231,9 @@ $small : breakpoints.$small
 
     .subTitleText
         text-align: center
+        
+    .ImageContainer
+        padding-top: 4rem
 
     
 
@@ -280,6 +286,7 @@ $small : breakpoints.$small
             // top: 90%
 
     .ImageContainer
+        padding-top: 0rem
         ::before
             width: 9.90944rem
             height: 9.90944rem
