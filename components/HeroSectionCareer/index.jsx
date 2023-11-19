@@ -11,14 +11,14 @@ import p5 from "./assests/person5.svg";
 import p6 from "./assests/person6.svg";
 import p7 from "./assests/person7.svg";
 import p8 from "./assests/person8.svg";
-import pr1 from './assests/p1.svg';
-import pr2 from './assests/p2.svg';
-import pr3 from './assests/p3.svg';
-import pr4 from './assests/p4.svg';
-import pr5 from './assests/p5.svg';
-import pr6 from './assests/p6.svg';
-import pr7 from './assests/p7.svg';
-import pr8 from './assests/p8.svg';
+import pr1 from "./assests/p1.svg";
+import pr2 from "./assests/p2.svg";
+import pr3 from "./assests/p3.svg";
+import pr4 from "./assests/p4.svg";
+import pr5 from "./assests/p5.svg";
+import pr6 from "./assests/p6.svg";
+import pr7 from "./assests/p7.svg";
+import pr8 from "./assests/p8.svg";
 import style from "./styleSheet.module.sass";
 
 const HeroSectionCareer = () => {
@@ -35,13 +35,12 @@ const HeroSectionCareer = () => {
         </div>
 
         <div className={cn(style.textContainer)}>
-          <div className={cn(style.titleContainer,style.titleText)}>
+          <div className={cn(style.titleContainer, style.titleText)}>
             {/* <span className={cn()}> */}
-              Discover your{' '}
-              <span className={cn(style.underLine)}>
-                 future 
-              </span>{' '}
-              with Asaan Retail
+            Discover your <span className={cn(style.underLine)}>
+              future
+            </span>{" "}
+            with Asaan Retail
             {/* </span> */}
           </div>
           <div className={cn(style.subTitleContainer)}>

@@ -128,7 +128,7 @@ function QuestionCircle() {
   return (
     <Image
       className={styles.tableMobileView}
-      style={{ marginLeft: "0.3rem" }}
+      styles={{ marginLeft: "0.3rem" }}
       src={QuestionCircleimg}
       alt="❔"
     />
@@ -263,6 +263,7 @@ const Tabs = (props) => {
     <>
       <div className={cn(styles.divTabsContainer)}>
         <div
+          className={cn(styles.addPadding)}
           onClick={() => {
             props.handleClick(1);
           }}
@@ -278,7 +279,10 @@ const Tabs = (props) => {
             <span />
           </span>
         </div>
-        <div onClick={() => props.handleClick(2)}>
+        <div
+          className={cn(styles.addPadding)}
+          onClick={() => props.handleClick(2)}
+        >
           <span
             className={
               props.tabNumber == 2
@@ -290,7 +294,10 @@ const Tabs = (props) => {
             <span />
           </span>
         </div>
-        <div onClick={() => props.handleClick(3)}>
+        <div
+          className={cn(styles.addPadding)}
+          onClick={() => props.handleClick(3)}
+        >
           <span
             className={
               props.tabNumber == 3
