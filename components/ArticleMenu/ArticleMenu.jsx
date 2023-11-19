@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styles from './styles.module.sass';
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import cn from 'classnames';
 
 import Shopify from './assets/images/Shopify.png';
-import Daraz from './assets/images/Daraz.png';
+import Article from './assets/images/article.png';
 import Woo from './assets/images/Woo.png';
 import TCS from './assets/images/TCS.png';
 import BlueEx from './assets/images/BlueEx.png';
@@ -20,115 +21,112 @@ import FPBRPOS from './assets/images/FPBRPOS.png';
 
 const initialPlatforms = [
   {
-    category: 'Marketplaces',
-    platforms: [
-      {
-        name: 'Daraz',
-        description: 'A dominant South Asian online marketplace with a vast product selection, serving shoppers in multiple countries.',
-        image: Daraz,
-      },
-      // Add other marketplace platforms here
-    ],
+    category: 'Accounting',
+    image: Article,
+    _id: '1',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
   },
   {
-    category: 'Ecommerce Platforms',
-    platforms: [
-      {
-        name: 'Shopify',
-        description: 'An e-commerce platform that empowers businesses to effortlessly set up and manage online stores.',
-        image: Shopify,
-      },
-      {
-        name: 'WooCommerce',
-        description: 'A versatile WordPress plugin designed for e-commerce on websites, providing scalability and customization options.',
-        image: Woo,
-      },
-      
-    ],
+    category: 'Accounting',
+    image: Article,
+    _id: '2',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
   },
   {
-    category: 'Shipping Platforms',
-    platforms: [
-      {
-        name: 'TCS',
-        description: 'TCS is celebrated for its proficiency in logistics and a sterling record of secure and timely deliveries.',
-        image: TCS,
-      },
-      {
-        name: 'BlueEx',
-        description: 'BlueEx celebrated for its expansive and well-connected delivery network, on-time deliveries.',
-        image: BlueEx,
-      },
-      {
-        name: 'PostEx',
-        description: 'A trusted courier service with a focus on reliable domestic and international deliveries, ensuring peace of mind for customers.',
-        image: BlueEx,
-      },
-      {
-        name: 'CallCourier',
-        description: 'CallCourier is a Pakistani courier company known for its swift, secure and on-time parcel delivery services.',
-        image: CallCourier,
-      },
-      {
-        name: 'Swyft',
-        description: 'Swift courier services are designed for businesses needing quick, efficient, and reliable transportation solutions.',
-        image: Swyft,
-      },
-      {
-        name: 'Rider',
-        description: 'Rider is a popular courier which offers swift and efficient delivery services, known for its focus on speed and reliability.',
-        image: Rider,
-      },
-      {
-        name: 'Trax',
-        description: 'TRAX specializes in precision logistics and courier services, offering innovative tracking and real-time delivery solutions.',
-        image: Trax,
-      },
-      
-    ],
+    category: 'Accounting',
+    image: Article,
+    _id: '3',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
   },
   {
-    category: 'SMS Portals',
-    platforms: [
-      {
-        name: 'Monty Mobile',
-        description: 'Monty Mobile is a global telecommunications company, offering solutions for mobile operators and businesses.',
-        image: MontyMobile,
-      },
-    ],
+    category: 'Inventory',
+    image: Article,
+    _id: '4',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
+  },
+  {
+    category: 'Inventory',
+    image: Article,
+    _id: '5',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
+  },
+  {
+    category: 'Order',
+    image: Article,
+    _id: '6',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
+  },
+  {
+    category: 'Order',
+    image: Article,
+    _id: '7',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
+  },
+  {
+    category: 'Warehouse',
+    image: Article,
+    _id: '8',
+    title: 'Know answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Kamil Riaz Kara",
+    date: "16 July 2023",
+    
   },
   {
     category: 'POS',
-    platforms: [
-      {
-        name: 'FBR POS',
-        description: 'A tax compliance system in Pakistan that helps to record and report sales data, ensuring adherence to tax regulations.',
-        image: FPBRPOS,
-      },
-    ],
+    image: Article,
+    _id: '9',
+    title: 'I dont answers regarding Daraz seller center Nepal to connect with buyers!',
+    author: "Ali Jone",
+    date: "16 July 2023",
   },
 ];
 
-function IntegrationMenu() {
+function ArticleMenu() {
   const [allPlatforms] = useState(initialPlatforms); // Keep the original list intact
   const [displayedPlatforms, setDisplayedPlatforms] = useState(initialPlatforms); // Platforms to display
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const router = useRouter();
+  
+  function handleJobClick(id) {
+    
+    // Navigate to /careerPage1
+    router.push('/articlePage/[id]', `/articlePage/${id}`);
+  }
 
   const handleSearchChange = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchTerm(value);
 
     if (selectedCategory === 'All') {
-      const filteredPlatforms = allPlatforms.map(cat => ({
-        ...cat,
-        platforms: cat.platforms.filter(p => p.name.toLowerCase().includes(value))
-      })).filter(cat => cat.platforms.length > 0);
+      const filteredPlatforms = allPlatforms.filter(p => p.title.toLowerCase().includes(value) || p.author.toLowerCase().includes(value) || p.date.toLowerCase().includes(value));
       setDisplayedPlatforms(filteredPlatforms);
     } else {
-      const categoryPlatforms = allPlatforms.find(cat => cat.category === selectedCategory).platforms;
-      const filteredPlatforms = categoryPlatforms.filter(p => p.name.toLowerCase().includes(value));
-      setDisplayedPlatforms([{ category: selectedCategory, platforms: filteredPlatforms }]);
+      const categoryPlatforms = allPlatforms.find(cat => cat.category === selectedCategory);
+      const filteredPlatforms = allPlatforms.filter(p => p.title.toLowerCase().includes(value) || p.author.toLowerCase().includes(value) || p.date.toLowerCase().includes(value));
+      setDisplayedPlatforms(filteredPlatforms);
     }
   };
 
@@ -165,8 +163,34 @@ function IntegrationMenu() {
             </div>
           </div>
           <div className={styles.Data}>
+            <div className={styles.CatBoxData}>
+
             {/* Map through categories and platforms */}
             {displayedPlatforms.map(cat => (
+              <>
+                <div className={styles.ArticleBoxCard} onClick={()=>handleJobClick(cat._id)}>
+                  <Image src={cat.image} alt={cat.name} height={"13rem"} width={"auto"}/>
+                  <div className={styles.BodyArticle}>
+                    <div className={styles.TagArticle}>
+                      <p className={styles.TagArticleText}>
+                      {cat.category}
+                      </p>
+                    </div>
+                    <div className={styles.TextArticle}>
+                      <h1 className={styles.TextArticleText}>
+                      {cat.title}
+                      </h1>
+                    </div>
+                    <div className={styles.DatenAuthorArticle}>
+                        <p className={styles.AuthorArticle}>{cat.author}</p>
+                        <p className={styles.DateArticle}>{cat.date}</p>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))}
+            </div>
+            {/* {displayedPlatforms.map(cat => (
               <div key={cat.category} className={styles.CatBox}>
                 <div className={styles.CatBoxTitle}>{cat.category}</div>
                 <div className={styles.CatBoxData}>
@@ -181,7 +205,7 @@ function IntegrationMenu() {
                   ))}
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
@@ -189,4 +213,4 @@ function IntegrationMenu() {
   );
 }
 
-export default IntegrationMenu;
+export default ArticleMenu;
