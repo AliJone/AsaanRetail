@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import cn from "classnames";
 import styles from "./styles.module.sass";
 import Image from "next/image";
@@ -34,16 +34,13 @@ const jobData = [
   },
 ];
 
-
-
 function OpenRoles() {
   const router = useRouter();
-  
-function handleJobClick() {
-  
-  // Navigate to /careerPage1
-  router.push('/careerPage1');
-}
+
+  function handleJobClick() {
+    // Navigate to /careerPage1
+    router.push("/careerPage1");
+  }
   return (
     <div className={styles.mainSection}>
       <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} />
@@ -91,7 +88,6 @@ function handleJobClick() {
               src={ForwardIcon}
               alt="forward icon"
               className={styles.forwardIcon}
-              
             />
           </div>
         ))}

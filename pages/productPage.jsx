@@ -1,7 +1,7 @@
 import { App } from "antd";
 import CTANew from "../components/CTA new/CTANew";
 import Carousel from "../components/Carousel";
-import {CarouselImages,} from "../strings";
+import { CarouselImages } from "../strings";
 import FAQ from "../components/FAQ/FAQ";
 import Footer from "../components/Footer/Footer";
 import HeroSectionProduct from "../components/HeroSectionProduct";
@@ -10,6 +10,7 @@ import InventoryManagement from "../components/InventoryManagement/InventoryMana
 import ManyMore from "../components/ManyMore";
 import NavigationBar from "../components/Navbar";
 import Testimonials from "../components/Testimonials/Testimonials";
+import ARPartnerProgram from "../components/AR Partner Program";
 
 const page = () => {
   return (
@@ -21,7 +22,7 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionProduct/>
+          <HeroSectionProduct />
           <Carousel imagesarray={CarouselImages} />
           <ImageTextGrid />
           <ManyMore />
