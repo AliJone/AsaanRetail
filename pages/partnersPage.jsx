@@ -1,3 +1,4 @@
+import ARPartnerProgram from "../components/AR Partner Program";
 import { App } from "antd";
 import CTANew from '../components/CTA new/CTANew';
 import Footer from '../components/Footer/Footer';
@@ -22,6 +23,7 @@ const page = () => {
             <InventoryManagement />
             <PartnersCarousel />
             <InspiredWorkspace />
+            <ARPartnerProgram/>
             <Testimonials />
             <CTANew />
             <Footer />
