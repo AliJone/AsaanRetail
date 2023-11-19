@@ -1,12 +1,6 @@
-import Selector from './selector';
-import Tabs from './tabs';
-import Tag from '../Tag';
-import cn from 'classnames';
-import style from './styleSheet.module.sass';
-import { useState } from 'react';
 import Selector from "./selector";
 import Tabs from "./tabs";
-import Tag from "../tag";
+import Tag from "../Tag";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
