@@ -1,0 +1,316 @@
+@use  '../../utils/breakpoints'
+@use '../../utils/fonts'
+@use '../../utils/colors'
+
+$small : breakpoints.$small
+
+
+
+//mainSection
+.heroSection
+    width: 100%
+    display: flex
+    justify-content: center
+    
+    background: colors.$radialGradient
+
+.container
+    width: 90%
+    display: flex
+    justify-content: center
+    align-items: center
+    gap:7.25rem
+    padding-top: 5.44rem
+    padding-bottom: 5.37rem
+
+.leftPane
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+
+.rightPane
+    display: flex
+    // width: 78.56%
+    // margin-left: auto
+
+.textContainer
+    display: flex
+    
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Size-32, 2rem)
+
+.titleContainer
+    text-align: left
+    display: flex
+    justify-content: flex-start
+    align-item: flex-start
+
+.titleText
+    @include fonts.fontDesktopTitle4Bold
+    color: colors.$fontColor_primary
+
+.subTitleContainer
+    text-align: left
+    display: flex
+    justify-content: flex-start
+    align-item: flex-start
+
+.subTitleText
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+    line-height: 169%
+
+.ImageDivPosition
+    margin-top:-6rem
+.ImageDivPosition2
+    margin-bottom:-7rem
+
+.ImageDiv
+    // width:35rem
+    object-fit: contain
+    width: 18.25rem
+    height: 25.8125rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    z-index: 1
+    background:  #D9D9D9
+    backdrop-filter: blur(1.0355486869812012px)
+    // height: 25.8125rem
+
+
+.ImageDiv2
+    display: none
+    width: 23.8125rem
+    height: 16.625rem
+    object-fit: contain
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background:  #D9D9D9
+
+    /* Website Shadow - Green */
+    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
+    backdrop-filter: blur(1.0355486869812012px)
+
+.ImageContainer
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    gap: 1.25rem
+   
+
+.spacer1
+    width: 1px
+    padding-top: 3.5rem
+
+
+.lowerContainer
+    display: flex
+    // height: 9rem
+    padding: var(--Space-0, 0rem)
+
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+    z-index: 1
+
+    flex-shrink: 0
+
+.FieldClass
+    width: 100%
+    background: colors.$bgPrimary
+
+    display: flex
+    justify-content: center
+    justify-self: center
+
+    border-radius: 0.625rem
+    border: 1px solid #C0DCCC
+    background: #FFF
+    box-shadow: 0px 0px 24px 0px rgba(145, 208, 173, 0.20)
+
+    align-items: center
+    height: 3.75rem
+
+.buttonTextContainer
+    display: flex
+    padding: var(--Space-0, 0rem)
+
+    align-items: center
+    gap: 1rem
+
+    align-self: stretch
+
+.FilledButtonText
+    @include fonts.fontH5Bold
+    color:var(--character-primary-inverse, #FFF)
+    text-align: center
+
+.greyTextContainer
+    width: 41%
+
+.greyText
+    @include fonts.fontDesktopBodyRegular
+    color:rgba(0, 0, 0, 0.318)
+
+.underLine
+    position: relative
+    display: inline-flex
+    
+
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
+
+.underLine2
+    position: relative
+    ::before
+        content: ""
+        position: absolute
+        width: 20rem
+        height: 0.5rem
+        flex-shrink: 0
+        border-radius: 1.25rem
+        background: colors.$linearGradientLine
+        top: 90%
+        margin-left: -20rem
+
+.buttonContainer
+    width:33%
+
+
+@media (max-width:1318px) 
+    .container
+        width: 95%
+        gap: 1.5rem
+
+@media (max-width:1318px) 
+    .container
+        width: 100%
+        gap: 1rem
+
+@media (max-width: 1089px)
+    .ImageDiv
+        display: none
+    
+    .ImageDiv2
+        display: block
+    .spacer1
+        padding-top: 9rem
+    .container
+        flex-wrap: wrap
+        justify-content: center
+        width: 75%
+    
+    .textContainer
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        align-items: center
+        justify-content: center
+        gap: 1rem
+        text-align: center
+
+    .titleText
+        text-align: center
+
+    .subTitleText
+        text-align: center
+        
+    .ImageContainer
+        padding-top: 4rem
+
+    
+
+@media (max-width: $small)
+    .container
+        width: 95%
+        gap: 1.5rem
+
+    .textContainer
+        width: 80%
+        gap: 0.3rem
+
+    .titleText
+        @include fonts.fontMobileH1Bold
+
+    .subTitleText
+        @include fonts.fontMobileH4Regular
+
+    .greyText
+        @include fonts.fontMobileSmallRegular
+        text-align: center
+
+    .buttonTextContainer
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    .buttonContainer
+        width: 100%
+
+    .greyTextContainer
+        width: 49%
+        text-align: center
+
+    .greyText
+        text-align: center
+
+    .ImageDiv
+        width: 24.3185rem
+
+    .underLine
+       ::before
+            width: 6.5rem
+            margin-left: 0rem 
+            top: 90%
+
+    .underLine2
+         ::before
+            width: 13.5rem
+            margin-left: -13.3rem 
+            // top: 90%
+
+    .ImageContainer
+        padding-top: 0rem
+        ::before
+            width: 9.90944rem
+            height: 9.90944rem
+            border-radius: 9.90944rem
+            margin-top: -8.1rem
+            margin-left: -3.8rem
+
+        ::after
+            width: 12.18438rem
+            height: 12.18438rem
+            border-radius: 12.18438rem
+            margin-left: 18.5rem
+            margin-top: -1.5rem
+
+    .spacer1
+        padding-top: 1.3rem
+
+@media (max-width: 400px)
+    .ImageDiv2
+        width: 100%
+            
+        
+    
+
+    
+
+
+    
+
+
+    
+    
+

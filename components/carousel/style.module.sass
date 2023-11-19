@@ -10,7 +10,7 @@ $medium: breakpoints.$medium
     flex-direction: row
     // justify-content: space-evenly
     gap: 5.95rem
-    width:200%
+    width:calc(19.719rem * 12)
     margin: 0 auto
     
 
@@ -41,22 +41,17 @@ $medium: breakpoints.$medium
   flex-direction: row
   justify-content: space-evenly
   align-items: center
-  // width: 100%
-  // height: 100%
-  // background: colors.$radialGradient
-  // border-radius: 0.625rem
-  // backdrop-filter: blur(18px)
+  
   padding-bottom: 2.1875rem
-  // padding: 2.5rem 3rem
 
 
 
 @keyframes LeftSlide 
-  from 
-    transform: translateX(48.36%)
+  0%
+    transform: translateX(0)
   
-  to 
-    transform: translateX(-48.36%)
+  100%
+    transform: translateX(calc(-15rem * 6))
 
     // 100%
     //     transform: translateX(-160rem)

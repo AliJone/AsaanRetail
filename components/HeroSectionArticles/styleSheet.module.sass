@@ -1,0 +1,186 @@
+@use '../../utils/breakpoints'
+@use '../../utils/colors'
+@use '../../utils/fonts'
+    
+
+$small: breakpoints.$small
+    
+.HeroSectionArticle
+    width: 100%
+    justify-content: center
+    display: flex
+    align-items: center
+
+.BG
+    width: 100%
+    background: colors.$radialGradient
+
+.HeroSectionBGCard
+    width: 100%
+    position: relative
+
+.HeroSectionBGCard::before
+        content: ''
+        position: absolute
+        background: url('./assests/CardArticleLeft.png') no-repeat center center
+        flex-shrink: 0
+        width: 347px
+        height: 312px
+        margin-left: 2.25rem
+        margin-top: 16.5rem
+        fill: linear-gradient(110deg, rgba(0, 146, 65, 0.42) -2.1%, rgba(59, 255, 146, 0.62) 86.04%)
+
+.HeroSectionBGCard::after
+        content: ''
+        position: absolute
+        background: url('./assests/CardArticleRight.png') no-repeat center center
+        flex-shrink: 0
+        width: 347px
+        height: 312px
+        margin-right: 1.7rem
+        right: 0
+        top: 0
+        margin-top: 6.5rem
+        fill: linear-gradient(110deg, rgba(0, 146, 65, 0.42) -2.1%, rgba(59, 255, 146, 0.62) 86.04%)
+
+.HeroSectionArticleContent
+    position: relative
+    width: 100%
+
+.HeroSectionArticleContent::before
+    content: ''
+    position: absolute
+    width: 16.0625rem
+    height: 16.0625rem
+    flex-shrink: 0
+    border-radius: 16.0625rem
+    background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+    margin-left: -6.5rem
+    margin-top: 7rem
+
+.HeroSectionArticleContent::after
+    content: ''
+    position: absolute
+    width: 16.0625rem
+    height: 16.0625rem
+    flex-shrink: 0
+    border-radius: 16.0625rem
+    margin-right: -5rem
+    right: 0
+    margin-top: -10rem
+    background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+    
+
+.ContentContainer
+    width: 100%
+    gap:1.5rem
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-bottom: 10.5rem
+    padding-top: 6.88rem
+    flex-direction: column
+
+
+.TitleContainer
+    width: 55.2%
+    margin: auto
+    text-align: center
+
+.TitleText
+    @include fonts.fontDesktopTitle4Bold
+    color: colors.$fontColor_primary
+    margin: 0
+
+.subTitleContainer
+    width: 43.188%
+    margin: auto
+    text-align: center
+
+.subTitleText
+    @include fonts.fontDesktopH4Regular
+    color: colors.$fontColor_primary
+    margin: 0
+
+.submissionContainer
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 1rem
+    width: 38.88%
+    margin: auto
+    // padding-bottom: 10.5rem
+
+.buttonContainer
+    width: 11.8125rem
+    
+.buttonText
+    @include fonts.fontH5Bold
+    color: colors.$fontColor_secondary
+    margin: 0
+
+.underLine
+    position: relative
+    display: inline-flex
+    
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
+
+.textFieldCard
+    width: 100%
+    padding:0.75rem 0.312rem
+    background: colors.$bgPrimary
+    border-radius: 0.625rem
+    border: 1px solid #C0DCCC
+    background: #FFf
+    box-shadow: 0px 0px 24px 0px rgba(145, 208, 173, 0.20)
+
+@media (max-width: 1130px)
+    .HeroSectionBGCard::before
+        display: none
+    .HeroSectionBGCard::after
+        display: none
+
+
+@media (max-width: $small)
+    .HeroSectionBGCard::before
+        display: none
+    .HeroSectionBGCard::after
+        display: none
+    .HeroSectionArticleContent::before
+        display: none
+    .HeroSectionArticleContent::after
+        display: none
+
+    .TitleContainer
+        width: 90%
+
+    .TitleText
+        @include fonts.fontMobileH1Bold
+
+    .subTitleContainer
+        width: 90%
+
+    .subTitleText
+        @include fonts.fontMobileH5Regular
+
+    .submissionContainer
+        width: 90%
+
+    .textFieldCard
+        width: 100%
+
+    .buttonContainer
+        width: 100%
+        
+
+
+

@@ -18,6 +18,15 @@ const Carousel = ({imagesarray})=>{
                     )
                 })
             }
+            {
+                imagesarray.map((image,index)=>{
+                    return (
+                        <div className={style.image}>
+                            <Image key={index} src = {image} />
+                        </div>
+                    )
+                })
+            }
             
         </div>
         <div className={cn(style.blurRight)}/>
