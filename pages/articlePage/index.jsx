@@ -1,5 +1,6 @@
 import { App } from "antd";
 import HeroSectionIntegrationSection from "../../components/HeroSectionIntegrationSection";
+import HeroSectionArticle from "../../components/HeroSectionArticles";
 import NavigationBar from "../../components/Navbar";
 import IntegrationMenu from "../../components/IntegrationMenu/IntegrationMenu";
 import FAQ from "../../components/FAQ/FAQ";
@@ -16,7 +17,9 @@ const page = () =>{
             }} 
             >
                 <NavigationBar/>
-                <HeroSectionIntegrationSection/>
+
+                <HeroSectionArticle/>
+                
                 <ArticleMenu/>
                 {/* <FAQ /> */}
                 <CTANew />

@@ -39,7 +39,7 @@ function OpenRoles() {
 
   function handleJobClick() {
     // Navigate to /careerPage1
-    router.push("/careerPage1");
+    router.push("/careerPage/1");
   }
   return (
     <div className={styles.mainSection}>
