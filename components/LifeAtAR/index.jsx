@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.sass";
 import cn from "classnames";
 import Image from "next/image";
+import limit from "../../styles/Limits.module.css";
 
 const images = [
   "../CTA new/assets/images/image1.png",
@@ -17,23 +18,25 @@ function LifeAtAsaanRetail() {
     <div className={styles.mainSection}>
       {/* / */}
 
-      <div className={styles.sectionTitle}>
-        <span>
-          Life at
-          <span className={cn(styles.underLine)}>
-            <span /> Asaan Retail
+      <div className={cn(limit.Limit, styles.gap)}>
+        <div className={styles.sectionTitle}>
+          <span>
+            Life at
+            <span className={cn(styles.underLine)}>
+              <span /> Asaan Retail
+            </span>
           </span>
-        </span>
-      </div>
+        </div>
 
-      <div className={styles.container}>
-        <div className={styles.grid}>
-          {images.map((image) => (
-            <div
-              className={styles.gridItem}
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
-          ))}
+        <div className={styles.container}>
+          <div className={styles.grid}>
+            {images.map((image) => (
+              <div
+                className={styles.gridItem}
+                style={{ backgroundImage: `url(${image})` }}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

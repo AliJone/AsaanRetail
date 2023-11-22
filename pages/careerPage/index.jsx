@@ -22,12 +22,12 @@ const page = () => {
         >
           <NavigationBar />
           <HeroSectionCareer />
-          <InspiredWorkspace number={0}/>
+          <InspiredWorkspace number={0} />
           <LifeAtAsaanRetail />
           <OpenRoles />
           {/* <HeroSectionApplication />
           <ApplicationFormFeilds/> */}
-           <Testimonials />
+          <Testimonials />
           {/* <ThroughLense /> */}
           {/* <Enterprise /> */}
 

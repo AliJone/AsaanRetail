@@ -21,7 +21,6 @@
     display: flex
     flex-direction: column
     align-items: center
-    gap: 2.8125rem
     padding-bottom: 5.19rem
 
 .sectionTitle
@@ -53,12 +52,16 @@
     border-radius: 1.25rem
     background: lightgray 50% / cover no-repeat
 
+.gap
+    gap: 2.8125rem
+
+
 @media (max-width: 991px) 
   .grid 
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(3, 1fr)
   
-  .mainSection
+  .gap
     gap: 1.5rem
 
   .underLine
@@ -76,9 +79,6 @@
         ::before
             width: 14rem
 
-  .mainSection
-    gap: 1.5rem
-
   .sectionTitle
     @include fonts.fontMobileH1Bold
 
@@ -95,7 +95,7 @@
         ::before
             width: 11.5rem
 
-  .mainSection
+  .gap
     gap: 1rem
 
 
