@@ -6,6 +6,7 @@ import Support from './assests/Support.svg';
 import cn from 'classnames';
 import limits from '../../styles/Limits.module.css';
 import style from './styleSheet.module.sass';
+import ContactUsFormFeilds from "../ContactUsFormFeilds/ContactUsFormFeilds";
 
 const Card = ({title, logo , isActive, setActive , value}) => {
     return(
@@ -44,6 +45,7 @@ const HeroSectionContactUS = () => {
             </div>
 
         </div>
+                <ContactUsFormFeilds state={Selector}/>
     </>);
 }
 

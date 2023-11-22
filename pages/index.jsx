@@ -1,115 +1,70 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import {
+  CarouselImages,
+  useCaseSection1Text,
+  useCaseSection2Text,
+} from "../strings";
 
-export default function Home() {
+import { App } from "antd";
+import CTA from "../components/CTA/CTA";
+import CTANew from "../components/CTA new/CTANew";
+import CTASection from "../components/ctaSection";
+import Carousel from "../components/Carousel";
+import Enterprise from "../components/Enterprise/Enterprise";
+import FAQ from "../components/FAQ/FAQ";
+import FeaturesSection from "../components/featuresSection";
+import FeaturesV2 from "../components/FeaturesV2";
+import Footer from "../components/Footer/Footer";
+import HeroSection from "../components/HeroSection";
+import HeroSectionLanding from "../components/HeroSectionLandpage";
+import IntegrationSection from "../components/IntegrationSection";
+import NavigationBar from "../components/Navbar";
+import Tabs from "../components/TabsRetail/TabsRetail";
+import Testimonials from "../components/Testimonials/Testimonials";
+import TextNAnimation from "../components/TextNAnimation/TextNAnimation";
+import ThroughLense from "../components/ThroughLense/ThroughLense";
+import UseCaseSection1 from "../components/usecaseSection1";
+import UseCaseSection2 from "../components/usecaseSection2";
+import VideoSection from "../components/videoSection";
+import VideoSectionNew from "../components/videoSectionNew";
+
+const page = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <App>
+        <div
+          style={{
+            overflowX: "hidden",
+          }}
         >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+          <NavigationBar />
+          <HeroSectionLanding />
+          {/* <HeroSection /> */}
+          <Carousel imagesarray={CarouselImages} />
+          <IntegrationSection />
 
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
+          {/* <FeaturesSection /> */}
+          {/* <CTASection /> */}
+          {/* <VideoSection /> */}
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+          <FeaturesV2 />
+          <TextNAnimation Title={"Increase efficiency through automation"} SubTitle={"With Asaan Retail say goodbye to manual tasks, errors, and inefficiencies, and say hello to enhanced productivity and growth."} Animation={true} ButtonText={"Book a Demo"}/>
+
+          <VideoSectionNew />
+          {/* <TextNAnimation/> */}
+          <Tabs />
+          {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
+                    <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} /> */}
+          <Testimonials />
+          <ThroughLense />
+          {/* <Enterprise /> */}
+
+          <FAQ />
+          <CTANew />
+          {/* <CTA /> */}
+          <Footer />
+        </div>
+      </App>
+    </>
   );
-}
+};
+export default page;

@@ -1,0 +1,156 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$medium: 1230px
+$small: 840px
+
+.BG
+    background-color: white
+.Container
+    margin: 2rem auto
+    display: flex
+    width: 86.1%
+    flex-direction: column
+    align-items: center
+    gap: var(--Spacing-64, 4rem)
+    p, h1, h2, h3, h4, h5, h6
+        margin: 0
+        padding: 0
+.Head
+    display: flex
+    padding: var(--Spacing-08, 0.5rem) 0rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+    align-self: stretch
+.Title
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    align-self: stretch
+    h1
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        @include fonts.fontDesktopH1Bold
+        
+.SubTitle
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    h3
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        @include fonts.fontDesktopH5Regular
+.underLine
+    position: relative
+    display: inline-flex
+    
+
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
+.EmployeeBox
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-items: flex-start
+    gap: var(--Spacing-40, 2.5rem)
+    align-self: stretch
+.EmployeeBoxTitle
+    // position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    transform: rotate(-90deg) translateX(-50%)
+    white-space: nowrap
+    h2
+        color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+        @include fonts.fontDesktopH3Regular
+.Employee
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-24, 1.5rem)
+.EmployeeImage
+    img
+        width: 20.23125rem
+        height: 23.8875rem
+        border-radius: 0.8125rem
+.EmployeeNameNPosition
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.395rem
+    align-self: stretch
+.EmployeeName
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    align-self: stretch
+    h3
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        @include fonts.fontDesktopH3Bold
+.EmployeePosition
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    h3
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        @include fonts.fontDesktopH4Regular
+.Right
+    // margin-left: 13.6rem
+    display: flex
+    flex-direction: column
+    gap: var(--Spacing-64, 4rem)
+.Data
+    display: flex
+    gap: var(--Spacing-64, 4rem)
+    width: 100%
+.MobileView
+    display: none
+.EmloyeeRowContainer
+    position: relative
+    display: grid
+    grid-template-columns: 2.1rem 1fr
+    flex-direction: row
+    align-items: flex-start
+    gap: var(--Spacing-64, 2.5rem)
+
+
+@media (max-width: $medium)
+    .EmployeeBox
+        grid-template-columns: repeat(2, 1fr)
+
+
+@media (max-width: $small)
+    .EmployeeBox
+        grid-template-columns: 1fr
+    .EmloyeeRowContainer
+        display: flex
+        flex-direction: column
+    .EmployeeBoxTitle
+        transform: rotate(0deg) translateX(0)
+    .Data
+        justify-content: center
+    .Title
+        h1
+            @include fonts.fontMobileH1Bold
+    .SubTitle
+        h1
+            @include fonts.fontMobileH5Regular
+    .EmployeeBoxTitle
+        h2
+            @include fonts.fontMobileH2Bold
+    .EmployeeName
+        h3
+            @include fonts.fontMobileH2Bold
+    .EmployeePosition
+        h3
+            @include fonts.fontMobileH3Regular
+            
