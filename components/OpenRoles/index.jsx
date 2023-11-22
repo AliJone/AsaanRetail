@@ -42,6 +42,9 @@ function OpenRoles() {
     // Navigate to /careerPage1
     router.push("/careerPage/1");
   }
+
+  function handleFilterChipClick() {}
+
   return (
     <div className={styles.mainSection}>
       <div className={cn(limit.Limit, styles.limit)}>

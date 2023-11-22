@@ -1,0 +1,103 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+.imageContainer
+    display: flex
+    width: 32.75rem
+    height: 28.9375rem
+    flex-direction: column
+    align-items: flex-start
+    flex-shrink: 0
+    margin-top: 2.69rem
+    margin-bottom: 1.94rem
+
+.textContainer
+    display: flex
+    width: 77.5rem
+    flex-direction: column
+    align-items: center
+    gap: var(--Spacing-24, 1.5rem)
+
+.heading
+    @include fonts.fontDesktopH1Bold
+
+.description
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    text-align: center
+    font-family: Roboto
+    font-size: 1.6875rem
+    font-style: normal
+    font-weight: 400
+    line-height: 150%
+
+.LoginButton
+    @include fonts.fontDesktopH5Bold
+    display: flex
+    width: 30rem
+    height: 3.5rem
+    padding: 0.4rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+
+    border-radius: 0.625rem
+    border: 1px solid var(--gradient-surface, #009241)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+
+    /* drop-shadow/button-primary */
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
+
+    color: var(--character-primary-inverse, #FFF)
+    text-align: center
+
+    margin-bottom: 9.25rem
+
+.mobileView
+    display: none 
+
+@media(max-width: 991px)
+    .heading
+        @include fonts.fontDesktopH2Bold
+
+    .description
+        font-size: 1.31rem
+
+    .LoginButton
+        @include fonts.fontDesktopH6Bold
+        width: 27rem
+
+@media(max-width: 552px)
+    .mobileContainer
+        display: flex
+        flex-direction: column
+        align-items: center
+        row-gap: 2.5rem
+        
+    .imageContainer
+        width: 91.3%
+        margin-top: 2.5rem
+        margin-bottom: 0rem
+        align-items: center
+        // border: 1px solid black
+
+    .textContainer
+        gap: 0.95rem
+        width: 91.6%
+
+    .heading
+        @include fonts.fontMobileH1Bold
+
+    .description
+        @include fonts.fontMobileH4Regular
+
+    .LoginButton
+        @include fonts.fontMobileH5Bold
+        width: 100%
+        margin-top: 2rem
+
+    .desktopView
+        display: none
+
+    .mobileView
+        display: block 

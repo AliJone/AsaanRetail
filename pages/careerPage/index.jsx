@@ -10,6 +10,8 @@ import LifeAtAsaanRetail from "../../components/LifeAtAR";
 import NavigationBar from "../../components/Navbar";
 import OpenRoles from "../../components/OpenRoles";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import AppReady from "../../components/AppReady";
+import AppError from "../../components/AppError";
 
 const page = () => {
   return (
