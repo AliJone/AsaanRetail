@@ -1,15 +1,15 @@
 import { App } from "antd";
 import ApplicationFormFeilds from "../components/ApplicationFormFeilds/ApplicationFormFeilds";
+import CTANew from "../components/CTA new/CTANew";
+import FAQ from "../components/FAQ/FAQ";
+import Footer from "../components/Footer/Footer";
 import HeroSectionApplication from "../components/HeroSectionApplication";
 import HeroSectionCareer from "../components/HeroSectionCareer";
 import InspiredWorkspace from "../components/InspiredWorkspace";
+import LifeAtAsaanRetail from "../components/LifeAtAR";
 import NavigationBar from "../components/Navbar";
 import OpenRoles from "../components/OpenRoles";
-import LifeAtAsaanRetail from "../components/LifeAtAR";
 import Testimonials from "../components/Testimonials/Testimonials";
-import FAQ from "../components/FAQ/FAQ";
-import CTANew from "../components/CTA new/CTANew";
-import Footer from "../components/Footer/Footer";
 
 const page = () => {
   return (
@@ -22,7 +22,7 @@ const page = () => {
         >
           <NavigationBar />
           <HeroSectionCareer />
-          <InspiredWorkspace/>
+          <InspiredWorkspace number={0}/>
           <LifeAtAsaanRetail />
           <OpenRoles />
           {/* <HeroSectionApplication />

@@ -31,9 +31,9 @@ const HeroSectionPricing = () => {
      ]
 
      const Price2 = [
-        "PKR 48,000/qt",
-        "PKR 80,000/qt",
-        "PKR 48,000/qt",
+        "PKR 48,000/qtr",
+        "PKR 80,000/qtr",
+        "PKR 48,000/qtr",
      ]
 
      const Price3 = [

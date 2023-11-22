@@ -22,7 +22,7 @@ const page = () => {
             <HeroSectionPartners />
             <InventoryManagement />
             <PartnersCarousel />
-            <InspiredWorkspace />
+            <InspiredWorkspace number={1} />
             <ARPartnerProgram/>
             <Testimonials />
             <CTANew />
