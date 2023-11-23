@@ -9,6 +9,7 @@ import AppReadyImageMobile from "./assets/images/AppReadyImageMobile.png";
 import cn from "classnames";
 
 import { Button } from "antd";
+import VerificationModal from "../VerificationCodeModal";
 
 function AppReady() {
   return (
@@ -29,6 +30,8 @@ function AppReady() {
 
         <Button className={styles.LoginButton}>Login to your App</Button>
       </div>
+
+      <VerificationModal />
     </div>
   );
 }

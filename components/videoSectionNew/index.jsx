@@ -44,12 +44,12 @@ const VideoSectionNew = () => {
 
   const closeModal = () => {
     setModal2Open(false);
-    document.body.style.overflow = "visible"; // Enable scrolling back when modal is closed
+    document.body.style.overflow = "visible"; // enable scrolling back when modal is closed
   };
 
   const openModal = () => {
     setModal2Open(true);
-    document.body.style.overflow = "hidden"; // Disable scrolling when modal is open
+    document.body.style.overflow = "hidden"; // disable scrolling when modal is open
   };
 
   return (

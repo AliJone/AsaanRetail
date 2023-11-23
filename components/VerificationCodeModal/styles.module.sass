@@ -1,0 +1,183 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"  
+@use "../../utils/breakpoints"   
+
+.ModalOverlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.7)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 3
+
+.modalContainer
+    display: flex
+    max-width: 50.4375rem
+    width: 50%
+    height: 37.2625rem
+    // padding: var(--Spacing-32, 2rem) 0rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+
+    border-radius: 1.25rem
+    background: var(--neutral-1, #FFF)
+
+.divHead
+    display: flex
+    padding: 0rem var(--Spacing-32, 2rem)
+    justify-content: flex-end
+    align-items: center
+    align-self: stretch
+    margin-top: 2rem
+
+.closeButton
+    display: flex
+    width: 3.5rem
+    height: 3.5rem
+    // padding: 0rem 0.99819rem
+    justify-content: center
+    align-items: center
+    // gap: 1.53131rem
+    border-radius: 0.30625rem
+    background: var(--neutral-3, #F5F7F6)
+
+.divBody
+    flex: 1 0 0
+    align-self: stretch
+    display: flex
+    flex-direction: row
+    gap: 6.205%
+    padding-right: 4.22%
+    padding-left: 5%
+
+.divSubBody
+    display: flex
+    width: 55%
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-40, 2.4rem)
+
+.divTitleContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.5rem
+
+.title
+    @include fonts.fontDesktopH3Bold
+
+.subTitle
+    @include fonts.fontDesktopBodyRegular
+
+.otpContainer
+    display: flex
+    align-items: flex-start
+    gap: var(--Spacing-24, 1.5rem)
+
+.otpInput 
+  @include fonts.fontDesktopH4Bold
+  display: flex
+  width: 14.32%
+  height: 4.4rem
+  align-items: center
+  border-radius: 0.6rem
+  border: 2.4px solid var(--neutral-5, #D9E0DC)
+  font-size: 3.2rem !important
+  color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+  text-align: center
+
+.errorText
+    @include fonts.fontDesktopBodyMedium
+    color: var(--character-danger, #FF4D4F)
+    margin-top: -1rem
+
+.verifyButton
+    @include fonts.fontDesktopH5Bold
+
+    display: flex
+    height: 3.5rem
+    padding: 0.4rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+    align-self: stretch
+    border-radius: 0.625rem
+    border: 1px solid var(--gradient-surface, #009241)
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+
+    /* drop-shadow/button-primary */
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
+
+    color: var(--character-primary-inverse, #FFF)
+    text-align: center
+
+    margin-top: -1rem
+
+.changeNumberContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.5rem
+    margin-top: 0.1rem
+
+.changeNumber
+    color: var(--primary-6, #009241)
+    text-align: center
+    font-family: Roboto
+    font-size: 1rem
+    font-style: normal
+    font-weight: 700
+    line-height: 150% /* 1.5rem */
+
+.tryAgain
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+    @include fonts.fontDesktopBodyRegular
+
+.mobileImageContainer
+    width: 34.8%
+    height: 17.5625rem
+    display: flex
+    background: url('./assets/MobileImage.png'), lightgray 50% / cover no-repeat
+    background-position: center
+    margin-top: 2.94rem
+
+@media(max-width: 1322px)
+    .divSubBody
+        width: 65%
+
+    .title
+        @include fonts.fontDesktopH4Bold
+
+    .subTitle
+        font-size: 0.9rem
+
+    .tryAgain
+        @include fonts.fontDesktopBodyRegular
+        font-size: 0.9rem
+
+@media(max-width: 1014px)
+    .mobileView
+        display: none
+
+    .modalContainer
+        max-width: 20rem
+        width: 20rem
+    
+    .closeButton
+        width: 2.5rem
+        height: 2.5rem
+
+    .divSubBody
+        width: 100%
+
+
+
+
+
+
+
