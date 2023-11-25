@@ -25,21 +25,21 @@ const HeroSectionPricing = () => {
      ]
     
      const Price1 = [
-        "PKR 12,000/mo",
-        "PKR 20,000/mo",
-        "PKR 12,000/mo",
+        "$40/mo",
+        "$60/mo",
+        "$50/mo",
      ]
 
      const Price2 = [
-        "PKR 48,000/qtr",
-        "PKR 80,000/qtr",
-        "PKR 48,000/qtr",
+        "$40/qtr",
+        "$60/qtr",
+        "$50/qtr",
      ]
 
      const Price3 = [
-        "PKR 144,000/yr",
-        "PKR 240,000/yr",
-        "PKR 144,000/yr",
+        "$40/yr",
+        "$60/yr",
+        "$50/yr",
      ]
     
      const Subtitle = [
@@ -78,12 +78,12 @@ const HeroSectionPricing = () => {
                 </div>
                 
                 <div className = {cn(style.cardsOnSectionDiv)}>
-                    <div className = {cn(style.mobileView)}>
+                    <div className = {cn(style.mobileView,style.forCard)}>
                     <PricingCard features={feature} price={tabNumber === 1 ? Price1[1] : tabNumber==2 ? Price2[1] : Price3[1]} subtitle={Subtitle[1]} title={Title[1]} type = {1}/>
                     </div>
 
                     <PricingCard features={feature} price={tabNumber === 1 ? Price1[0] : tabNumber==2 ? Price2[0] : Price3[0]} subtitle={Subtitle[0]} title={Title[0]} type = {2}/>
-                    <div className = {cn(style.desktopView)}>
+                    <div className = {cn(style.desktopView,style.forCard)}>
                     <PricingCard features={feature} price={tabNumber === 1 ? Price1[1] : tabNumber==2 ? Price2[1] : Price3[1]} subtitle={Subtitle[1]} title={Title[1]} type = {1}/>
                     </div>
                     <PricingCard features={feature} price={tabNumber === 1 ? Price1[2] : tabNumber==2 ? Price2[2] : Price3[2]} subtitle={Subtitle[2]} title={Title[2]} type = {2}/>

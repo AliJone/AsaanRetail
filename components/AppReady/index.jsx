@@ -1,15 +1,19 @@
-import React from "react";
-import styles from "./styles.module.sass";
-import limit from "../../styles/Limits.module.css";
-import Image from "next/image";
 import AppReadyImage from "./assets/images/AppReadyImage.png";
 import AppReadyImageMobile from "./assets/images/AppReadyImageMobile.png";
+import { Button } from "antd";
+import Image from "next/image";
+import React from "react";
+import VerificationModal from "../VerificationCodeModal";
+import cn from "classnames";
+import limit from "../../styles/Limits.module.css";
+import styles from "./styles.module.sass";
+
 // import AppReadyVideo from "./assets/videos/AppReadyVideo.mp4";
 
-import cn from "classnames";
 
-import { Button } from "antd";
-import VerificationModal from "../VerificationCodeModal";
+
+
+
 
 function AppReady() {
   return (
@@ -31,7 +35,7 @@ function AppReady() {
         <Button className={styles.LoginButton}>Login to your App</Button>
       </div>
 
-      <VerificationModal />
+      
     </div>
   );
 }

@@ -8,7 +8,13 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 
-const Screen1 = () => {
+const Screen1 = ({AddValue , handleStepperScreen }) => {
+    
+  function onProceed(){
+    handleStepperScreen({position: 1});
+
+  };
+
   return (
     <div className={cn(limit.Limit, style.overrideLimit)}>
     <div className={cn(style.Screen1)}>
@@ -117,6 +123,7 @@ const Screen1 = () => {
               <CustomFilledButton
                 children={<span className={cn(style.buttonText)}>Proceed</span>}
                 width={"inherit"}
+                handleClick={onProceed}
               />
             </div>
         <div className={cn(style.SubtitleText)}>
@@ -124,7 +131,7 @@ const Screen1 = () => {
           </div>
       </div>
       <div className={cn(style.rightPane ,style.desktopView)}>
-        <Image className={cn(style.imageContainer)} src="" />
+        <Image className={cn(style.imageContainer)} src="" alt="abc" />
       </div>
     </div>
     </div>

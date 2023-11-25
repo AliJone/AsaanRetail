@@ -109,8 +109,10 @@ $small: breakpoints.$small
     
 .cardFrame
     display: flex
-    width: 19.5rem
+    // width: 19.5rem
     
+    // width: 33.56%
+    width: 100%
     padding:  3rem 2.5rem
 
 
@@ -124,7 +126,9 @@ $small: breakpoints.$small
     
 .cardFrame2
     display: flex
-    width: 18.75rem
+    // width: 18.75rem
+    // width: 33.56%
+    width:25.647%
     padding: 2.5rem var(--Spacing-24, 1.5rem)
     margin-top: 1rem
 
@@ -140,7 +144,8 @@ $small: breakpoints.$small
 
 .tagOnCard
     position: relative
-    ::before
+    
+.tagOnCard::after
         content: "Most Popular"
         @include fonts.fontDesktopBodyBold
         color: colors.$fontColor_secondary
@@ -158,7 +163,7 @@ $small: breakpoints.$small
         align-items: center
         gap: 0.25rem
         top: -1.58rem
-        left: 14.5rem
+        // left: 14.5rem
         z-index: 1
 
 .textContainer
@@ -176,8 +181,9 @@ $small: breakpoints.$small
     color: colors.$fontColor_secondary
 
 .cardPrice
-    @include fonts.fontDesktopH3Bold
+    @include fonts.fontDesktopH1Bold
     color: colors.$fontColor_secondary
+
 
 .cardFeatures
     @include fonts.fontDesktopBodyRegular
@@ -192,7 +198,7 @@ $small: breakpoints.$small
     color:  rgba(0, 0, 0, 0.45)
 
 .cardPrice2
-    @include fonts.fontDesktopH3Bold
+    @include fonts.fontDesktopH1Bold
     color: colors.$fontColor_primary
 
 .cardFeatures2
@@ -241,10 +247,39 @@ $small: breakpoints.$small
     color: #009241
 
 .minContent
-    width: min-content
+    // width: min-content
 
 .spacerCard1
     padding-top: 0rem
+
+@media (max-width: 777px)
+
+    .cardFrame
+        display: flex
+        width: 19.625rem
+        // width: 100%
+        // height: 28.6875rem
+        padding: var(--Size-48, 3rem) 1.5rem
+
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-32, 2rem)
+
+        flex-shrink: 0
+
+    .cardFrame2
+        display: flex
+        width: 21.625rem
+        // height: 28.3875rem
+        padding: 2.5rem var(--Spacing-24, 0.5rem)
+        margin-top: 0rem
+
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-32, 2rem)
+
+        flex-shrink: 0
+
 
 
 @media (max-width: $small)
@@ -272,9 +307,9 @@ $small: breakpoints.$small
 
     .cardFrame
         display: flex
-        // width: 19.625rem
+        width: 19.625rem
         // width: 100%
-        height: 28.6875rem
+        // height: 28.6875rem
         padding: var(--Size-48, 3rem) 2.5rem
 
         flex-direction: column
@@ -285,8 +320,8 @@ $small: breakpoints.$small
 
     .cardFrame2
         display: flex
-        // width: 21.625rem
-        height: 28.3875rem
+        width: 21.625rem
+        // height: 28.3875rem
         padding: 2.5rem var(--Spacing-24, 1.5rem)
         margin-top: 0rem
 
@@ -346,13 +381,13 @@ $small: breakpoints.$small
     margin: auto
 
 .cardsOnSectionDiv
-    width: 83.53%
+    width: 81.527%
     margin: auto
     gap:2.5rem
     display: flex
     flex-direction: row
-    justify-content: space-around
-    flex-wrap: wrap
+    justify-content: space-between
+    // flex-wrap: wrap
     z-index: 1
 
 
@@ -417,11 +452,43 @@ $small: breakpoints.$small
 .desktopView
     display: flex
 
+.forCard
+    width: 33.56%
+
+@media (max-width: 1110px)
+    .cardsOnSectionDiv
+        width: 89%
+
+@media (max-width: 1015px)
+    .cardsOnSectionDiv
+        width: 95%
+
+@media (max-width: 952px)
+    .cardsOnSectionDiv
+        width: 100%
+        gap: 1.5rem
+
+@media (max-width: 868px)
+    .cardsOnSectionDiv
+        gap: 0rem
+        justify-content: center
+
+    .forCard
+        width: auto
+
+
 @media (max-width: 777px)
     .underLine
         ::before
             left: -16rem
             top: 95%
+    .cardsOnSectionDiv
+        width: 100%
+        gap: 2.5rem
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: center
+        align-items: center
 
 @media (max-width: $small)
     .mobileView

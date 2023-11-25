@@ -15,6 +15,10 @@
   background: var(--primary-6, #009241)
 }
 
+:where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled){
+  background: var(--primary-6, #009241)
+}
+
 
 
 .ant-carousel .slick-dots-bottom{
@@ -91,4 +95,22 @@ line-height: 150%;
 
 :where(.css-dev-only-do-not-override-1vr7spz).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
   stroke: #561d9b !important;
+
 }
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-btn >span{
+  font-size: 17px
+}
+:where(.css-dev-only-do-not-override-1vr7spz).ant-switch .ant-switch-handle::before{
+  border-radius: 111px;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked .ant-switch-handle{
+  inset-inline-start: calc(100% - 1.75rem);
+}
+
+
+
+

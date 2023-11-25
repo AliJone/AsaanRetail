@@ -15,7 +15,7 @@ import web from '../assests/icons/web.svg';
 
 {/* <Progress type="circle" percent={50} size={20} /> */}
 
-const Screen3 =()=>{
+const Screen3 =({handleStepperScreen})=>{
     return(
         <div className={cn(style.Screen3)}>
             <div className={cn(limit.Limit)}>

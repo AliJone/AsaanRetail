@@ -8,14 +8,14 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 
-const Screen1 = () => {
+const Screen1 = ({AddValue ,handleStepperScreen, setModal2Open}) => {
   return (
     <div className={cn(limit.Limit, style.overrideLimit)}>
     <div className={cn(style.Screen1)}>
       <div className={cn(style.leftPane)}>
         <div className={cn(style.logoContainer)}>
-            <ArrowLeftOutlined className={cn(style.backButton)}/>
-            <Link className={cn(style.backButton)} href=''>Back</Link>
+            <ArrowLeftOutlined onClick={handleStepperScreen({position: 0})} className={cn(style.backButton)}/>
+            <Link onClick={handleStepperScreen({position: 0})} className={cn(style.backButton)} href=''>Back</Link>
         </div>
         <div className={cn(style.inputFieldContainer)}>
           <div className={cn(style.inputFieldContainer2)}>
@@ -97,6 +97,7 @@ const Screen1 = () => {
               <CustomFilledButton
                 children={<span className={cn(style.buttonText)}>Create App</span>}
                 width={"inherit"}
+                handleClick={setModal2Open(true)}
               />
             </div>
       </div>

@@ -1,13 +1,14 @@
+import { Button, Input, Modal } from "antd";
 import React, { useState } from "react";
+
+import CloseModalIcon from "./assets/crossIcon.svg";
 import Image from "next/image";
+import MobileImage from "./assets/MobileImage.png";
 import cn from "classnames";
 import styles from "./styles.module.sass";
-import { Button, Input, Modal } from "antd";
-import CloseModalIcon from "./assets/crossIcon.svg";
-import MobileImage from "./assets/MobileImage.png";
 
-function VerificationModal() {
-  const [modal2Open, setModal2Open] = useState(true);
+function VerificationModal({modal2Open, setModal2Open , handleStepperScreen}) {
+  // const [modal2Open, setModal2Open] = useState(true);
 
   const closeModal = () => {
     setModal2Open(false);
@@ -28,6 +29,8 @@ function VerificationModal() {
   };
 
   const verifyOtp = () => {
+    setModal2Open(false);
+    handleStepperScreen({position: 2});
     console.log(otpValues);
   };
 
