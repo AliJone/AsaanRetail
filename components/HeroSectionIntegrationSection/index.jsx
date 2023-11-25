@@ -42,12 +42,15 @@ const HeroSectionIntegrationSection = () => {
                             </div>
                             
                             
-                            <div className={cn(style.carouselContainer)}>
-                                <CarouselIntegration imagesarray={imagesarray}/>
-                            </div>
+                            
                             
                         </div>
 
+
+                    </div>
+
+                    <div className={cn(style.carouselContainer)}>
+                                <CarouselIntegration imagesarray={imagesarray}/>
                     </div>
                     
                 </div>
