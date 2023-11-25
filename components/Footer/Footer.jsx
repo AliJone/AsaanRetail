@@ -1,16 +1,13 @@
-import React from 'react'
-import Image from 'next/image'
-
-import styles from './styles.module.sass'
 import { Divider } from 'antd'
-
+import Image from 'next/image'
+import React from 'react'
 import cn from 'classnames'
-import logo from './assets/images/logo.png'
 import facebook from './assets/images/facebook.png'
 import instagram from './assets/images/instagram.png'
 import linkedin from './assets/images/linkedin.png'
+import logo from './assets/images/logo.png'
+import styles from './styles.module.sass'
 import youtube from './assets/images/youtube.png'
-
 
 function Footer() {
   return (

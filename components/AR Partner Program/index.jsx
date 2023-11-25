@@ -1,10 +1,11 @@
-import React from "react";
-import styles from "./styles.module.sass";
+import { Button } from "antd";
 import Image from "next/image";
+import React from "react";
 import TimelineHead from "./assets/Timeline-Item-Head.png";
 import TimelineHeadMob from "./assets/Timeline-Item-Head-Mob.png";
-import { Button } from "antd";
 import classNames from "classnames";
+import limit from '../../styles/Limits.module.css';
+import styles from "./styles.module.sass";
 
 const textData = ["Apply", "Refer", "Earn"];
 
@@ -12,7 +13,9 @@ function ARPartnerProgram() {
   return (
     <>
       {/* desktop view */}
+      <div className={classNames(limit.Limit)}>
       <div className={classNames(styles.container, styles.desktopView)}>
+      
         {/* // */}
         <h1 className={styles.titleText}>
           How does the Asaan Retail's <br />
@@ -45,6 +48,8 @@ function ARPartnerProgram() {
           </div>
           <div className={styles.gridItem2}></div>
         </div>
+        </div>
+        
       </div>
 
       {/* mobile view */}

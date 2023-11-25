@@ -1,18 +1,17 @@
-import React from 'react'
-import Image from 'next/image'
-
-import styles from './styles.module.sass'
 import { Button } from 'antd';
-
+import Image from 'next/image'
+import React from 'react'
 import cn from 'classnames'
-
 import image1 from './assets/images/image1.png'
 import image2 from './assets/images/image2.png'
+import limit from '../../styles/Limits.module.css';
+import styles from './styles.module.sass'
 
 function CTANew() {
   return (
     <>
       <div className={styles.CTANew}>
+      <div className={cn(limit.Limit)}>
         <div className={styles.CTABoxRight}> </div>
         <div className={styles.CTABox}>
           <div className={styles.CTARight}>
@@ -44,6 +43,7 @@ function CTANew() {
           
         </div>
         <div className={styles.CTABoxLeft}> </div>
+        </div>
       </div>
     </>
   )

@@ -1,6 +1,7 @@
 import PricingCard from './pricingCard';
 import Tabs from './tabs';
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
 import style from './styleSheet.module.sass';
 import { useState } from 'react';
 
@@ -52,6 +53,7 @@ const HeroSectionPricing = () => {
     return(
         <>
             <div className={cn(style.heroSection)}>
+            <div className={cn(limit.Limit)}>
                 <div className = {cn(style.spacer1)}/>
                 
                 <div className={cn(style.divTitleContainer)}>
@@ -88,6 +90,7 @@ const HeroSectionPricing = () => {
                     </div>
                     <PricingCard features={feature} price={tabNumber === 1 ? Price1[2] : tabNumber==2 ? Price2[2] : Price3[2]} subtitle={Subtitle[2]} title={Title[2]} type = {2}/>
 
+                </div>
                 </div>
 
             </div>

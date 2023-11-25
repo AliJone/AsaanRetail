@@ -1,19 +1,16 @@
-import React from 'react'
+import { Button, Tabs } from 'antd';
+
+import Daraz from './assets/images/Daraz.png'
 import Image from 'next/image'
 import Link from 'next/link';
-
-import cn from 'classnames'
-
-import styles from './styles.module.sass'
-import { Tabs, Button } from 'antd';
-
+import React from 'react'
+import Shopify from './assets/images/Shopify.png'
 import Tables from './assets/images/Tables.png'
 import TickIcon from './assets/images/TickIcon.png'
-import Shopify from './assets/images/Shopify.png'
-import Daraz from './assets/images/Daraz.png'
 import Woo from './assets/images/Woo.png'
-
-
+import cn from 'classnames'
+import limit from '../../styles/Limits.module.css';
+import styles from './styles.module.sass'
 
 function Offering({ svgPath, name }) {
   return (
@@ -104,6 +101,7 @@ function TabsRetail() {
   return (
     <>
       <div className={styles.BG}>
+      <div className={cn(limit.Limit)}>
         <div className={styles.Container}>
           <div className={styles.Heading}>
             <Button className={styles.ButtonAntd}>Solutions</Button>
@@ -165,6 +163,7 @@ function TabsRetail() {
               ))}
             </Tabs>
           </div>
+        </div>
         </div>
       </div>
     </>

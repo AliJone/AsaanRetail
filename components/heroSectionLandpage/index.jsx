@@ -4,12 +4,14 @@ import Image from "next/image";
 import InputField from '../InputField/index.jsx';
 import cn from "classnames";
 import landingImage from './assests/landpagePic.png'
+import limit from '../../styles/Limits.module.css'
 import style from './styleSheet.module.sass';
 
 const HeroSectionLanding = () =>{
     return(
         <>
         <div className = {cn(style.heroSection)}>
+            <div className={cn(limit.Limit)}>
             <div className = {cn(style.container)}>
             <div className = {cn(style.leftPane)}>
                 <div className={cn(style.textContainer)}>
@@ -57,7 +59,7 @@ const HeroSectionLanding = () =>{
             </div>
             </div>
             
-            
+            </div>
         </div>
         <div className = {cn(style.spacer1)} />
         </>

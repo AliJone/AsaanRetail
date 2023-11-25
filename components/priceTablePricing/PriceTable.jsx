@@ -2,10 +2,11 @@ import { Button } from "antd";
 import Check from "./assets/check.svg";
 import Image from "next/image";
 import QuestionCircleimg from "./assets/QuestionCircle.svg";
+import Tag from "../tag";
 import cn from "classnames";
+import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useState } from "react";
-import Tag from "../tag";
 
 const tiers = [
   { type: "Standard", price: "Rs 12,000" },
@@ -324,57 +325,61 @@ function PriceTable() {
   return (
     <>
       <div className={styles.heroSection}>
-        <div className={styles.spacer1} />
+      <div className={limit.Limit}>
+        
 
-        {/* <Tag text="Compare plans" className={styles.tag} /> */}
+          <div className={styles.spacer1} />
 
-        <div className={styles.divTitleContainer}>
-          <span className={styles.titleText}>
-            See what{" "}
-            <span className={cn(styles.titleDiv, styles.underLine)}>
-              <span />
-              suits
-            </span>{" "}
-            your business
-          </span>
-        </div>
+          {/* <Tag text="Compare plans" className={styles.tag} /> */}
 
-        {/* <div className={styles.spacer} /> */}
+          <div className={styles.divTitleContainer}>
+            <span className={styles.titleText}>
+              See what{" "}
+              <span className={cn(styles.titleDiv, styles.underLine)}>
+                <span />
+                suits
+              </span>{" "}
+              your business
+            </span>
+          </div>
 
-        <div className={styles.subTitleContainer}>
-          <span className={styles.subTitleText}>
-            Explore our pricing options and find the perfect fit for your unique
-            needs.
-          </span>
-        </div>
+          {/* <div className={styles.spacer} /> */}
 
-        <div className={styles.spacer3} />
+          <div className={styles.subTitleContainer}>
+            <span className={styles.subTitleText}>
+              Explore our pricing options and find the perfect fit for your
+              unique needs.
+            </span>
+          </div>
 
-        <div className={cn(styles.divTiersContainer, styles.mobileView)}>
-          <div className={styles.tierContainerFiller}></div>
-          {tiers.map((tier, index) => (
-            <TierContainer key={index} type={tier.type} price={tier.price} />
-          ))}
-        </div>
+          <div className={styles.spacer3} />
 
-        <div className={cn(styles.tabsFrame)}>
-          <Tabs tabNumber={tabNumber} handleClick={handleTabClick} />
-        </div>
+          <div className={cn(styles.divTiersContainer, styles.mobileView)}>
+            <div className={styles.tierContainerFiller}></div>
+            {tiers.map((tier, index) => (
+              <TierContainer key={index} type={tier.type} price={tier.price} />
+            ))}
+          </div>
 
-        <div className={cn(styles.spacer4)} />
+          <div className={cn(styles.tabsFrame)}>
+            <Tabs tabNumber={tabNumber} handleClick={handleTabClick} />
+          </div>
 
-        <div className={cn(styles.divTiersContainer, styles.desktopView)}>
-          <TierContainer
-            type={tiers[tabNumber - 1].type}
-            price={tiers[tabNumber - 1].price}
-          />
-        </div>
+          <div className={cn(styles.spacer4)} />
 
-        {/* <div className={styles.spacer4} /> */}
+          <div className={cn(styles.divTiersContainer, styles.desktopView)}>
+            <TierContainer
+              type={tiers[tabNumber - 1].type}
+              price={tiers[tabNumber - 1].price}
+            />
+          </div>
 
-        <div className={styles.tableContainer}>
-          <FeatureComparisonTable tabNumber={tabNumber} />
-        </div>
+          {/* <div className={styles.spacer4} /> */}
+
+          <div className={styles.tableContainer}>
+            <FeatureComparisonTable tabNumber={tabNumber} />
+          </div>
+          </div>
       </div>
     </>
   );

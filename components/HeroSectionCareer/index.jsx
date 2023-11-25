@@ -3,6 +3,7 @@ import CustomFilledButton from "../buttons/filledButton";
 import Growth from "./assests/careerGrowth.svg";
 import Image from "next/image";
 import cn from "classnames";
+import limit from '../../styles/Limits.module.css';
 import p1 from "./assests/person1.svg";
 import p2 from "./assests/person2.svg";
 import p3 from "./assests/person3.svg";
@@ -25,6 +26,7 @@ const HeroSectionCareer = () => {
   return (
     <>
       <div className={cn(style.heroSection)}>
+      <div className={cn(limit.Limit)}>
         <div className={cn(style.careerGrowthContainer)}>
           <Button className={cn(style.buttonClass)}>
             <div className={cn(style.Gap)}>
@@ -96,6 +98,7 @@ const HeroSectionCareer = () => {
               }
             />
           </div>
+        </div>
         </div>
       </div>
     </>

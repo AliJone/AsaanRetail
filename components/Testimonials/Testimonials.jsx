@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-
-import styles from './styles.module.sass';
-import { Button } from 'antd';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
+import React, { useState } from 'react';
 
+import { Button } from 'antd';
+import Image from 'next/image';
 import cn from 'classnames';
-
-import highfyMan from './assets/images/highfyMan.png';
 import highfy from './assets/images/highfy.png';
+import highfyMan from './assets/images/highfyMan.png';
+import limit from '../../styles/Limits.module.css';
+import styles from './styles.module.sass';
 
 function Testimonials() {
   const data = [
@@ -41,6 +40,7 @@ function Testimonials() {
   return (
     <>
     <div className={styles.BG}>
+    <div className={cn(limit.Limit)}>
       <div className={styles.Test}>
         <div className={cn(styles.TestRight, styles.MobileView)}>
           <div className={styles.ImageWrapper}>
@@ -84,6 +84,7 @@ function Testimonials() {
             <Image src={data[currentIndex].logo} alt="Logo" className={styles.LogoImage} />
           </div>
         </div>
+      </div>
       </div>
     </div>
     </>

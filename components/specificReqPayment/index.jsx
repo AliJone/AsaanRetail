@@ -2,6 +2,7 @@ import Selector from "./selector";
 import Tabs from "./tabs";
 import Tag from "../Tag";
 import cn from "classnames";
+import limit from '../../styles/Limits.module.css';
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
 
@@ -34,6 +35,7 @@ const CustomizePayment = () => {
 
   return (
     <div className={cn(style.customizePaymentSection)}>
+      <div className={cn(limit.Limit)}>
       <div className={cn(style.spacer1)} />
       <div className={cn(style.textFrame)}>
         <Tag text="Customize" />
@@ -61,6 +63,7 @@ const CustomizePayment = () => {
           <div className={cn(style.lowerCircle)} />
           <Selector handletype={handleType} type={type} />
         </div>
+      </div>
       </div>
     </div>
   );

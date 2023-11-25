@@ -7,6 +7,7 @@ import PointOfSales from './assests/PointOfSales.svg';
 import Reporting from './assests/Reporting.svg';
 import Tag from "../Tag";
 import cn from "classnames";
+import limit from '../../styles/Limits.module.css';
 import style from "./styleSheet.module.sass";
 import warehouse from './assests/warehouse.svg';
 
@@ -14,6 +15,7 @@ const FeaturesV2 = () =>{
 
     return(
         <div className={cn(style.FeaturesV2Section)}>
+            <div className={cn(limit.Limit)}>
             <div className={cn(style.spacer1)}/>
             <div className={cn(style.tagContainer)}>
                 <Tag text="Product"/>
@@ -47,6 +49,8 @@ const FeaturesV2 = () =>{
                 <FeatureCard icon={warehouse} title="Inventory Management" description="Manage your inventory, track your stock, and prevent losses with our inventory management system."/>
             </div>
             <div className={cn(style.spacer4)}/>
+
+            </div>
             
         </div>
     )

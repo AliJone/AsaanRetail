@@ -1,3 +1,4 @@
+import ARPartnerProgram from "../../components/AR Partner Program";
 import { App } from "antd";
 import CTANew from "../../components/CTA new/CTANew";
 import Carousel from "../../components/Carousel";
@@ -10,7 +11,6 @@ import InventoryManagement from "../../components/InventoryManagement/InventoryM
 import ManyMore from "../../components/ManyMore";
 import NavigationBar from "../../components/Navbar";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import ARPartnerProgram from "../../components/AR Partner Program";
 
 const page = () => {
   return (

@@ -9,6 +9,7 @@ import c5 from './assests/c5.svg';
 import c6 from './assests/c6.svg';
 import c7 from './assests/c7.svg';
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
 import style from './styleSheet.module.sass';
 
 const HeroSectionIntegrationSection = () => {
@@ -17,6 +18,7 @@ const HeroSectionIntegrationSection = () => {
         <>
             <div className={cn(style.heroSection)}>
                 <div className={cn(style.heroSectionBG)}>
+                <div className={cn(limit.Limit)}>
                     <div className={cn(style.textContainer)}>
                         <div className ={cn(style.titleContainer)}>
                             <span className={cn(style.titleText)}>
@@ -53,6 +55,7 @@ const HeroSectionIntegrationSection = () => {
                         <CarouselIntegration imagesarray={imagesarray}/>
                     </div>
                     
+                </div>
                 </div>
             </div>
         </>
