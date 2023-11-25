@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Progress } from 'antd';
@@ -16,6 +18,25 @@ import web from '../assests/icons/web.svg';
 {/* <Progress type="circle" percent={50} size={20} /> */}
 
 const Screen3 =({handleStepperScreen})=>{
+
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+          setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+        }, 800);
+
+        if(progress >= 100){
+            handleStepperScreen({position: 3});
+        }
+
+        return () => {
+          clearInterval(timer);
+        };
+
+       
+      })
+
     return(
         <div className={cn(style.Screen3)}>
             <div className={cn(limit.Limit)}>
@@ -32,11 +53,11 @@ const Screen3 =({handleStepperScreen})=>{
 
                         <div className={cn(style.LoadingContainer)}>
                             <p className={cn(style.LoadingText)}>
-                                50% Completed
+                                {progress}% Completed
                             </p>
 
                             <div className={cn(style.LoadingBar)}>
-                                <Progress percent={50} showInfo={false} />
+                                <Progress percent={progress} showInfo={false} />
                             </div>
 
                         </div>
@@ -50,7 +71,7 @@ const Screen3 =({handleStepperScreen})=>{
                                             Coding the structure...
                                         </p>
                                     </div>
-                                    <Progress type="circle" percent={50} size={20} />
+                                    <Progress type="circle" percent={progress} size={20} />
                                 </div>
 
                                 <div className={cn(style.TextAndCheckContainer)}>
@@ -60,7 +81,7 @@ const Screen3 =({handleStepperScreen})=>{
                                         Connecting the Domain...
                                         </p>
                                     </div>
-                                    <Progress type="circle" percent={50} size={20} />
+                                    <Progress type="circle" percent={progress} size={20} />
                                 </div>
 
                                 <div className={cn(style.TextAndCheckContainer)}>
@@ -70,7 +91,7 @@ const Screen3 =({handleStepperScreen})=>{
                                             Connecting the Database...
                                         </p>
                                     </div>
-                                    <Progress type="circle" percent={50} size={20} />
+                                    <Progress type="circle" percent={progress} size={20} />
                                 </div>
 
                                 <div className={cn(style.TextAndCheckContainer)}>
@@ -80,7 +101,7 @@ const Screen3 =({handleStepperScreen})=>{
                                             Performing Inspection...
                                         </p>
                                     </div>
-                                    <Progress type="circle" percent={50} size={20} />
+                                    <Progress type="circle" percent={progress} size={20} />
                                 </div>
 
                                 <div className={cn(style.TextAndCheckContainer)}>
@@ -90,7 +111,7 @@ const Screen3 =({handleStepperScreen})=>{
                                             Testing the App...
                                         </p>
                                     </div>
-                                    <Progress type="circle" percent={50} size={20} />
+                                    <Progress type="circle" percent={progress} size={20} />
                                 </div>
                             </div>
 

@@ -11,6 +11,7 @@ import style from "./styleSheet.module.sass";
 const Screen1 = ({AddValue , handleStepperScreen }) => {
     
   function onProceed(){
+    console.log("called from Screen 1")
     handleStepperScreen({position: 1});
 
   };
@@ -131,7 +132,7 @@ const Screen1 = ({AddValue , handleStepperScreen }) => {
           </div>
       </div>
       <div className={cn(style.rightPane ,style.desktopView)}>
-        <Image className={cn(style.imageContainer)} src="" alt="abc" />
+        <Image  src={Logo} alt="abc" />
       </div>
     </div>
     </div>

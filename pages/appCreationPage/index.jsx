@@ -15,12 +15,18 @@ const page = () => {
   
   const showModal = ({bool}) => {
     if(bool !== undefined)
-    setIsModalVisible(bool);
+    console.log("called from page",bool)
+      setIsModalVisible(bool);
   };
 
   const handleStepperScreen = ({position}) => {
     if(position !== undefined)
-    setStepperPosition(position);
+    {
+      console.log(position,"called")
+      if(position === 0)
+      {}
+      setStepperPosition(position);
+    }
   }
 
   const AddValue = ({Value})=>{
@@ -42,17 +48,17 @@ const page = () => {
                 StepperPosition === 0 && <Screen1 AddValue={AddValue} handleStepperScreen={handleStepperScreen}/>
             }
             {
-                StepperPosition === 1 && <Screen2 AddValue={AddValue}handleStepperScreen={handleStepperScreen} setModal2Open={showModal}/>
+                StepperPosition === 1 && <Screen2 AddValue={AddValue} handleStepperScreen={handleStepperScreen} modal2Open={isModalVisible} setModal2Open={showModal} />
             }
             {
-                StepperPosition === 2 && <VerificationModal modal2Open={isModalVisible} setModal2Open={showModal} handleStepperScreen={handleStepperScreen} />
+                StepperPosition === 2 && <><Screen3 handleStepperScreen={handleStepperScreen}/></>
             }
             {
                 StepperPosition === 3 && <AppReady/>
             }
-            <Screen1/>
+            {/* <Screen1/>
             <VerificationModal modal2Open={isModalVisible} setModal2Open={showModal} handleStepperScreen={handleStepperScreen} />
-            <AppReady/>
+            <AppReady/> */}
         </div>
       </App>
     </>
