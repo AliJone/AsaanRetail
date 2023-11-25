@@ -20,10 +20,8 @@ const FeaturesV2 = () =>{
             </div>
             <div className={cn(style.spacer2)}/>
             <div className={cn(style.TitleContainer)}>
-                <span className={cn(style.convertToRow)}><h2 className={cn(style.TitleText)}>Features to ignite business growth!</h2></span>
-                <div className={cn(style.underlineDiv)}>
-                    <GradientLine width={"inherit"}/>
-                </div>
+                <span className={cn(style.convertToRow)}><h2 className={cn(style.TitleText)}>Features to <span className={cn(style.underLine)}>ignite</span> business growth!</h2></span>
+                
                 
             </div>
             <div className={cn(style.spacer5)}/>

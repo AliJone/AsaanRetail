@@ -56,7 +56,7 @@ const HeroSection = () => {
                   <ul className={cn(style.ulClass)}>
                     {item["Bullets"].map((item, index) => {
                       return (
-                        <li>
+                        <li >
                           <span className={cn(style.responsibiltyCardBullet)}>
                             {item}
                           </span>

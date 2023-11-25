@@ -1,4 +1,5 @@
 import { App } from "antd";
+import AppReady from "../../components/AppReady/";
 import CTANew from "../../components/CTA new/CTANew";
 import FAQ from "../../components/FAQ/FAQ";
 import Footer from "../../components/Footer/Footer";
@@ -8,7 +9,6 @@ import LifeAtAsaanRetail from "../../components/LifeAtAR";
 import NavigationBar from "../../components/Navbar";
 import OpenRoles from "../../components/OpenRoles";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import AppReady from "../../components/AppReady/";
 
 const page = () => {
   return (
@@ -20,7 +20,6 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <AppReady />
           <HeroSectionCareer />
           <InspiredWorkspace number={0} />
           <LifeAtAsaanRetail />
