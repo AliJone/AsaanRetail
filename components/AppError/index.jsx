@@ -1,15 +1,18 @@
-import React from "react";
-import styles from "./styles.module.sass";
-import limit from "../../styles/Limits.module.css";
-import Image from "next/image";
 import AppErrorImage from "./assets/images/AppErrorImage.png";
 import AppErrorImageMobile from "./assets/images/AppErrorImageMobile.png";
-
-import cn from "classnames";
-
 import { Button } from "antd";
+import Image from "next/image";
+import React from "react";
+import cn from "classnames";
+import limit from "../../styles/Limits.module.css";
+import styles from "./styles.module.sass";
+import { useRouter } from "next/router";
 
 function AppError() {
+  const router = useRouter();
+
+const handleHomeButtonclick = () => {router.push("/")};
+const handlePricingButtonclick = () => {router.push("/pricingPage")};
   return (
     <div className={cn(limit.Limit, styles.mobileContainer)}>
       <div className={styles.imageContainer}>
@@ -31,8 +34,8 @@ function AppError() {
         </Button>
 
         <div className={styles.buttonsContainer}>
-          <Button className={styles.goPricingButton}>Explore pricing</Button>
-          <Button className={styles.goHomeButton}>Go to home</Button>
+          <Button className={styles.goPricingButton} onClick={handlePricingButtonclick}>Explore pricing</Button>
+          <Button className={styles.goHomeButton} onClick={handleHomeButtonclick}>Go to home</Button>
         </div>
       </div>
     </div>

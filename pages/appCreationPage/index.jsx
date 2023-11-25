@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { App } from "antd";
+import AppError from "../../components/AppError";
 import AppReady from "../../components/AppReady";
 import Screen1 from "../../components/GetStartedScreens/Screen1";
 import Screen2 from "../../components/GetStartedScreens/Screen2";
@@ -55,6 +56,9 @@ const page = () => {
             }
             {
                 StepperPosition === 3 && <AppReady/>
+            }
+            {
+              <AppError/>
             }
             {/* <Screen1/>
             <VerificationModal modal2Open={isModalVisible} setModal2Open={showModal} handleStepperScreen={handleStepperScreen} />
