@@ -2,7 +2,7 @@ import Asset1 from "./assets/Asset.png";
 import Asset2 from "./assets/Asset_1.png";
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
 import Image from "next/image";
-import InputField from "../InputField/index.jsx";
+import InputField from "../inputField/index.jsx";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
