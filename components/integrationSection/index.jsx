@@ -7,7 +7,7 @@ import Image from 'next/image.js';
 import IntegrationImage from '../../images/svgs/integrationSection.svg';
 import  {IntegrationText} from '../../strings.jsx';
 import React from 'react';
-import Tag from "../Tag/index.jsx";
+import Tag from "../tag/index.jsx";
 import cn from 'classnames';
 import limit from '../../styles/Limits.module.css';
 import style from './style.module.sass';

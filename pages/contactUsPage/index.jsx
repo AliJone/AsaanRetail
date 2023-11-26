@@ -4,7 +4,7 @@ import { App } from "antd";
 import CTANew from '../../components/CTA new/CTANew';
 import Footer from '../../components/Footer/Footer';
 import HeroSectionContactUs from "../../components/HeroSectionContactUs";
-import NavigationBar from "../../components/Navbar";
+import NavigationBar from "../../components/navbar";
 
 const page = () => {
 

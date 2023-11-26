@@ -5,7 +5,7 @@ import Inventory from './assests/Inventory.svg';
 import Order from './assests/Order.svg';
 import PointOfSales from './assests/PointOfSales.svg';
 import Reporting from './assests/Reporting.svg';
-import Tag from "../Tag";
+import Tag from "../tag";
 import cn from "classnames";
 import limit from '../../styles/Limits.module.css';
 import style from "./styleSheet.module.sass";
