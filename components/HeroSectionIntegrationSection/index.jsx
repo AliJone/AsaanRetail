@@ -12,8 +12,8 @@ import cn from 'classnames';
 import limit from '../../styles/Limits.module.css';
 import style from './styleSheet.module.sass';
 
+const imagesarray = [c1,c2,c3,c4,c5,c6,c7];
 const HeroSectionIntegrationSection = () => {
-    const imagesarray = [c1,c2,c3,c4,c5,c6,c7];
     return(
         <>
             <div className={cn(style.heroSection)}>
@@ -22,7 +22,7 @@ const HeroSectionIntegrationSection = () => {
                     <div className={cn(style.textContainer)}>
                         <div className ={cn(style.titleContainer)}>
                             <span className={cn(style.titleText)}>
-                            Every <span className = {cn(style.underLine)}>integration</span> you need is here
+                            Every <span className = {cn(style.underLine)}>integration</span> <br /> you need is here
                             </span>
 
                         </div>

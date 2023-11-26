@@ -16,7 +16,7 @@ const HeroSectionProduct = () =>{
                 <div className={cn(style.textContainer)}>
                     <div className = {cn(style.titleContainer)}>
                         <span className={cn(style.titleText)}>
-                            Hassle <span className={style.underLine}>free</span> <span className={style.underLine}>Inventory</span> Management
+                            Hassle <span className={style.underLine}>free</span><br /> <span className={style.underLine}>Inventory</span> Management
                         </span>
                     </div>
                     <div className = {cn(style.subTitleContainer)}>

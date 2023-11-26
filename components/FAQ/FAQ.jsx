@@ -22,14 +22,14 @@ function FAQ() {
 
   return (
     <>
-      <div className={styles.FAQ}>
         <div className={cn(limit.Limit)}>
+      <div className={styles.FAQ}>
           <div className={styles.Head}>
             <div className={styles.Title}>
               Frequently asked{" "}
               <span className={styles.Underline}>
                 {" "}
-                questions <GradientLine width="60%" height="7px" />{" "}
+                questions <GradientLine width="100%" height="7px" />{" "}
               </span>{" "}
             </div>
 
@@ -98,7 +98,7 @@ function FAQ() {
               // onChange={handleCollapseChange}
               defaultActiveKey={["1"]}
               expandIcon={({ isActive }) => (
-                <PlusOutlined rotate={isActive ? 45 : 0} />
+                <PlusOutlined rotate={isActive ? 45 : 0} style={{ fontSize: '16px', color: '#009241' }}/>
               )}
               style={{
                 backgroundColor: "transparent",
