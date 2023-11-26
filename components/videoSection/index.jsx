@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import GradientLine from '../GradientLine';
+import GradientLine from '../gradientLine';
 import Image from 'next/image';
 import React from 'react';
 import VidIcon from '../../images/svgs/Video.svg'

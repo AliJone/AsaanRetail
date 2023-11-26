@@ -2,9 +2,9 @@ import {Col, Row} from 'antd';
 
 import CustomFilledButton from '../buttons/filledButton/index.jsx';
 import Flags from './flags.jsx';
-import GradientLine from '../GradientLine/index.jsx';
+import GradientLine from '../gradientLine/index.jsx';
 import Image from 'next/image';
-import InputField from '../InputField/index.jsx';
+import InputField from '../inputField/index.jsx';
 import IntegrationPage from "../../images/svgs/features.svg"
 import LandingPage from '../../images/svgs/LandingPage.svg'
 import LandingPageMobile from '../../images/svgs/LandingPageMobile.svg'

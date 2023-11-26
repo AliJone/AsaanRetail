@@ -1,6 +1,6 @@
 import {Col, Row} from 'antd';
 
-import GradientLine from '../GradientLine';
+import GradientLine from '../gradientLine';
 import Image from 'next/image';
 import check from '../../images/svgs/icons/check.svg';
 import cn from 'classnames';

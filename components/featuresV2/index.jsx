@@ -1,6 +1,6 @@
 import Accounting from './assests/Accounting.svg';
 import FeatureCard from "./featureCard";
-import GradientLine from "../GradientLine";
+import GradientLine from "../gradientLine";
 import Inventory from './assests/Inventory.svg';
 import Order from './assests/Order.svg';
 import PointOfSales from './assests/PointOfSales.svg';

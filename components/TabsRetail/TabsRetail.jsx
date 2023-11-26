@@ -1,6 +1,6 @@
 import { Button, Tabs } from 'antd';
 
-import Daraz from './assets/images/Daraz.png'
+import Daraz from './assets/images/daraz.png'
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
