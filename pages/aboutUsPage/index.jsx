@@ -2,11 +2,11 @@ import {React, useState} from "react";
 
 import { App } from "antd";
 import CTANew from '../../components/CTA new/CTANew';
-import Carousel from "../../components/Carousel";
+import Carousel from "../../components/carousel";
 import { CarouselImages } from "../../strings";
 import Footer from '../../components/Footer/Footer';
 import HeroSectionAboutUs from "../../components/HeroSectionAboutUs";
-import NavigationBar from "../../components/Navbar";
+import NavigationBar from "../../components/navbar";
 import Testimonial from "../../components/Testimonials/Testimonials";
 import MeetThePack from "../../components/MeetThePack/MeetThePack";
 import OurJourney from "../../components/OurJourney/OurJourney";

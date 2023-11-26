@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 import HeroSectionPartners from "../../components/HeroSectionPartners";
 import InspiredWorkspace from '../../components/InspiredWorkspace';
 import InventoryManagement from "../../components/InventoryManagement/InventoryManagement";
-import NavigationBar from "../../components/Navbar";
+import NavigationBar from "../../components/navbar";
 import PartnersCarousel from "../../components/PartnersCarousel";
 import Testimonials from '../../components/Testimonials/Testimonials';
 

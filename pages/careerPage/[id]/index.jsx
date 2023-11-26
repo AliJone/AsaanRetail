@@ -3,7 +3,7 @@ import ApplicationFormFeilds from "../../../components/ApplicationFormFeilds/App
 import HeroSectionApplication from "../../../components/HeroSectionApplication";
 import HeroSectionCareer from "../../../components/HeroSectionCareer";
 import InspiredWorkspace from "../../../components/InspiredWorkspace";
-import NavigationBar from "../../../components/Navbar";
+import NavigationBar from "../../../components/navbar";
 import OpenRoles from "../../../components/OpenRoles";
 import LifeAtAsaanRetail from "../../../components/LifeAtAR";
 import CTANew from "../../../components/CTA new/CTANew";

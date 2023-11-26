@@ -1,6 +1,6 @@
 import GradientLine from "../gradientLine";
 import React, { useState } from "react";
-import Tag from "../Tag";
+import Tag from "../tag";
 import { VideoSectionText } from "../../strings";
 import cn from "classnames";
 import style from "./style.module.sass";

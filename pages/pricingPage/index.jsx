@@ -4,7 +4,7 @@ import Enterprise from "../../components/Enterprise/Enterprise";
 import FAQ from "../../components/FAQ/FAQ";
 import Footer from "../../components/Footer/Footer";
 import HeroSectionPricing from "../../components/HeroSectionPricing";
-import NavigationBar from "../../components/Navbar";
+import NavigationBar from "../../components/navbar";
 import PriceTable from "../../components/priceTablePricing/PriceTable";
 import SpecificRequirementPayment from "../../components/SpecificReqPayment";
 import Testimonials from "../../components/Testimonials/Testimonials";

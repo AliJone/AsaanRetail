@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import HeroSectionCareer from "../../components/HeroSectionCareer";
 import InspiredWorkspace from "../../components/InspiredWorkspace";
 import LifeAtAsaanRetail from "../../components/LifeAtAR";
-import NavigationBar from "../../components/Navbar";
+import NavigationBar from "../../components/navbar";
 import OpenRoles from "../../components/OpenRoles";
 import Testimonials from "../../components/Testimonials/Testimonials";
 

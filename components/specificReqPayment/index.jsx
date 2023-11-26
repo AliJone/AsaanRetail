@@ -1,6 +1,6 @@
 import Selector from "./selector";
 import Tabs from "./tabs";
-import Tag from "../Tag";
+import Tag from "../tag";
 import cn from "classnames";
 import limit from '../../styles/Limits.module.css';
 import style from "./styleSheet.module.sass";
