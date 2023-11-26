@@ -1,7 +1,7 @@
 import { Button, Collapse } from "antd";
 import { React, useState } from "react";
 
-import GradientLine from "../GradientLine";
+import GradientLine from "../gradientLine";
 import { PlusOutlined } from "@ant-design/icons";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";

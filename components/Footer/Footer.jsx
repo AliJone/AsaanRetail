@@ -4,7 +4,7 @@ import React from 'react'
 import cn from 'classnames'
 import facebook from './assets/images/facebook.png'
 import instagram from './assets/images/instagram.png'
-import linkedin from './assets/images/linkedin.png'
+import linkedin from './assets/images/linkedIn.png'
 import logo from './assets/images/logo.png'
 import styles from './styles.module.sass'
 import limit from '../../styles/Limits.module.css';

@@ -1,5 +1,5 @@
 import CustomFilledButton from '../buttons/filledButton';
-import InputField from '../InputField';
+import InputField from '../inputField';
 import cn from 'classnames';
 import limits from '../../styles/Limits.module.css'
 import style from './styleSheet.module.sass';
