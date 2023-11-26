@@ -7,7 +7,7 @@ import HeroSectionApplication from "../HeroSectionApplication";
 import HeroSectionCareer from "../HeroSectionCareer";
 import InspiredWorkspace from "../InspiredWorkspace";
 import LifeAtAsaanRetail from "../LifeAtAR";
-import NavigationBar from "../Navbar";
+import NavigationBar from "../navbar";
 import OpenRoles from "../OpenRoles";
 import Testimonials from "../Testimonials/Testimonials";
 

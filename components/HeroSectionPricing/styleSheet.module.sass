@@ -1,0 +1,548 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+
+$small: breakpoints.$small
+
+// tabs
+.divTabsContainer
+    display: inline-flex
+    padding: 0.25rem  1.5rem
+    align-items: center
+    gap: 1rem
+    border-radius: 1.25rem
+    background:  #FFF
+
+.tabsOnSectionDiv
+    .divTabsContainer
+        .tabsTagsDiv
+            cursor: pointer
+
+.Active
+    user-select: none
+    position: relative
+    color: #000000
+    ::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 0.25rem
+        flex-shrink: 0
+        // border-radius: 1.25rem
+        background: #009241
+        top: 100%
+        left:0
+
+.inActive
+    user-select: none
+    color: rgba(0, 0, 0, 0.45)
+
+
+.tabFontActive
+    @include fonts.fontDesktopH5Bold
+
+.tabFontInActive
+    @include fonts.fontDesktopH5Regular
+
+
+.tabsTagsDiv
+    display: flex
+    padding: 0.5rem
+    align-items: center
+    gap: 0.5rem
+
+
+.tabsTagFont
+    @include fonts.fontDesktopBodyBold
+    
+    
+.tabsTag
+    display: flex
+    padding: 0rem 1rem
+
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 0.975rem
+
+    color: colors.$fontColor_secondary
+
+    border-radius: 1.25rem
+    background: var(--character-title-85, rgba(0, 0, 0, 0.85))
+
+@media (max-width: $small)
+    .tabFontActive
+        @include fonts.fontMobileH5Bold
+    .tabFontInActive
+        @include fonts.fontMobileH5Regular
+    .tabsTagFont
+        @include fonts.fontMobileBodyBold
+
+    .tabsTag
+        display: flex
+        padding: 0rem 0.5rem
+
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 0.975rem
+
+    .tabsTagsDiv
+        display: flex
+        // padding: 0rem 0.5rem
+
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        // gap: 0.975rem
+
+    .divTabsContainer
+        width: 100%
+        padding: 0.25rem  0rem
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+
+    
+//Pricing Card
+    
+.cardFrame
+    display: flex
+    // width: 19.5rem
+    
+    // width: 33.56%
+    width: 100%
+    padding:  3rem 2.5rem
+
+
+    flex-direction: column
+    align-items: flex-start
+    gap: 2rem
+
+    border-radius: 0.625rem
+    background: var(--background-dark, radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #191919)
+    position: relative
+    
+.cardFrame2
+    display: flex
+    // width: 18.75rem
+    // width: 33.56%
+    width:25.647%
+    padding: 2.5rem var(--Spacing-24, 1.5rem)
+    margin-top: 1rem
+
+    flex-direction: column
+    align-items: flex-start
+    gap: 2rem
+
+    border-radius: 0.625rem
+    border-top: 4px solid var(--gradient-surface, #009241)
+    background: rgba(255, 255, 255, 0.80)
+    backdrop-filter: blur(18px)
+
+
+.tagOnCard
+    position: relative
+    
+.tagOnCard::after
+        content: "Most Popular"
+        @include fonts.fontDesktopBodyBold
+        color: colors.$fontColor_secondary
+        position: absolute
+        display: flex
+        width: 7rem
+        height: 1.75rem
+        padding: 0.25rem 0.5rem
+
+        border-radius: 2.25rem
+        border: 4px solid var(--character-title-85, rgba(0, 0, 0, 0.85))
+        background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+
+        justify-content: center
+        align-items: center
+        gap: 0.25rem
+        top: -1.58rem
+        // left: 14.5rem
+        z-index: 1
+
+.textContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    // gap: 0.95831rem
+
+.cardTitle
+    @include fonts.fontDesktopH5Bold
+    color: colors.$fontColor_secondary
+
+.cardSubTitle
+    @include fonts.fontDesktopBodyRegular
+    color: colors.$fontColor_secondary
+
+.cardPrice
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_secondary
+
+
+.cardFeatures
+    @include fonts.fontDesktopBodyRegular
+    color: colors.$fontColor_secondary
+
+.cardTitle2
+    @include fonts.fontDesktopH5Bold
+    color: colors.$fontColor_primary
+
+.cardSubTitle2
+    @include fonts.fontDesktopBodyRegular
+    color:  rgba(0, 0, 0, 0.45)
+
+.cardPrice2
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+
+.cardFeatures2
+    @include fonts.fontDesktopBodyRegular
+    color: colors.$fontColor_primary
+
+.featureDiv
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.95831rem
+    align-self: stretch
+    
+
+.checkDim
+    width: 1.4375rem
+    height: 1.4375rem
+
+.featureContainer
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+.pricingFrameCard
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-24, 1.5rem)
+
+    align-self: stretch
+
+.buttonsCardContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 0.5rem
+
+    align-self: stretch
+
+.textButtonText
+    @include fonts.fontDesktopH5Bold
+    color: colors.$fontColor_secondary
+
+.textButtonText2
+    @include fonts.fontDesktopH5Bold
+    color: #009241
+
+.minContent
+    // width: min-content
+
+.spacerCard1
+    padding-top: 0rem
+
+@media (max-width: 777px)
+
+    .cardFrame
+        display: flex
+        width: 19.625rem
+        // width: 100%
+        // height: 28.6875rem
+        padding: var(--Size-48, 3rem) 1.5rem
+
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-32, 2rem)
+
+        flex-shrink: 0
+
+    .cardFrame2
+        display: flex
+        width: 21.625rem
+        // height: 28.3875rem
+        padding: 2.5rem var(--Spacing-24, 0.5rem)
+        margin-top: 0rem
+
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-32, 2rem)
+
+        flex-shrink: 0
+
+
+
+@media (max-width: $small)
+    .cardTitle
+        @include fonts.fontMobileH5Bold
+    .cardSubTitle
+        @include fonts.fontMobileBodyRegular
+    .cardPrice
+        @include fonts.fontMobileH2Bold
+    .cardFeatures
+        @include fonts.fontMobileBodyRegular
+    .textButtonText
+        @include fonts.fontMobileH5Bold
+        
+    .cardTitle2
+        @include fonts.fontMobileH5Bold
+    .cardSubTitle2
+        @include fonts.fontMobileBodyRegular
+    .cardPrice2
+        @include fonts.fontMobileH2Bold
+    .cardFeatures2
+        @include fonts.fontMobileBodyRegular
+    .textButtonText2
+        @include fonts.fontMobileH5Bold
+
+    .cardFrame
+        display: flex
+        width: 19.625rem
+        // width: 100%
+        // height: 28.6875rem
+        padding: var(--Size-48, 3rem) 2.5rem
+
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-32, 2rem)
+
+        flex-shrink: 0
+
+    .cardFrame2
+        display: flex
+        width: 21.625rem
+        // height: 28.3875rem
+        padding: 2.5rem var(--Spacing-24, 1.5rem)
+        margin-top: 0rem
+
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-32, 2rem)
+
+        flex-shrink: 0
+
+
+//mainSection
+
+.heroSection
+    width: 100%
+    background: colors.$radialGradient
+    // height: 1076px
+    display: flex
+    flex-direction: column
+    
+
+.divTitleContainer
+    width: 68.82222%
+    margin: auto
+    text-align: center
+
+.titleText
+    @include fonts.fontDesktopH1Bold
+    text-align: center
+
+
+
+.underLine
+    position: relative
+    ::before
+        content: ""
+        position: absolute
+        width: 9.75rem
+        height: 0.5rem
+        flex-shrink: 0
+        border-radius: 1.25rem
+        background: colors.$linearGradientLine
+        top: 90%
+
+.subTitleContainer
+    width: 66.66%
+    text-align: center
+    margin: auto
+
+.subTitleText
+    @include fonts.fontDesktopH4Regular
+    text-align: center
+
+.tabsOnSectionDiv
+    width:100%
+    display: flex
+    justify-content: center
+    margin: auto
+
+.cardsOnSectionDiv
+    width: 81.527%
+    margin: auto
+    gap:2.5rem
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    // flex-wrap: wrap
+    z-index: 1
+
+
+
+.test
+    position: relative
+
+.forBG
+    height:0px
+    width:60rem
+    z-index: 0
+    ::before
+        content: ""
+        position: absolute
+        
+        width: 19.75rem
+        height: 19.75rem
+        flex-shrink: 0
+
+        border-radius: 19.75rem
+        opacity: 0.8
+        background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+        margin-left: -9%
+        margin-top: 13%
+        
+        
+
+    ::after
+        content: ""
+        position: absolute
+        
+        width: 19.75rem
+        height: 19.75rem
+        flex-shrink: 0
+
+        border-radius: 19.75rem
+        opacity: 0.8
+        background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
+        margin-left: 82%
+        margin-top: -3%
+        
+
+
+.spacer1
+    padding-top: 3rem
+
+.spacer2
+    padding-top: 0.3rem
+
+.spacer3
+    padding-top:3rem
+
+
+.spacer4
+    padding-top: 5.9rem
+
+.spacer5
+    padding-top: 5.4rem
+
+.mobileView
+    display: none
+.desktopView
+    display: flex
+
+.forCard
+    width: 33.56%
+
+@media (max-width: 1110px)
+    .cardsOnSectionDiv
+        width: 89%
+
+@media (max-width: 1015px)
+    .cardsOnSectionDiv
+        width: 95%
+
+@media (max-width: 952px)
+    .cardsOnSectionDiv
+        width: 100%
+        gap: 1.5rem
+
+@media (max-width: 868px)
+    .cardsOnSectionDiv
+        gap: 0rem
+        justify-content: center
+
+    .forCard
+        width: auto
+
+
+@media (max-width: 777px)
+    .underLine
+        ::before
+            left: -16rem
+            top: 95%
+    .cardsOnSectionDiv
+        width: 100%
+        gap: 2.5rem
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+@media (max-width: $small)
+    .mobileView
+        display: flex
+    .desktopView
+        display: none
+
+    .heroSection
+        justify-content: center
+
+    .titleText
+        @include fonts.fontMobileH1Bold
+    .subTitleText
+        @include fonts.fontMobileH4Regular
+
+    .cardsOnSectionDiv
+        width: 100%
+        // justify-content: center
+
+    .tabsOnSectionDiv
+        width: 100%
+        display: inline-flex
+        padding: 0.25rem 0rem
+
+        align-items: center
+        gap: 0.25rem
+
+    .subTitleContainer
+        width: 90%
+
+    .divTitleContainer
+        width: 90%
+
+    .underLine
+        ::before
+            left: 0rem
+            width: 6.25rem
+
+    .spacer2
+        padding-top: 0rem
+    .spacer3
+        padding-top: 1.5rem
+
+    .spacer4
+        padding-top: 4.1rem
+
+
+@media (max-width: 339px)
+    .underLine
+        ::before
+            left: -10.5rem
+            top: 95%
+
+
+    
+
+
