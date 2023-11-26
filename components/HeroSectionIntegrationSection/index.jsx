@@ -1,6 +1,6 @@
 import CarouselIntegration from './carousel';
 import CustomFilledButton from '../buttons/filledButton';
-import InputField from '../InputField';
+import InputField from '../inputField';
 import c1 from './assests/c1.svg';
 import c2 from './assests/c2.svg';
 import c3 from './assests/c3.svg';

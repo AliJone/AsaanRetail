@@ -1,6 +1,6 @@
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
 import Image from "next/image";
-import InputField from '../InputField/index.jsx';
+import InputField from '../inputField/index.jsx';
 import cn from "classnames";
 import landingImage from './assests/landpagePic.png'
 import limit from '../../styles/Limits.module.css';

@@ -3,7 +3,7 @@ import { React, useState } from 'react'
 
 import Agency from './assets/images/Agency.png'
 import Ecommerce from './assets/images/Ecommerce.png'
-import GradientLine from '../GradientLine';
+import GradientLine from '../gradientLine';
 import Image from 'next/image';
 import Retail from './assets/images/Retail.png'
 import cn from 'classnames'

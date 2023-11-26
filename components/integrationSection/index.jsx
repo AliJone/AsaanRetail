@@ -2,7 +2,7 @@ import {Col, Row} from 'antd';
 
 import{ArrowRightOutlined} from '@ant-design/icons';
 import { Button } from "antd";
-import GradientLine from '../GradientLine/index.jsx';
+import GradientLine from '../gradientLine/index.jsx';
 import Image from 'next/image.js';
 import IntegrationImage from '../../images/svgs/integrationSection.svg';
 import  {IntegrationText} from '../../strings.jsx';

@@ -1,4 +1,4 @@
-import GradientLine from "../GradientLine";
+import GradientLine from "../gradientLine";
 import React, { useState } from "react";
 import Tag from "../Tag";
 import { VideoSectionText } from "../../strings";
