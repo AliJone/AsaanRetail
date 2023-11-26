@@ -168,7 +168,33 @@ $medium: 960px
     @include fonts.fontDesktopH5Bold
 
 @media (max-width: $small)
-    .Right, .Left
+    .ARight, .ALeft
         width: 100%
-    .Container
-        
+    .AContainer
+        flex-wrap: wrap
+        gap: 1.5rem
+    .ATitle
+        h1
+            @include fonts.fontMobileH1Bold
+    .ASubTitle
+        h2
+            @include fonts.fontMobileH5Regular
+    .ADataHead
+        h3
+            @include fonts.fontMobileH5Medium
+    .ADataBody
+        p
+            @include fonts.fontMobileH5Regular
+    .BG
+        background: var(--background-light, radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #FFF)
+    .ARight
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: var(--Spacing-40, 2.5rem)
+        align-self: stretch
+        padding: 1rem 0rem
+        box-shadow: none
+        border-radius: 1.25rem
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), rgba(255, 255, 255, 0.20)
+        backdrop-filter: blur(8px)
