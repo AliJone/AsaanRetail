@@ -2,7 +2,7 @@ import { Col, Row } from "antd";
 
 import CustomFilledButton from "../../buttons/filledButton";
 import GenericDropDown from "../genericDropDown";
-import ImageWithBGGradient from "../../ImageWithBGGradient";
+import ImageWithBGGradient from "../../imageWithBGGradient";
 import SalesOrders from "../../../images/svgs/salesOrders.svg";
 import Tiles from "./tiles";
 import styles from "./style.module.sass";

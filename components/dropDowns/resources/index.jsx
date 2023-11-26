@@ -2,8 +2,8 @@ import { Col, Row } from "antd";
 
 import CustomFilledButton from "../../buttons/filledButton";
 import GenericDropDown from "../genericDropDown";
-import ImageWithBGGradient from "../../ImageWithBGGradient";
-import Resources from "../../../images/svgs/resources.svg";
+import ImageWithBGGradient from "../../imageWithBGGradient";
+import Resources from "../../../images/svgs/Resources.svg";
 import Tiles from "./tiles";
 import styles from "./style.module.sass";
 

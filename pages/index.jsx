@@ -12,7 +12,7 @@ import Carousel from "../components/carousel";
 import Enterprise from "../components/Enterprise/Enterprise";
 import FAQ from "../components/FAQ/FAQ";
 import FeaturesSection from "../components/featuresSection";
-import FeaturesV2 from "../components/FeaturesV2";
+import FeaturesV2 from "../components/featuresV2";
 import Footer from "../components/Footer/Footer";
 import HeroSection from "../components/HeroSection";
 import HeroSectionLanding from "../components/HeroSectionLandpage";
