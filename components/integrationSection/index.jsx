@@ -9,6 +9,7 @@ import  {IntegrationText} from '../../strings.jsx';
 import React from 'react';
 import Tag from "../Tag/index.jsx";
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
 import style from './style.module.sass';
 
 const IntegrationSection = () => {
@@ -22,7 +23,8 @@ const IntegrationSection = () => {
 
     return(
         <div className={style.Body}>
-            <Row >
+            <div>
+            <Row className={cn(limit.Limit)}>
                 <Col span={24}>
                     <div className={cn(style.upperContainer)}>
                         <div className ={cn(style.tagDiv)}>
@@ -55,6 +57,7 @@ const IntegrationSection = () => {
 
                 <div className={style.spacer}/>
             </Row>
+            </div>
         </div>
     )
 }

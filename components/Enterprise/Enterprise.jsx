@@ -5,6 +5,7 @@ import { CalendarOutlined } from '@ant-design/icons';
 import GradientLine from '../GradientLine';
 import Image from 'next/image';
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
 import styles from './styles.module.sass';
 
 function Enterprise() {
@@ -13,6 +14,7 @@ function Enterprise() {
   return (
     <>
       <div className={styles.BG}>
+      <div className={cn(limit.Limit)}>
         <div className={styles.Container}>
           <div className={styles.Left}>
             <div className={styles.Text}>
@@ -22,6 +24,7 @@ function Enterprise() {
             <Button className={styles.Buttton} size='large' >Contact Sales</Button>
           </div>
           <div className={styles.Right}>Animation PlaceHolder</div>
+        </div>
         </div>
       </div>
     </>

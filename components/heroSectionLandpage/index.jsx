@@ -4,18 +4,20 @@ import Image from "next/image";
 import InputField from '../InputField/index.jsx';
 import cn from "classnames";
 import landingImage from './assests/landpagePic.png'
+import limit from '../../styles/Limits.module.css'
 import style from './styleSheet.module.sass';
 
 const HeroSectionLanding = () =>{
     return(
         <>
         <div className = {cn(style.heroSection)}>
+            <div className={cn(limit.Limit)}>
             <div className = {cn(style.container)}>
             <div className = {cn(style.leftPane)}>
                 <div className={cn(style.textContainer)}>
                     <div className = {cn(style.titleContainer)}>
                         <span className={cn(style.titleText)}>
-                            Centralized <span className={style.underLine}><span/>Retail</span> & <span className={style.underLine2}>Ecommerce <span/></span> Management
+                            Centralized <span className={style.underLine}>Retail</span> & <span className={style.underLine}>Ecommerce</span> Management
                         </span>
                     </div>
                     <div>
@@ -23,7 +25,7 @@ const HeroSectionLanding = () =>{
                     </div>
                     <div className = {cn(style.subTitleContainer)}>
                         <span className = {cn(style.subTitleText)}>
-                            One window <span className={cn(style.changeColorSubTitle)}>Inventory</span>,<span className={cn(style.changeColorSubTitle)}>Orders</span> , <span className={cn(style.changeColorSubTitle)}>Shipments</span>, and <span className={cn(style.changeColorSubTitle)}>Accounting</span> software for Multi-Channel Commerce.
+                            One window <span className={cn(style.changeColorSubTitle)}><b>Inventory</b></span>, <span className={cn(style.changeColorSubTitle)}><b>Orders</b></span>, <span className={cn(style.changeColorSubTitle)}><b>Shipments</b></span>, and <span className={cn(style.changeColorSubTitle)}><b>Accounting</b></span> software for Multi-Channel Commerce.
                         </span>
                     </div>
                 </div>
@@ -57,7 +59,7 @@ const HeroSectionLanding = () =>{
             </div>
             </div>
             
-            
+            </div>
         </div>
         <div className = {cn(style.spacer1)} />
         </>

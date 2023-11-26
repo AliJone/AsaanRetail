@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import styles from './styles.module.sass';
 import { Button, Input } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
-import cn from 'classnames';
+import React, { useState } from 'react';
 
-import Shopify from './assets/images/Shopify.png';
-import Daraz from './assets/images/Daraz.png';
-import Woo from './assets/images/Woo.png';
-import TCS from './assets/images/TCS.png';
 import BlueEx from './assets/images/BlueEx.png';
-import PostEx from './assets/images/PostEx.png';
 import CallCourier from './assets/images/CallCourier.png';
-import Swyft from './assets/images/Swyft.png';
-import Rider from './assets/images/Rider.png';
-import Trax from './assets/images/Trax.png';
-import MontyMobile from './assets/images/MontyMobile.png';
+import Daraz from './assets/images/Daraz.png';
 import FPBRPOS from './assets/images/FPBRPOS.png';
+import Image from 'next/image';
+import MontyMobile from './assets/images/MontyMobile.png';
+import PostEx from './assets/images/PostEx.png';
+import Rider from './assets/images/Rider.png';
+import { SearchOutlined } from '@ant-design/icons';
+import Shopify from './assets/images/Shopify.png';
+import Swyft from './assets/images/Swyft.png';
+import TCS from './assets/images/TCS.png';
+import Trax from './assets/images/Trax.png';
+import Woo from './assets/images/Woo.png';
+import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
+import styles from './styles.module.sass';
 
 const initialPlatforms = [
   {
-    category: 'Market Places',
+    category: 'Marketplaces',
     platforms: [
       {
         name: 'Daraz',
@@ -148,11 +149,12 @@ function IntegrationMenu() {
   return (
     <>
       <div className={styles.BG}>
+      <div className={cn(limit.Limit)}>
         <div className={styles.Container}>
           <div className={styles.Menu}>
             <div className={styles.Search}>
               <div className={styles.SearchTitle}>Search <span className={styles.SearchIcon}><SearchOutlined /></span></div>
-              <div className={styles.SearchBox}><Input size="large" placeholder="  Input search text" onChange={handleSearchChange} /></div>
+              <div className={styles.SearchBox}><Input size="large" placeholder="Input search text" onChange={handleSearchChange} /></div>
             </div>
             <div className={styles.Categories}>
               <div className={styles.CategoriesTitle}>Categories</div>
@@ -183,6 +185,7 @@ function IntegrationMenu() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </>

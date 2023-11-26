@@ -2,6 +2,7 @@ import CardManyMore from './cardManyMore';
 import { Carousel } from 'antd';
 import React from 'react';
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
 import style from './styleSheet.module.sass';
 
 const cardContent = [
@@ -23,6 +24,7 @@ const ManyMore =()=>{
         <>
         
             <div className = {cn(style.manyMoreSection)}>
+            <div className={cn(limit.Limit , style.limitOverride)}>
                 <div className = {cn(style.textContiner)}>
                     <span className={cn(style.titleText)}>& many <span className={cn(style.titeColorChangeText)}>more :&#41;</span> </span>
                 </div>
@@ -59,6 +61,7 @@ const ManyMore =()=>{
                         </div>
                     </div>
                 </Carousel>
+                </div>
                 </div>
             </div>
         </>

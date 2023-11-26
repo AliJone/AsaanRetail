@@ -29,7 +29,7 @@ $small : breakpoints.$small
     gap: 1.5rem
 
 .titleContainer
-    width: 53.2%
+    width: 50.2%
     margin: auto
     text-align: center
 
@@ -88,43 +88,71 @@ $small : breakpoints.$small
 
 .buttonContainer
     // width: 33.74857142857143%
+    width: 11.812rem
     margin: auto
 
 
 
 .carouselContainer
     display: none
+    
+$animationSpeed : 20s
 
-  
-.CarouselClass
+@keyframes scroll
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(calc(-6rem*7))
+
+.slider 
+    background: rgba(0,0,0,0)
+    height: 5.625rem
+    // margin: auto
+    overflow: hidden
+    position: relative
+    // padding-bottom: 3.85rem
+    width: 100%
+
+
+.slideTrack 
+    animation: scroll $animationSpeed linear infinite
     display: flex
-    flex-direction: row
-    gap: 1rem
-    // justify-content: space-evenly
-    width:200%
-    margin: 0 auto
-    // padding-bottom: 2.1875rem
+    width: calc(6rem * 14)
 
 
-.divAnimation
-    animation: LeftSlide 25s linear infinite
-
-
-
-
-@keyframes LeftSlide 
-  from 
-    transform: translateX(0%)
+.slide 
+    height: 5.625rem
+    width: 6rem
   
-  to 
-    transform: translateX(-11.36%)
+// .CarouselClass
+//     display: flex
+//     flex-direction: row
+//     gap: 1rem
+//     // justify-content: space-evenly
+//     width:200%
+//     margin: 0 auto
+//     // padding-bottom: 2.1875rem
 
-    // 100%
-    //     transform: translateX(-160rem)
 
-.image
-  width: auto
-  height: auto
+// .divAnimation
+//     animation: LeftSlide 25s linear infinite
+
+
+
+
+// @keyframes LeftSlide 
+//   from 
+//     transform: translateX(0%)
+  
+//   to 
+//     transform: translateX(-11.36%)
+
+//     // 100%
+//     //     transform: translateX(-160rem)
+
+// .image
+//   width: auto
+//   height: auto
 
 
 @media (max-width: $small)

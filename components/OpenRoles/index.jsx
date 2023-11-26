@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import cn from "classnames";
 import styles from "./styles.module.sass";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import WeirdIcon from "./assets/Icon.svg";
 import ForwardIcon from "./assets/Icon2.svg";
 import TriangleIcon from "./assets/TriangleIcon.svg";
 import TickMark from "./assets/TickMark.svg";
+import limit from "../../styles/Limits.module.css";
 
 import { Button } from "antd";
 
@@ -33,65 +35,73 @@ const jobData = [
   },
 ];
 
-function handleJobClick() {
-  // navigate to job appli form
-}
-
 function OpenRoles() {
+  const router = useRouter();
+
+  function handleJobClick() {
+    // Navigate to /careerPage1
+    router.push("/careerPage/1");
+  }
+
+  function handleFilterChipClick() {}
+
   return (
     <div className={styles.mainSection}>
-      <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} />
+      <div className={cn(limit.Limit, styles.limit)}>
+        <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} />
 
-      <div className={styles.sectionTitle}>
-        <span>
-          Open
-          <span className={cn(styles.underLine)}>
-            <span /> roles
+        <div className={styles.sectionTitle}>
+          <span>
+            Open
+            <span className={cn(styles.underLine)}>
+              <span /> roles
+            </span>
+            ⚡
           </span>
-          ⚡
-        </span>
 
-        <div className={styles.filterChipsContainer}>
-          <div className={styles.filterChip}>Engineering</div>
-          <div className={styles.filterChip}>Design</div>
-          <div className={styles.filterChip}>Sales</div>
+          <div className={styles.filterChipsContainer}>
+            <div className={styles.filterChip}>Engineering</div>
+            <div className={styles.filterChip}>Design</div>
+            <div className={styles.filterChip}>Sales</div>
 
-          <div className={styles.activeFilterChip}>
-            <Image src={TickMark} className={styles.tickMark} />
-            Support
+            <div className={styles.activeFilterChip}>
+              <Image src={TickMark} className={styles.tickMark} />
+              Support
+            </div>
           </div>
         </div>
-      </div>
 
-      <>
-        {jobData.map((job) => (
-          <div className={styles.jobCard}>
-            <div className={styles.jobInnerCard}>
-              <Image src={WeirdIcon} alt="icon" />
+        <>
+          {jobData.map((job) => (
+            <div className={styles.jobCard} onClick={handleJobClick}>
+              <div className={styles.jobInnerCard}>
+                <Image src={WeirdIcon} alt="icon" />
 
-              <div className={styles.jobTitleDescContainer}>
-                <div className={styles.jobTitle}>{job.title}</div>
+                <div className={styles.jobTitleDescContainer}>
+                  <div className={styles.jobTitle}>{job.title}</div>
 
-                <div className={styles.jobDescription}>{job.description}</div>
+                  <div className={styles.jobDescription}>{job.description}</div>
+                </div>
+
+                <div className={styles.jobTypeLocationContainer}>
+                  <div className={styles.jobType}>{job.type}</div>
+                  <div className={styles.jobLocation}>
+                    &#183; {job.location}
+                  </div>
+                </div>
               </div>
 
-              <div className={styles.jobTypeLocationContainer}>
-                <div className={styles.jobType}>{job.type}</div>
-                <div className={styles.jobLocation}>&#183; {job.location}</div>
-              </div>
+              <Image
+                src={ForwardIcon}
+                alt="forward icon"
+                className={styles.forwardIcon}
+              />
             </div>
+          ))}
+        </>
 
-            <Image
-              src={ForwardIcon}
-              alt="forward icon"
-              className={styles.forwardIcon}
-              onClick={handleJobClick}
-            />
-          </div>
-        ))}
-      </>
-
-      <Button className={styles.SubmitButton}>Load more</Button>
+        <Button className={styles.SubmitButton}>Load more</Button>
+      </div>
     </div>
   );
 }

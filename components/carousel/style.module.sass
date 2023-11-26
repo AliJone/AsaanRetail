@@ -1,41 +1,142 @@
-
-@use '../../utils/colors'
 @use '../../utils/breakpoints'
+@use '../../utils/colors'
+@use '../../utils/fonts'
 
-$small: breakpoints.$small
-$medium: breakpoints.$medium
-  
-.CarouselClass
+
+$small : breakpoints.$small
+$animationSpeed : 40s
+
+@keyframes scroll
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(calc(-18rem * 6))
+
+
+
+// Styling
+
+
+
+
+.slider 
+    background: rgba(0,0,0,0)
+    height: 4.5rem
+    margin: auto
+    overflow: hidden
+    position: relative
+    width: 100%
+
+.slider::before
+    background: linear-gradient(to right,   #F4F7F5 73.33%, rgba(254, 255, 254, 0.00) 100%)
+    content: ""
+    height: 4.5rem
+    position: absolute
+    width: 200px
+    z-index: 2
+    left: 0
+    top: 0
+.slider::after 
+    background: linear-gradient(to right,   #F4F7F5 73.33%, rgba(254, 255, 254, 0.00) 100%)
+    content: ""
+    height: 4.5rem
+    position: absolute
+    width: 200px
+    z-index: 2
+    right: 0
+    top: 0
+    transform: rotateZ(180deg)
+
+.slideTrack 
+    animation: scroll $animationSpeed linear infinite
     display: flex
-    flex-direction: row
-    justify-content: space-evenly
-    width:200%
-    margin: 0 auto
-    padding-bottom: 2.1875rem
+    width: calc(18rem * 12)
 
 
-.divAnimation
-    animation: LeftSlide 25s linear infinite
+.slide 
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 4.5rem
+    width: 18rem
 
 
 
 
-@keyframes LeftSlide 
-  from 
-    transform: translateX(0%)
+
+
+
+
+
+
+
+
+
+
+
+// @use '../../utils/colors'
+// @use '../../utils/breakpoints'
+
+// $small: breakpoints.$small
+// $medium: breakpoints.$medium
   
-  to 
-    transform: translateX(-48.36%)
+// .CarouselClass
+//     display: flex
+//     flex-direction: row
+//     // justify-content: space-evenly
+//     gap: 5.95rem
+//     width:calc(19.719rem * 12)
+//     margin: 0 auto
+    
 
-    // 100%
-    //     transform: translateX(-160rem)
 
-.image
-  width: auto
-  height: auto
+// .divAnimation
+//     animation: LeftSlide 25s linear infinite
 
-@media (max-width:$small) 
-  .CarouselClass
-    display: none
+// .blurRight
+//   width: 17.625rem
+//   height: 4.5rem
+//   flex-shrink: 0
+//   background: linear-gradient(270deg, #F4F7F5 73.33%, rgba(254, 255, 254, 0.00) 100%)
+//   z-index: 1
+//   position: absolute
+//   right: 0
+
+// .blurLeft
+//   width: 17.625rem
+//   height: 4.5rem
+//   flex-shrink: 0
+//   background: linear-gradient(90deg, #FEFFFE 73.33%, rgba(254, 255, 254, 0.00) 100%)
+//   z-index: 1
+//   position: absolute
+//   left: 0
+
+// .divContainer
+//   display: flex
+//   flex-direction: row
+//   justify-content: space-evenly
+//   align-items: center
+  
+//   padding-bottom: 2.1875rem
+
+
+
+// @keyframes LeftSlide 
+//   0%
+//     transform: translateX(0)
+  
+//   100%
+//     transform: translateX(calc(-15rem * 6))
+
+//     // 100%
+//     //     transform: translateX(-160rem)
+
+// .image
+//   width: auto
+//   height: auto
+
+// @media (max-width:$small) 
+//   .divContainer
+//     display: none
 
   

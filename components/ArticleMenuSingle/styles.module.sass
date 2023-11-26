@@ -1,0 +1,173 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$small: 730px
+$medium: 991px
+$issue: 1180px
+
+.BG
+    background: white
+.Container
+    margin: 2rem auto
+    width: 86.1%
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    gap: 1.25rem
+
+.Left
+    display: flex
+    padding: 4.125rem var(--Spacing-24, 1.5rem)
+    flex-direction: column
+    align-items: flex-start
+    width: 18.4375rem
+    gap: 1rem
+
+.Right
+    display: flex
+    width: 70%
+    flex-direction: column
+    align-items: center 
+    gap: 2.5rem
+    flex: 1 0 0
+    padding: 4.125rem 0rem
+    min-height: 30rem
+.Heading
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    @include fonts.fontDesktopH4Bold
+    
+.SelectedContent
+    color: var(--primary-6, #009241)
+    cursor: pointer
+    @include fonts.fontDesktopBodyMedium
+    p
+        margin: 0
+        padding: 0
+    
+.content
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    cursor: pointer
+    @include fonts.fontDesktopBodyRegular
+    p
+        margin: 0
+        padding: 0
+    
+.TitleImage
+    img
+        height: auto
+        width: 100%
+        align-self: stretch
+    
+.TitleData
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+    align-self: stretch
+
+.Tag
+    display: flex
+    padding: 0.10313rem 1.2375rem
+    align-items: center
+    gap: 0.30938rem
+    border-radius: 1.03125rem
+    border: 2.2px solid var(--Gradient-Dark, #3E9B1D)
+
+.Tag
+    p
+        margin: 0
+        padding: 0
+        @include fonts.fontBodyMedium
+        
+.TitleHeading
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    h1
+        @include fonts.fontDesktopH3Bold
+        margin: 0
+        padding: 0
+        
+.TitleAuthorNDate
+    display: flex
+    width: 38.125rem
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.25rem
+
+.Author
+    p
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        @include fonts.fontDesktopH5Medium
+        margin: 0
+        padding: 0
+        
+.Date
+    p
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        @include fonts.fontDesktopBodyRegular
+        margin: 0
+        padding: 0
+        
+.Description
+    p
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        font-family: Roboto
+        font-size: 1.25rem
+        font-style: normal
+        font-weight: 400
+        line-height: 170%
+        margin: 0
+        padding: 0
+
+.DescImage
+    img
+        height: auto
+        width: 100%
+        align-self: stretch
+
+@media (max-width: $small)
+    .Container
+        flex-direction: column
+        align-items: center
+    .Right
+        width: 100%
+    .Heading
+        @include fonts.fontMobileH4Bold
+    .SelectedContent
+        @include fonts.fontMobileH5Medium
+    .content
+        @include fonts.fontMobileH5Regular
+        
+    .Tag
+        p
+            @include fonts.fontH5Regular
+    
+    .TitleHeading
+        h1
+            @include fonts.fontMobileH4Bold
+    .Author
+        p
+            @include fonts.fontH4Medium
+    .Date
+        p
+            @include fonts.fontH5Regular
+    .Description
+        p
+            @include fonts.fontMobileH5Regular
+    
+
+        
+
+    
+// @media (max-width: $issue)
+//     .Right
+//         width: 44.6875rem
+//     .DescImage
+//         img
+//             height: auto
+//             width: 100%
+//             align-self: stretch
+//     .TitleImage
+//         img
+//             height: auto
+//             width: 100%
+//             align-self: stretch

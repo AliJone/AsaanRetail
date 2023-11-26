@@ -15,6 +15,7 @@ import SolutionsDropDown from '../dropDowns/solutions';
 import {UserOutlined} from '@ant-design/icons';
 import classNames from 'classnames';
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css'
 import style from './style.module.sass';
 
 const { Header } = Layout;
@@ -83,7 +84,7 @@ const NavBarExample = () => {
       }
     }
     return(
-        <>
+        <div className={classNames(limit.Limit)}>
           <Header className={headerClass}>
               <div className = {divClass}>
                   <div className={menuClass}>
@@ -133,7 +134,7 @@ const NavBarExample = () => {
           {current === 'Product' ? <ProductsDropDown/> : <></>}
           {current === 'Solution' ? <SolutionsDropDown/> : <></>}
           {current === 'Resources' ? <ResourcesDropDown/> : <></>}
-        </>
+        </div>
 )
 };
 

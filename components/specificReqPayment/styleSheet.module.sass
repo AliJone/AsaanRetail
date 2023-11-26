@@ -7,7 +7,7 @@ $small: breakpoints.$small
 //tabs
 .divTabsContainer
     display: inline-flex
-    padding: 0.25rem  1.5rem
+    padding: 0.65rem  1.54rem
     align-items: center
     gap: 1rem
     border-radius: 1.25rem
@@ -55,8 +55,8 @@ $small: breakpoints.$small
 
 .CounterDiv
     display: flex
-    width: 4rem
-    padding: 0.1rem 0.2rem
+    width: 5.5rem
+    padding: 0.3rem 0.75rem
     justify-content: space-between
     align-items: center
     border-radius: 2.5rem
@@ -69,15 +69,15 @@ $small: breakpoints.$small
     display: flex
     width: 100%
     flex-direction: row
-    align-items: center
+    // align-items: center
     // gap: 1rem
     padding: 0rem 0rem
 
 .selectorLeftPane
     display: flex
-    width: 43.05%
+    width: 44.6%
     height: max-content
-    padding: 2.5rem var(--Spacing-32, 2rem)
+    padding: 2.2rem var(--Spacing-32, 2rem)
     flex-direction: column
     align-items: flex-start
     gap: var(--Spacing-24, 1.5rem)
@@ -92,11 +92,11 @@ $small: breakpoints.$small
 
 .selectorRightPane
     display: flex
-    width: 43.05%
+    width: 45.05%
     // height: 100%
     padding: 2.5rem var(--Spacing-32, 2rem)
     flex-direction: column
-    justify-content: center
+    justify-content: flex-start
     align-items: center
     gap: var(--Spacing-32, 2rem)
     flex-shrink: 0
@@ -118,7 +118,7 @@ $small: breakpoints.$small
 
 .dropDown
     display: flex
-    padding: 0.6rem 0.9rem
+    padding: 1.6rem 0.9rem
     align-items: flex-start
 
     border-radius: 1.25rem
@@ -138,7 +138,10 @@ $small: breakpoints.$small
     display: flex
     flex-direction: column
     align-items: flex-start
-    gap: 1rem
+    gap: 1.5rem
+
+.addPadding
+    padding: 0.5rem
 
 .textFeatures
     @include fonts.fontDesktopH5Medium
@@ -151,13 +154,15 @@ $small: breakpoints.$small
 
 .switchColor
     display: flex
+    width: 4rem
+    height: 2rem
     // background: var(--primary-6, #009241) !important
 
 .reciptDiv
     display: flex
     flex-direction: column
     align-items: flex-start
-    gap: 1rem
+    gap: 2.4rem
     width: 100%
 
 .manageRecipt
@@ -177,7 +182,7 @@ $small: breakpoints.$small
     flex-direction: column
     justify-content: center
     align-items: center
-    gap: var(--Spacing-24, 1.5rem)
+    gap: var(--Spacing-24, 2.75rem)
 
     align-self: stretch
 
@@ -192,7 +197,7 @@ $small: breakpoints.$small
     background:  #00000044
 
 .spacerSelector1
-    padding-top: 3.95rem
+    padding-top: 7.2rem
 
 @media (max-width: 900px)
     .selectorDiv
@@ -292,6 +297,7 @@ $small: breakpoints.$small
     display: flex
 
 .bgDiv
+    padding-bottom: 2rem
     position: relative
     overflow: hidden
     display: flex 
@@ -315,8 +321,8 @@ $small: breakpoints.$small
     border-radius: 19.75rem
     opacity: 0.8
     background: linear-gradient(112deg, rgba(0, 146, 65, 0.42) 1.3%, rgba(59, 255, 146, 0.62) 86.5%)
-    margin-left: -9%
-    margin-top: 15rem
+    margin-left: -11%
+    margin-top: 27rem
     z-index: 0
 
 

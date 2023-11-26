@@ -5,6 +5,8 @@
 
 $small: breakpoints.$small
 
+
+
 .FeaturesV2Section
     width: 100%
     display: flex
@@ -13,9 +15,11 @@ $small: breakpoints.$small
     flex-direction: column
     background: colors.$radialGradient
 
-    
-    
-    
+    p
+        margin: 0
+
+    h1
+        margin: 0
 
     // ::after
     //     content: ""
@@ -32,11 +36,26 @@ $small: breakpoints.$small
     justify-content: center
     align-items: center
     flex-direction: row
+
     
 
 .underlineDiv
     width: 7.5rem
     margin-left: -8rem
+
+.underLine
+    position: relative
+    display: inline-flex
+    
+.underLine::after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 0.5rem
+    flex-shrink: 0
+    border-radius: 1.25rem
+    background: colors.$linearGradientLine
+    top: 90%
     
 
 
@@ -53,10 +72,10 @@ $small: breakpoints.$small
     
 
 .TitleText
-    
     @include fonts.fontDesktopH2Bold
     color: colors.$fontColor_primary
     text-align: center
+    margin: 0
 
 .convertToColumn
     flex-direction: column
@@ -178,6 +197,17 @@ $small: breakpoints.$small
     padding-top:1rem
 
 
+.Link
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
+    margin-top: 0.25rem
+    @include fonts.fontDesktopH5Regular
+
+.arrow 
+  // Initial state of the arrow
+  display: inline-block
+  margin-left: 0
+  transition: margin-left 0.3s ease 
+
 .featureCardContainer
     width: 17.93rem
     display: flex
@@ -194,6 +224,14 @@ $small: breakpoints.$small
         background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box !important
         border: .25rem solid transparent
         border-radius: 0.625rem
+        cursor: pointer
+        .arrow 
+            margin-left: 10px 
+        .Link
+            background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
         
         .featureCardButton
             @include fonts.fontDesktopH5Regular

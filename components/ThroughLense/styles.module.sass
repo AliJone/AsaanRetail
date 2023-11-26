@@ -1,16 +1,16 @@
 @use "../../utils/colors"
 @use "../../utils/fonts"
 
-$issue: 1145px
+$issue: 1330px
 $small: 680px
 
 .BG
     background: var(--background-dark, radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #191919)
     background-image: url("./assets/images/BG.png")
     background-size: cover
+    padding: 2.5rem 0
 .Container
     width: 86.6%
-    padding: 2.5rem 0
     display: flex
     justify-content: space-between
     align-items: center
@@ -19,11 +19,13 @@ $small: 680px
     gap: 2.5rem
     margin: auto
 .ContainerLeft
+    // padding: 2.5rem 0
+    margin-top: -5rem
     display: flex
     gap: 1rem
     flex-direction: column
     color: var(--character-primary-inverse, #FFF)
-    width: 30%
+    width: 40%
 .Heading
     @include fonts.fontDesktopH1Bold
 .SubHeading
@@ -38,6 +40,7 @@ $small: 680px
         justify-content: center
         text-align: center
     .ContainerLeft
+        margin-top: 0rem
         width: 100%
 @media (max-width: $small)
     .MobileView

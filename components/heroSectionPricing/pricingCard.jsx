@@ -7,11 +7,8 @@ import style from './styleSheet.module.sass';
 
 const PricingCard = ({ title, subtitle, price, features , type }) => {
     return(
-        <div className={cn(style.minContent)}>
-            {type == 1?
-                <div className={cn(style.tagOnCard)}><div/></div>:<></>
-            }
-            <div className={type == 1 ? cn(style.cardFrame) : cn(style.cardFrame2)}>
+        
+            <div className={type == 1 ? cn(style.cardFrame,style.tagOnCard) : cn(style.cardFrame2)}>
                 
                 <div className={cn(style.textContainer)}>
                     <span className={type ==1 ?  cn(style.cardTitle) : cn(style.cardTitle2)}>
@@ -54,8 +51,7 @@ const PricingCard = ({ title, subtitle, price, features , type }) => {
 
 
             </div>
-
-        </div>
+        
     )
 
 }

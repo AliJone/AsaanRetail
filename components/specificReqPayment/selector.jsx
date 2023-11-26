@@ -39,7 +39,7 @@ const Selector = ({handletype,type}) =>{
                         className= {cn(style.dropDown)}
                         bordered = {false}
                         defaultValue= {type}
-                        style={{ width: "50%" }}
+                        style={{ width: "47%" }}
                         onChange={handleChange}
                         options={[
                             { value: 'Monthly', label: 'Monthly' },

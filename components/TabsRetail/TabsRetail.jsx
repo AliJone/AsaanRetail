@@ -1,21 +1,22 @@
-import React from 'react'
+import { Button, Tabs } from 'antd';
+
+import Daraz from './assets/images/Daraz.png'
 import Image from 'next/image'
 import Link from 'next/link';
-
-import styles from './styles.module.sass'
-import { Tabs, Button } from 'antd';
-
+import React from 'react'
+import Shopify from './assets/images/Shopify.png'
 import Tables from './assets/images/Tables.png'
 import TickIcon from './assets/images/TickIcon.png'
-import Shopify from './assets/images/Shopify.png'
-import Daraz from './assets/images/Daraz.png'
 import Woo from './assets/images/Woo.png'
-
-
+import cn from 'classnames'
+import limit from '../../styles/Limits.module.css';
+import styles from './styles.module.sass'
 
 function Offering({ svgPath, name }) {
   return (
-    <div className={styles.Data1}>
+    <div className={styles.Data1}
+      style={{ gap: name === "" ? "0" : "0.625rem" }}
+    >
       <Image src={svgPath} />
       <div className={styles.Name}>
         {name}
@@ -65,7 +66,7 @@ function TabsRetail() {
         image: Tables,
         offeringHead: ""
       }
-    },{
+    }, {
       tabTitle: "For Agencies",
       content: {
         title: "Multi-Channel management at breeze",
@@ -100,69 +101,68 @@ function TabsRetail() {
   return (
     <>
       <div className={styles.BG}>
-        <div className={styles.Container}>
-          <div className={styles.Heading}>
-            <Button className={styles.ButtonAntd}>Solutions</Button>
-            <div className={styles.Title}>From retail to ecommerce, Asaan Retail for everyone </div>
-            <div className={styles.SubTitle}>Explore how Asaan Retail works for every industries</div>
-          </div>
-          <div className={styles.Body}>
-            <Tabs className={styles.DekstopView} defaultActiveKey="1"  centered>
-              {tabsData.map((tab, index) => (
-                <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
-                  <div className={styles.TabPane}>
-                    <div className={styles.LeftPane}>
-                      <div className={styles.Title}>{tab.content.title}</div>
-                      <div className={styles.SubTitle}>{tab.content.subTitle}</div>
-                      <div className={styles.Offering}>
-                        <div className={styles.OfferingHeading}>{tab.content.offeringHead}</div>
-                        <div className={styles.OfferingData}>
-                          {tab.content.offerings.map(offering => (
-                            <Offering svgPath={offering.svgPath} name={offering.name} key={offering.name} />
-                          ))}
+        <div className={cn(limit.Limit)}>
+          <div className={styles.Container}>
+            <div className={styles.Heading}>
+              <Button className={styles.ButtonAntd}>Solutions</Button>
+              <div className={styles.Title}>From retail to <span className={cn(styles.underLine)}>
+                ecommerce , </span> <br />  Asaan Retail for everyone </div>
+              <div className={styles.SubTitle}>Explore how Asaan Retail works for every industries</div>
+            </div>
+            <div className={styles.Body}>
+              <Tabs className={cn(styles.DekstopView, styles.TabsMain)} defaultActiveKey="1" centered>
+                {tabsData.map((tab, index) => (
+                  <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
+                    <div className={styles.TabPane}>
+                      <div className={styles.LeftPane}>
+                        <div className={styles.Title}>{tab.content.title}</div>
+                        <div className={styles.SubTitle}>{tab.content.subTitle}</div>
+                        <div className={styles.Offering}>
+                          <div className={styles.OfferingHeading}>{tab.content.offeringHead}</div>
+                          <div className={styles.OfferingData}>
+                            {tab.content.offerings.map(offering => (
+                              <Offering svgPath={offering.svgPath} name={offering.name} key={offering.name} />
+                            ))}
+                          </div>
                         </div>
+                        <Button type="text" onClick={() => { }} style={{ padding: "0px" }}>
+                          <span className={cn(styles.featureCardButton)}>Learn More &gt;</span>
+                        </Button>
                       </div>
-                      <div className={styles.LearnMore}>
-                        <Link href={tab.content.learnMoreLink}>
-                          Learn More <span className={styles.Arrow}>→</span>
-                        </Link>
+                      <div className={styles.RightPane}>
+                        <Image src={tab.content.image} />
                       </div>
                     </div>
-                    <div className={styles.RightPane}>
-                      <Image src={tab.content.image} />
-                    </div>
-                  </div>
-                </Tabs.TabPane>
-              ))}
-            </Tabs>
-            <Tabs className={styles.MobileView} defaultActiveKey="1"  >
-              {tabsData.map((tab, index) => (
-                <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
-                  <div className={styles.TabPane}>
-                    <div className={styles.LeftPane}>
-                      <div className={styles.Title}>{tab.content.title}</div>
-                      <div className={styles.SubTitle}>{tab.content.subTitle}</div>
-                      <div className={styles.Offering}>
-                        <div className={styles.OfferingHeading}>{tab.content.offeringHead}</div>
-                        <div className={styles.OfferingData}>
-                          {tab.content.offerings.map(offering => (
-                            <Offering svgPath={offering.svgPath} name={offering.name} key={offering.name} />
-                          ))}
+                  </Tabs.TabPane>
+                ))}
+              </Tabs>
+              <Tabs className={styles.MobileView} defaultActiveKey="1"  >
+                {tabsData.map((tab, index) => (
+                  <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
+                    <div className={styles.TabPane}>
+                      <div className={styles.LeftPane}>
+                        <div className={styles.Title}>{tab.content.title}</div>
+                        <div className={styles.SubTitle}>{tab.content.subTitle}</div>
+                        <div className={styles.Offering}>
+                          <div className={styles.OfferingHeading}>{tab.content.offeringHead}</div>
+                          <div className={styles.OfferingData}>
+                            {tab.content.offerings.map(offering => (
+                              <Offering svgPath={offering.svgPath} name={offering.name} key={offering.name} />
+                            ))}
+                          </div>
                         </div>
+                        <Button type="text" onClick={() => { }} style={{ padding: "0px" }}>
+                          <span className={cn(styles.featureCardButton)}>Learn More &gt;</span>
+                        </Button>
                       </div>
-                      <div className={styles.LearnMore}>
-                        <Link href={tab.content.learnMoreLink}>
-                          Learn More <span className={styles.Arrow}>→</span>
-                        </Link>
+                      <div className={styles.RightPane}>
+                        <Image src={tab.content.image} />
                       </div>
                     </div>
-                    <div className={styles.RightPane}>
-                      <Image src={tab.content.image} />
-                    </div>
-                  </div>
-                </Tabs.TabPane>
-              ))}
-            </Tabs>
+                  </Tabs.TabPane>
+                ))}
+              </Tabs>
+            </div>
           </div>
         </div>
       </div>

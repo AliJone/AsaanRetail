@@ -1,24 +1,26 @@
+import { Button, Collapse, Form } from 'antd';
 import { React, useState } from 'react'
-import Image from 'next/image';
 
+import Agency from './assets/images/Agency.png'
+import Ecommerce from './assets/images/Ecommerce.png'
 import GradientLine from '../GradientLine';
+import Image from 'next/image';
+import Retail from './assets/images/Retail.png'
 import cn from 'classnames'
+import d2c from './assets/images/d2c.png'
+import limit from '../../styles/Limits.module.css';
+import pl from './assets/images/3pl.png'
 import styles from './styles.module.sass'
 
-import pl from './assets/images/3pl.png'
-import Retail from './assets/images/Retail.png'
-import Ecommerce from './assets/images/Ecommerce.png'
-import d2c from './assets/images/d2c.png'
-import Agency from './assets/images/Agency.png'
-
-import { Button, Collapse, Form } from 'antd';
 const { Panel } = Collapse;
+
 
 function InventoryManagement() {
 
   return (
     <>
       <div className={styles.BG}>
+      <div className={cn(limit.Limit)}>
         <div className={styles.Container}>
           <div className={styles.Heading}>
             <div className={styles.LineText}>Inventory  <span className={styles.gradientUnderline}> Management </span>  </div>
@@ -37,6 +39,7 @@ function InventoryManagement() {
             {Box(Ecommerce, "For Ecommerce", "With real-time syncing, alerts for low stock, and inventory forecasting, we streamline your operations. Bundle products, organize listings, and ensure precision with our audit feature.", "Solutions for ecommerce")}
             </div>
           </div>
+        </div>
         </div>
       </div>
     </>

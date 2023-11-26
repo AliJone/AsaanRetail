@@ -1,22 +1,21 @@
-import React from 'react'
-import Image from 'next/image'
-
-import styles from './styles.module.sass'
 import { Button } from 'antd';
-
+import Image from 'next/image'
+import React from 'react'
 import cn from 'classnames'
-
 import image1 from './assets/images/image1.png'
 import image2 from './assets/images/image2.png'
+import limit from '../../styles/Limits.module.css';
+import styles from './styles.module.sass'
 
 function CTANew() {
   return (
     <>
       <div className={styles.CTANew}>
+      <div className={cn(limit.Limit)}>
         <div className={styles.CTABoxRight}> </div>
         <div className={styles.CTABox}>
           <div className={styles.CTARight}>
-            <div className={styles.Text}>Start <span style={{ color: "var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))" }}> 14 days </span>  free trial or book a demo with us</div>
+            <div className={styles.Text}>Start <span className={styles.GradientSurface}> 14 days </span>  free trial or book a demo with us</div>
             <div className={styles.Buttons}>
               <Button
                 type="primary"
@@ -44,6 +43,7 @@ function CTANew() {
           
         </div>
         <div className={styles.CTABoxLeft}> </div>
+        </div>
       </div>
     </>
   )

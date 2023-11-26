@@ -43,6 +43,9 @@
     transform: translateY(19%) 
     z-index: 1
 
+.limit
+    position: relative
+
 .filterChipsContainer
     display: inline-flex
     align-items: flex-start
@@ -88,7 +91,17 @@
     background: var(--neutral-1, #FFF)
 
     &:hover
-        border: 2.5px solid var(--gradient-surface, #009241)
+        outline: 2.5px solid var(--gradient-surface, #009241)
+        outline-offset: -2.5px
+        cursor: pointer
+        .forwardIcon 
+            margin-left: 10px 
+
+.forwardIcon 
+  // Initial state of the arrow
+  display: inline-block
+  margin-left: 0
+  transition: margin-left 0.3s ease 
 
 .jobInnerCard
     display: flex

@@ -9,18 +9,20 @@ import c5 from './assests/c5.svg';
 import c6 from './assests/c6.svg';
 import c7 from './assests/c7.svg';
 import cn from 'classnames';
+import limit from '../../styles/Limits.module.css';
 import style from './styleSheet.module.sass';
 
+const imagesarray = [c1,c2,c3,c4,c5,c6,c7];
 const HeroSectionIntegrationSection = () => {
-    const imagesarray = [c1,c2,c3,c4,c5,c6,c7];
     return(
         <>
             <div className={cn(style.heroSection)}>
                 <div className={cn(style.heroSectionBG)}>
+                <div className={cn(limit.Limit)}>
                     <div className={cn(style.textContainer)}>
                         <div className ={cn(style.titleContainer)}>
                             <span className={cn(style.titleText)}>
-                            Every <span className = {cn(style.underLine)}>integration</span> you need is here
+                            Every <span className = {cn(style.underLine)}>integration</span> <br /> you need is here
                             </span>
 
                         </div>
@@ -42,14 +44,18 @@ const HeroSectionIntegrationSection = () => {
                             </div>
                             
                             
-                            <div className={cn(style.carouselContainer)}>
-                                <CarouselIntegration imagesarray={imagesarray}/>
-                            </div>
+                            
                             
                         </div>
 
+
+                    </div>
+
+                    <div className={cn(style.carouselContainer)}>
+                        <CarouselIntegration imagesarray={imagesarray}/>
                     </div>
                     
+                </div>
                 </div>
             </div>
         </>

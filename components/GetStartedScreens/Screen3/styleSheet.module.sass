@@ -1,0 +1,190 @@
+@use '../../../utils/breakpoints'
+@use '../../../utils/colors'
+@use '../../../utils/fonts'
+
+$small : breakpoints.$small
+
+.Screen3
+    display: flex
+    justify-content: center
+    background: colors.$radialGradient
+
+.ScreenContainer
+    width: 86.111%
+    margin: auto
+
+.ParentContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: var(--Spacing-40, 2.5rem)
+    flex: 1 0 0
+
+.TextContainerHeading
+    display: flex
+    padding: var(--Spacing-08, 0.5rem) 0rem
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+    align-self: stretch
+    text-align: center
+
+.TitleText
+    @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+    margin: 0
+    text-align: center
+
+.SubtitleText
+    @include fonts.fontDesktopH4Regular
+    color: colors.$fontColor_primary
+    margin: 0
+    text-align: center
+
+.LoadingContainer
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    flex-direction: column
+
+.LoadingText
+    @include fonts.fontDesktopH3Bold
+    color: colors.$fontColor_primary
+    margin: 0
+
+.LoadingBar
+    display: flex
+    padding: 0.59375rem 0rem
+    justify-content: center
+    align-items: center
+    align-self: stretch
+    width: 100%
+
+.Container
+    display: flex
+    align-items: flex-start
+    gap: 2.91rem
+    align-self: stretch
+
+
+.leftPane
+    flex-direction: column
+    display: flex
+    align-items: flex-start
+    gap: 1rem
+    align-self: stretch
+    width: 48.383335%
+
+.TextAndCheckContainer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100% 
+
+.TextContainer
+    display: inline-flex
+    gap: 0.5rem
+    flex-direction: row
+    align-items: center
+
+.TextChecksActive
+    @include fonts.fontDesktopH4Bold
+    color: colors.$fontColor_primary
+
+.TextChecksInActive
+    @include fonts.fontDesktopH4Bold
+    color: rgba(0, 0, 0, 0.45)
+
+.rightPane
+    display: flex
+    width: 48.383335%
+
+.imageContainer
+    background: colors.$color
+    width: 100%
+    border-radius: 0.63rem
+    height: 22.125rem
+
+.mobileView
+    display: none
+
+.deskTopView
+    display: flex
+
+.cardContainer
+    border-radius: 1.25rem
+    border: 3px solid transparent 
+    background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box
+    padding: 1.5rem 1rem
+    display: flex
+    align-content: center
+    justify-content: space-between
+    width: 100%
+
+.cardTextContainer
+    display: inline-flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+    justify-content: center
+
+.cardTextTitle
+    @include fonts.fontDesktopH3Bold
+    color: colors.$fontColor_primary
+
+.cardTextSubtitle
+    @include fonts.fontDesktopH5Regular
+    color: colors.$fontColor_primary
+    padding-top: 0.6rem
+
+.linkColor
+    @include fonts.fontDesktopH5Bold
+    color: colors.$fontColor_tertiary
+    
+
+
+@media (max-width: $small)
+    .mobileView
+        display: flex
+
+    .deskTopView
+        display: none
+
+    .leftPane
+        width: 100%
+
+    .TitleText
+        @include fonts.fontMobileH1Bold
+
+    .SubtitleText
+        @include fonts.fontMobileH4Regular
+
+    .LoadingText
+        @include fonts.fontMobileH3Bold
+
+    .TextChecksActive
+        @include fonts.fontMobileH4Bold
+
+    .TextChecksInActive
+        @include fonts.fontMobileH4Bold
+
+    .cardTextTitle
+        @include fonts.fontMobileH3Bold
+
+    .cardTextSubtitle
+        @include fonts.fontMobileH5Regular
+        
+    .linkColor
+        @include fonts.fontMobileH5Bold
+        
+    
+
+
+
+        
+
+
+    
+
+
+    
