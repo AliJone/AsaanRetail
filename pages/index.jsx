@@ -5,6 +5,7 @@ import {
 } from "../strings";
 
 import { App } from "antd";
+import withScrollAnimation from "../components/Animate/animate";
 import CTA from "../components/CTA/CTA";
 import CTANew from "../components/CTA new/CTANew";
 import CTASection from "../components/ctaSection";
@@ -27,6 +28,18 @@ import UseCaseSection2 from "../components/usecaseSection2";
 import VideoSection from "../components/videoSection";
 import VideoSectionNew from "../components/videoSectionNew";
 
+const HeroSectionWithScroll = withScrollAnimation( HeroSection, "animate__fadeInUp");
+const HeroSectionLandingWithScroll = withScrollAnimation( HeroSectionLanding, "animate__fadeIn");
+const CarouselWithScroll = withScrollAnimation( Carousel, "animate__fadeIn");
+const IntegrationSectionWithScroll = withScrollAnimation( IntegrationSection, "animate__fadeIn");
+const FeaturesV2WithScroll = withScrollAnimation( FeaturesV2, "animate__fadeInUp");
+const TextNAnimationWithScroll = withScrollAnimation( TextNAnimation, "animate__fadeIn");
+const VideoSectionNewWithScroll = withScrollAnimation( VideoSectionNew, "animate__fadeIn");
+const TabsWithScroll = withScrollAnimation( Tabs, "animate__fadeIn");
+const TestimonialsWithScroll = withScrollAnimation( Testimonials, "animate__fadeInUp");
+const ThroughLenseWithScroll = withScrollAnimation( ThroughLense, "animate__fadeIn");
+const FAQWithScroll = withScrollAnimation( FAQ, "animate__fadeInUp");
+
 const page = () => {
   return (
     <>
@@ -39,7 +52,7 @@ const page = () => {
           <NavigationBar />
           <HeroSectionLanding />
           {/* <HeroSection /> */}
-          <Carousel imagesarray={CarouselImages} />
+          <CarouselWithScroll imagesarray={CarouselImages} />
           <IntegrationSection />
 
           {/* <FeaturesSection /> */}

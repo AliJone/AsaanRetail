@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './styles.module.sass'
 import limits from '../../styles/Limits.module.css'
 import { Divider } from 'antd';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import cn from 'classnames'
 
@@ -19,6 +20,7 @@ function MeetThePack() {
       <div className={styles.BG}>
         <div className={limits.Limit}>
           <div className={styles.Container}>
+          <ScrollAnimation animateIn="animate__fadeInUp"> 
             <div className={styles.Head}>
               <div className={styles.HeadTitle}>
                 <h1>
@@ -31,6 +33,8 @@ function MeetThePack() {
                 </h4>
               </div>
             </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="animate__fadeInUp"> 
             <div className={styles.Middle}>
               <div className={styles.MiddleHead}>
                 <div className={styles.MiddleHeadTitle}>
@@ -52,9 +56,13 @@ function MeetThePack() {
                 <Image src={uae} />
               </div>
             </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="animate__fadeInUp"> 
             <div className={styles.Space}>
               <Divider />
             </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="animate__fadeInUp"> 
             <div className={styles.End}>
               <div className={styles.EndText}>
                 <p>
@@ -106,6 +114,7 @@ function MeetThePack() {
                 </div>
               </div>
             </div>
+          </ScrollAnimation>
           </div>
         </div>
       </div>

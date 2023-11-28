@@ -1,4 +1,5 @@
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
+import ScrollAnimation from 'react-animate-on-scroll';
 import Flags from "./flags.jsx";
 import Image from "next/image";
 import InputField from '../inputField/index.jsx';
@@ -13,6 +14,8 @@ const HeroSectionLanding = () =>{
         <div className = {cn(style.heroSection)}>
             <div className={cn(limit.Limit)}>
             <div className = {cn(style.container)}>
+            <ScrollAnimation animateIn="animate__fadeInLeft">
+
             <div className = {cn(style.leftPane)}>
                 <div className={cn(style.textContainer)}>
                     <div className = {cn(style.titleContainer)}>
@@ -47,6 +50,10 @@ const HeroSectionLanding = () =>{
 
                 </div>
             </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateIn="animate__fadeInRight"> 
+
             <div className = {cn(style.rightPane)}>
                 <div className={cn(style.ImageContainer)}>
                     <span/>
@@ -57,6 +64,7 @@ const HeroSectionLanding = () =>{
                 
 
             </div>
+            </ScrollAnimation>            
             </div>
             
             </div>

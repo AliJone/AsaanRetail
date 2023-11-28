@@ -2,10 +2,12 @@ import { Button } from "antd";
 import Image from "next/image";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const FeatureCard = ({icon, title, description}) => {
     return(
-        <div className={cn(style.featureCardContainer)}>
+        <ScrollAnimation animateIn="animate__fadeInUp">
+            <div className={cn(style.featureCardContainer)}>
             <div className={cn(style.spacer2)}/>
             <div className={cn(style.featureCardIconDiv)}>
                 <Image src={icon} alt="icon"/>
@@ -28,6 +30,8 @@ const FeatureCard = ({icon, title, description}) => {
             
             
         </div>
+        </ScrollAnimation>
+        
     )
 }
 

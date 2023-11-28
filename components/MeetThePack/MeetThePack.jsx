@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './styles.module.sass'
 import limits from '../../styles/Limits.module.css'
 import { Button } from 'antd';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import cn from 'classnames'
 
@@ -123,11 +124,14 @@ function MeetThePack() {
               <div className={styles.Right}>
                 {data?.map((item, index) => (
                   <div className={styles.EmloyeeRowContainer}>
+                    
                     <div className={cn(styles.EmployeeBoxTitle)}>
                       <h2>
                         {item?.title}
                       </h2>
                     </div>
+                    
+                    <ScrollAnimation animateIn="animate__fadeInRight">
 
                     <div className={styles.EmployeeBox}>
 
@@ -153,6 +157,7 @@ function MeetThePack() {
                         </>
                       ))}
                     </div>
+                    </ScrollAnimation>
                   </div>
                 ))}
               </div>
