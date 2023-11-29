@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.sass";
 import { Button } from "antd";
 import Image from "next/image";
+import CustomFilledButton from "../buttons/filledButton";
 
 // const data = [
 //   {
@@ -44,7 +45,13 @@ function ImageTextGrid() {
             Choose Asaan Retail for accurate inventory.
           </div>
 
-          <Button className={styles.CTAButton}>Start Free Trial</Button>
+          {/* <Button className={styles.CTAButton}>Start Free Trial</Button> */}
+
+          <div>
+            <CustomFilledButton width={"11.8125rem"}>
+              <span className={styles.buttonText}>Start Free Trial</span>
+            </CustomFilledButton>
+          </div>
         </div>
 
         <div className={styles.image}>
@@ -74,7 +81,13 @@ function ImageTextGrid() {
             </div>
           </div>
 
-          <Button className={styles.CTAButton}>Start Free Trial</Button>
+          {/* <Button className={styles.CTAButton}>Start Free Trial</Button> */}
+
+          <div>
+            <CustomFilledButton width={"11.8125rem"}>
+              <span className={styles.buttonText}>Start Free Trial</span>
+            </CustomFilledButton>
+          </div>
         </div>
 
         <div className={styles.image}>
@@ -106,7 +119,13 @@ function ImageTextGrid() {
             success with Asaan Retail's Inventory Syncing.
           </div>
 
-          <Button className={styles.CTAButton}>Start Free Trial</Button>
+          {/* <Button className={styles.CTAButton}>Start Free Trial</Button> */}
+
+          <div>
+            <CustomFilledButton width={"11.8125rem"}>
+              <span className={styles.buttonText}>Start Free Trial</span>
+            </CustomFilledButton>
+          </div>
         </div>
 
         <div className={styles.image}>
