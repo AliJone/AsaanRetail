@@ -1,109 +1,121 @@
-import { Button, Input } from 'antd';
-import React, { useState } from 'react';
+import { Button, Input } from "antd";
+import React, { useState } from "react";
 
-import BlueEx from './assets/images/BlueEx.png';
-import CallCourier from './assets/images/CallCourier.png';
-import Daraz from './assets/images/Daraz.png';
-import FPBRPOS from './assets/images/FPBRPOS.png';
-import Image from 'next/image';
-import MontyMobile from './assets/images/MontyMobile.png';
-import PostEx from './assets/images/PostEx.png';
-import Rider from './assets/images/Rider.png';
-import { SearchOutlined } from '@ant-design/icons';
-import Shopify from './assets/images/Shopify.png';
-import Swyft from './assets/images/Swyft.png';
-import TCS from './assets/images/TCS.png';
-import Trax from './assets/images/Trax.png';
-import Woo from './assets/images/Woo.png';
-import cn from 'classnames';
-import limit from '../../styles/Limits.module.css';
-import styles from './styles.module.sass';
+import BlueEx from "./assets/images/BlueEx.png";
+import CallCourier from "./assets/images/CallCourier.png";
+import Daraz from "./assets/images/Daraz.png";
+import FPBRPOS from "./assets/images/FPBRPOS.png";
+import Image from "next/image";
+import MontyMobile from "./assets/images/MontyMobile.png";
+import PostEx from "./assets/images/PostEx.png";
+import Rider from "./assets/images/Rider.png";
+import { SearchOutlined } from "@ant-design/icons";
+import Shopify from "./assets/images/Shopify.png";
+import Swyft from "./assets/images/Swyft.png";
+import TCS from "./assets/images/TCS.png";
+import Trax from "./assets/images/Trax.png";
+import Woo from "./assets/images/Woo.png";
+import cn from "classnames";
+import limit from "../../styles/Limits.module.css";
+import styles from "./styles.module.sass";
+import InputField from "../inputField";
+import IntegrationSearchInputField from "../inputs/IntegrationSearchField";
 
 const initialPlatforms = [
   {
-    category: 'Marketplaces',
+    category: "Marketplaces",
     platforms: [
       {
-        name: 'Daraz',
-        description: 'A dominant South Asian online marketplace with a vast product selection, serving shoppers in multiple countries.',
+        name: "Daraz",
+        description:
+          "A dominant South Asian online marketplace with a vast product selection, serving shoppers in multiple countries.",
         image: Daraz,
       },
       // Add other marketplace platforms here
     ],
   },
   {
-    category: 'Ecommerce Platforms',
+    category: "Ecommerce Platforms",
     platforms: [
       {
-        name: 'Shopify',
-        description: 'An e-commerce platform that empowers businesses to effortlessly set up and manage online stores.',
+        name: "Shopify",
+        description:
+          "An e-commerce platform that empowers businesses to effortlessly set up and manage online stores.",
         image: Shopify,
       },
       {
-        name: 'WooCommerce',
-        description: 'A versatile WordPress plugin designed for e-commerce on websites, providing scalability and customization options.',
+        name: "WooCommerce",
+        description:
+          "A versatile WordPress plugin designed for e-commerce on websites, providing scalability and customization options.",
         image: Woo,
       },
-      
     ],
   },
   {
-    category: 'Shipping Platforms',
+    category: "Shipping Platforms",
     platforms: [
       {
-        name: 'TCS',
-        description: 'TCS is celebrated for its proficiency in logistics and a sterling record of secure and timely deliveries.',
+        name: "TCS",
+        description:
+          "TCS is celebrated for its proficiency in logistics and a sterling record of secure and timely deliveries.",
         image: TCS,
       },
       {
-        name: 'BlueEx',
-        description: 'BlueEx celebrated for its expansive and well-connected delivery network, on-time deliveries.',
+        name: "BlueEx",
+        description:
+          "BlueEx celebrated for its expansive and well-connected delivery network, on-time deliveries.",
         image: BlueEx,
       },
       {
-        name: 'PostEx',
-        description: 'A trusted courier service with a focus on reliable domestic and international deliveries, ensuring peace of mind for customers.',
+        name: "PostEx",
+        description:
+          "A trusted courier service with a focus on reliable domestic and international deliveries, ensuring peace of mind for customers.",
         image: BlueEx,
       },
       {
-        name: 'CallCourier',
-        description: 'CallCourier is a Pakistani courier company known for its swift, secure and on-time parcel delivery services.',
+        name: "CallCourier",
+        description:
+          "CallCourier is a Pakistani courier company known for its swift, secure and on-time parcel delivery services.",
         image: CallCourier,
       },
       {
-        name: 'Swyft',
-        description: 'Swift courier services are designed for businesses needing quick, efficient, and reliable transportation solutions.',
+        name: "Swyft",
+        description:
+          "Swift courier services are designed for businesses needing quick, efficient, and reliable transportation solutions.",
         image: Swyft,
       },
       {
-        name: 'Rider',
-        description: 'Rider is a popular courier which offers swift and efficient delivery services, known for its focus on speed and reliability.',
+        name: "Rider",
+        description:
+          "Rider is a popular courier which offers swift and efficient delivery services, known for its focus on speed and reliability.",
         image: Rider,
       },
       {
-        name: 'Trax',
-        description: 'TRAX specializes in precision logistics and courier services, offering innovative tracking and real-time delivery solutions.',
+        name: "Trax",
+        description:
+          "TRAX specializes in precision logistics and courier services, offering innovative tracking and real-time delivery solutions.",
         image: Trax,
       },
-      
     ],
   },
   {
-    category: 'SMS Portals',
+    category: "SMS Portals",
     platforms: [
       {
-        name: 'Monty Mobile',
-        description: 'Monty Mobile is a global telecommunications company, offering solutions for mobile operators and businesses.',
+        name: "Monty Mobile",
+        description:
+          "Monty Mobile is a global telecommunications company, offering solutions for mobile operators and businesses.",
         image: MontyMobile,
       },
     ],
   },
   {
-    category: 'POS',
+    category: "POS",
     platforms: [
       {
-        name: 'FBR POS',
-        description: 'A tax compliance system in Pakistan that helps to record and report sales data, ensuring adherence to tax regulations.',
+        name: "FBR POS",
+        description:
+          "A tax compliance system in Pakistan that helps to record and report sales data, ensuring adherence to tax regulations.",
         image: FPBRPOS,
       },
     ],
@@ -112,80 +124,122 @@ const initialPlatforms = [
 
 function IntegrationMenu() {
   const [allPlatforms] = useState(initialPlatforms); // Keep the original list intact
-  const [displayedPlatforms, setDisplayedPlatforms] = useState(initialPlatforms); // Platforms to display
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [displayedPlatforms, setDisplayedPlatforms] =
+    useState(initialPlatforms); // Platforms to display
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const handleSearchChange = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchTerm(value);
 
-    if (selectedCategory === 'All') {
-      const filteredPlatforms = allPlatforms.map(cat => ({
-        ...cat,
-        platforms: cat.platforms.filter(p => p.name.toLowerCase().includes(value))
-      })).filter(cat => cat.platforms.length > 0);
+    if (selectedCategory === "All") {
+      const filteredPlatforms = allPlatforms
+        .map((cat) => ({
+          ...cat,
+          platforms: cat.platforms.filter((p) =>
+            p.name.toLowerCase().includes(value)
+          ),
+        }))
+        .filter((cat) => cat.platforms.length > 0);
       setDisplayedPlatforms(filteredPlatforms);
     } else {
-      const categoryPlatforms = allPlatforms.find(cat => cat.category === selectedCategory).platforms;
-      const filteredPlatforms = categoryPlatforms.filter(p => p.name.toLowerCase().includes(value));
-      setDisplayedPlatforms([{ category: selectedCategory, platforms: filteredPlatforms }]);
+      const categoryPlatforms = allPlatforms.find(
+        (cat) => cat.category === selectedCategory
+      ).platforms;
+      const filteredPlatforms = categoryPlatforms.filter((p) =>
+        p.name.toLowerCase().includes(value)
+      );
+      setDisplayedPlatforms([
+        { category: selectedCategory, platforms: filteredPlatforms },
+      ]);
     }
   };
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setSearchTerm(''); // Reset search term on category change
+    setSearchTerm(""); // Reset search term on category change
 
-    if (category === 'All') {
+    if (category === "All") {
       setDisplayedPlatforms(allPlatforms);
     } else {
-      const filteredPlatforms = allPlatforms.filter(cat => cat.category === category);
+      const filteredPlatforms = allPlatforms.filter(
+        (cat) => cat.category === category
+      );
       setDisplayedPlatforms(filteredPlatforms);
     }
   };
 
-
   return (
     <>
       <div className={styles.BG}>
-      <div className={cn(limit.Limit)}>
-        <div className={styles.Container}>
-          <div className={styles.Menu}>
-            <div className={styles.Search}>
-              <div className={styles.SearchTitle}>Search <span className={styles.SearchIcon}><SearchOutlined /></span></div>
-              <div className={styles.SearchBox}><Input size="large" placeholder="Input search text" onChange={handleSearchChange} /></div>
+        <div className={cn(limit.Limit)}>
+          <div className={styles.Container}>
+            <div className={styles.Menu}>
+              <div className={styles.Search}>
+                <div className={styles.SearchTitle}>
+                  Search{" "}
+                  <span className={styles.SearchIcon}>
+                    <SearchOutlined />
+                  </span>
+                </div>
+                <div className={styles.SearchBox}>
+                  <IntegrationSearchInputField
+                    placeHolder="Input search text"
+                    size="large"
+                    onInputChange={handleSearchChange}
+                  />
+                </div>
+              </div>
+              <div className={styles.Categories}>
+                <div className={styles.CategoriesTitle}>Categories</div>
+                {/* Map through categories for buttons */}
+                {[
+                  "All",
+                  ...new Set(initialPlatforms.map((item) => item.category)),
+                ].map((category) => (
+                  <div
+                    key={category}
+                    className={cn(styles.Button, {
+                      [styles.Selected]: selectedCategory === category,
+                    })}
+                  >
+                    <Button
+                      type="primary"
+                      size="medium"
+                      title={category}
+                      onClick={() => handleCategoryClick(category)}
+                    >
+                      {category}
+                    </Button>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className={styles.Categories}>
-              <div className={styles.CategoriesTitle}>Categories</div>
-              {/* Map through categories for buttons */}
-              {['All', ...new Set(initialPlatforms.map(item => item.category))].map((category) => (
-                <div key={category} className={cn(styles.Button, { [styles.Selected]: selectedCategory === category })}>
-                  <Button type='primary' size='medium' title={category} onClick={() => handleCategoryClick(category)}>{category}</Button>
+            <div className={styles.Data}>
+              {/* Map through categories and platforms */}
+              {displayedPlatforms.map((cat) => (
+                <div key={cat.category} className={styles.CatBox}>
+                  <div className={styles.CatBoxTitle}>{cat.category}</div>
+                  <div className={styles.CatBoxData}>
+                    {cat.platforms.map((platform) => (
+                      <div key={platform.name} className={styles.CatBoxCard}>
+                        <Image src={platform.image} alt={platform.name} />
+                        <div className={styles.CatBoxCardData}>
+                          <div className={styles.CatBoxCardDataTitle}>
+                            {platform.name}
+                          </div>
+                          <div className={styles.CatBoxCardDataSubTitle}>
+                            {platform.description}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className={styles.Data}>
-            {/* Map through categories and platforms */}
-            {displayedPlatforms.map(cat => (
-              <div key={cat.category} className={styles.CatBox}>
-                <div className={styles.CatBoxTitle}>{cat.category}</div>
-                <div className={styles.CatBoxData}>
-                  {cat.platforms.map(platform => (
-                    <div key={platform.name} className={styles.CatBoxCard}>
-                      <Image src={platform.image} alt={platform.name} />
-                      <div className={styles.CatBoxCardData}>
-                        <div className={styles.CatBoxCardDataTitle}>{platform.name}</div>
-                        <div className={styles.CatBoxCardDataSubTitle}>{platform.description}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
         </div>
       </div>
     </>

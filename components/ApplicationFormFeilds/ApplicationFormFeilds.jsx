@@ -3,9 +3,16 @@ import React from "react";
 import Image from "next/image";
 import { Form, Input, Button, Upload } from "antd";
 import { UploadOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
+import {
+  CareerInputField,
+  CareerLargeInputField,
+} from "../inputs/CareerApplyFields";
 import styles from "./styles.module.sass"; // make sure you have this SASS file
 
 import captcha from "./assets/images/captcha.png";
+import CustomTextButton from "../buttons/textButton";
+import CustomFilledButton from "../buttons/filledButton";
+import CustomUploadButton from "../buttons/uploadButton";
 
 const ApplicationFormFeilds = () => {
   // Function to handle file upload, assuming you need to handle it
@@ -23,17 +30,17 @@ const ApplicationFormFeilds = () => {
         <div className={styles.Container}>
           <div className={styles.Right}>
             <Form.Item className={styles.Labels} label="* Name" name="name">
-              <Input
+              <CareerInputField
                 size="large"
-                placeholder="  Jhon Doe"
+                placeHolder="Jhon Doe"
                 prefix={<UserOutlined />}
               />
             </Form.Item>
             <Form.Item className={styles.Labels} label="* Email" name="email">
-              <Input
+              <CareerInputField
                 type="email"
                 size="large"
-                placeholder="  Jhon@gmail.com"
+                placeHolder="  Jhon@gmail.com"
                 prefix={<MailOutlined />}
               />
             </Form.Item>
@@ -52,12 +59,10 @@ const ApplicationFormFeilds = () => {
               label="* Cover Letter"
               name="coverLetter"
             >
-              <Input.TextArea size="large" placeholder="  Enter Text" />
+              <CareerLargeInputField size="large" placeHolder="  Enter Text" />
             </Form.Item>
             <Form.Item className={styles.Labels} label="* Resume" name="resume">
-              <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
-                <Button icon={<UploadOutlined />}>Click to Upload</Button>
-              </Upload>
+              <CustomUploadButton customRequest={handleUpload} />
               <div className={styles.Allowed}>
                 Allowed Type(s): .pdf, .doc, .docx
               </div>
