@@ -22,14 +22,14 @@ const ApplicationFormFeilds = () => {
         <h2 className={styles.heading}>Application Form</h2>
         <div className={styles.Container}>
           <div className={styles.Right}>
-            <Form.Item className={styles.Labels}  label="* Name" name="name">
+            <Form.Item className={styles.Labels} label="* Name" name="name">
               <Input
                 size="large"
                 placeholder="  Jhon Doe"
                 prefix={<UserOutlined />}
               />
             </Form.Item>
-            <Form.Item className={styles.Labels}  label="* Email" name="email">
+            <Form.Item className={styles.Labels} label="* Email" name="email">
               <Input
                 type="email"
                 size="large"
@@ -37,7 +37,7 @@ const ApplicationFormFeilds = () => {
                 prefix={<MailOutlined />}
               />
             </Form.Item>
-            <Form.Item className={styles.Labels}  label="* Phone" name="phone">
+            <Form.Item className={styles.Labels} label="* Phone" name="phone">
               <Input
                 addonBefore="+92"
                 type="phonenumber"
@@ -47,10 +47,14 @@ const ApplicationFormFeilds = () => {
             </Form.Item>
           </div>
           <div className={styles.Left}>
-            <Form.Item className={styles.Labels}  label="* Cover Letter" name="coverLetter">
+            <Form.Item
+              className={styles.Labels}
+              label="* Cover Letter"
+              name="coverLetter"
+            >
               <Input.TextArea size="large" placeholder="  Enter Text" />
             </Form.Item>
-            <Form.Item className={styles.Labels}  label="* Resume" name="resume">
+            <Form.Item className={styles.Labels} label="* Resume" name="resume">
               <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
                 <Button icon={<UploadOutlined />}>Click to Upload</Button>
               </Upload>

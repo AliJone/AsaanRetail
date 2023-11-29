@@ -1,13 +1,13 @@
 import ARPartnerProgram from "../../components/AR Partner Program";
 import { App } from "antd";
-import CTANew from '../../components/CTA new/CTANew';
-import Footer from '../../components/Footer/Footer';
+import CTANew from "../../components/CTA new/CTANew";
+import Footer from "../../components/Footer/Footer";
 import HeroSectionPartners from "../../components/HeroSectionPartners";
-import InspiredWorkspace from '../../components/InspiredWorkspace';
+import InspiredWorkspace from "../../components/InspiredWorkspace";
 import InventoryManagement from "../../components/InventoryManagement/InventoryManagement";
 import NavigationBar from "../../components/navbar";
 import PartnersCarousel from "../../components/PartnersCarousel";
-import Testimonials from '../../components/Testimonials/Testimonials';
+import Testimonials from "../../components/Testimonials/Testimonials";
 
 const page = () => {
   return (
@@ -18,17 +18,15 @@ const page = () => {
             overflowX: "hidden",
           }}
         >
-            <NavigationBar />
-            <HeroSectionPartners />
-            <InventoryManagement />
-            <PartnersCarousel />
-            <InspiredWorkspace number={1} />
-            <ARPartnerProgram/>
-            <Testimonials />
-            <CTANew />
-            <Footer />
-
-
+          <NavigationBar />
+          <HeroSectionPartners />
+          <InventoryManagement />
+          <PartnersCarousel />
+          <InspiredWorkspace number={1} />
+          <ARPartnerProgram />
+          <Testimonials />
+          <CTANew />
+          <Footer />
         </div>
       </App>
     </>
