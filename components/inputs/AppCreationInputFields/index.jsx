@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "antd";
 
 const defaultInputStyle = {
@@ -15,7 +15,13 @@ const AppCreationInputField = ({
   type,
   customStyle,
 }) => {
-  const mergedStyle = { ...defaultInputStyle, ...customStyle };
+  const [isFocused, setIsFocused] = useState(false);
+
+  const mergedStyle = {
+    ...defaultInputStyle,
+    ...customStyle,
+    border: isFocused ? "1px solid #009241" : defaultInputStyle.border,
+  };
 
   return (
     <Input
@@ -27,6 +33,8 @@ const AppCreationInputField = ({
       onChange={onInputChange}
       addonBefore={addonBefore}
       style={mergedStyle}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
     />
   );
 };

@@ -14,6 +14,7 @@ import styles from "./styles.module.sass"; // make sure you have this SASS file
 import limits from "../../styles/Limits.module.css";
 import AppCreationInputField from "../inputs/AppCreationInputFields";
 import { CareerLargeInputField } from "../inputs/CareerApplyFields";
+import CustomFilledButton from "../buttons/filledButton";
 
 import captcha from "./assets/images/captcha.png";
 import CustomSelect from "../dropDowns/AntDesignDropdown";
@@ -224,14 +225,23 @@ const ContactUsFormFeilds = ({ data, state }) => {
 
                 <Form.Item className={styles.Submit}>
                   {/* <Image src={captcha} /> */}
-                  <Button
+                  {/* <Button
                     className={styles.SubmitButton}
                     type="primary"
                     size="large"
                     htmlType="submit"
                   >
                     Apply now
-                  </Button>
+                  </Button> */}
+
+                  <CustomFilledButton
+                    type="primary"
+                    size="large"
+                    htmlType="submit"
+                    width={"100%"}
+                  >
+                    Apply now
+                  </CustomFilledButton>
                 </Form.Item>
               </Form>
             </div>

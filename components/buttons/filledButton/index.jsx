@@ -8,6 +8,7 @@ const CustomFilledButton = (props) => {
       style={{ width: props.width != undefined ? props.width : "auto" }}
       className={style.buttonClass}
       size={props.size}
+      icon={props.icon}
     >
       {props.children}
     </Button>

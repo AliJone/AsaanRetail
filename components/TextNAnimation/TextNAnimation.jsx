@@ -6,6 +6,7 @@ import Image from "next/image";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
+import CustomFilledButton from "../buttons/filledButton";
 
 function TextNAnimation({ Title, SubTitle, Animation = false, ButtonText }) {
   return (
@@ -29,13 +30,25 @@ function TextNAnimation({ Title, SubTitle, Animation = false, ButtonText }) {
                 <div className={styles.Title}>{Title}</div>
                 <div className={styles.SubTitle}>{SubTitle}</div>
               </div>
-              <Button
+              {/* <Button
                 className={styles.Buttton}
                 size="large"
                 icon={<CalendarOutlined />}
               >
                 {ButtonText}
-              </Button>
+              </Button> */}
+
+              <div className={styles.buttonContainer}>
+                <CustomFilledButton
+                  className={styles.Buttton}
+                  size="large"
+                  icon={<CalendarOutlined />}
+                  width={"11.875rem"}
+                  handleClick={() => {}}
+                >
+                  {ButtonText}
+                </CustomFilledButton>
+              </div>
             </div>
             {Animation && (
               <div className={styles.Right}>Animation PlaceHolder</div>

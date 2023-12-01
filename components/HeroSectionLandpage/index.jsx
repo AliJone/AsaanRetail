@@ -7,6 +7,7 @@ import cn from "classnames";
 import landingImage from "./assests/landpagePic.png";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import HeroSectionInput from "../inputs/HeroSectionInputs/index.jsx";
 
 const HeroSectionLanding = () => {
   return (
@@ -51,9 +52,12 @@ const HeroSectionLanding = () => {
                   </div>
                 </div>
                 <div className={cn(style.lowerContainer)}>
-                  <div className={style.FieldClass}>
-                    <InputField placeHolder={"Enter Your Work Email"} />
-                  </div>
+                  {/* <div className={style.FieldClass}>
+                    <InputField placeHolder={"Enter Your Work Emails"} />
+                  </div> */}
+
+                  <HeroSectionInput placeHolder={"Enter Your Work Email"} />
+
                   <div className={cn(style.buttonTextContainer)}>
                     <div className={cn(style.buttonContainer)}>
                       <CustomFilledButton

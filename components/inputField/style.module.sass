@@ -1,2 +1,17 @@
+@use '../../utils/colors'
+@use '../../utils/fonts'
+@use '../../utils/breakpoints'
+    
+$small : breakpoints.$small
 
+.textFieldCard
+    width: 100%
+    padding:0.75rem 0.312rem
+    background: colors.$bgPrimary
 
+@media (max-width: $small)
+    .textFieldCard
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15)
+        border-radius: 0.625rem
+        border: 2px solid var(--neutral-1, #FFF)
+        background: #FFF

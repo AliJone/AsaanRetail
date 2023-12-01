@@ -28,17 +28,41 @@ import UseCaseSection2 from "../components/usecaseSection2";
 import VideoSection from "../components/videoSection";
 import VideoSectionNew from "../components/videoSectionNew";
 
-const HeroSectionWithScroll = withScrollAnimation( HeroSection, "animate__fadeInUp");
-const HeroSectionLandingWithScroll = withScrollAnimation( HeroSectionLanding, "animate__fadeIn");
-const CarouselWithScroll = withScrollAnimation( Carousel, "animate__fadeIn");
-const IntegrationSectionWithScroll = withScrollAnimation( IntegrationSection, "animate__fadeIn");
-const FeaturesV2WithScroll = withScrollAnimation( FeaturesV2, "animate__fadeInUp");
-const TextNAnimationWithScroll = withScrollAnimation( TextNAnimation, "animate__fadeIn");
-const VideoSectionNewWithScroll = withScrollAnimation( VideoSectionNew, "animate__fadeIn");
-const TabsWithScroll = withScrollAnimation( Tabs, "animate__fadeIn");
-const TestimonialsWithScroll = withScrollAnimation( Testimonials, "animate__fadeInUp");
-const ThroughLenseWithScroll = withScrollAnimation( ThroughLense, "animate__fadeIn");
-const FAQWithScroll = withScrollAnimation( FAQ, "animate__fadeInUp");
+const HeroSectionWithScroll = withScrollAnimation(
+  HeroSection,
+  "animate__fadeInUp"
+);
+const HeroSectionLandingWithScroll = withScrollAnimation(
+  HeroSectionLanding,
+  "animate__fadeIn"
+);
+const CarouselWithScroll = withScrollAnimation(Carousel, "animate__fadeIn");
+const IntegrationSectionWithScroll = withScrollAnimation(
+  IntegrationSection,
+  "animate__fadeIn"
+);
+const FeaturesV2WithScroll = withScrollAnimation(
+  FeaturesV2,
+  "animate__fadeInUp"
+);
+const TextNAnimationWithScroll = withScrollAnimation(
+  TextNAnimation,
+  "animate__fadeIn"
+);
+const VideoSectionNewWithScroll = withScrollAnimation(
+  VideoSectionNew,
+  "animate__fadeIn"
+);
+const TabsWithScroll = withScrollAnimation(Tabs, "animate__fadeIn");
+const TestimonialsWithScroll = withScrollAnimation(
+  Testimonials,
+  "animate__fadeInUp"
+);
+const ThroughLenseWithScroll = withScrollAnimation(
+  ThroughLense,
+  "animate__fadeIn"
+);
+const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
 
 const page = () => {
   return (
@@ -60,7 +84,14 @@ const page = () => {
           {/* <VideoSection /> */}
 
           <FeaturesV2 />
-          <TextNAnimation Title={"Increase efficiency through automation"} SubTitle={"With Asaan Retail say goodbye to manual tasks, errors, and inefficiencies, and say hello to enhanced productivity and growth."} Animation={true} ButtonText={"Book a Demo"}/>
+          <TextNAnimation
+            Title={"Increase efficiency through automation"}
+            SubTitle={
+              "With Asaan Retail say goodbye to manual tasks, errors, and inefficiencies, and say hello to enhanced productivity and growth."
+            }
+            Animation={true}
+            ButtonText={"Book a Demo"}
+          />
 
           <VideoSectionNew />
           {/* <TextNAnimation/> */}

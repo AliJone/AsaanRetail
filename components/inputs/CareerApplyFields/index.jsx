@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "antd";
 
-const inputStyle = {
-  border: "1px solid #D9E0DC",
+const defaultInputStyle = {
+  border: "0.5px solid #D9E0DC",
   backgroundColor: "#FFF",
 };
 
@@ -14,6 +14,13 @@ const CareerInputField = ({
   addonBefore,
   type,
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const mergedStyle = {
+    ...defaultInputStyle,
+    border: isFocused ? "0.5px solid #009241" : defaultInputStyle.border,
+  };
+
   return (
     <Input
       placeholder={placeHolder}
@@ -23,7 +30,9 @@ const CareerInputField = ({
       prefix={prefix}
       onChange={onInputChange}
       addonBefore={addonBefore}
-      style={inputStyle}
+      style={mergedStyle}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
     />
   );
 };
@@ -32,18 +41,25 @@ const CareerLargeInputField = ({
   placeHolder,
   onInputChange,
   prefix,
-  addonBefore,
   type,
 }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const mergedStyle = {
+    ...defaultInputStyle,
+    border: isFocused ? "0.5px solid #009241" : defaultInputStyle.border,
+  };
+
   return (
     <Input.TextArea
-      placeHolder={placeHolder}
+      placeholder={placeHolder}
       size="large"
       type={type}
-      onInputChange={onInputChange}
+      onChange={onInputChange}
       prefix={prefix}
-      addonBefore={addonBefore}
-      style={inputStyle}
+      style={mergedStyle}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
     />
   );
 };

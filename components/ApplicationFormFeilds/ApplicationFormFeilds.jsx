@@ -50,6 +50,11 @@ const ApplicationFormFeilds = () => {
                 type="phonenumber"
                 size="large"
                 placeholder="  3229775013"
+                style={{
+                  border: "none",
+                  // borderBottom: "1px solid #D9E0DC",
+                  backgroundColor: "#FFF",
+                }}
               />
             </Form.Item>
           </div>
