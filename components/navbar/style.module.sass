@@ -4,11 +4,18 @@
 $small: 42.5rem
 $medium: 61.9375rem
     
+.limitOverride
+    padding-bottom: 5rem
 .HeaderClass
     display: flex
     justify-content: center
     padding: 0 0
     background-color: rgb(255, 255, 255)
+    position: fixed
+    z-index: 999999
+    // max-width: 1400px
+    
+
     
     height: 5rem
     top:0
@@ -17,6 +24,14 @@ $medium: 61.9375rem
 .NavButtonFonts
     @include fonts.fontNavBar
     color: colors.$fontColor_primary
+
+.setMaxWidth
+    max-width: 1440px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    width: 100%
     
 
 .DivCenter
@@ -26,10 +41,11 @@ $medium: 61.9375rem
 
 .DivClass
     display: flex
-    justify-content: space-around
+    justify-content: center
     align-items: center
-    flex-direction: row
-    padding: 0 0
+    // flex-direction: row
+    // padding: 0 0
+    // max-width: 1440px
     // margin-left:.5rem
     
     background-color: rgb(255, 255, 255)
@@ -90,11 +106,13 @@ $medium: 61.9375rem
     flex-direction: column
     align-items: center
     height:100%
-    // justify-content: center
+    justify-content: flex-end
 
 
 .barColor
-    background: linear-gradient(90deg, #5FFF27 0.02%, rgba(237, 251, 239, 0.68) 61.33%, rgba(204, 240, 58, 0.68) 98.45%)
+    // border-radius: 1.25rem
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    // background: linear-gradient(90deg, #5FFF27 0.02%, rgba(237, 251, 239, 0.68) 61.33%, rgba(204, 240, 58, 0.68) 98.45%)
     border-radius: 1.25rem
     width: 5.0625rem
     height: .25rem

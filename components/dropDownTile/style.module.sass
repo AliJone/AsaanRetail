@@ -14,9 +14,44 @@
     
 .titleClass
     @include fonts.fontboldh4
-    color: colors.$fontColor_secondary
+    color: colors.$fontColor_primary
 
 .contentClass
     @include fonts.fontbodyRegular
-    color: colors.$fontColor_secondary
+    color: colors.$fontColor_primary
+
+
+// new classes
+
+.TileContainer
+    display: flex
+    padding: 1rem
+    align-items: flex-start
+    gap: 1rem
+    flex: 1 0 0
+    align-self: stretch
+    border-radius: 0.625rem
+    max-width: 23.4375rem
+
+.TileContainer:hover
+    background: rgba(230, 244, 236, 0.60)
+
+
     
+.TileTextContainer
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    text-align: left
+    justify-content: flex-start
+    align-self: stretch
+    flex: 1 0 0
+
+.TileTitle
+    @include fonts.fontDesktopH5Bold
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+
+.TileContent
+    @include fonts.fontDesktopBodyRegular
+    align-self: stretch
+    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))

@@ -111,6 +111,21 @@ line-height: 150%;
   inset-inline-start: calc(100% - 1.75rem);
 }
 
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):active{
+  background-color: white;
+  color: black;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover{
+  background-color: white;
+  color: black;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover{
+  background-color: white;
+  color: black;
+}
+
 
 
 

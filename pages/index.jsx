@@ -5,7 +5,6 @@ import {
 } from "../strings";
 
 import { App } from "antd";
-import withScrollAnimation from "../components/Animate/animate";
 import CTA from "../components/CTA/CTA";
 import CTANew from "../components/CTA new/CTANew";
 import CTASection from "../components/ctaSection";
@@ -27,6 +26,7 @@ import UseCaseSection1 from "../components/usecaseSection1";
 import UseCaseSection2 from "../components/usecaseSection2";
 import VideoSection from "../components/videoSection";
 import VideoSectionNew from "../components/videoSectionNew";
+import withScrollAnimation from "../components/Animate/animate";
 
 const HeroSectionWithScroll = withScrollAnimation( HeroSection, "animate__fadeInUp");
 const HeroSectionLandingWithScroll = withScrollAnimation( HeroSectionLanding, "animate__fadeIn");

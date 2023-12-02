@@ -1,8 +1,8 @@
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
-import ScrollAnimation from 'react-animate-on-scroll';
 import Flags from "./flags.jsx";
 import Image from "next/image";
 import InputField from '../inputField/index.jsx';
+import ScrollAnimation from 'react-animate-on-scroll';
 import cn from "classnames";
 import landingImage from './assests/landpagePic.png'
 import limit from '../../styles/Limits.module.css'
@@ -19,9 +19,9 @@ const HeroSectionLanding = () =>{
             <div className = {cn(style.leftPane)}>
                 <div className={cn(style.textContainer)}>
                     <div className = {cn(style.titleContainer)}>
-                        <span className={cn(style.titleText)}>
-                            Centralized <span className={style.underLine}>Retail</span> & <span className={style.underLine}>Ecommerce</span> Management
-                        </span>
+                        <h1 className={cn(style.titleText)}>
+                            Centralized <span className={style.underLine}>Retail</span> <p className={cn(style.titleText)}>& <span className={style.underLine}>Ecommerce</span> Management</p>
+                        </h1>
                     </div>
                     <div>
                         <Flags/>

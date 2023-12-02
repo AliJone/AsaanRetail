@@ -7,46 +7,44 @@ import ImageWithBGGradient from "../../imageWithBGGradient";
 import IntegrationTile from "./integrationTile";
 import SalesOrders from "../../../images/svgs/salesOrders.svg";
 import Tiles from "./tiles";
+import cn from "classnames";
 import styles from "./style.module.sass";
 
 const ProductsDropDown = () => {
     return(
-        <div className = {styles.divAnimation}>
+        // <div className = {styles.divAnimation}>
         <GenericDropDown
         child1 ={
             <>
-            <Row>
-                <Col span={24}>
-                    {<><ImageWithBGGradient image={SalesOrders} /></>}
-                </Col>
-                <Col span={24}>
-                    <Row>
-                        <h1 className = {styles.classText}>Experience the Asaan Retail Difference</h1>
-                    </Row>
-                    <Row>
-                        <div className = {styles.backGround}>
-                        <CustomFilledButton children={<div>Watch Demo</div>} />
+                <div className = {styles.LeftPane}>
+                    <div className={cn(styles.ImageDiv)}>
+                        <Image src={SalesOrders} alt="Sales Orders" />
+                    </div>
+                    <div className={cn(styles.LeftPaneDesContainer)}>
+                        <h1 className={cn(styles.LeftPaneTextContainer)} >
+                            Experience the Asaan Retail Difference
+                        </h1>
+
+                        <div >
+                        <CustomFilledButton children={<span className={cn(styles.buttonText)}>Start Free Trial</span>} width={'inherit'} />
                         </div>
-                    </Row>
-                </Col>
-            </Row>
+
+                    </div>
+
+                </div>
             </>
         }
         child2= {
             <>
-            <Row>
-                <Col span={24}>
-                    <Tiles/>
-                </Col>
-                <Col span={24}>
-                    <IntegrationTile/>
-                </Col>
-            </Row>
+            <div className={cn(styles.RightPane)}>
+                <Tiles/>
+                <IntegrationTile/>
+            </div>
             </>
         }
         
         />
-        </div>
+        // </div>
     )
 }
 
