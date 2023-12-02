@@ -12,22 +12,26 @@ $small : breakpoints.$small
   justify-self: center
 
   border-radius: 0.625rem
-  border: 1px solid #C0DCCC
+  border: 1px solid #009241
   background: #FFF
-  box-shadow: 0px 0px 24px 0px rgba(145, 208, 173, 0.20)  
+  box-shadow: 0px 0px 24px 0px rgba(4, 173, 79, 0.15)  
+  // boxShadow: 0 0 10px rgba(4, 173, 79, 0.2)
+
   align-items: center
   height: 3.75rem
-  &:focus-within 
-    border: 0.5px solid #009241
   
-
   input 
-    border: none 
-  
+    border: none
+
+  &:hover
+      outline: 2px solid var(--gradient-surface, #009241)
+      outline-offset: -2px
+
+  &:focus-within 
+      outline: 3px solid var(--gradient-surface, #009241)
+      outline-offset: -3px
 
 
-
-  
 
 
     

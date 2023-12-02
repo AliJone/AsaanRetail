@@ -1,0 +1,38 @@
+@use '/utils/breakpoints.sass'
+@use '/utils/colors.sass'
+
+.inputContainer
+    border: 0.5px solid #009241
+    background-color: #FFF
+    box-sizing: border-box
+    box-shadow: 0 0 10px rgba(4, 173, 79, 0.1)
+    border-radius: 9px
+
+    input 
+        border: none
+
+    &:hover
+        outline: 2px solid var(--gradient-surface, #009241)
+        outline-offset: -2px
+
+    &:focus-within 
+        outline: 3px solid var(--gradient-surface, #009241)
+        outline-offset: -3px
+
+.largeInputContainer
+    border: 0.5px solid #009241
+    background-color: #FFF
+    box-sizing: border-box
+    box-shadow: 0 0 10px rgba(4, 173, 79, 0.1)
+    border-radius: 9px
+
+    input 
+        border: none
+
+    &:hover
+        outline: 4px solid var(--gradient-surface, #009241)
+        outline-offset: -3px
+
+    &:focus-within 
+        outline: 5px solid var(--gradient-surface, #009241)
+        outline-offset: -3px

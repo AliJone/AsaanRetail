@@ -113,17 +113,17 @@
   inset-inline-start: calc(100% - 1.75rem);
 }
 
-:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):active{
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):active {
   background-color: white;
   color: black;
 }
 
-:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover{
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover {
   background-color: white;
   color: black;
 }
 
-:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover{
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):hover {
   background-color: white;
   color: black;
 }
@@ -133,10 +133,52 @@
   box-shadow: none;
 }
 
-/* :where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-customize-input):focus .ant-select-selector {
-  border: 0.5px solid #009241;
-  box-shadow: none;
+/* input addon */
+/* :where(.css-dev-only-do-not-override-3mqfnx) {
+  position: relative;
+
+  .ant-input-group>.ant-input:first-child,
+  .ant-input-group .ant-input-group-addon:first-child {
+    border-color: rgba(0, 0, 0, 0.88);
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 50%;
+
+      background-color: #fff;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 0;
+    }
+  }
 } */
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-input-group .ant-input {
+  border: 1px solid #009241;
+  box-shadow: none;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-input-group .ant-input:hover {
+  /* border: 2px solid #009241; */
+  outline: 1px solid var(--gradient-surface, #009241);
+  outline-offset: -1px;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-input-group .ant-input:focus {
+  outline: 3px solid var(--gradient-surface, #009241);
+  outline-offset: -3px;
+  box-shadow: none;
+}
 
 :where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
   border: 0.5px solid #009241;
