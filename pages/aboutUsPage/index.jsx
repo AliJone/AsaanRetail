@@ -1,18 +1,17 @@
 import { React, useState } from "react";
 
 import { App } from "antd";
-
-import withScrollAnimation from "../../components/Animate/animate";
 import CTANew from "../../components/CTA new/CTANew";
 import Carousel from "../../components/carousel";
 import { CarouselImages } from "../../strings";
 import Footer from "../../components/Footer/Footer";
 import HeroSectionAboutUs from "../../components/HeroSectionAboutUs";
-import NavigationBar from "../../components/navbar";
-import Testimonial from "../../components/Testimonials/Testimonials";
 import MeetThePack from "../../components/MeetThePack/MeetThePack";
+import NavigationBar from "../../components/Navbar";
 import OurJourney from "../../components/OurJourney/OurJourney";
+import Testimonial from "../../components/Testimonials/Testimonials";
 import TextNAnimation from "../../components/TextNAnimation/TextNAnimation";
+import withScrollAnimation from "../../components/Animate/animate";
 
 const TextNAnimationWithScroll = withScrollAnimation(
   TextNAnimation,
