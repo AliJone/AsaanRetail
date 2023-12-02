@@ -7,13 +7,9 @@ import VerificationModal from "../VerificationCodeModal";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
+import CustomFilledButton from "../buttons/filledButton";
 
 // import AppReadyVideo from "./assets/videos/AppReadyVideo.mp4";
-
-
-
-
-
 
 function AppReady() {
   return (
@@ -32,10 +28,14 @@ function AppReady() {
           Your journey to optimized operations starts now
         </p>
 
-        <Button className={styles.LoginButton}>Login to your App</Button>
-      </div>
+        {/* <Button className={styles.LoginButton}>Login to your App</Button> */}
 
-      
+        <div className={styles.buttonContainer}>
+          <CustomFilledButton width={"inherit"}>
+            <span className={styles.buttonText}>Login to your App</span>
+          </CustomFilledButton>
+        </div>
+      </div>
     </div>
   );
 }

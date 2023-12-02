@@ -1,9 +1,9 @@
-.styleSheet_CounterDiv__spubf .ant-input-number .ant-input-number-input-wrap input.ant-input-number-input{
+.styleSheet_CounterDiv__spubf .ant-input-number .ant-input-number-input-wrap input.ant-input-number-input {
   text-align: center;
   cursor: default;
-} 
+}
 
-.ant-input-number-disabled .ant-input-number-input{
+.ant-input-number-disabled .ant-input-number-input {
   text-align: center;
 }
 
@@ -15,18 +15,16 @@
   background: var(--primary-6, #009241)
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled){
+:where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
   background: var(--primary-6, #009241)
 }
 
-
-
-.ant-carousel .slick-dots-bottom{
+.ant-carousel .slick-dots-bottom {
   bottom: -14px;
-  gap:0.8rem
+  gap: 0.8rem
 }
 
-.ant-carousel .slick-dots li button{
+.ant-carousel .slick-dots li button {
   border-radius: 0.1125rem;
   opacity: 0.3;
   background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%));
@@ -35,7 +33,7 @@
   align-items: center;
 }
 
-.ant-carousel .slick-dots li.slick-active button{
+.ant-carousel .slick-dots li.slick-active button {
   border-radius: 0.1125rem;
   background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%));
   display: flex;
@@ -44,70 +42,74 @@
   opacity: 1;
 }
 
-.ant-tabs-tab div{
+.ant-tabs-tab div {
   color: var(--character-mark, #000);
   font-family: Roboto;
-font-size: 1.3125rem;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
+  font-size: 1.3125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .ant-tabs-tab-active div {
   color: var(--primary-6, #009241) !important;
   font-weight: 500;
-  
+
 }
-:where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-btn:focus:not(:focus-visible), :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:focus:not(:focus-visible), :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-btn:active, :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:active {
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-btn:focus:not(:focus-visible),
+:where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:focus:not(:focus-visible),
+:where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-btn:active,
+:where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:active {
   color: var(--primary-6, #009241) !important;
 }
 
-.ant-tabs > div:first-child{
+.ant-tabs>div:first-child {
   padding: 0px 10px;
 }
+
 .ant-tabs-ink-bar {
   background: var(--primary-6, #009241) !important;
 }
 
-.styles_Btn1__Ij3L8:hover{
+.styles_Btn1__Ij3L8:hover {
   background: var(--primary-6, #fff) !important;
   color: var(--primary-6, #009241) !important
-
 }
 
-.styles_Btn1__Ij3L8:focus{
+.styles_Btn1__Ij3L8:focus {
   background: var(--primary-6, #fff) !important;
   color: var(--primary-6, #009241) !important
-
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper::before{
+:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper::before {
   content: none !important;
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-space-compact{
+:where(.css-dev-only-do-not-override-1vr7spz).ant-space-compact {
   width: 100% !important;
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-progress .ant-progress-bg{
+:where(.css-dev-only-do-not-override-1vr7spz).ant-progress .ant-progress-bg {
   background: linear-gradient(90deg, #3E9B1D 0.02%, rgba(194, 220, 88, 0.68) 61.84%, rgba(125, 142, 58, 0.68) 98.45%) !important;
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+:where(.css-dev-only-do-not-override-1vr7spz).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
   stroke: #561d9b !important;
 
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-btn >span{
+:where(.css-dev-only-do-not-override-1vr7spz).ant-btn>span {
   font-size: 17px
 }
-:where(.css-dev-only-do-not-override-1vr7spz).ant-switch .ant-switch-handle::before{
+
+:where(.css-dev-only-do-not-override-1vr7spz).ant-switch .ant-switch-handle::before {
   border-radius: 111px;
   height: 1.75rem;
   width: 1.75rem;
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked .ant-switch-handle{
+:where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked .ant-switch-handle {
   inset-inline-start: calc(100% - 1.75rem);
 }
 
@@ -126,6 +128,17 @@ line-height: 150%;
   color: black;
 }
 
+:where(.css-dev-only-do-not-override-3mqfnx).ant-input:focus {
+  border: 0.5px solid #009241;
+  box-shadow: none;
+}
 
+/* :where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-customize-input):focus .ant-select-selector {
+  border: 0.5px solid #009241;
+  box-shadow: none;
+} */
 
-
+:where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  border: 0.5px solid #009241;
+  box-shadow: none;
+}

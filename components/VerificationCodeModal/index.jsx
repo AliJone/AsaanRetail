@@ -6,10 +6,9 @@ import Image from "next/image";
 import MobileImage from "./assets/MobileImage.png";
 import cn from "classnames";
 import styles from "./styles.module.sass";
+import CustomFilledButton from "../buttons/filledButton";
 
-function VerificationModal({modal2Open, setModal2Open , handleStepperScreen}) {
-  // const [modal2Open, setModal2Open] = useState(true);
-
+function VerificationModal({ modal2Open, setModal2Open, handleStepperScreen }) {
   const closeModal = () => {
     setModal2Open(false);
     document.body.style.overflow = "visible"; // enable scrolling back when modal is closed
@@ -30,7 +29,7 @@ function VerificationModal({modal2Open, setModal2Open , handleStepperScreen}) {
 
   const verifyOtp = () => {
     setModal2Open(false);
-    handleStepperScreen({position: 2});
+    handleStepperScreen({ position: 2 });
     console.log(otpValues);
   };
 
@@ -72,9 +71,9 @@ function VerificationModal({modal2Open, setModal2Open , handleStepperScreen}) {
                   Code doesn’t seem right! Try again
                 </div>
 
-                <Button className={styles.verifyButton} onClick={verifyOtp}>
+                <CustomFilledButton handleClick={verifyOtp}>
                   Verify
-                </Button>
+                </CustomFilledButton>
 
                 <div className={styles.changeNumberContainer}>
                   <p className={styles.changeNumber}>Change the number</p>

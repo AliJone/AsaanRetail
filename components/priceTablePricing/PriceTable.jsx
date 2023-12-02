@@ -7,6 +7,7 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useState } from "react";
+import CustomFilledButton from "../buttons/filledButton";
 
 const tiers = [
   { type: "Standard", price: "Rs 12,000" },
@@ -235,7 +236,11 @@ function TierContainer({ type, price }) {
           <span className={styles.tierContainerPrice2}>/mo</span>
         </div>
         <div className={styles.tierContainerButton}>
-          <Button className={styles.tierContainerCTA}>Get started</Button>
+          {/* <Button className={styles.tierContainerCTA}>Get started</Button> */}
+
+          <CustomFilledButton width={"11.785rem"}>
+            Get started
+          </CustomFilledButton>
         </div>
       </div>
 
@@ -251,7 +256,11 @@ function TierContainer({ type, price }) {
           </div>
 
           <div className={styles.tierContainerButton}>
-            <Button className={styles.tierContainerCTA}>Get started</Button>
+            {/* <Button className={styles.tierContainerCTA}>Get started</Button> */}
+
+            <CustomFilledButton width={"79.86%"}>
+              <span className={styles.buttonText}>Get started</span>
+            </CustomFilledButton>
           </div>
         </div>
       </div>
@@ -325,9 +334,7 @@ function PriceTable() {
   return (
     <>
       <div className={styles.heroSection}>
-      <div className={limit.Limit}>
-        
-
+        <div className={limit.Limit}>
           <div className={styles.spacer1} />
 
           {/* <Tag text="Compare plans" className={styles.tag} /> */}
@@ -379,7 +386,7 @@ function PriceTable() {
           <div className={styles.tableContainer}>
             <FeatureComparisonTable tabNumber={tabNumber} />
           </div>
-          </div>
+        </div>
       </div>
     </>
   );

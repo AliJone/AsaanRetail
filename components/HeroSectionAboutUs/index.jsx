@@ -7,6 +7,8 @@ import ScrollAnimation from "react-animate-on-scroll";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import ScrollAnimation from "react-animate-on-scroll";
+import HeroSectionInput from "../inputs/HeroSectionInputs/index.jsx";
 
 // import landingImage from './assests/landpagePic.png'
 
@@ -20,10 +22,10 @@ const HeroSectionAboutUs = () => {
             <div className={cn(style.leftPane)}>
               <div className={cn(style.textContainer)}>
                 <div className={cn(style.titleContainer)}>
-                  <h1 className={cn(style.titleText)}>
-                    Discover{' '}
-                    <p className={cn(style.titleText , style.underLine)}> Asaan Retail</p>
-                  </h1>
+                  <span className={cn(style.titleText)}>
+                    Discover{" "}
+                    <span className={style.underLine}>Asaan Retail</span>
+                  </span>
                 </div>
                 <div className={cn(style.subTitleContainer)}>
                   <span className={cn(style.subTitleText)}>

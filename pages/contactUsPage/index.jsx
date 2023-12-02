@@ -1,13 +1,12 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 
 import { App } from "antd";
-import CTANew from '../../components/CTA new/CTANew';
-import Footer from '../../components/Footer/Footer';
+import CTANew from "../../components/CTA new/CTANew";
+import Footer from "../../components/Footer/Footer";
 import HeroSectionContactUs from "../../components/HeroSectionContactUs";
 import NavigationBar from "../../components/navbar";
 
 const page = () => {
-
   return (
     <>
       <App>
@@ -16,13 +15,11 @@ const page = () => {
             overflowX: "hidden",
           }}
         >
-            <NavigationBar />
-            <HeroSectionContactUs/>
-            
-            <CTANew />
-            <Footer />
+          <NavigationBar />
+          <HeroSectionContactUs />
 
-
+          <CTANew />
+          <Footer />
         </div>
       </App>
     </>

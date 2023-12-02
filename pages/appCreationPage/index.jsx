@@ -9,33 +9,27 @@ import Screen3 from "../../components/GetStartedScreens/Screen3/Screen3";
 import VerificationModal from "../../components/VerificationCodeModal";
 
 const page = () => {
-
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [StepperPosition, setStepperPosition] = useState(0);
   const [Values, setValues] = useState([]);
-  
-  const showModal = ({bool}) => {
-    if(bool !== undefined)
-    console.log("called from page",bool)
-      setIsModalVisible(bool);
+
+  const showModal = ({ bool }) => {
+    if (bool !== undefined) console.log("called from page", bool);
+    setIsModalVisible(bool);
   };
 
-  const handleStepperScreen = ({position}) => {
-    if(position !== undefined)
-    {
-      console.log(position,"called")
-      if(position === 0)
-      {}
+  const handleStepperScreen = ({ position }) => {
+    if (position !== undefined) {
+      console.log(position, "called");
+      if (position === 0) {
+      }
       setStepperPosition(position);
     }
-  }
+  };
 
-  const AddValue = ({Value})=>{
-    if(Value !== undefined)
-    setValues([...Values, Value]);
-  }
-
-
+  const AddValue = ({ Value }) => {
+    if (Value !== undefined) setValues([...Values, Value]);
+  };
 
   return (
     <>
@@ -45,22 +39,28 @@ const page = () => {
             overflowX: "hidden",
           }}
         >
-            {
-                StepperPosition === 0 && <Screen1 AddValue={AddValue} handleStepperScreen={handleStepperScreen}/>
-            }
-            {
-                StepperPosition === 1 && <Screen2 AddValue={AddValue} handleStepperScreen={handleStepperScreen} modal2Open={isModalVisible} setModal2Open={showModal} />
-            }
-            {
-                StepperPosition === 2 && <><Screen3 handleStepperScreen={handleStepperScreen}/></>
-            }
-            {
-                StepperPosition === 3 && <AppReady/>
-            }
-            {
-              <AppError/>
-            }
-            {/* <Screen1/>
+          {StepperPosition === 0 && (
+            <Screen1
+              AddValue={AddValue}
+              handleStepperScreen={handleStepperScreen}
+            />
+          )}
+          {StepperPosition === 1 && (
+            <Screen2
+              AddValue={AddValue}
+              handleStepperScreen={handleStepperScreen}
+              modal2Open={isModalVisible}
+              setModal2Open={showModal}
+            />
+          )}
+          {StepperPosition === 2 && (
+            <>
+              <Screen3 handleStepperScreen={handleStepperScreen} />
+            </>
+          )}
+          {StepperPosition === 3 && <AppReady />}
+          {<AppError />}
+          {/* <Screen1/>
             <VerificationModal modal2Open={isModalVisible} setModal2Open={showModal} handleStepperScreen={handleStepperScreen} />
             <AppReady/> */}
         </div>

@@ -10,6 +10,7 @@ import TickMark from "./assets/TickMark.svg";
 import limit from "../../styles/Limits.module.css";
 
 import { Button } from "antd";
+import CustomFilledButton from "../buttons/filledButton";
 
 const jobData = [
   {
@@ -100,7 +101,13 @@ function OpenRoles() {
           ))}
         </>
 
-        <Button className={styles.SubmitButton}>Load more</Button>
+        <div>
+          <CustomFilledButton width={"11.8125rem"}>
+            <span>Load more</span>
+          </CustomFilledButton>
+        </div>
+
+        {/* <Button className={styles.SubmitButton}>Load more</Button> */}
       </div>
     </div>
   );
