@@ -39,6 +39,7 @@ $small : breakpoints.$small
     justify-content: center
     align-items: center
     gap:2.7rem
+    padding-top: 4.25rem
 
 .leftPane
     display: flex
@@ -143,12 +144,17 @@ $small : breakpoints.$small
     display: flex
     justify-content: center
     justify-self: center
-    backdrop-filter: 0rem .125rem .5rem 0rem rgba(255, 255, 255, 0.15)
-    border: .0625rem solid #00000000
-    border-radius: .625rem
+    // backdrop-filter: 0rem .125rem .5rem 0rem rgba(255, 255, 255, 0.15)
+    // border: .0625rem solid #00000000
+    // border-radius: .625rem
 
     align-items: center
     height: 3.75rem
+
+    border-radius: 0.625rem
+    border: 1px solid #C0DCCC
+    background: #FFF
+    box-shadow: 0px 0px 24px 0px rgba(145, 208, 173, 0.20)
 
 .buttonTextContainer
     display: flex
@@ -165,11 +171,12 @@ $small : breakpoints.$small
     text-align: center
 
 .greyTextContainer
-    width: 40%
+    width: 45%
 
 .greyText
+    color: rgba(0, 0, 0, 0.45)
     @include fonts.fontDesktopBodyRegular
-    color:rgba(0, 0, 0, 0.318)
+     
 
 .underLine
     position: relative

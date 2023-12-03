@@ -1,13 +1,13 @@
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
-import ScrollAnimation from "react-animate-on-scroll";
 import Flags from "./flags.jsx";
+import HeroSectionInput from "../inputs/HeroSectionInputs/index.jsx";
 import Image from "next/image";
 import InputField from "../inputField/index.jsx";
+import ScrollAnimation from "react-animate-on-scroll";
 import cn from "classnames";
 import landingImage from "./assests/landpagePic.png";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
-import HeroSectionInput from "../inputs/HeroSectionInputs/index.jsx";
 
 const HeroSectionLanding = () => {
   return (

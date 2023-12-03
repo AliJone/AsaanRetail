@@ -1,12 +1,37 @@
-.background
 
-    display: flex
-    padding: 16px 32px 32px 32px
+
+.backgroundOverlay
+    height: 9999999px
+    width: 100%
+    position: absolute
+    z-index: 999
+    background: rgba(0, 0, 0, 0.5)
+
+
+.limitOveride
+    flex-direction: row
     align-items: flex-start
-    gap: var(--Spacing-64, 64px)
-    align-self: stretch
-    zindex: 5
-    
-    background: rgba(25, 25, 25, 0.90)
+
+.background
+    // height: 100%
+    width: 100%
+    // position: absolute
+    position: fixed
+    justify-content: center
+    display: flex
+    // z-index: 998
+    background: var(--neutral-1, #FFF)
+    border-radius: 0rem 0rem 1.25rem 1.25rem
+
+
+.Container
+    display: flex
+    // width: 90rem
+    padding: var(--Size-32, 2rem) 6.25rem
+
+    align-items: flex-start
+    gap: var(--Spacing-64, 4rem)
+
+    border-radius: 0rem 0rem 1.25rem 1.25rem
+    background: var(--neutral-1, #FFF)
     backdrop-filter: blur(10px)
-    border-radius: 20px

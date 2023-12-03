@@ -2,29 +2,29 @@ import {Col, Row} from "antd"
 
 import CustomFilledButton from "../../buttons/filledButton";
 import DropDownTile from "../../dropDownTile";
-import Integration from "../../../images/svgs/icons/Integrations.svg";
+import Image from "next/image"
+import Integration from "./assets/integrationIcon_1.svg";
 import { TilesProduct } from "../../../strings";
 import classNames from 'classnames';
 import styles from "./style.module.sass"
 
 const IntegrationTile = ()=>{
-    const integrationClass = classNames(styles.integrationButtonClass, styles.backGround);
+    // const integrationClass = classNames(styles.integrationButtonClass, styles.backGround);
     return(
         <>
-            <div className = {styles.divClass}>
+            <div className = {styles.integrationTileContainer}>
 
-                <Row gutter = {4}>
-                    <Col span = {18}>
-                        <DropDownTile content={TilesProduct[0].content} title={TilesProduct[0].title} image={Integration}/>
-                    </Col>
-                    <Col span = {6} s>
-                        <div className = {styles.integrationButtonClass}>
-                            <div className = {styles.backGround}>
-                            <CustomFilledButton children={<div>Watch Demo</div>} />
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+                <div className={styles.integrationTileLogo}>
+                    <Image src={Integration} alt="Picture" />
+                </div>
+                <div className={styles.integrationTileTextContainer}>
+                    <h2 className={styles.integrationTileTitle}>Integrations</h2>
+                    <p className={styles.integrationTileContent}>Effortlessly integrate local couriers and sales channels in one central hub for streamlined operations</p>
+                </div>
+
+                <div>
+                    <CustomFilledButton children={<div className={(styles.integrationTileButtonText)}>View All</div>} />
+                </div>
 
             </div>
         </>

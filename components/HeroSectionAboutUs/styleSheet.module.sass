@@ -102,7 +102,7 @@ $small : breakpoints.$small
 
 .spacer1
     width: 1px
-    padding-top: 3.5rem
+    padding-top: 5.37rem
 
 
 .lowerContainer
@@ -153,14 +153,14 @@ $small : breakpoints.$small
 
 .greyText
     @include fonts.fontDesktopBodyRegular
-    color:rgba(0, 0, 0, 0.318)
+    color: rgba(0, 0, 0, 0.45)
 
 .underLine
     position: relative
     display: inline-flex
     
 
-.underLine::after
+.underLine::before
     content: ""
     position: absolute
     width: 100%
@@ -187,15 +187,15 @@ $small : breakpoints.$small
     width:33%
 
 
-@media (max-width:1318px) 
-    .container
-        width: 95%
-        gap: 1.5rem
+// @media (max-width:1318px) 
+//     .container
+//         width: 95%
+//         gap: 1.5rem
 
-@media (max-width:1318px) 
-    .container
-        width: 100%
-        gap: 1rem
+// @media (max-width:1318px) 
+//     .container
+//         width: 100%
+//         gap: 1rem
 
 @media (max-width: 1089px)
     .ImageDiv
@@ -203,8 +203,8 @@ $small : breakpoints.$small
     
     .ImageDiv2
         display: block
-    .spacer1
-        padding-top: 9rem
+    // .spacer1
+    //     padding-top: 9rem
     .container
         flex-wrap: wrap
         justify-content: center
