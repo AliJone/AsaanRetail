@@ -1,0 +1,98 @@
+@use "../../utils/colors"
+@use "../../utils/fonts"
+
+$small: 680px
+$medium: 991px
+.BG
+    border-radius: var(--tallyCount, 0rem)
+    background: var(--neutral-1, #FFF)
+.Container
+    margin: 2rem auto
+    display: flex
+    width: 86.1%
+    flex-direction: column
+    align-items: center
+    gap: var(--Spacing-40, 2.5rem)
+.Head
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: var(--Spacing-40, 2.1rem)
+.UpperHead
+    display: flex
+    padding: 1rem var(--tallyCount, 0rem)
+    flex-direction: column
+    align-items: center
+    gap: 1rem
+.Title
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    align-self: stretch
+    h1
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        text-align: center
+        @include fonts.fontDesktopH2Bold
+.SubTitle
+    display: flex
+    align-items: center
+    gap: 0.25rem
+    align-self: stretch
+    h1
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        text-align: center
+        @include fonts.fontDesktopH5Regular
+.LowerHead
+    display: inline-flex
+    padding: var(--tallyCount, 0rem)
+    align-items: center
+    gap: 2.9375rem
+.Logo
+    width: 7.6875rem
+    height: 7.6875rem
+    fill: #000
+    filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.15))
+.Body
+    display: inline-flex
+    padding: var(--tallyCount, 0rem)
+    align-items: center
+    margin: auto
+    gap: 1rem
+.Left, .Right
+    display: flex
+    width: 38.2%
+    padding: 1rem
+    flex-direction: column
+    align-items: center
+    gap: var(--Spacing-24, 1.5rem)
+.Main
+    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+    text-align: center
+    @include fonts.fontDesktopH3Bold
+.Data
+    display: flex
+    padding: var(--tallyCount, 0rem)
+    flex-direction: column
+    align-items: center
+    gap: 0.625rem
+    align-self: stretch
+    white-space: nowrap
+    h5
+        color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        text-align: center
+        font-family: Roboto
+        font-size: 1.6875rem
+        font-style: normal
+        font-weight: 400
+        line-height: 200% 
+        span
+            color: var(--dust-red-6, #F5222D)
+            font-family: Roboto
+            font-size: 1.6875rem
+            font-style: normal
+            font-weight: 700
+            line-height: 200%
+
+
+@media (max-width: $small)

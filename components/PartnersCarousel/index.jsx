@@ -16,7 +16,8 @@ import cn from 'classnames';
 import limit from '../../styles/Limits.module.css'
 import style from './styleSheet.module.sass';
 
-const PartnersCarousel = () => {
+const imagesArray=[L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11];
+const PartnersCarousel = ({images = imagesArray}) => {
     return (
             
         <div className={cn(style.carousel)}>
@@ -27,12 +28,12 @@ const PartnersCarousel = () => {
                     </div>
                     <div className={cn(style.slider)}>
                         <div className = {cn(style.slideTrack)}>
-                            {[L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11].map((partner) => (
+                            {images.map((partner) => (
                                 <div className={cn(style.slide)}>
                                     <Image src={partner} alt={""} />
                                 </div>
                             ))}
-                            {[L0,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11].map((partner) => (
+                            {images.map((partner) => (
                                 <div className={cn(style.slide)}>
                                     <Image src={partner} alt={""} />
                                 </div>
