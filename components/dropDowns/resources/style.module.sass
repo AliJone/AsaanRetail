@@ -1,3 +1,4 @@
+
 @use "../../../utils/colors"
 @use "../../../utils/fonts"
 
@@ -11,34 +12,19 @@
     
 .classText
     @include fonts.fontboldh2
-    color: var(--primary-1, colors.$fontColor_secondary)
+    color: var(--primary-1, colors.$fontColor_primary)
 
-.divClass
-    border-radius: 20px
-    border: 3px solid var(--Text-Shadow, #3E9B1D)
-
-.divAnimation
-    animation: dropdown 1s ease-out
-    
-@keyframes dropdown
-  from 
-    transform: translateY(-100%)
-  
-  to 
-    transform: translateY(0%)
-
-
-// start new
+// New Classes------ start
 .LeftPane
-  display: flex
-  width: 25.6875rem
-  padding: var(--Size-32, 2rem) 1rem
+    display: flex
+    width: min-content
+    padding: var(--Size-32, 2rem) 1rem
 
-  flex-direction: column
-  align-items: flex-start
-  gap: 1.5rem
-  flex-shrink: 0
-  align-self: stretch
+    flex-direction: column
+    align-items: flex-start
+    gap: 1.5rem
+    flex-shrink: 0
+    align-self: stretch
 
 .ImageDiv
     width: 23.6875rem
@@ -58,13 +44,25 @@
 
 .buttonText
     @include fonts.fontBodyMedium
-    padding: var(--Size-08, 0.5rem) var(--Size-16, 1rem)
+    // padding: var(--Size-08, 0.5rem) var(--Size-16, 1rem)
     color: var(--primary-1, colors.$fontColor_secondary)
+
+.ButtonClass
+    width: 8.7312rem
+
     
 
 
 // tiles
 .RightPane
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 2.5rem
+
+    flex: 1 0 0
+
+.TilesContainer
     display: flex
     flex-direction: column
     align-items: flex-start
@@ -80,52 +78,30 @@
     align-self: stretch
 
 
-.integrationTileContainer
-    display: flex
-    padding: 1rem var(--Size-32, 2rem)
-
-    align-items: center
-    gap: 1rem
-
-    align-self: stretch
-    border-radius: 1.25rem
-    border: 3px solid var(--gradient-surface, #009241) 
-
-.integrationTileLogo
-    display: flex
-    justify-content: center
-    align-items: center
-
-
-.integrationTileTextContainer
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    text-align: left
-    justify-content: center
-    align-self: stretch
-    
-
-.integrationTileTitle
-    @include fonts.fontDesktopH5Bold
-    color: var(--character-title-85, rgba(0, 0, 0, 0.85))
-
-.integrationTileContent
-    @include fonts.fontDesktopBodyRegular
-    align-self: stretch
-    color: var(--character-secondary-45, rgba(0, 0, 0, 0.45))
-
-.integrationTileButtonText
-    @include fonts.fontBodyMedium
-    padding: var(--Size-08, 0.5rem) var(--Size-16, 1rem)
-    color: var(--primary-1, colors.$fontColor_secondary)
-
-
-
-@media (max-width: 1000px)
-    .integrationTileContainer
-        flex-wrap: wrap
-
 // new classe ------ end
 
 
+
+
+.divClass
+    border-radius: 20px
+    border: 3px solid var(--Text-Shadow, #3E9B1D)
+
+.integrationButtonClass
+    width: 100%
+    // height: 100%
+    // width: fit-content
+    display: flex
+    justify-content: center
+    align-items: center
+
+.colCenter
+    display: flex
+    // justify-content: center
+    align-items: center
+    
+
+
+  
+    
+ 

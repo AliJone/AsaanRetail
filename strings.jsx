@@ -15,50 +15,50 @@ import stripe from './images/svgs/logos/stripe.svg';
 const TilesProduct  = [
     {
         title: "Inventory Management",
-        content : "A 360° view of all your inventory from all the locations at one place."
-    },
-    {
-        title: "Shipment Management",
-        content : "Bulk ship now with our easy-to-use software and print labels for fulfillment"
-    },
-    {
-        title: "Accounting & Finances",
-        content : "Digitize and automate your entire accounting process with a highly sophisticated built-in accounting module."
-    },
-    {
-        title: "Analytics & Insights",
-        content : "Make informed business decisions from data savvy reports offering actionable insights."
+        content : "Effortless inventory control for a streamlined and organized business"
     },
     {
         title: "Orders Management",
-        content : "Order workflows, order status sync & return management for all your sales channels."
+        content : "Automate orders, from placement to delivery for a smooth customer journey"
+    },
+    {
+        title: "Accounting & Finances",
+        content : "Precision in finance management, ensuring accuracy and efficiency"
+    },
+    {
+        title: "Analytics & Insights",
+        content : "Gain profound insights and analytics to drive data-informed decisions"
+    },
+    {
+        title: "Shipment Management",
+        content : "Simplified shipment processes for punctual and reliable deliveries"
     },
     {
         title: "Point of Sales",
-        content : "FBR integrated Point of Sales System (POS) that allows retailers like you to sell from multiple retail outlets"
+        content : "Efficiently manage your transactions and enhance customer experience"
     }
 ]
 
 const TilesSolution = [
     {
         title: "For Retail",
-        content : "A 360° view of all your inventory from all the locations at one place."
+        content : "Revolutionize retail operations with integrated solutions"
     },
     {
         title: "For Ecommerce",
-        content : "Bulk ship now with our easy-to-use software and print labels for fulfillment"
+        content : "Empower ecommerce business with tailored solutions"
     },
     {
         title: "For 3PL",
-        content : "Digitize and automate your entire accounting process with a highly sophisticated built-in accounting module."
+        content : "Optimize logistics with solutions designed for 3PL"
     },
     {
-        title: "For Wholesalers",
-        content : "Make informed business decisions from data savvy reports offering actionable insights."
+        title: "For Agencies",
+        content : "solutions designed for multi-channel management and operational efficiency."
     },
     {
-        title: "For Service Providers",
-        content : "Order workflows, order status sync & return management for all your sales channels."
+        title: "For D2C Brands",
+        content : "Transform D2C brands with efficient inventory and order management"
     },
     
 ]
@@ -66,19 +66,19 @@ const TilesSolution = [
 const TilesResources = [
     {
         title: "Careers",
-        content : "A 360° view of all your inventory from all the locations at one place."
+        content : "Explore exciting career opportunities with Asaan Retail"
     },
     {
         title: "Contact Us",
-        content : "Bulk ship now with our easy-to-use software and print labels for fulfillment"
+        content : "Reach out to us, we're here to assist you with any queries"
     },
     {
         title: "Articles",
-        content : "Digitize and automate your entire accounting process with a highly sophisticated built-in accounting module."
+        content : "Stay informed and inspired with our articles"
     },
     {
         title: "Integrations",
-        content : "Make informed business decisions from data savvy reports offering actionable insights."
+        content : "Effortlessly integrate local couriers and sales channels in one central hub"
     },
 ]
 

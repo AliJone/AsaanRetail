@@ -22,13 +22,14 @@ $medium: 61.9375rem
     width: 100%
 
 .NavButtonFonts
-    @include fonts.fontNavBar
+    @include fonts.fontNavBarButton
     color: colors.$fontColor_primary
 
 .setMaxWidth
     max-width: 1440px
     display: flex
-    justify-content: space-around
+    justify-content: space-between
+    padding: 0rem 6.25rem
     align-items: center
     flex-direction: row
     width: 100%
@@ -43,10 +44,8 @@ $medium: 61.9375rem
     display: flex
     justify-content: center
     align-items: center
-    // flex-direction: row
-    // padding: 0 0
-    // max-width: 1440px
-    // margin-left:.5rem
+    max-width: 1440px
+    
     
     background-color: rgb(255, 255, 255)
     // box-shadow: 0 0 .625rem 0 rgb(182, 182, 182)
@@ -64,6 +63,7 @@ $medium: 61.9375rem
     align-items: center
     flex-direction: row
     overflow: auto
+    gap: 2.75rem   
     // width: 100%
     // width: auto
 
@@ -95,7 +95,15 @@ $medium: 61.9375rem
 
 .divClassRow
     display: flex
-    flex-direction: row
+    align-items: center
+    padding: 0.625rem
+    gap: var(--Size-32, 2rem)
+
+.divClassRowConvert
+    display: flex
+    align-items: center
+    gap: 1.33575rem
+
     // align-items: center
     // justify-content: center
 
@@ -116,7 +124,18 @@ $medium: 61.9375rem
     border-radius: 1.25rem
     width: 5.0625rem
     height: .25rem
-    position: relative
+    position: absolute
+    bottom: -0.25rem
+
+.buttonText
+    @include fonts.fontDesktopBodyMedium
+    color: rgba(0, 0, 0, 0.85)
+
+.buttonTextV2
+    @include fonts.fontDesktopBodyMedium
+    color: #FFF
+    
+    
 
 .mobileNavBar
     display: none

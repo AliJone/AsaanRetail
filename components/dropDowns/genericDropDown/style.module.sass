@@ -1,11 +1,14 @@
 
 
 .backgroundOverlay
-    height: 9999999px
+    height: 100%
     width: 100%
-    position: absolute
+    position: fixed
+    top: 0
+    left: 0
     z-index: 999
-    background: rgba(0, 0, 0, 0.5)
+    background: rgba(170, 170, 170, 0.40)
+    backdrop-filter: blur(3.299999952316284px)
 
 
 .limitOveride
@@ -15,6 +18,7 @@
 .background
     // height: 100%
     width: 100%
+    padding-top: 5rem
     // position: absolute
     position: fixed
     justify-content: center
@@ -22,12 +26,20 @@
     // z-index: 998
     background: var(--neutral-1, #FFF)
     border-radius: 0rem 0rem 1.25rem 1.25rem
+    animation: dropdown 1s ease-out
+
+.AddPositioning
+    padding: var(--Size-32, 2rem) 6.25rem
+    display: flex
+    margin: auto
+    gap: var(--Spacing-64, 4rem)
 
 
 .Container
     display: flex
     // width: 90rem
-    padding: var(--Size-32, 2rem) 6.25rem
+    // padding: var(--Size-32, 2rem) 6.25rem
+    max-width: 1440px
 
     align-items: flex-start
     gap: var(--Spacing-64, 4rem)
@@ -35,3 +47,15 @@
     border-radius: 0rem 0rem 1.25rem 1.25rem
     background: var(--neutral-1, #FFF)
     backdrop-filter: blur(10px)
+
+
+.divAnimation
+    animation: dropdown 1s ease-out
+    
+
+@keyframes dropdown 
+  from 
+    transform: translateY(-100%)
+  
+  to 
+    transform: translateY(0%)

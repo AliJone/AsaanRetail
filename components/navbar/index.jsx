@@ -85,14 +85,11 @@ const NavBarExample = () => {
             </div>
             <div className={classNames(style.divClassRow)}>
               <div className={style.divButtonContainer}>
-                <CustomNavButtons
-                  children={
-                    <div className={cn(style.NavButtonFonts, style.DivCenter)}>
+                <a onClick={ handleClickProduct }>
+                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
                       Product <Image src={DropDownIcon} />
-                    </div>
-                  }
-                  handleClick={handleClickProduct}
-                />
+                    </span>
+                </a>
                 {current === "Product" ? (
                   <div className={style.barColor} />
                 ) : (
@@ -103,14 +100,11 @@ const NavBarExample = () => {
               
 
               <div className={style.divButtonContainer}>
-                <CustomNavButtons
-                  children={
-                    <div className={cn(style.NavButtonFonts, style.DivCenter)}>
-                      Solution <Image src={DropDownIcon} />
-                    </div>
-                  }
-                  handleClick={handleClickSolution}
-                />
+                <a onClick={ handleClickSolution }>
+                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
+                      Solutions <Image src={DropDownIcon} />
+                    </span>
+                </a>
                 {current === "Solution" ? (
                   <div className={style.barColor} />
                 ) : (
@@ -118,24 +112,18 @@ const NavBarExample = () => {
                 )}
               </div>
               <div className={style.divButtonContainer}>
-                <CustomNavButtons
-                  children={
-                    <div className={cn(style.NavButtonFonts, style.DivCenter)}>
+                <a >
+                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
                       Pricing
-                    </div>
-                  }
-                  handleClick={handleClickSolution}
-                />
+                    </span>
+                </a>
               </div>
               <div className={style.divButtonContainer}>
-                <CustomNavButtons
-                  children={
-                    <div className={cn(style.NavButtonFonts, style.DivCenter)}>
+                <a onClick={ handleClickResources }>
+                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
                       Resources <Image src={DropDownIcon} />
-                    </div>
-                  }
-                  handleClick={handleClickResources}
-                />
+                    </span>
+                </a>
                 {current === "Resources" ? (
                   <div className={style.barColor} />
                 ) : (
@@ -144,34 +132,29 @@ const NavBarExample = () => {
               </div>
 
               <div className={style.divButtonContainer}>
-                <CustomNavButtons
-                  children={
-                    <div className={cn(style.NavButtonFonts, style.DivCenter)}>
+                <a >
+                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
                       About
-                    </div>
-                  }
-                  handleClick={handleClickSolution}
-                />
+                    </span>
+                </a>
               </div>
             </div>
           </div>
-          <div className={style.divClassRow}>
+          <div className={style.divClassRowConvert}>
             <div className={style.divClass2}>
               <UserOutlined className={style.userLogoClass} />
               <Divider type="vertical" className={style.dividerClass} />
-              <CustomTextButton
-                children={
-                  <span className={cn(style.NavButtonFonts)}>Get Demo</span>
-                }
+              <a
                 handleClick={handleClick}
-              />
+              >
+                <span className={cn(style.buttonText)}>Book A Demo</span>
+              </a>
             </div>
             <div className={cn(style.buttonAlignment)}>
               <CustomFilledButton
                 children={
                   <span
-                    className={cn(style.NavButtonFonts)}
-                    style={{ color: "white" }}
+                    className={cn(style.buttonTextV2)}
                   >
                     Start Free Trial
                   </span>

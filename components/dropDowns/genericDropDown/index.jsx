@@ -11,7 +11,7 @@ const  GenericDropDown = (props) => {
             <div className = {cn(styles.background) }>
                 
                     <div className={cn(styles.Container)}>
-                    <div className= {cn(limit.Limit,styles.limitOveride)}>
+                    <div className = {cn(styles.AddPositioning)}>
                         <div>
                             {props.child1}
                         </div>
@@ -20,14 +20,6 @@ const  GenericDropDown = (props) => {
                         </div>
 
                     </div>
-                {/* <Row gutter={10} style = {{width : "100%"}}>
-                    <Col span={8}>
-                        {props.child1}
-                    </Col>
-                    <Col span={16}>
-                        {props.child2}
-                    </Col>
-                </Row> */}
                 </div>
             </div>
         </div>

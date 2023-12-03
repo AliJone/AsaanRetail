@@ -5,7 +5,9 @@ import style from "./style.module.sass";
 
 const Carousel = ({ imagesarray }) => {
   return (
+    
     <div className={cn(style.spacer1)}>
+      <div className={cn(limit.Limit)}>
       <div className={cn(style.slider)}>
         <div className={cn(style.slideTrack)}>
           {imagesarray.map((partner) => (
@@ -20,6 +22,7 @@ const Carousel = ({ imagesarray }) => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

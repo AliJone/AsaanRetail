@@ -3,7 +3,7 @@ import {Col, Row} from "antd"
 import CustomFilledButton from "../../buttons/filledButton";
 import DropDownTile from "../../dropDownTile";
 import Image from "next/image"
-import Integration from "./assets/integrationIcon_1.svg";
+import Integration from "./assets/3.svg";
 import { TilesProduct } from "../../../strings";
 import classNames from 'classnames';
 import styles from "./style.module.sass"

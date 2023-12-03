@@ -15,7 +15,7 @@ import style from './style.module.sass';
 const Tiles = () => {
     return(
         <>
-        <div className={cn(style.RightPane)}>
+        <div className={cn(style.TilesContainer)}>
             <div className={cn(style.tilesRow)}>
                 <DropDownTile content={TilesProduct[0].content} title={TilesProduct[0].title} image={Accounting}/>
                 <DropDownTile content={TilesProduct[1].content} title={TilesProduct[1].title} image={Accounting}/>

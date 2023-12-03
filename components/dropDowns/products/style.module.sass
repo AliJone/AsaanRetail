@@ -16,7 +16,7 @@
 // New Classes------ start
 .LeftPane
     display: flex
-    width: 25.6875rem
+    width: min-content
     padding: var(--Size-32, 2rem) 1rem
 
     flex-direction: column
@@ -43,13 +43,25 @@
 
 .buttonText
     @include fonts.fontBodyMedium
-    padding: var(--Size-08, 0.5rem) var(--Size-16, 1rem)
+    // padding: var(--Size-08, 0.5rem) var(--Size-16, 1rem)
     color: var(--primary-1, colors.$fontColor_secondary)
+
+.ButtonClass
+    width: 8.7312rem
+
     
 
 
 // tiles
 .RightPane
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 2.5rem
+
+    flex: 1 0 0
+
+.TilesContainer
     display: flex
     flex-direction: column
     align-items: flex-start
@@ -91,6 +103,7 @@
     align-self: stretch
     
 
+
 .integrationTileTitle
     @include fonts.fontDesktopH5Bold
     color: var(--character-title-85, rgba(0, 0, 0, 0.85))
@@ -102,7 +115,7 @@
 
 .integrationTileButtonText
     @include fonts.fontBodyMedium
-    padding: var(--Size-08, 0.5rem) var(--Size-16, 1rem)
+    padding: var(--Size-08, 0.5rem) var(--Size-16, 0.25rem)
     color: var(--primary-1, colors.$fontColor_secondary)
 
 
@@ -134,14 +147,5 @@
     align-items: center
     
 
-.divAnimation
-    animation: dropdown 1s ease-out
-    
 
-@keyframes dropdown 
-  from 
-    transform: translateY(-100%)
-  
-  to 
-    transform: translateY(0%)
   

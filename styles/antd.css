@@ -142,3 +142,8 @@
   border: 0.5px solid #009241;
   box-shadow: none;
 }
+
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-btn .css-dev-only-do-not-override-3mqfnx .ant-btn-text .style_textButtonClass__HF21_ {
+  padding: 0px;
+}

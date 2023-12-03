@@ -13,7 +13,7 @@ import style from './style.module.sass';
 const Tiles = () => {
     return(
         <>
-        <div className={cn(style.RightPane)}>
+        <div className={cn(style.TilesContainer)}>
             <div className={cn(style.tilesRow)}>
                 <DropDownTile content={TilesResources[0].content} title={TilesResources[0].title} image={Accounting}/>
                 <DropDownTile content={TilesResources[1].content} title={TilesResources[1].title} image={Accounting}/>
@@ -23,24 +23,6 @@ const Tiles = () => {
                 <DropDownTile content={TilesResources[3].content} title={TilesResources[3].title} image={Accounting}/>
             </div>
         </div>
-        {/* {console.log(TilesProduct, "abcded")} */}
-        {/* <Row gutter={32}>
-            <Col span={12}>
-                <DropDownTile content={TilesResources[0].content} title={TilesResources[0].title} image={Retail}/>
-            </Col>
-            <Col span={12}>
-                <DropDownTile content={TilesResources[1].content} title={TilesResources[1].title} image={Ecommerce}/>
-            </Col>
-        </Row>
-        <div style={{padding : "15px"}}/>
-        <Row gutter={32}>
-            <Col span={12}>
-                <DropDownTile content={TilesResources[2].content} title={TilesResources[2].title} image={PL}/>
-            </Col>
-            <Col span={12}>
-                <DropDownTile content={TilesResources[3].content} title={TilesResources[3].title} image={Wholesalers}/>
-            </Col>
-        </Row> */}
         </>
     )
 

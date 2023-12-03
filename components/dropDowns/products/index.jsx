@@ -18,14 +18,14 @@ const ProductsDropDown = () => {
             <>
                 <div className = {styles.LeftPane}>
                     <div className={cn(styles.ImageDiv)}>
-                        <Image src={SalesOrders} alt="Sales Orders" />
+                        {/* <Image src={SalesOrders} alt="Sales Orders" /> */}
                     </div>
                     <div className={cn(styles.LeftPaneDesContainer)}>
                         <h1 className={cn(styles.LeftPaneTextContainer)} >
                             Experience the Asaan Retail Difference
                         </h1>
 
-                        <div >
+                        <div className={cn(styles.ButtonClass)} >
                         <CustomFilledButton children={<span className={cn(styles.buttonText)}>Start Free Trial</span>} width={'inherit'} />
                         </div>
 
