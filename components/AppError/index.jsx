@@ -7,12 +7,18 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useRouter } from "next/router";
+import CustomFilledButton from "../buttons/filledButton";
+import CustomOutlinedButton from "../buttons/outlinedButton";
 
 function AppError() {
   const router = useRouter();
 
-const handleHomeButtonclick = () => {router.push("/")};
-const handlePricingButtonclick = () => {router.push("/pricingPage")};
+  const handleHomeButtonclick = () => {
+    router.push("/");
+  };
+  const handlePricingButtonclick = () => {
+    router.push("/pricingPage");
+  };
   return (
     <div className={cn(limit.Limit, styles.mobileContainer)}>
       <div className={styles.imageContainer}>
@@ -34,8 +40,29 @@ const handlePricingButtonclick = () => {router.push("/pricingPage")};
         </Button>
 
         <div className={styles.buttonsContainer}>
-          <Button className={styles.goPricingButton} onClick={handlePricingButtonclick}>Explore pricing</Button>
-          <Button className={styles.goHomeButton} onClick={handleHomeButtonclick}>Go to home</Button>
+          <Button
+            className={styles.goPricingButton}
+            onClick={handlePricingButtonclick}
+          >
+            Explore pricing
+          </Button>
+          <Button
+            className={styles.goHomeButton}
+            onClick={handleHomeButtonclick}
+          >
+            Go to home
+          </Button>
+        </div>
+
+        <div className={styles.buttonsContainer}>
+          <Button
+            className={styles.goPricingButton}
+            onClick={handlePricingButtonclick}
+          >
+            Explore pricing
+          </Button>
+
+          <CustomFilledButton width={"47%"}>Go to home</CustomFilledButton>
         </div>
       </div>
     </div>

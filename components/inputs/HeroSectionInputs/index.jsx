@@ -3,20 +3,20 @@ import React from "react";
 import style from "./style.module.sass";
 import { useState } from "react";
 
-function HeroSectionInput({ placeHolder, value, onChange }) {
+function HeroSectionInput({ placeHolder, value, onChange, borderRadius }) {
   // const [value, setValue] = useState("");
+  const fieldStyle = {
+    borderRadius: borderRadius || "0.625rem",
+  };
+
   return (
-    <div className={style.FieldClass}>
-      <Input
-        placeholder={placeHolder}
-        bordered={false}
-        value={value}
-        onChange={(e) => {
-          onChange(e);
-        }}
-        // className={style.textFieldCard}
+    <div className={style.FieldClass} style={fieldStyle}>
+      <Input placeholder={placeHolder} bordered={false} 
+      value={value}
+      onChange={(e) => {
+        onChange(e);
+      }}
       />
-      {/* <InputField placeHolder={placeHolder} /> */}
     </div>
   );
 }
