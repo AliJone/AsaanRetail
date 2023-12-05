@@ -1,6 +1,8 @@
 import CarouselIntegration from "./carousel";
 import CustomFilledButton from "../buttons/filledButton";
+import HeroSectionInput from "../inputs/HeroSectionInputs";
 import InputField from "../inputField";
+import IntegrationPageService from "../../services/IntegrationPageService";
 import c1 from "./assests/c1.svg";
 import c2 from "./assests/c2.svg";
 import c3 from "./assests/c3.svg";
@@ -11,9 +13,28 @@ import c7 from "./assests/c7.svg";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import { useState } from "react";
 
 const imagesarray = [c1, c2, c3, c4, c5, c6, c7];
 const HeroSectionIntegrationSection = () => {
+  const [email, setEmail] = useState("");
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+    console.log(email);
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await IntegrationPageService.sendIntegrationPageData({email});
+      console.log('landingPage Response:', response);
+      // Handle success (e.g., show a success message or redirect)
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error (e.g., show an error message)
+    }
+  };
   return (
     <>
       <div className={cn(style.heroSection)}>
@@ -34,9 +55,9 @@ const HeroSectionIntegrationSection = () => {
               </div>
 
               <div className={cn(style.textFieldContainer)}>
-                <div className={cn(style.textFieldCard)}>
-                  <InputField placeHolder={"Enter Your Work Email"} />
-                </div>
+                {/* <div className={cn(style.textFieldCard)}> */}
+                  <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email}/>
+                {/* </div> */}
                 <span className={cn(style.greyText)}>
                   Experience 14 Days of Free Trial, No Credit Card Needed
                 </span>
@@ -48,6 +69,7 @@ const HeroSectionIntegrationSection = () => {
                         Start Free Trial
                       </span>
                     }
+                    handleClick={handleSubmit}
                   />
                 </div>
               </div>

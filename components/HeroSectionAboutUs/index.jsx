@@ -1,3 +1,4 @@
+import AboutUsPageService from "../../services/AboutUsPageService.js";
 import Asset1 from "./assets/Asset.png";
 import Asset2 from "./assets/Asset_1.png";
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
@@ -8,10 +9,31 @@ import ScrollAnimation from "react-animate-on-scroll";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import { useState } from "react";
 
 // import landingImage from './assests/landpagePic.png'
 
 const HeroSectionAboutUs = () => {
+
+  const [email, setEmail] = useState("");
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+    console.log(email);
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await AboutUsPageService.sendArticlePageData({email});
+      console.log('landingPage Response:', response);
+      // Handle success (e.g., show a success message or redirect)
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error (e.g., show an error message)
+    }
+  };
+
   return (
     <>
       <div className={cn(style.heroSection)}>
@@ -36,7 +58,8 @@ const HeroSectionAboutUs = () => {
               </div>
               <div className={cn(style.lowerContainer)}>
                 <div className={style.FieldClass}>
-                  <InputField placeHolder={"Enter Your Work Email"} />
+                  {/* <InputField placeHolder={"Enter Your Work Email"} /> */}
+                  <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email} />
                 </div>
                 <div className={cn(style.buttonTextContainer)}>
                   <div className={cn(style.buttonContainer)}>
@@ -47,7 +70,7 @@ const HeroSectionAboutUs = () => {
                         </span>
                       }
                       width={"100%"}
-                      handleClick={() => {}}
+                      handleClick={handleSubmit}
                     />
                   </div>
                   <div className={cn(style.greyTextContainer)}>

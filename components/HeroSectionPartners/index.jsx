@@ -1,11 +1,24 @@
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
 import Image from "next/image";
 import PartnersImage from "./assests/ABC.png";
+import PartnersPageService from "../../services/PartnersPageService.js";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 
 const HeroSectionPartners = () => {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await PartnersPageService.SubmitPartnersPageData();
+      console.log('landingPage Response:', response);
+      // Handle success (e.g., show a success message or redirect)
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error (e.g., show an error message)
+    }
+  };
   return (
     <>
       <div className={cn(style.heroSection)}>
@@ -38,7 +51,7 @@ const HeroSectionPartners = () => {
                         </span>
                       }
                       width={"100%"}
-                      handleClick={() => {}}
+                      handleClick={handleSubmit}
                     />
                   </div>
                 </div>

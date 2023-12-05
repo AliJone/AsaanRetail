@@ -1,13 +1,35 @@
 import CustomFilledButton from "../buttons/filledButton/index.jsx";
+import HeroSectionInput from "../inputs/HeroSectionInputs/index.jsx";
 import Image from "next/image";
 import InputField from "../inputField/index.jsx";
+import ProductPageService from "../../services/ProductPageService.js";
 import cn from "classnames";
 import landingImage from "./assests/landpagePic.png";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
-import HeroSectionInput from "../inputs/HeroSectionInputs/index.jsx";
+import { useState } from "react";
 
 const HeroSectionProduct = () => {
+
+  const [email, setEmail] = useState("");
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+    console.log(email);
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await ProductPageService.sendProductPageData({email});
+      console.log('Product Page Response:', response);
+      // Handle success (e.g., show a success message or redirect)
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error (e.g., show an error message)
+    }
+  };
+
   return (
     <>
       <div className={cn(style.heroSection)}>
@@ -36,7 +58,7 @@ const HeroSectionProduct = () => {
                 {/* <div className={style.FieldClass}>
                   <InputField placeHolder={"Enter Your Work Email"} />
                 </div> */}
-                <HeroSectionInput placeHolder={"Enter Your Work Email"} />
+                <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email}/>
 
                 <div className={cn(style.buttonTextContainer)}>
                   <div className={cn(style.buttonContainer)}>
@@ -47,7 +69,7 @@ const HeroSectionProduct = () => {
                         </span>
                       }
                       width={"100%"}
-                      handleClick={() => {}}
+                      handleClick={handleSubmit}
                     />
                   </div>
                   <div className={cn(style.greyTextContainer)}>
