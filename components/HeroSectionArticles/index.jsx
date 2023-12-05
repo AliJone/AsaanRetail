@@ -3,6 +3,7 @@ import InputField from "../inputField";
 import cn from "classnames";
 import limits from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import HeroSectionInput from "../inputs/HeroSectionInputs";
 
 const HeroSectionArticle = () => {
   return (
@@ -25,9 +26,12 @@ const HeroSectionArticle = () => {
                   </p>
                 </div>
                 <div className={cn(style.submissionContainer)}>
-                  <div className={cn(style.textFieldCard)}>
+                  {/* <div className={cn(style.textFieldCard)}>
                     <InputField placeHolder={"Enter Your Work Email"} />
-                  </div>
+                  </div> */}
+
+                  <HeroSectionInput placeHolder={"Enter Your Work Email"} />
+
                   <div className={cn(style.buttonContainer)}>
                     <CustomFilledButton
                       children={

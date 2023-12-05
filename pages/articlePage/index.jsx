@@ -1,5 +1,5 @@
 import { App } from "antd";
-import HeroSectionIntegrationSection from "../../components/HeroSectionIntegrationSection";
+import HeroSectionIntegrationSection from "../../components/HeroSectionIntegration";
 import HeroSectionArticle from "../../components/HeroSectionArticles";
 import NavigationBar from "../../components/navbar";
 import IntegrationMenu from "../../components/IntegrationMenu/IntegrationMenu";
@@ -8,26 +8,25 @@ import CTANew from "../../components/CTA new/CTANew";
 import Footer from "../../components/Footer/Footer";
 import ArticleMenu from "../../components/ArticleMenu/ArticleMenu";
 
-const page = () =>{
-    return(
-        <App>
-            <div
-            style={{
-                overflowX: "hidden",
-            }} 
-            >
-                <NavigationBar/>
+const page = () => {
+  return (
+    <App>
+      <div
+        style={{
+          overflowX: "hidden",
+        }}
+      >
+        <NavigationBar />
 
-                <HeroSectionArticle/>
-                
-                <ArticleMenu/>
-                {/* <FAQ /> */}
-                <CTANew />
-                <Footer />
-            </div>
+        <HeroSectionArticle />
 
-        </App>
-    )
-}
+        <ArticleMenu />
+        {/* <FAQ /> */}
+        <CTANew />
+        <Footer />
+      </div>
+    </App>
+  );
+};
 
 export default page;

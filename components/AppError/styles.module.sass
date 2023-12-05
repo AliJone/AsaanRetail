@@ -67,6 +67,7 @@
 .goPricingButton
     display: flex
     height: 3.5rem
+    width: inherit
     padding: 0.4rem 0.9375rem
     justify-content: center
     align-items: center
@@ -84,6 +85,20 @@
     background-clip: text
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
+
+    :hover
+        background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+        border-color: var(--gradient-surface, #009241) !important
+        color: colors.$fontColor_secondary !important
+        // box-shadow: 0rem .1072rem 0rem 0rem rgba(0, 0, 0, 0.04)
+        cursor: pointer
+
+    :active
+        background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+        border-color: var(--gradient-surface, #009241) !important
+        color: colors.$fontColor_secondary !important
+        // box-shadow: 0rem .1072rem 0rem 0rem rgba(0, 0, 0, 0.04)
+        cursor: pointer   
 
 .goHomeButton
     display: flex

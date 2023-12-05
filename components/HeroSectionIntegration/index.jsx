@@ -11,6 +11,7 @@ import c7 from "./assests/c7.svg";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import HeroSectionInput from "../inputs/HeroSectionInputs";
 
 const imagesarray = [c1, c2, c3, c4, c5, c6, c7];
 const HeroSectionIntegrationSection = () => {
@@ -34,9 +35,15 @@ const HeroSectionIntegrationSection = () => {
               </div>
 
               <div className={cn(style.textFieldContainer)}>
-                <div className={cn(style.textFieldCard)}>
+                {/* <div className={cn(style.textFieldCard)}>
                   <InputField placeHolder={"Enter Your Work Email"} />
-                </div>
+                </div> */}
+
+                <HeroSectionInput
+                  placeHolder={"Enter Your Work Email"}
+                  // borderRadius={"0"}
+                />
+
                 <span className={cn(style.greyText)}>
                   Experience 14 Days of Free Trial, No Credit Card Needed
                 </span>

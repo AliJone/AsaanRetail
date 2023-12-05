@@ -1,5 +1,5 @@
 import { App } from "antd";
-import HeroSectionIntegrationSection from "../../components/HeroSectionIntegrationSection";
+import HeroSectionIntegrationSection from "../../components/HeroSectionIntegration";
 import NavigationBar from "../../components/navbar";
 import IntegrationMenu from "../../components/IntegrationMenu/IntegrationMenu";
 import FAQ from "../../components/FAQ/FAQ";
