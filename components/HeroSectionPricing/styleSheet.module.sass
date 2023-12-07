@@ -165,6 +165,7 @@ $small: breakpoints.$small
         top: -1.58rem
         // left: 14.5rem
         z-index: 1
+        right: 1.625rem
 
 .textContainer
     display: flex
@@ -183,7 +184,13 @@ $small: breakpoints.$small
 .cardPrice
     @include fonts.fontDesktopH1Bold
     color: colors.$fontColor_secondary
+    display: inline-flex
+    align-items: flex-end
+    line-height: 100%
 
+.cardUnit
+    @include fonts.fontDesktopH5Medium
+    color: colors.$fontColor_secondary
 
 .cardFeatures
     @include fonts.fontDesktopBodyRegular
@@ -199,6 +206,13 @@ $small: breakpoints.$small
 
 .cardPrice2
     @include fonts.fontDesktopH1Bold
+    color: colors.$fontColor_primary
+    display: inline-flex
+    align-items: flex-end
+    line-height: 100%
+
+.cardUnit2
+    @include fonts.fontDesktopH5Medium
     color: colors.$fontColor_primary
 
 .cardFeatures2
@@ -251,13 +265,12 @@ $small: breakpoints.$small
 
 .spacerCard1
     padding-top: 0rem
-
 @media (max-width: 777px)
 
     .cardFrame
         display: flex
-        width: 19.625rem
-        // width: 100%
+        // width: 19.625rem
+        width: 87%
         // height: 28.6875rem
         padding: var(--Size-48, 3rem) 1.5rem
 
@@ -266,11 +279,13 @@ $small: breakpoints.$small
         gap: var(--Spacing-32, 2rem)
 
         flex-shrink: 0
+        margin: auto
 
     .cardFrame2
         display: flex
-        width: 21.625rem
-        // height: 28.3875rem
+        // width: 21.625rem
+        width: 90%
+        height: 28.3875rem
         padding: 2.5rem var(--Spacing-24, 0.5rem)
         margin-top: 0rem
 
@@ -289,6 +304,8 @@ $small: breakpoints.$small
         @include fonts.fontMobileBodyRegular
     .cardPrice
         @include fonts.fontMobileH2Bold
+    .cardUnit
+        @include fonts.fontMobileH5Medium
     .cardFeatures
         @include fonts.fontMobileBodyRegular
     .textButtonText
@@ -300,6 +317,8 @@ $small: breakpoints.$small
         @include fonts.fontMobileBodyRegular
     .cardPrice2
         @include fonts.fontMobileH2Bold
+    .cardUnit2
+        @include fonts.fontMobileH5Medium
     .cardFeatures2
         @include fonts.fontMobileBodyRegular
     .textButtonText2
@@ -474,7 +493,7 @@ $small: breakpoints.$small
         justify-content: center
 
     .forCard
-        width: auto
+        width: 100%
 
 
 @media (max-width: 777px)

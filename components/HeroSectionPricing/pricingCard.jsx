@@ -5,13 +5,15 @@ import Image from "next/image";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
 
-const PricingCard = ({ title, subtitle, price, features, type }) => {
+const PricingCard = ({ title, subtitle, price, features, type , unit }) => {
   return (
     <div
       className={
         type == 1 ? cn(style.cardFrame, style.tagOnCard) : cn(style.cardFrame2)
       }
     >
+      {console.log(unit,"--------")}
+      {console.log(price,"--------")}
       <div className={cn(style.textContainer)}>
         <span
           className={type == 1 ? cn(style.cardTitle) : cn(style.cardTitle2)}
@@ -29,11 +31,14 @@ const PricingCard = ({ title, subtitle, price, features, type }) => {
       </div>
 
       <div className={cn(style.pricingFrameCard)}>
-        <span
+        <h1
           className={type == 1 ? cn(style.cardPrice) : cn(style.cardPrice2)}
         >
-          {price}
-        </span>
+          {price } 
+          <p className={type == 1 ? cn(style.cardUnit) : cn(style.cardUnit2)}>
+            {unit}
+          </p>
+        </h1>
         <div className={cn(style.buttonsCardContainer)}>
           <CustomFilledButton
             width={"inherit"}
