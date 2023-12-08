@@ -11,22 +11,43 @@ import Shipment from './assets/5.svg';
 import {TilesProduct} from '../../../strings.jsx';
 import cn from 'classnames';
 import style from './style.module.sass';
+import {useRouter} from 'next/router';
 
 const Tiles = () => {
+    const router = useRouter();
+
+  const handleInventoryManagement = () => {
+    router.push("/productPage/inventoryManagment");
+  };
+  const handleOrderManagement = () => {
+    router.push("/productPage/orderManagement");
+  };
+  const handleAccounts = () => {
+    router.push("/productPage/accounts&Finance");
+  };
+  const handleAnalytics = () => {
+    router.push("/productPage/analytics&Insights");
+  };
+  const handleShipment = () => {
+    router.push("/productPage/shipmentManagement");
+  };
+  const handlePointOfSales = () => {
+    router.push("/productPage/pointOfSales");
+  };
     return(
         <>
         <div className={cn(style.TilesContainer)}>
             <div className={cn(style.tilesRow)}>
-                <DropDownTile content={TilesProduct[0].content} title={TilesProduct[0].title} image={Accounting}/>
-                <DropDownTile content={TilesProduct[1].content} title={TilesProduct[1].title} image={Accounting}/>
+                <DropDownTile handleClick={handleInventoryManagement} content={TilesProduct[0].content} title={TilesProduct[0].title} image={Accounting}/>
+                <DropDownTile handleClick={handleOrderManagement} content={TilesProduct[1].content} title={TilesProduct[1].title} image={Accounting}/>
             </div>
             <div className={cn(style.tilesRow)}>
-                <DropDownTile content={TilesProduct[2].content} title={TilesProduct[2].title} image={Accounting}/>
-                <DropDownTile content={TilesProduct[3].content} title={TilesProduct[3].title} image={Accounting}/>
+                <DropDownTile handleClick={handleAccounts} content={TilesProduct[2].content} title={TilesProduct[2].title} image={Accounting}/>
+                <DropDownTile handleClick={handleAnalytics} content={TilesProduct[3].content} title={TilesProduct[3].title} image={Accounting}/>
             </div>
             <div className={cn(style.tilesRow)}>
-                <DropDownTile content={TilesProduct[4].content} title={TilesProduct[4].title} image={Accounting}/>
-                <DropDownTile content={TilesProduct[5].content} title={TilesProduct[5].title} image={Accounting}/>
+                <DropDownTile handleClick={handleShipment} content={TilesProduct[4].content} title={TilesProduct[4].title} image={Accounting}/>
+                <DropDownTile handleClick={handlePointOfSales} content={TilesProduct[5].content} title={TilesProduct[5].title} image={Accounting}/>
             </div>
         </div>
 

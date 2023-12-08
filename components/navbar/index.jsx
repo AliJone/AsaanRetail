@@ -21,19 +21,7 @@ import style from "./style.module.sass";
 const { Header } = Layout;
 
 const NavBarExample = () => {
-  const theme = {
-    components: {
-      Menu: {
-        menuItem: {
-          selected: {
-            after: {
-              borderBottom: ".125rem solid #37bf2d !important",
-            },
-          },
-        },
-      },
-    },
-  };
+  
 
   const divClass = classNames(style.DivClass);
   const headerClass = classNames(style.HeaderClass);

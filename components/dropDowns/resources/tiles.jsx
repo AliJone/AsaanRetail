@@ -9,18 +9,35 @@ import {TilesResources} from '../../../strings.jsx';
 import Wholesalers from '../../../images/svgs/icons/wholesale.svg';
 import cn from 'classnames';
 import style from './style.module.sass';
+import {useRouter} from 'next/router';
 
 const Tiles = () => {
+    const router = useRouter();
+
+  const handleCareer = () => {
+    router.push("/careerPage");
+  };
+  const handleContactUs = () => {
+    router.push("/contactUsPage");
+  };
+  const handleArticles = () => {
+    router.push("/articlePage");
+  };
+  const handleIntegration = () => {
+    router.push("/integrationPage");
+  };
+
+
     return(
         <>
         <div className={cn(style.TilesContainer)}>
             <div className={cn(style.tilesRow)}>
-                <DropDownTile content={TilesResources[0].content} title={TilesResources[0].title} image={Accounting}/>
-                <DropDownTile content={TilesResources[1].content} title={TilesResources[1].title} image={Accounting}/>
+                <DropDownTile handleClick={handleCareer} content={TilesResources[0].content} title={TilesResources[0].title} image={Accounting}/>
+                <DropDownTile handleClick={handleContactUs} content={TilesResources[1].content} title={TilesResources[1].title} image={Accounting}/>
             </div>
             <div className={cn(style.tilesRow)}>
-                <DropDownTile content={TilesResources[2].content} title={TilesResources[2].title} image={Accounting}/>
-                <DropDownTile content={TilesResources[3].content} title={TilesResources[3].title} image={Accounting}/>
+                <DropDownTile handleClick={handleArticles} content={TilesResources[2].content} title={TilesResources[2].title} image={Accounting}/>
+                <DropDownTile handleClick={handleIntegration} content={TilesResources[3].content} title={TilesResources[3].title} image={Accounting}/>
             </div>
         </div>
         </>
