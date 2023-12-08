@@ -63,7 +63,9 @@
 :where(.css-dev-only-do-not-override-3mqfnx).ant-tabs .ant-tabs-tab-remove:active {
   color: var(--primary-6, #009241) !important;
 }
-
+:where(.css-dev-only-do-not-override-3mqfnx) a:hover {
+  color: inherit !important
+}
 .ant-tabs>div:first-child {
   padding: 0px 10px;
 }

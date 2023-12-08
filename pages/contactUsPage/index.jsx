@@ -13,6 +13,7 @@ const page = () => {
         <div
           style={{
             overflowX: "hidden",
+            scrollBehavior: "smooth",
           }}
         >
           <NavigationBar />

@@ -57,11 +57,11 @@ function MeetThePack() {
               </div>
             </div>
           </ScrollAnimation>
-          <ScrollAnimation animateIn="animate__fadeInUp"> 
+          {/* <ScrollAnimation animateIn="animate__fadeInUp"> 
             <div className={styles.Space}>
               <Divider />
             </div>
-          </ScrollAnimation>
+          </ScrollAnimation> */}
           <ScrollAnimation animateIn="animate__fadeInUp"> 
             <div className={styles.End}>
               <div className={styles.EndText}>

@@ -22,7 +22,7 @@ function Footer() {
               <div className={styles.Logo}> <Image src={logo} /> </div>
               <div className={styles.Text}>We allow retailers and brands to scale and efficiently manage their business operations by equipping them with centralized inventory, fulfillment, and accounting management software for multi-channel commerce.</div>
             </div>
-            <div className={cn(styles.ExtraLinks, styles.fontDesktopBodyRegular)}>
+            <div className={cn(styles.ExtraLinks)}>
               <a href="#">Privacy Policy</a>
               <a href="#">Terms & Conditions</a>
               <a href="#">Security</a>
@@ -56,47 +56,32 @@ const linkData = [
   {
     title: "Product",
     links: [
-      { label: "Inventory", url: "#inventory" },
-      { label: "Sales", url: "#sales" },
-      { label: "Finance", url: "#finance" },
-      { label: "Integrations", url: "#integrations" },
-      { label: "Automation", url: "#automation" },
-      { label: "Purchases", url: "#purchases" },
+      { label: "Inventory management", url: "#inventory" },
+      { label: "Order management", url: "#sales" },
+      { label: "Accounting & finances", url: "#finance" },
+      { label: "Warehouse management", url: "#integrations" },
+      { label: "Reports & analytics", url: "#automation" },
+      { label: "Point of sales (POS)", url: "#purchases" },
     ]
   },
   {
     title: "Solution",
     links: [
-      { label: "Inventory Managent", url: "#inventory" },
-      { label: "Order Management", url: "#order" },
-      { label: "Shipment Management", url: "#sales" },
+      { label: "For retail", url: "#inventory" },
+      { label: "For ecommerce", url: "#order" },
+      { label: "For 3PL", url: "#sales" },
+      { label: "For wholesalers", url: "#sales" },
+      { label: "For service providers", url: "#sales" },
     ]
   },
   {
     title: "Resources",
     links: [
-      { label: "Inventory", url: "#inventory" },
-      { label: "Sales", url: "#order" },
-      { label: "Finance", url: "#sales" },
+      { label: "Pricing", url: "#inventory" },
+      { label: "Careers", url: "#order" },
+      { label: "Articles", url: "#sales" },
       { label: "Integrations", url: "#sales" },
-    ]
-  },
-  {
-    title: "Pricing",
-    links: [
-      { label: "Inventory", url: "#inventory" },
-      { label: "Sales", url: "#order" },
-      { label: "Finance", url: "#sales" },
-      { label: "Integrations", url: "#sales" },
-    ]
-  },
-  {
-    title: "Compare",
-    links: [
-      { label: "vs Gingko", url: "#inventory" },
-      { label: "vs Veeqo", url: "#order" },
-      { label: "Finance", url: "#sales" },
-      { label: "Integrations", url: "#sales" },
+      { label: "Contact us", url: "#sales" },
     ]
   },
   // You can add more sections by following the structure above
@@ -108,10 +93,10 @@ function FooterLinks() {
     <div className={styles.VerticalContent}>
       {linkData.map((section, idx) => (
         <div key={idx} className={styles.SingleVerticalSection}>
-          <div className={cn(styles.Title, styles.fontBodyBold)}>{section.title}</div>
+          <div className={cn(styles.Title)}>{section.title}</div>
           <div className={styles.SubTitleBlock}>
             {section.links.map((link, linkIdx) => (
-              <a key={linkIdx} href={link.url} className={cn(styles.SubTitle, styles.fontH5Regular)}>
+              <a key={linkIdx} href={link.url} className={cn(styles.SubTitle)}>
                 {link.label}
               </a>
             ))}
