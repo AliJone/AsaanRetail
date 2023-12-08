@@ -21,11 +21,13 @@ const HeroSectionPricing = () => {
 
   const Title = ["Standard", "Premium", "Pro"];
 
-  const Price1 = ["$40/mo", "$60/mo", "$50/mo"];
+  const Price1 = ["$40", "$60", "$50"];
 
-  const Price2 = ["$40/qtr", "$60/qtr", "$50/qtr"];
+  const Price2 = ["$40", "$60", "$50"];
 
-  const Price3 = ["$40/yr", "$60/yr", "$50/yr"];
+  const Price3 = ["$40", "$60", "$50"];
+
+  const unit = ["/mo", "/qtr", "/yr"];
 
   const Subtitle = [
     "Perfect plan for Starters",
@@ -78,6 +80,12 @@ const HeroSectionPricing = () => {
                     ? Price2[1]
                     : Price3[1]
                 }
+                unit = {
+                  tabNumber === 1?
+                   unit[0]
+                  : tabNumber == 2
+                  ? unit[1]
+                  : unit[2]}
                 subtitle={Subtitle[1]}
                 title={Title[1]}
                 type={1}
@@ -93,6 +101,14 @@ const HeroSectionPricing = () => {
                   ? Price2[0]
                   : Price3[0]
               }
+
+              unit = {
+                tabNumber === 1?
+                 unit[0]
+                : tabNumber == 2
+                ? unit[1]
+                : unit[2]}
+              
               subtitle={Subtitle[0]}
               title={Title[0]}
               type={2}
@@ -107,6 +123,14 @@ const HeroSectionPricing = () => {
                     ? Price2[1]
                     : Price3[1]
                 }
+
+                unit = {
+                  tabNumber === 1?
+                   unit[0]
+                  : tabNumber == 2
+                  ? unit[1]
+                  : unit[2]}
+
                 subtitle={Subtitle[1]}
                 title={Title[1]}
                 type={1}
@@ -121,6 +145,13 @@ const HeroSectionPricing = () => {
                   ? Price2[2]
                   : Price3[2]
               }
+
+              unit = {
+                tabNumber === 1?
+                 unit[0]
+                : tabNumber == 2
+                ? unit[1]
+                : unit[2]}
               subtitle={Subtitle[2]}
               title={Title[2]}
               type={2}

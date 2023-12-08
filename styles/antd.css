@@ -8,15 +8,15 @@
 }
 
 .ant-switch.ant-switch-checked:not(.ant-switch-disabled) {
-  background: var(--primary-6, #009241)
+  background: var(--primary-6, #009241) !important
 }
 
 .ant-switch.ant-switch-checked:hover :not(.ant-switch-disabled) {
-  background: var(--primary-6, #009241)
+  background: var(--primary-6, #009241) !important
 }
 
 :where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
-  background: var(--primary-6, #009241)
+  background: var(--primary-6, #009241) !important
 }
 
 .ant-carousel .slick-dots-bottom {
@@ -84,7 +84,7 @@
   color: var(--primary-6, #009241) !important
 }
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper::before {
+/* :where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper::before {
   content: none !important;
 }
 
@@ -99,9 +99,9 @@
 :where(.css-dev-only-do-not-override-1vr7spz).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
   stroke: #561d9b !important;
 
-}
+} */
 
-:where(.css-dev-only-do-not-override-1vr7spz).ant-btn>span {
+/* :where(.css-dev-only-do-not-override-1vr7spz).ant-btn>span {
   font-size: 17px
 }
 
@@ -113,7 +113,7 @@
 
 :where(.css-dev-only-do-not-override-1vr7spz).ant-switch.ant-switch-checked .ant-switch-handle {
   inset-inline-start: calc(100% - 1.75rem);
-}
+} */
 
 :where(.css-dev-only-do-not-override-3mqfnx).ant-btn-text:not(:disabled):not(.ant-btn-disabled):active {
   background-color: white;
@@ -190,4 +190,34 @@
 
 :where(.css-dev-only-do-not-override-3mqfnx).ant-btn .css-dev-only-do-not-override-3mqfnx .ant-btn-text .style_textButtonClass__HF21_ {
   padding: 0px;
+}
+:where(.css-dev-only-do-not-override-3mqfnx).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled){
+  background: var(--primary-6, #009241) !important;
+
+}
+
+.ant-input-affix-wrapper::before{
+  content: none !important;
+}
+.ant-space-compact{
+  width: 100% !important;
+}
+.ant-progress .ant-progress-bg{
+  background: linear-gradient(90deg, #3E9B1D 0.02%, rgba(194, 220, 88, 0.68) 61.84%, rgba(125, 142, 58, 0.68) 98.45%) !important;
+}
+.ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path{
+  stroke: #561d9b !important;
+}
+
+
+.ant-btn >span{
+  font-size: 17px !important;
+}
+.ant-switch .ant-switch-handle::before{
+  border-radius: 111px !important;
+  height: 1.75rem !important;
+  width: 1.75rem !important;
+}
+.ant-switch.ant-switch-checked .ant-switch-handle{
+  inset-inline-start: calc(100% - 1.75rem) !important;
 }
