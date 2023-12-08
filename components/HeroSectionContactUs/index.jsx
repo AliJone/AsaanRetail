@@ -8,12 +8,26 @@ import limits from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import ContactUsFormFeilds from "../ContactUsFormFeilds/ContactUsFormFeilds";
 
-const Card = ({ title, logo, isActive, setActive, value }) => {
+const Card = ({ title, logo, isActive, setActive, value, targetId}) => {
+  const handleCardClick = (e, targetId) => {
+    e.preventDefault();
+    const offset = 80; // Number of pixels you want to stop before the div
+    const targetElement = document.getElementById(targetId);
+  
+    if (targetElement) {
+      const topPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+      setActive(value);
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <>
       <div
         className={cn(style.Card, isActive == true ? style.Active : null)}
-        onClick={() => setActive(value)}
+        onClick={(e) => handleCardClick(e, targetId)}
       >
         <Image src={logo} alt="title" />
         <p className={cn(style.CardTitle)}>{title}</p>
@@ -54,6 +68,7 @@ const HeroSectionContactUS = () => {
                 isActive={Selector === 0}
                 setActive={setSelector}
                 value={0}
+                targetId="sales-section"
               />
               <Card
                 title="Support"
@@ -61,6 +76,7 @@ const HeroSectionContactUS = () => {
                 isActive={Selector === 1}
                 setActive={setSelector}
                 value={1}
+                targetId="support-section"
               />
             </div>
           </div>

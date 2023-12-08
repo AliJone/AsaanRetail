@@ -7,7 +7,7 @@ import { CarouselImages } from "../../strings";
 import Footer from "../../components/Footer/Footer";
 import HeroSectionAboutUs from "../../components/HeroSectionAboutUs";
 import MeetThePack from "../../components/MeetThePack/MeetThePack";
-import NavigationBar from "../../components/Navbar";
+import NavigationBar from "../../components/navbar";
 import OurJourney from "../../components/OurJourney/OurJourney";
 import Testimonial from "../../components/Testimonials/Testimonials";
 import TextNAnimation from "../../components/TextNAnimation/TextNAnimation";

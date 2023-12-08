@@ -26,7 +26,7 @@ $medium: 991px
 .VerticalContent
     display: flex
     align-items: flex-start
-    gap: 4rem
+    gap: 5rem
     align-self: stretch
 
 .SingleVerticalSection
@@ -44,6 +44,8 @@ $medium: 991px
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     cursor: pointer
+    @include fonts.fontDesktopH5Bold
+    
 
 .SubTitleBlock
     display: flex
@@ -59,6 +61,13 @@ $medium: 991px
     gap: 10px
     border-radius: 2px
     cursor: pointer
+    @include fonts.fontDesktopBodyRegular
+
+.SubTitle:hover , .SubTitle:active
+        background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
 
 .Description
     display: flex
@@ -118,6 +127,8 @@ $medium: 991px
     align-items: center
     gap: 0.625rem
     color: var(--neutral-7, #8CA397)
+    @include fonts.fontDesktopBodyRegular
+    
 
 .ExtraLinks
     a
