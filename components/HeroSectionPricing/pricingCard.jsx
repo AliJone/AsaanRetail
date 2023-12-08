@@ -12,8 +12,6 @@ const PricingCard = ({ title, subtitle, price, features, type , unit }) => {
         type == 1 ? cn(style.cardFrame, style.tagOnCard) : cn(style.cardFrame2)
       }
     >
-      {console.log(unit,"--------")}
-      {console.log(price,"--------")}
       <div className={cn(style.textContainer)}>
         <span
           className={type == 1 ? cn(style.cardTitle) : cn(style.cardTitle2)}
