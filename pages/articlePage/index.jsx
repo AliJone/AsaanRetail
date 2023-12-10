@@ -20,7 +20,7 @@ const page = () => {
         <HeroSectionArticle />
 
         <ArticleMenu />
-        {/* <FAQ /> */}
+        
         <CTANew />
         <Footer />
       </div>

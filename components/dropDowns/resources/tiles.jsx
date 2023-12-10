@@ -2,9 +2,6 @@ import {Col, Row} from 'antd';
 
 import Accounting from './assets/3.svg';
 import DropDownTile from '../../dropDownTile/index';
-import Ecommerce from '../../../images/svgs/icons/Ecommerce.svg';
-import PL from '../../../images/svgs/icons/3pl.svg';
-import Retail from '../../../images/svgs/icons/forRetail.svg';
 import {TilesResources} from '../../../strings.jsx';
 import Wholesalers from '../../../images/svgs/icons/wholesale.svg';
 import cn from 'classnames';

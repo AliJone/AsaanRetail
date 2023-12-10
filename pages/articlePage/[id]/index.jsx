@@ -1,14 +1,14 @@
 import { App } from "antd";
-import withScrollAnimation from "../../../components/Animate/animate";
-import HeroSectionIntegrationSection from "../../../components/HeroSectionIntegrationSection";
-import NavigationBar from "../../../components/navbar";
-import IntegrationMenu from "../../../components/IntegrationMenu/IntegrationMenu";
-import FAQ from "../../../components/FAQ/FAQ";
-import CTANew from "../../../components/CTA new/CTANew";
-import Footer from "../../../components/Footer/Footer";
 import ArticleMenu from "../../../components/ArticleMenu/ArticleMenu";
 import ArticleMenuSingle from "../../../components/ArticleMenuSingle/ArticleMenuSingle";
+import CTANew from "../../../components/CTA new/CTANew";
+import FAQ from "../../../components/FAQ/FAQ";
+import Footer from "../../../components/Footer/Footer";
+import HeroSectionIntegrationSection from "../../../components/HeroSectionIntegrationSection";
+import IntegrationMenu from "../../../components/IntegrationMenu/IntegrationMenu";
+import NavigationBar from "../../../components/navbar";
 import RelatedArticles from "../../../components/RelatedArticles/RelatedArticles";
+import withScrollAnimation from "../../../components/Animate/animate";
 
 const HeroSectionIntegrationSectionWithScroll = withScrollAnimation(HeroSectionIntegrationSection, "animate__fadeInUp");
 const IntegrationMenuWithScroll = withScrollAnimation(IntegrationMenu, "animate__fadeInUp");
@@ -29,9 +29,6 @@ const page = () =>{
             }} 
             >
                 <NavigationBar/>
-                {/* <HeroSectionIntegrationSection/>
-                <ArticleMenu/> */}
-                {/* <FAQ /> */}
                 <ArticleMenuSingle/>
                 <RelatedArticles/>
                 <CTANew />
