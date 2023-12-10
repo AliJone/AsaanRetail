@@ -20,6 +20,7 @@ import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import InputField from "../inputField";
 import IntegrationSearchInputField from "../inputs/IntegrationSearchField";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const initialPlatforms = [
   {
@@ -175,67 +176,80 @@ function IntegrationMenu() {
       <div className={styles.BG}>
         <div className={cn(limit.Limit)}>
           <div className={styles.Container}>
-            <div className={styles.Menu}>
-              <div className={styles.Search}>
-                <div className={styles.SearchTitle}>
-                  Search{" "}
-                  <span className={styles.SearchIcon}>
-                    <SearchOutlined />
-                  </span>
-                </div>
-                <div className={styles.SearchBox}>
-                  <IntegrationSearchInputField
-                    placeHolder="Input search text"
-                    size="large"
-                    onInputChange={handleSearchChange}
-                  />
-                </div>
-              </div>
-              <div className={styles.Categories}>
-                <div className={styles.CategoriesTitle}>Categories</div>
-                {/* Map through categories for buttons */}
-                {[
-                  "All",
-                  ...new Set(initialPlatforms.map((item) => item.category)),
-                ].map((category) => (
-                  <div
-                    key={category}
-                    className={cn(styles.Button, {
-                      [styles.Selected]: selectedCategory === category,
-                    })}
-                  >
-                    <Button
-                      type="primary"
-                      size="medium"
-                      title={category}
-                      onClick={() => handleCategoryClick(category)}
-                    >
-                      {category}
-                    </Button>
+            <ScrollAnimation animateIn={"animate__fadeInUp"}>
+              <div className={styles.Menu}>
+                {/* Search */}
+                <div className={styles.Search}>
+                  <div className={styles.SearchTitle}>
+                    Search{" "}
+                    <span className={styles.SearchIcon}>
+                      <SearchOutlined />
+                    </span>
                   </div>
-                ))}
+                  <div className={styles.SearchBox}>
+                    <IntegrationSearchInputField
+                      placeHolder="Input search text"
+                      size="large"
+                      onInputChange={handleSearchChange}
+                    />
+                  </div>
+                </div>
+
+                {/* Categories */}
+                <div className={styles.Categories}>
+                  <div className={styles.CategoriesTitle}>Categories</div>
+                  {/* Map through categories for buttons */}
+                  {[
+                    "All",
+                    ...new Set(initialPlatforms.map((item) => item.category)),
+                  ].map((category) => (
+                    <div
+                      key={category}
+                      className={cn(styles.Button, {
+                        [styles.Selected]: selectedCategory === category,
+                      })}
+                    >
+                      <Button
+                        type="primary"
+                        size="medium"
+                        title={category}
+                        onClick={() => handleCategoryClick(category)}
+                      >
+                        {category}
+                      </Button>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollAnimation>
+
             <div className={styles.Data}>
               {/* Map through categories and platforms */}
               {displayedPlatforms.map((cat) => (
                 <div key={cat.category} className={styles.CatBox}>
-                  <div className={styles.CatBoxTitle}>{cat.category}</div>
-                  <div className={styles.CatBoxData}>
-                    {cat.platforms.map((platform) => (
-                      <div key={platform.name} className={styles.CatBoxCard}>
-                        <Image src={platform.image} alt={platform.name} />
-                        <div className={styles.CatBoxCardData}>
-                          <div className={styles.CatBoxCardDataTitle}>
-                            {platform.name}
-                          </div>
-                          <div className={styles.CatBoxCardDataSubTitle}>
-                            {platform.description}
+                  {/* Title */}
+                  <ScrollAnimation animateIn={"animate__fadeInUp"}>
+                    <div className={styles.CatBoxTitle}>{cat.category}</div>
+                  </ScrollAnimation>
+
+                  {/* Description */}
+                  <ScrollAnimation animateIn={"animate__fadeInUp"}>
+                    <div className={styles.CatBoxData}>
+                      {cat.platforms.map((platform) => (
+                        <div key={platform.name} className={styles.CatBoxCard}>
+                          <Image src={platform.image} alt={platform.name} />
+                          <div className={styles.CatBoxCardData}>
+                            <div className={styles.CatBoxCardDataTitle}>
+                              {platform.name}
+                            </div>
+                            <div className={styles.CatBoxCardDataSubTitle}>
+                              {platform.description}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  </ScrollAnimation>
                 </div>
               ))}
             </div>

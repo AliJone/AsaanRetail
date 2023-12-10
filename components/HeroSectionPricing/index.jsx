@@ -4,6 +4,7 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const HeroSectionPricing = () => {
   const [tabNumber, setTabNumber] = useState(1);
@@ -41,26 +42,37 @@ const HeroSectionPricing = () => {
         <div className={cn(limit.Limit)}>
           <div className={cn(style.spacer1)} />
 
-          <div className={cn(style.divTitleContainer)}>
-            <span className={cn(style.titleText)}>
-              Pricing for{" "}
-              <span className={cn(style.titleDiv, style.underLine)}>
-                <span />
-                SMBs
-              </span>{" "}
-              to enterprises
-            </span>
-          </div>
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <div className={cn(style.divTitleContainer)}>
+              <span className={cn(style.titleText)}>
+                Pricing for{" "}
+                <span className={cn(style.titleDiv, style.underLine)}>
+                  <span />
+                  SMBs
+                </span>{" "}
+                to enterprises
+              </span>
+            </div>
+          </ScrollAnimation>
+
           <div className={cn(style.spacer2)} />
-          <div className={cn(style.subTitleContainer)}>
-            <span className={cn(style.subTitleText)}>
-              Flexible plans to elevate your business
-            </span>
-          </div>
+
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <div className={cn(style.subTitleContainer)}>
+              <span className={cn(style.subTitleText)}>
+                Flexible plans to elevate your business
+              </span>
+            </div>
+          </ScrollAnimation>
+
           <div className={cn(style.spacer3)} />
-          <div className={cn(style.tabsOnSectionDiv)}>
-            <Tabs tabNumber={tabNumber} handleClick={handleClick} />
-          </div>
+
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <div className={cn(style.tabsOnSectionDiv)}>
+              <Tabs tabNumber={tabNumber} handleClick={handleClick} />
+            </div>
+          </ScrollAnimation>
+
           <div className={cn(style.spacer4)} />
 
           <div className={cn(style.test)}>
@@ -80,12 +92,9 @@ const HeroSectionPricing = () => {
                     ? Price2[1]
                     : Price3[1]
                 }
-                unit = {
-                  tabNumber === 1?
-                   unit[0]
-                  : tabNumber == 2
-                  ? unit[1]
-                  : unit[2]}
+                unit={
+                  tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
+                }
                 subtitle={Subtitle[1]}
                 title={Title[1]}
                 type={1}
@@ -101,14 +110,9 @@ const HeroSectionPricing = () => {
                   ? Price2[0]
                   : Price3[0]
               }
-
-              unit = {
-                tabNumber === 1?
-                 unit[0]
-                : tabNumber == 2
-                ? unit[1]
-                : unit[2]}
-              
+              unit={
+                tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
+              }
               subtitle={Subtitle[0]}
               title={Title[0]}
               type={2}
@@ -123,14 +127,9 @@ const HeroSectionPricing = () => {
                     ? Price2[1]
                     : Price3[1]
                 }
-
-                unit = {
-                  tabNumber === 1?
-                   unit[0]
-                  : tabNumber == 2
-                  ? unit[1]
-                  : unit[2]}
-
+                unit={
+                  tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
+                }
                 subtitle={Subtitle[1]}
                 title={Title[1]}
                 type={1}
@@ -145,13 +144,9 @@ const HeroSectionPricing = () => {
                   ? Price2[2]
                   : Price3[2]
               }
-
-              unit = {
-                tabNumber === 1?
-                 unit[0]
-                : tabNumber == 2
-                ? unit[1]
-                : unit[2]}
+              unit={
+                tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
+              }
               subtitle={Subtitle[2]}
               title={Title[2]}
               type={2}

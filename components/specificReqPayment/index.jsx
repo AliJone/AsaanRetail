@@ -2,9 +2,10 @@ import Selector from "./selector";
 import Tabs from "./tabs";
 import Tag from "../tag";
 import cn from "classnames";
-import limit from '../../styles/Limits.module.css';
+import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const CustomizePayment = () => {
   const [tabNumber, setTabNumber] = useState(1);
@@ -36,34 +37,43 @@ const CustomizePayment = () => {
   return (
     <div className={cn(style.customizePaymentSection)}>
       <div className={cn(limit.Limit)}>
-      <div className={cn(style.spacer1)} />
-      <div className={cn(style.textFrame)}>
-        <Tag text="Customize" />
+        <div className={cn(style.spacer1)} />
+        <div className={cn(style.textFrame)}>
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <Tag text="Customize" />
+          </ScrollAnimation>
 
-        <span className={cn(style.titleText)}>{Title}</span>
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <span className={cn(style.titleText)}>{Title}</span>
+          </ScrollAnimation>
 
-        <span className={cn(style.subTitleText)}>{subtTitle}</span>
-      </div>
-
-      <div className={cn(style.spacer1)} />
-      <div className={cn(style.tabsFrame)}>
-        <Tabs tabNumber={tabNumber} handleClick={handleClick} />
-      </div>
-
-      <div className={cn(style.spacer2)} />
-
-      <div className={cn(style.bgDiv2)}>
-        <div className={cn(style.forBG)}>
-          <span />
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <span className={cn(style.subTitleText)}>{subtTitle}</span>
+          </ScrollAnimation>
         </div>
-      </div>
 
-      <div className={cn(style.bgDiv)}>
-        <div className={cn(style.selectorsFrame)}>
-          <div className={cn(style.lowerCircle)} />
-          <Selector handletype={handleType} type={type} />
+        <div className={cn(style.spacer1)} />
+
+        <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <div className={cn(style.tabsFrame)}>
+            <Tabs tabNumber={tabNumber} handleClick={handleClick} />
+          </div>
+        </ScrollAnimation>
+
+        <div className={cn(style.spacer2)} />
+
+        <div className={cn(style.bgDiv2)}>
+          <div className={cn(style.forBG)}>
+            <span />
+          </div>
         </div>
-      </div>
+
+        <div className={cn(style.bgDiv)}>
+          <div className={cn(style.selectorsFrame)}>
+            <div className={cn(style.lowerCircle)} />
+            <Selector handletype={handleType} type={type} />
+          </div>
+        </div>
       </div>
     </div>
   );

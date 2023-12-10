@@ -40,15 +40,13 @@ const ContactUsFormFeilds = ({ data, state }) => {
     <div className={styles.BG}>
       <div className={styles.formContainer}>
         <div className={limits.Limit}>
+          {/* Sales Form */}
           <div id="sales-section" className={styles.AContainer}>
             <div className={styles.ALeft}>
               <div className={styles.AHead}>
                 <div className={styles.ATitle}>
                   <h1>
-                    Contact{" "}
-                    <span className={styles.underLine}>
-                      Sales
-                    </span>
+                    Contact <span className={styles.underLine}>Sales</span>
                   </h1>
                 </div>
                 <div className={styles.ASubTitle}>
@@ -88,7 +86,6 @@ const ContactUsFormFeilds = ({ data, state }) => {
             </div>
             <div className={cn(styles.ARight, styles.Container)}>
               <Form layout="vertical" style={{ width: "100%" }}>
-
                 <>
                   <Form.Item
                     className={styles.Labels}
@@ -169,16 +166,16 @@ const ContactUsFormFeilds = ({ data, state }) => {
               </Form>
             </div>
           </div>
+
           <div className={styles.Spacer}></div>
+
+          {/* Support Section Form */}
           <div id="support-section" className={styles.AContainer}>
             <div className={styles.ALeft}>
               <div className={styles.AHead}>
                 <div className={styles.ATitle}>
                   <h1>
-                    Contact{" "}
-                    <span className={styles.underLine}>
-                      Support
-                    </span>
+                    Contact <span className={styles.underLine}>Support</span>
                   </h1>
                 </div>
                 <div className={styles.ASubTitle}>
@@ -229,7 +226,6 @@ const ContactUsFormFeilds = ({ data, state }) => {
             </div>
             <div className={cn(styles.ARight, styles.Container)}>
               <Form layout="vertical" style={{ width: "100%" }}>
-
                 <>
                   <Form.Item
                     className={styles.Labels}

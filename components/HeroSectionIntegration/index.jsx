@@ -16,22 +16,24 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 
 const imagesarray = [c1, c2, c3, c4, c5, c6, c7];
-const HeroSectionIntegrationSection = () => {
+const HeroSectionIntegration = () => {
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
     setEmail(event.target.value);
     console.log(email);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await IntegrationPageService.sendIntegrationPageData({email});
-      console.log('landingPage Response:', response);
+      const response = await IntegrationPageService.sendIntegrationPageData({
+        email,
+      });
+      console.log("landingPage Response:", response);
       // Handle success (e.g., show a success message or redirect)
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       // Handle error (e.g., show an error message)
     }
   };
@@ -56,7 +58,11 @@ const HeroSectionIntegrationSection = () => {
 
               <div className={cn(style.textFieldContainer)}>
                 {/* <div className={cn(style.textFieldCard)}> */}
-                  <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email}/>
+                <HeroSectionInput
+                  placeHolder={"Enter Your Work Email"}
+                  onChange={handleChange}
+                  value={email}
+                />
                 {/* </div> */}
                 <span className={cn(style.greyText)}>
                   Experience 14 Days of Free Trial, No Credit Card Needed
@@ -85,4 +91,4 @@ const HeroSectionIntegrationSection = () => {
   );
 };
 
-export default HeroSectionIntegrationSection;
+export default HeroSectionIntegration;

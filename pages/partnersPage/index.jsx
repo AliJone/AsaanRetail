@@ -8,6 +8,41 @@ import InventoryManagement from "../../components/InventoryManagement/InventoryM
 import NavigationBar from "../../components/navbar";
 import PartnersCarousel from "../../components/PartnersCarousel";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import withScrollAnimation from "../../components/Animate/animate";
+
+const HeroSectionPartnersWithScroll = withScrollAnimation(
+  HeroSectionPartners,
+  "animate__fadeInUp"
+);
+
+const PartnersCarouselWithScroll = withScrollAnimation(
+  PartnersCarousel,
+  "animate__fadeIn"
+);
+
+const InventoryManagementWithScroll = withScrollAnimation(
+  InventoryManagement,
+  "animate__fadeInUp"
+);
+
+const InspiredWorkspaceWithScroll = withScrollAnimation(
+  InspiredWorkspace,
+  "animate__fadeInUp"
+);
+
+const ARPartnerProgramWithScroll = withScrollAnimation(
+  ARPartnerProgram,
+  "animate__fadeInUp"
+);
+
+const TestimonialsWithScroll = withScrollAnimation(
+  Testimonials,
+  "animate__fadeInUp"
+);
+
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeInUp");
+
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
 const page = () => {
   return (
@@ -19,14 +54,14 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionPartners />
-          <InventoryManagement />
-          <PartnersCarousel />
-          <InspiredWorkspace number={1} />
-          <ARPartnerProgram />
-          <Testimonials />
-          <CTANew />
-          <Footer />
+          <HeroSectionPartnersWithScroll />
+          <InventoryManagementWithScroll />
+          <PartnersCarouselWithScroll />
+          <InspiredWorkspaceWithScroll number={1} />
+          <ARPartnerProgramWithScroll />
+          <TestimonialsWithScroll />
+          <CTANewWithScroll />
+          <FooterWithScroll />
         </div>
       </App>
     </>

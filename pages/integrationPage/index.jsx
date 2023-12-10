@@ -5,6 +5,23 @@ import Footer from "../../components/Footer/Footer";
 import HeroSectionIntegration from "../../components/HeroSectionIntegration";
 import IntegrationMenu from "../../components/IntegrationMenu/IntegrationMenu";
 import NavigationBar from "../../components/navbar";
+import withScrollAnimation from "../../components/Animate/animate";
+
+const HeroSectionIntegrationWithScroll = withScrollAnimation(
+  HeroSectionIntegration,
+  "animate__fadeInUp"
+);
+
+const IntegrationMenuWithScroll = withScrollAnimation(
+  IntegrationMenu,
+  "animate__fadeInUp"
+);
+
+const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
+
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
+
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
 const page = () => {
   return (
@@ -15,11 +32,11 @@ const page = () => {
         }}
       >
         <NavigationBar />
-        <HeroSectionIntegration />
+        <HeroSectionIntegrationWithScroll />
         <IntegrationMenu />
-        <FAQ />
-        <CTANew />
-        <Footer />
+        <FAQWithScroll />
+        <CTANewWithScroll />
+        <FooterWithScroll />
       </div>
     </App>
   );

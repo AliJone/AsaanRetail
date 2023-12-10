@@ -9,6 +9,35 @@ import LifeAtAsaanRetail from "../../components/LifeAtAR";
 import NavigationBar from "../../components/navbar";
 import OpenRoles from "../../components/OpenRoles";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import withScrollAnimation from "../../components/Animate/animate";
+
+const HeroSectionCareerWithScroll = withScrollAnimation(
+  HeroSectionCareer,
+  "animate__fadeInUp"
+);
+
+const InspiredWorkspaceWithScroll = withScrollAnimation(
+  InspiredWorkspace,
+  "animate__fadeInUp"
+);
+
+const LifeAtAsaanRetailWithScroll = withScrollAnimation(
+  LifeAtAsaanRetail,
+  "animate__fadeInUp"
+);
+
+const OpenRolesWithScroll = withScrollAnimation(OpenRoles, "animate__fadeInUp");
+
+const TestimonialsWithScroll = withScrollAnimation(
+  Testimonials,
+  "animate__fadeInUp"
+);
+
+const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
+
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeInUp");
+
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeInUp");
 
 const page = () => {
   return (
@@ -20,20 +49,20 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionCareer />
-          <InspiredWorkspace number={0} />
-          <LifeAtAsaanRetail />
-          <OpenRoles />
+          <HeroSectionCareerWithScroll />
+          <InspiredWorkspaceWithScroll number={0} />
+          <LifeAtAsaanRetailWithScroll />
+          <OpenRolesWithScroll />
           {/* <HeroSectionApplication />
           <ApplicationFormFeilds/> */}
-          <Testimonials />
+          <TestimonialsWithScroll />
           {/* <ThroughLense /> */}
           {/* <Enterprise /> */}
 
-          <FAQ />
-          <CTANew />
+          <FAQWithScroll />
+          <CTANewWithScroll />
           {/* <CTA /> */}
-          <Footer />
+          <FooterWithScroll />
         </div>
       </App>
     </>
