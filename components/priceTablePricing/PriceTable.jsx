@@ -8,6 +8,7 @@ import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useState } from "react";
 import CustomFilledButton from "../buttons/filledButton";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const tiers = [
   { type: "Standard", price: "Rs 12,000" },
@@ -339,25 +340,29 @@ function PriceTable() {
 
           {/* <Tag text="Compare plans" className={styles.tag} /> */}
 
-          <div className={styles.divTitleContainer}>
-            <span className={styles.titleText}>
-              See what{" "}
-              <span className={cn(styles.titleDiv, styles.underLine)}>
-                <span />
-                suits
-              </span>{" "}
-              your business
-            </span>
-          </div>
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <div className={styles.divTitleContainer}>
+              <span className={styles.titleText}>
+                See what{" "}
+                <span className={cn(styles.titleDiv, styles.underLine)}>
+                  <span />
+                  suits
+                </span>{" "}
+                your business
+              </span>
+            </div>
+          </ScrollAnimation>
 
           {/* <div className={styles.spacer} /> */}
 
-          <div className={styles.subTitleContainer}>
-            <span className={styles.subTitleText}>
-              Explore our pricing options and find the perfect fit for your
-              unique needs.
-            </span>
-          </div>
+          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <div className={styles.subTitleContainer}>
+              <span className={styles.subTitleText}>
+                Explore our pricing options and find the perfect fit for your
+                unique needs.
+              </span>
+            </div>
+          </ScrollAnimation>
 
           <div className={styles.spacer3} />
 

@@ -4,9 +4,15 @@ import CustomTextButton from "../buttons/textButton";
 import Image from "next/image";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
+import ScrollAnimation from "react-animate-on-scroll";
 
-const PricingCard = ({ title, subtitle, price, features, type , unit }) => {
+// const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
+
+<ScrollAnimation animateIn={"animate__fadeInUp"}></ScrollAnimation>;
+
+const PricingCard = ({ title, subtitle, price, features, type, unit }) => {
   return (
+    // <ScrollAnimation animateIn={"animate__fadeIn"}>
     <div
       className={
         type == 1 ? cn(style.cardFrame, style.tagOnCard) : cn(style.cardFrame2)
@@ -29,10 +35,8 @@ const PricingCard = ({ title, subtitle, price, features, type , unit }) => {
       </div>
 
       <div className={cn(style.pricingFrameCard)}>
-        <h1
-          className={type == 1 ? cn(style.cardPrice) : cn(style.cardPrice2)}
-        >
-          {price } 
+        <h1 className={type == 1 ? cn(style.cardPrice) : cn(style.cardPrice2)}>
+          {price}
           <p className={type == 1 ? cn(style.cardUnit) : cn(style.cardUnit2)}>
             {unit}
           </p>
@@ -79,6 +83,7 @@ const PricingCard = ({ title, subtitle, price, features, type , unit }) => {
 
       <div className={cn(style.spacerCard1)} />
     </div>
+    // </ScrollAnimation>
   );
 };
 

@@ -20,6 +20,7 @@ import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useRouter } from "next/router";
 import IntegrationSearchInputField from "../inputs/IntegrationSearchField";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const initialPlatforms = [
   {
@@ -164,79 +165,86 @@ function ArticleMenu() {
       <div className={styles.BG}>
         <div className={cn(limit.Limit)}>
           <div className={styles.Container}>
-            <div className={styles.Menu}>
-              <div className={styles.Search}>
-                <div className={styles.SearchTitle}>
-                  Search{" "}
-                  <span className={styles.SearchIcon}>
-                    <SearchOutlined />
-                  </span>
-                </div>
-                <div className={styles.SearchBox}>
-                  <IntegrationSearchInputField
-                    placeHolder="Input search text"
-                    size="large"
-                    onInputChange={handleSearchChange}
-                  />
-                </div>
-              </div>
-              <div className={styles.Categories}>
-                <div className={styles.CategoriesTitle}>Categories</div>
-                {/* Map through categories for buttons */}
-                {[
-                  "All",
-                  ...new Set(initialPlatforms.map((item) => item.category)),
-                ].map((category) => (
-                  <div
-                    key={category}
-                    className={cn(styles.Button, {
-                      [styles.Selected]: selectedCategory === category,
-                    })}
-                  >
-                    <Button
-                      type="primary"
-                      size="medium"
-                      title={category}
-                      onClick={() => handleCategoryClick(category)}
-                    >
-                      {category}
-                    </Button>
+            {/* // */}
+            <ScrollAnimation animateIn="animate__fadeInUp">
+              <div className={styles.Menu}>
+                <div className={styles.Search}>
+                  <div className={styles.SearchTitle}>
+                    Search{" "}
+                    <span className={styles.SearchIcon}>
+                      <SearchOutlined />
+                    </span>
                   </div>
-                ))}
+                  <div className={styles.SearchBox}>
+                    <IntegrationSearchInputField
+                      placeHolder="Input search text"
+                      size="large"
+                      onInputChange={handleSearchChange}
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.Categories}>
+                  <div className={styles.CategoriesTitle}>Categories</div>
+                  {/* Map through categories for buttons */}
+                  {[
+                    "All",
+                    ...new Set(initialPlatforms.map((item) => item.category)),
+                  ].map((category) => (
+                    <div
+                      key={category}
+                      className={cn(styles.Button, {
+                        [styles.Selected]: selectedCategory === category,
+                      })}
+                    >
+                      <Button
+                        type="primary"
+                        size="medium"
+                        title={category}
+                        onClick={() => handleCategoryClick(category)}
+                      >
+                        {category}
+                      </Button>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollAnimation>
+
             <div className={styles.Data}>
               <div className={styles.CatBoxData}>
                 {/* Map through categories and platforms */}
                 {displayedPlatforms.map((cat) => (
                   <>
-                    <div
-                      className={styles.ArticleBoxCard}
-                      onClick={() => handleJobClick(cat._id)}
-                    >
-                      <Image
-                        src={cat.image}
-                        alt={cat.name}
-                        height={"13rem"}
-                        width={"auto"}
-                      />
-                      <div className={styles.BodyArticle}>
-                        <div className={styles.TagArticle}>
-                          <p className={styles.TagArticleText}>
-                            {cat.category}
-                          </p>
-                        </div>
-                        <div className={styles.TextArticle}>
-                          <h1 className={styles.TextArticleText}>
-                            {cat.title}
-                          </h1>
-                        </div>
-                        <div className={styles.DatenAuthorArticle}>
-                          <p className={styles.AuthorArticle}>{cat.author}</p>
-                          <p className={styles.DateArticle}>{cat.date}</p>
+                    <ScrollAnimation animateIn="animate__fadeInUp">
+                      <div
+                        className={styles.ArticleBoxCard}
+                        onClick={() => handleJobClick(cat._id)}
+                      >
+                        <Image
+                          src={cat.image}
+                          alt={cat.name}
+                          height={"13rem"}
+                          width={"auto"}
+                        />
+                        <div className={styles.BodyArticle}>
+                          <div className={styles.TagArticle}>
+                            <p className={styles.TagArticleText}>
+                              {cat.category}
+                            </p>
+                          </div>
+                          <div className={styles.TextArticle}>
+                            <h1 className={styles.TextArticleText}>
+                              {cat.title}
+                            </h1>
+                          </div>
+                          <div className={styles.DatenAuthorArticle}>
+                            <p className={styles.AuthorArticle}>{cat.author}</p>
+                            <p className={styles.DateArticle}>{cat.date}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </ScrollAnimation>
                   </>
                 ))}
               </div>
