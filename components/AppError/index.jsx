@@ -19,6 +19,7 @@ function AppError() {
   const handlePricingButtonclick = () => {
     router.push("/pricingPage");
   };
+
   return (
     <div className={cn(limit.Limit, styles.mobileContainer)}>
       <div className={styles.imageContainer}>

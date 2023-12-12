@@ -59,7 +59,7 @@ const page = () => {
             </>
           )}
           {StepperPosition === 3 && <AppReady />}
-          {<AppError />}
+          {/* {<AppError />} */}
           {/* <Screen1/>
             <VerificationModal modal2Open={isModalVisible} setModal2Open={showModal} handleStepperScreen={handleStepperScreen} />
             <AppReady/> */}

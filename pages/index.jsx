@@ -54,15 +54,20 @@ const VideoSectionNewWithScroll = withScrollAnimation(
   "animate__fadeIn"
 );
 const TabsWithScroll = withScrollAnimation(Tabs, "animate__fadeIn");
+
 const TestimonialsWithScroll = withScrollAnimation(
   Testimonials,
-  "animate__fadeInUp"
+  "animate__fadeIn"
 );
 const ThroughLenseWithScroll = withScrollAnimation(
   ThroughLense,
   "animate__fadeIn"
 );
 const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
+
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
+
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
 const page = () => {
   return (
@@ -98,14 +103,14 @@ const page = () => {
           <Tabs />
           {/* <UseCaseSection1 Title={useCaseSection1Text.Title} image={useCaseSection1Text.image} subTitle={useCaseSection1Text.subTitle} options={useCaseSection1Text.items} />
                     <UseCaseSection2 Title={useCaseSection2Text.Title} image={useCaseSection2Text.image} subTitle={useCaseSection2Text.subTitle} options={useCaseSection2Text.items} /> */}
-          <Testimonials />
-          <ThroughLense />
+          <TestimonialsWithScroll />
+          <ThroughLenseWithScroll />
           {/* <Enterprise /> */}
 
-          <FAQ />
-          <CTANew />
+          <FAQWithScroll />
+          <CTANewWithScroll />
           {/* <CTA /> */}
-          <Footer />
+          <FooterWithScroll />
         </div>
       </App>
     </>
