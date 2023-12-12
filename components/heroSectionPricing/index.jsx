@@ -43,7 +43,7 @@ const HeroSectionPricing = () => {
           <div className={cn(style.spacer1)} />
 
           <ScrollAnimation animateIn={"animate__fadeInUp"}>
-            <div className={cn(style.divTitleContainer)}>
+            <h1 className={cn(style.divTitleContainer)}>
               <span className={cn(style.titleText)}>
                 Pricing for{" "}
                 <span className={cn(style.titleDiv, style.underLine)}>
@@ -52,17 +52,17 @@ const HeroSectionPricing = () => {
                 </span>{" "}
                 to enterprises
               </span>
-            </div>
+            </h1>
           </ScrollAnimation>
 
           <div className={cn(style.spacer2)} />
 
           <ScrollAnimation animateIn={"animate__fadeInUp"}>
-            <div className={cn(style.subTitleContainer)}>
+            <h4 className={cn(style.subTitleContainer)}>
               <span className={cn(style.subTitleText)}>
                 Flexible plans to elevate your business
               </span>
-            </div>
+            </h4>
           </ScrollAnimation>
 
           <div className={cn(style.spacer3)} />

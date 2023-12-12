@@ -8,22 +8,21 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 
 const HeroSectionArticle = () => {
-
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
     setEmail(event.target.value);
     console.log(email);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await ArticlePageService.sendArticlePageData({email});
-      console.log('ArticlePage Response:', response);
+      const response = await ArticlePageService.sendArticlePageData({ email });
+      console.log("ArticlePage Response:", response);
       // Handle success (e.g., show a success message or redirect)
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       // Handle error (e.g., show an error message)
     }
   };
@@ -49,7 +48,11 @@ const HeroSectionArticle = () => {
                 </div>
                 <div className={cn(style.submissionContainer)}>
                   {/* <div className={cn(style.textFieldCard)}> */}
-                    <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={ email} />
+                  <HeroSectionInput
+                    placeHolder={"Enter Your Work Email"}
+                    onChange={handleChange}
+                    value={email}
+                  />
                   {/* </div> */}
                   <div className={cn(style.buttonContainer)}>
                     <CustomFilledButton

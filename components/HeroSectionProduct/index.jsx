@@ -10,22 +10,21 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 
 const HeroSectionProduct = () => {
-
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
     setEmail(event.target.value);
     console.log(email);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await ProductPageService.sendProductPageData({email});
-      console.log('Product Page Response:', response);
+      const response = await ProductPageService.sendProductPageData({ email });
+      console.log("Product Page Response:", response);
       // Handle success (e.g., show a success message or redirect)
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       // Handle error (e.g., show an error message)
     }
   };
@@ -58,7 +57,11 @@ const HeroSectionProduct = () => {
                 {/* <div className={style.FieldClass}>
                   <InputField placeHolder={"Enter Your Work Email"} />
                 </div> */}
-                <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email}/>
+                <HeroSectionInput
+                  placeHolder={"Enter Your Work Email"}
+                  onChange={handleChange}
+                  value={email}
+                />
 
                 <div className={cn(style.buttonTextContainer)}>
                   <div className={cn(style.buttonContainer)}>
@@ -72,6 +75,7 @@ const HeroSectionProduct = () => {
                       handleClick={handleSubmit}
                     />
                   </div>
+
                   <div className={cn(style.greyTextContainer)}>
                     <span className={cn(style.greyText)}>
                       Experience 14 Days of Free Trial, No Credit Card Needed

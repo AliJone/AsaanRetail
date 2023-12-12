@@ -17,13 +17,13 @@ function Enterprise() {
           <div className={styles.Container}>
             <div className={styles.Left}>
               <div className={styles.Text}>
-                <div className={styles.Title}>
+                <h2 className={styles.Title}>
                   Enterprise <GradientLine width="100%" height="7px" />
-                </div>
-                <div className={styles.SubTitle}>
+                </h2>
+                <h5 className={styles.SubTitle}>
                   Built for larger organizations who want to scale with
                   confidence.
-                </div>
+                </h5>
               </div>
               {/* <Button className={styles.Buttton} size="large">
                 Contact Sales

@@ -342,14 +342,14 @@ function PriceTable() {
 
           <ScrollAnimation animateIn={"animate__fadeInUp"}>
             <div className={styles.divTitleContainer}>
-              <span className={styles.titleText}>
+              <h2 className={styles.titleText}>
                 See what{" "}
                 <span className={cn(styles.titleDiv, styles.underLine)}>
                   <span />
                   suits
                 </span>{" "}
                 your business
-              </span>
+              </h2>
             </div>
           </ScrollAnimation>
 
@@ -357,10 +357,10 @@ function PriceTable() {
 
           <ScrollAnimation animateIn={"animate__fadeInUp"}>
             <div className={styles.subTitleContainer}>
-              <span className={styles.subTitleText}>
+              <h5 className={styles.subTitleText}>
                 Explore our pricing options and find the perfect fit for your
                 unique needs.
-              </span>
+              </h5>
             </div>
           </ScrollAnimation>
 
