@@ -1,21 +1,23 @@
 import { App } from "antd";
-import withScrollAnimation from "../../../components/Animate/animate";
-import HeroSectionIntegration from "../../../components/HeroSectionIntegration";
-import NavigationBar from "../../../components/navbar";
-import IntegrationMenu from "../../../components/IntegrationMenu/IntegrationMenu";
-import FAQ from "../../../components/FAQ/FAQ";
-import CTANew from "../../../components/CTA new/CTANew";
-import Footer from "../../../components/Footer/Footer";
 import ArticleMenu from "../../../components/ArticleMenu/ArticleMenu";
 import ArticleMenuSingle from "../../../components/ArticleMenuSingle/ArticleMenuSingle";
 import CTANew from "../../../components/CTA new/CTANew";
 import FAQ from "../../../components/FAQ/FAQ";
 import Footer from "../../../components/Footer/Footer";
-import HeroSectionIntegrationSection from "../../../components/HeroSectionIntegrationSection";
+import HeroSectionIntegration from "../../../components/HeroSectionIntegration";
 import IntegrationMenu from "../../../components/IntegrationMenu/IntegrationMenu";
 import NavigationBar from "../../../components/navbar";
 import RelatedArticles from "../../../components/RelatedArticles/RelatedArticles";
 import withScrollAnimation from "../../../components/Animate/animate";
+
+// import CTANew from "../../../components/CTA new/CTANew";
+// import FAQ from "../../../components/FAQ/FAQ";
+// import Footer from "../../../components/Footer/Footer";
+// import HeroSectionIntegrationSection from "../../../components/HeroSectionIntegrationSection";
+// import IntegrationMenu from "../../../components/IntegrationMenu/IntegrationMenu";
+// import NavigationBar from "../../../components/navbar";
+
+// import withScrollAnimation from "../../../components/Animate/animate";
 
 const HeroSectionIntegrationSectionWithScroll = withScrollAnimation(
   HeroSectionIntegration,
@@ -41,25 +43,23 @@ const RelatedArticlesWithScroll = withScrollAnimation(
   "animate__fadeIn"
 );
 
-const page = () => {
-  return (
-    <App>
-      <div
-        style={{
-          overflowX: "hidden",
-        }}
-      >
-        <NavigationBar />
-        {/* <HeroSectionIntegration/>
-                <ArticleMenu/> */}
-        {/* <FAQ /> */}
-        <ArticleMenuSingle />
-        <RelatedArticles />
-        <CTANew />
-        <Footer />
-      </div>
-    </App>
-  );
-};
+const page = () =>{
+    return(
+        <App>
+            <div
+            style={{
+                overflowX: "hidden",
+            }} 
+            >
+                <NavigationBar/>
+                <ArticleMenuSingle/>
+                <RelatedArticles/>
+                <CTANew />
+                <Footer />
+            </div>
+
+        </App>
+    )
+}
 
 export default page;

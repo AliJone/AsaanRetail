@@ -11,8 +11,21 @@ async function sendArticlePageData({email}){
     }
 }
 
+async function getArticlePageData({id}){
+    try {
+        console.log("email from Service", {id});
+        const response = await api.get('/api/ArticlePage',  {id});
+        console.log("abc")
+        return response.data.userData['data'];
+    } catch (error) {
+        throw error;
+    }
+
+}
+
 
 
 export default {
     sendArticlePageData,
+    getArticlePageData
 }
