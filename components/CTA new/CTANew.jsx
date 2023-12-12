@@ -16,10 +16,10 @@ function CTANew() {
 
           <div className={styles.CTABox}>
             <div className={styles.CTARight}>
-              <div className={styles.Text}>
+              <h2 className={styles.Text}>
                 Start <span className={styles.GradientSurface}> 14 days </span>{" "}
                 free trial or book a demo with us
-              </div>
+              </h2>
               <div className={styles.Buttons}>
                 <Button type="primary" size="large" className={styles.Btn1}>
                   Get Demo

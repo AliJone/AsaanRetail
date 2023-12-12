@@ -27,8 +27,8 @@ function TextNAnimation({ Title, SubTitle, Animation = false, ButtonText }) {
               )}
             >
               <div className={styles.Text}>
-                <div className={styles.Title}>{Title}</div>
-                <div className={styles.SubTitle}>{SubTitle}</div>
+                <h2 className={styles.Title}>{Title}</h2>
+                <h5 className={styles.SubTitle}>{SubTitle}</h5>
               </div>
               {/* <Button
                 className={styles.Buttton}

@@ -41,7 +41,7 @@ function OpenRoles() {
 
   function handleJobClick() {
     // Navigate to /careerPage1
-    router.push("/careerPage/1");
+    router.push("/careers/1");
   }
 
   function handleFilterChipClick() {}

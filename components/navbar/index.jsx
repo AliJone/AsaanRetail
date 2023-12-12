@@ -17,12 +17,11 @@ import classNames from "classnames";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./style.module.sass";
+import { useRouter } from "next/router";
 
 const { Header } = Layout;
 
 const NavBarExample = () => {
-  
-
   const divClass = classNames(style.DivClass);
   const headerClass = classNames(style.HeaderClass);
   const logoClass = classNames(style.LogoClass);
@@ -31,8 +30,22 @@ const NavBarExample = () => {
 
   const [current, setCurrent] = React.useState("");
 
-  const handleClick = () => {
-    // Handle click event
+  const router = useRouter();
+
+  const handleFreeTrialClick = () => {
+    router.push("/start-free-trial");
+  };
+
+  const handleBookDemoClick = () => {
+    router.push("https://calendly.com/asaan-retail/onboarding-session");
+  };
+
+  const handlePricingClick = () => {
+    router.push("/pricing");
+  };
+
+  const handleAboutClick = () => {
+    router.push("/about-us");
   };
 
   const handleClickProduct = () => {
@@ -63,100 +76,104 @@ const NavBarExample = () => {
   };
   return (
     <>
-      <div className={classNames( style.limitOverride)}>
-      <Header className={headerClass}>
-        <div className={divClass}>
-          <div className={style.setMaxWidth}>
-          <div className={menuClass}>
-            <div className={logoClass}>
-              <Image src={Logo} alt="Asaan Retail" />
-            </div>
-            <div className={classNames(style.divClassRow)}>
-              <div className={style.divButtonContainer}>
-                <a onClick={ handleClickProduct }>
-                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
-                      Product <Image src={DropDownIcon} />
-                    </span>
-                </a>
-                {current === "Product" ? (
-                  <div className={style.barColor} />
-                ) : (
-                  <></>
-                )}
-                
-              </div>
-              
+      <div className={classNames(style.limitOverride)}>
+        <Header className={headerClass}>
+          <div className={divClass}>
+            <div className={style.setMaxWidth}>
+              <div className={menuClass}>
+                <div className={logoClass}>
+                  <Image src={Logo} alt="Asaan Retail" />
+                </div>
+                <div className={classNames(style.divClassRow)}>
+                  <div className={style.divButtonContainer}>
+                    <a onClick={handleClickProduct}>
+                      <span
+                        className={cn(style.NavButtonFonts, style.DivCenter)}
+                      >
+                        Product <Image src={DropDownIcon} />
+                      </span>
+                    </a>
+                    {current === "Product" ? (
+                      <div className={style.barColor} />
+                    ) : (
+                      <></>
+                    )}
+                  </div>
 
-              <div className={style.divButtonContainer}>
-                <a onClick={ handleClickSolution }>
-                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
-                      Solutions <Image src={DropDownIcon} />
-                    </span>
-                </a>
-                {current === "Solution" ? (
-                  <div className={style.barColor} />
-                ) : (
-                  <></>
-                )}
-              </div>
-              <div className={style.divButtonContainer}>
-                <a >
-                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
-                      Pricing
-                    </span>
-                </a>
-              </div>
-              <div className={style.divButtonContainer}>
-                <a onClick={ handleClickResources }>
-                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
-                      Resources <Image src={DropDownIcon} />
-                    </span>
-                </a>
-                {current === "Resources" ? (
-                  <div className={style.barColor} />
-                ) : (
-                  <></>
-                )}
-              </div>
+                  <div className={style.divButtonContainer}>
+                    <a onClick={handleClickSolution}>
+                      <span
+                        className={cn(style.NavButtonFonts, style.DivCenter)}
+                      >
+                        Solutions <Image src={DropDownIcon} />
+                      </span>
+                    </a>
+                    {current === "Solution" ? (
+                      <div className={style.barColor} />
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                  <div className={style.divButtonContainer}>
+                    <a onClick={handlePricingClick}>
+                      <span
+                        className={cn(style.NavButtonFonts, style.DivCenter)}
+                      >
+                        Pricing
+                      </span>
+                    </a>
+                  </div>
+                  <div className={style.divButtonContainer}>
+                    <a onClick={handleClickResources}>
+                      <span
+                        className={cn(style.NavButtonFonts, style.DivCenter)}
+                      >
+                        Resources <Image src={DropDownIcon} />
+                      </span>
+                    </a>
+                    {current === "Resources" ? (
+                      <div className={style.barColor} />
+                    ) : (
+                      <></>
+                    )}
+                  </div>
 
-              <div className={style.divButtonContainer}>
-                <a >
-                    <span className={cn(style.NavButtonFonts, style.DivCenter)}>
-                      About
-                    </span>
-                </a>
+                  <div className={style.divButtonContainer}>
+                    <a onClick={handleAboutClick}>
+                      <span
+                        className={cn(style.NavButtonFonts, style.DivCenter)}
+                      >
+                        About
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className={style.divClassRowConvert}>
+                <div className={style.divClass2}>
+                  <UserOutlined className={style.userLogoClass} />
+                  <Divider type="vertical" className={style.dividerClass} />
+                  <a onClick={handleBookDemoClick}>
+                    <span className={cn(style.buttonText)}>Book A Demo</span>
+                  </a>
+                </div>
+                <div className={cn(style.buttonAlignment)}>
+                  <CustomFilledButton
+                    children={
+                      <span className={cn(style.buttonTextV2)}>
+                        Start Free Trial
+                      </span>
+                    }
+                    handleClick={handleFreeTrialClick}
+                  />
+                </div>
+                <div className={cn(style.mobileNavBar)}>
+                  <MenuOutlined />
+                </div>
               </div>
             </div>
           </div>
-          <div className={style.divClassRowConvert}>
-            <div className={style.divClass2}>
-              <UserOutlined className={style.userLogoClass} />
-              <Divider type="vertical" className={style.dividerClass} />
-              <a
-                handleClick={handleClick}
-              >
-                <span className={cn(style.buttonText)}>Book A Demo</span>
-              </a>
-            </div>
-            <div className={cn(style.buttonAlignment)}>
-              <CustomFilledButton
-                children={
-                  <span
-                    className={cn(style.buttonTextV2)}
-                  >
-                    Start Free Trial
-                  </span>
-                }
-                handleClick={handleClick}
-              />
-            </div>
-            <div className={cn(style.mobileNavBar)}>
-              <MenuOutlined />
-            </div>
-          </div>
-          </div>
-        </div>
-      </Header>
+        </Header>
       </div>
       {current === "Product" ? <ProductsDropDown /> : <></>}
       {current === "Solution" ? <SolutionsDropDown /> : <></>}

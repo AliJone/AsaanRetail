@@ -18,16 +18,16 @@ const HeroSectionLanding = () => {
   const handleChange = (event) => {
     setEmail(event.target.value);
     console.log(email);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await LandingPageService.setLandingPageData({email});
-      console.log('landingPage Response:', response);
+      const response = await LandingPageService.setLandingPageData({ email });
+      console.log("landingPage Response:", response);
       // Handle success (e.g., show a success message or redirect)
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       // Handle error (e.g., show an error message)
     }
   };
@@ -41,18 +41,18 @@ const HeroSectionLanding = () => {
               <div className={cn(style.leftPane)}>
                 <div className={cn(style.textContainer)}>
                   <div className={cn(style.titleContainer)}>
-                    <span className={cn(style.titleText)}>
+                    <h1 className={cn(style.titleText)}>
                       Centralized{" "}
                       <span className={style.underLine}>Retail</span> &{" "}
                       <span className={style.underLine}>Ecommerce</span>{" "}
                       Management
-                    </span>
+                    </h1>
                   </div>
                   <div>
                     <Flags />
                   </div>
                   <div className={cn(style.subTitleContainer)}>
-                    <span className={cn(style.subTitleText)}>
+                    <h4 className={cn(style.subTitleText)}>
                       One window{" "}
                       <span className={cn(style.changeColorSubTitle)}>
                         <b>Inventory</b>
@@ -70,13 +70,15 @@ const HeroSectionLanding = () => {
                         <b>Accounting</b>
                       </span>{" "}
                       software for Multi-Channel Commerce.
-                    </span>
+                    </h4>
                   </div>
                 </div>
                 <div className={cn(style.lowerContainer)}>
-                  
-
-                  <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email} />
+                  <HeroSectionInput
+                    placeHolder={"Enter Your Work Email"}
+                    onChange={handleChange}
+                    value={email}
+                  />
 
                   <div className={cn(style.buttonTextContainer)}>
                     <div className={cn(style.buttonContainer)}>

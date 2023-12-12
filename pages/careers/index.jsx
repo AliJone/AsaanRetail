@@ -1,5 +1,5 @@
 import { App } from "antd";
-import AppReady from "../../components/AppReady/";
+import AppReady from "../../components/AppReady";
 import CTANew from "../../components/CTA new/CTANew";
 import FAQ from "../../components/FAQ/FAQ";
 import Footer from "../../components/Footer/Footer";
@@ -35,9 +35,9 @@ const TestimonialsWithScroll = withScrollAnimation(
 
 const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
 
-const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeInUp");
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
 
-const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeInUp");
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
 const page = () => {
   return (

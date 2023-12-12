@@ -5,6 +5,7 @@ import { VideoSectionText } from "../../strings";
 import cn from "classnames";
 import style from "./style.module.sass";
 import { Button, Modal } from "antd";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const VideoSectionNew = () => {
   const TitleWithGradientLine = () => (
@@ -54,25 +55,35 @@ const VideoSectionNew = () => {
 
   return (
     <div className={style.VideoSectionDiv}>
-      <Tag text="Discovery" />
+      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+        <Tag text="Discovery" />
+      </ScrollAnimation>
 
       <div className={style.spacer1} />
 
-      <span className={cn(style.VideoSectionDivTitle, style.desktopView)}>
-        {<TitleWithGradientLine />}
-      </span>
+      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+        <span className={cn(style.VideoSectionDivTitle, style.desktopView)}>
+          {<TitleWithGradientLine />}
+        </span>
+      </ScrollAnimation>
 
-      <span className={cn(style.VideoSectionDivTitle, style.mobileView)}>
-        {TitleWithLineBreaks}
-      </span>
+      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+        <span className={cn(style.VideoSectionDivTitle, style.mobileView)}>
+          {TitleWithLineBreaks}
+        </span>
+      </ScrollAnimation>
 
-      <span className={cn(style.VideoSectionDivSubTitle, style.mobileView)}>
-        {VideoSectionText.subTitle}
-      </span>
+      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+        <span className={cn(style.VideoSectionDivSubTitle, style.mobileView)}>
+          {VideoSectionText.subTitle}
+        </span>
+      </ScrollAnimation>
 
-      <span className={cn(style.VideoSectionDivSubTitle, style.desktopView)}>
-        {subTitleWithLineBreaks}
-      </span>
+      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+        <span className={cn(style.VideoSectionDivSubTitle, style.desktopView)}>
+          {subTitleWithLineBreaks}
+        </span>
+      </ScrollAnimation>
 
       <div className={cn(style.spacer2)} />
 
