@@ -35,7 +35,7 @@ const page = () => {
         <HeroSectionArticleWithScroll />
 
         <ArticleMenu />
-        
+
         <CTANewWithScroll />
         <FooterWithScroll />
       </div>

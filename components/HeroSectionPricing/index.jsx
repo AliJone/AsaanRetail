@@ -42,7 +42,7 @@ const HeroSectionPricing = () => {
         <div className={cn(limit.Limit)}>
           <div className={cn(style.spacer1)} />
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <h1 className={cn(style.divTitleContainer)}>
               <span className={cn(style.titleText)}>
                 Pricing for{" "}
@@ -57,7 +57,7 @@ const HeroSectionPricing = () => {
 
           <div className={cn(style.spacer2)} />
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <h4 className={cn(style.subTitleContainer)}>
               <span className={cn(style.subTitleText)}>
                 Flexible plans to elevate your business
@@ -67,7 +67,7 @@ const HeroSectionPricing = () => {
 
           <div className={cn(style.spacer3)} />
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <div className={cn(style.tabsOnSectionDiv)}>
               <Tabs tabNumber={tabNumber} handleClick={handleClick} />
             </div>

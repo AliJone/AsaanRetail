@@ -217,7 +217,10 @@ function ArticleMenu() {
                 {/* Map through categories and platforms */}
                 {displayedPlatforms.map((cat) => (
                   <>
-                    <ScrollAnimation animateIn="animate__fadeInUp">
+                    <ScrollAnimation
+                      animateOnce={true}
+                      animateIn="animate__fadeInUp"
+                    >
                       <div
                         className={styles.ArticleBoxCard}
                         onClick={() => handleJobClick(cat._id)}

@@ -340,7 +340,7 @@ function PriceTable() {
 
           {/* <Tag text="Compare plans" className={styles.tag} /> */}
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <div className={styles.divTitleContainer}>
               <h2 className={styles.titleText}>
                 See what{" "}
@@ -355,7 +355,7 @@ function PriceTable() {
 
           {/* <div className={styles.spacer} /> */}
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <div className={styles.subTitleContainer}>
               <h5 className={styles.subTitleText}>
                 Explore our pricing options and find the perfect fit for your

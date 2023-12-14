@@ -176,7 +176,7 @@ function IntegrationMenu() {
       <div className={styles.BG}>
         <div className={cn(limit.Limit)}>
           <div className={styles.Container}>
-            <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
               <div className={styles.Menu}>
                 {/* Search */}
                 <div className={styles.Search}>
@@ -228,12 +228,18 @@ function IntegrationMenu() {
               {displayedPlatforms.map((cat) => (
                 <div key={cat.category} className={styles.CatBox}>
                   {/* Title */}
-                  <ScrollAnimation animateIn={"animate__fadeInUp"}>
+                  <ScrollAnimation
+                    animateOnce={true}
+                    animateIn={"animate__fadeInUp"}
+                  >
                     <div className={styles.CatBoxTitle}>{cat.category}</div>
                   </ScrollAnimation>
 
                   {/* Description */}
-                  <ScrollAnimation animateIn={"animate__fadeInUp"}>
+                  <ScrollAnimation
+                    animateOnce={true}
+                    animateIn={"animate__fadeInUp"}
+                  >
                     <div className={styles.CatBoxData}>
                       {cat.platforms.map((platform) => (
                         <div key={platform.name} className={styles.CatBoxCard}>

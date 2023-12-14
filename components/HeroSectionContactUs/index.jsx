@@ -48,7 +48,7 @@ const HeroSectionContactUS = () => {
         <div className={cn(limits.Limit)}>
           <div className={cn(style.TextContainer)}>
             {/* // */}
-            <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
               <div className={cn(style.TitleContiner)}>
                 <p className={cn(style.TitleText, style.isDesktop)}>
                   <span className={cn(style.underLine)}>How can</span> we help
@@ -68,7 +68,7 @@ const HeroSectionContactUS = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
               <div className={cn(style.CardContainer)}>
                 <Card
                   title="Sales"

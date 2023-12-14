@@ -22,7 +22,7 @@ function InventoryManagement() {
         <div className={cn(limit.Limit)}>
           <div className={styles.Container}>
             {/* Heading */}
-            <ScrollAnimation animateIn={"animate__fadeInUp"}>
+            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
               <div className={styles.Heading}>
                 <div className={styles.LineText}>
                   Inventory{" "}
@@ -78,7 +78,7 @@ function InventoryManagement() {
 
   function Box(logo, title, subtitle, link) {
     return (
-      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+      <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
         <div className={styles.Box}>
           <div className={styles.BoxContainer}>
             <div className={styles.Logo}>

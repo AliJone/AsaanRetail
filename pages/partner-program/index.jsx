@@ -40,7 +40,7 @@ const TestimonialsWithScroll = withScrollAnimation(
   "animate__fadeInUp"
 );
 
-const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeInUp");
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
 
 const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 

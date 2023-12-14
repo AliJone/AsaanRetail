@@ -10,6 +10,32 @@ import InventoryManagement from "../../../components/InventoryManagement/Invento
 import ManyMore from "../../../components/ManyMore";
 import NavigationBar from "../../../components/navbar";
 import Testimonials from "../../../components/Testimonials/Testimonials";
+import withScrollAnimation from "../../../components/Animate/animate";
+
+const HeroSectionProductWithScroll = withScrollAnimation(
+  HeroSectionProduct,
+  "animate__fadeInUp"
+);
+
+const CarouselWithScroll = withScrollAnimation(Carousel, "animate__fadeInUp");
+
+const ImageTextGridWithScroll = withScrollAnimation(
+  ImageTextGrid,
+  "animate__fadeInUp"
+);
+
+const ManyMoreWithScroll = withScrollAnimation(ManyMore, "animate__fadeIn");
+
+const TestimonialsWithScroll = withScrollAnimation(
+  Testimonials,
+  "animate__fadeInUp"
+);
+
+const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
+
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
+
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
 const page = () => {
   return (
@@ -21,15 +47,15 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionProduct />
-          <Carousel imagesarray={CarouselImages} />
-          <ImageTextGrid />
-          <ManyMore />
+          <HeroSectionProductWithScroll />
+          <CarouselWithScroll imagesarray={CarouselImages} />
+          <ImageTextGridWithScroll />
+          <ManyMoreWithScroll />
           <InventoryManagement />
-          <Testimonials />
-          <FAQ />
-          <CTANew />
-          <Footer />
+          <TestimonialsWithScroll />
+          <FAQWithScroll />
+          <CTANewWithScroll />
+          <FooterWithScroll />
         </div>
       </App>
     </>
