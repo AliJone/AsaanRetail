@@ -1,11 +1,11 @@
 import { React, useState } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { Collapse } from 'antd';
-import cn from 'classnames';
-import styles from './styles.module.sass';
 
 import Article from './assets/images/article.png';
+import { Collapse } from 'antd';
+import Image from 'next/image';
+import cn from 'classnames';
+import styles from './styles.module.sass';
+import { useRouter } from 'next/router';
 
 const displayedPlatforms = [
   {
@@ -51,7 +51,7 @@ function RelatedArticles() {
   const router = useRouter();
   
   const handleJobClick = (id) => {
-    router.push(`/articlePage/${id}`);
+    router.push(`/blogs/${id}`);
   }
   return (
     <>

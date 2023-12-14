@@ -6,9 +6,11 @@ import BlueEx from "./assets/images/BlueEx.png";
 import CallCourier from "./assets/images/CallCourier.png";
 import FPBRPOS from "./assets/images/FPBRPOS.png";
 import Image from "next/image";
+import IntegrationSearchInputField from "../inputs/IntegrationSearchField";
 import MontyMobile from "./assets/images/MontyMobile.png";
 import PostEx from "./assets/images/PostEx.png";
 import Rider from "./assets/images/Rider.png";
+import ScrollAnimation from "react-animate-on-scroll";
 import { SearchOutlined } from "@ant-design/icons";
 import Shopify from "./assets/images/Shopify.png";
 import Swyft from "./assets/images/Swyft.png";
@@ -19,8 +21,6 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useRouter } from "next/router";
-import IntegrationSearchInputField from "../inputs/IntegrationSearchField";
-import ScrollAnimation from "react-animate-on-scroll";
 
 const initialPlatforms = [
   {
@@ -117,7 +117,8 @@ function ArticleMenu() {
 
   function handleJobClick(id) {
     // Navigate to /careerPage1
-    router.push("/articlePage/[id]", `/articlePage/${id}`);
+    window.location.href = `/blogs/${id}`;
+    // router.push("/blogs/[id]", `/blogs/${id}`);
   }
 
   const handleSearchChange = (e) => {
@@ -166,7 +167,7 @@ function ArticleMenu() {
         <div className={cn(limit.Limit)}>
           <div className={styles.Container}>
             {/* // */}
-            <ScrollAnimation animateIn="animate__fadeInUp">
+            <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
               <div className={styles.Menu}>
                 <div className={styles.Search}>
                   <div className={styles.SearchTitle}>

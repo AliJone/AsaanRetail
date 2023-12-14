@@ -18,7 +18,7 @@ const Tiles = () => {
     router.push("/contact-us");
   };
   const handleArticles = () => {
-    router.push("/articlePage");
+    router.push("/blogs");
   };
   const handleIntegration = () => {
     router.push("/integrations");
