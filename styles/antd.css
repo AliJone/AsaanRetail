@@ -191,7 +191,7 @@
   box-shadow: none;
 }
 
-:where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):visited .ant-select-selector {
+:where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):active .ant-select-selector {
   border: 0.5px solid #009241;
   box-shadow: none;
 }

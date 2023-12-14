@@ -6,6 +6,8 @@ import image1 from "./assets/images/image1.png";
 import image2 from "./assets/images/image2.png";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
+import CustomFilledButton from "../buttons/filledButton/index";
+import CustomOutlinedButton from "../buttons/outlinedButton/index";
 
 function CTANew() {
   return (
@@ -21,12 +23,17 @@ function CTANew() {
                 free trial or book a demo with us
               </h2>
               <div className={styles.Buttons}>
-                <Button type="primary" size="large" className={styles.Btn1}>
-                  Get Demo
-                </Button>
-                <Button type="primary" size="large" className={styles.Btn2}>
-                  Start Free Trial
-                </Button>
+                <div>
+                  <CustomOutlinedButton width={"11.875rem"}>
+                    <span className={styles.buttonText}>Get Demo</span>
+                  </CustomOutlinedButton>
+                </div>
+
+                <div>
+                  <CustomFilledButton width={"11.875rem"}>
+                    <span className={styles.buttonText}>Start Free Trial</span>
+                  </CustomFilledButton>
+                </div>
               </div>
             </div>
             <div className={styles.CTALeft}>

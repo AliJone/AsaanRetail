@@ -6,14 +6,14 @@ const CustomOutlinedButton = (props) => {
     <Button
       onClick={props.handleClick}
       style={{
-        width: props.width != undefined ? props.width : "auto",
-        // backgroundColor: "transparent",
+        width: props.width !== undefined ? props.width : "auto",
+        backgroundColor: "#FCF8EF",
       }}
       className={style.buttonClass}
       size={props.size}
       icon={props.icon}
     >
-      {props.children}
+      <span className={style.buttonText}>{props.children}</span>
     </Button>
   );
 };
