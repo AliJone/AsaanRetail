@@ -21,7 +21,7 @@ const HeroSectionSolutionWithScroll = withScrollAnimation(
   "animate__fadeInUp"
 );
 
-const CarouselWithScroll = withScrollAnimation(Carousel, "animate__fadeInUp");
+const CarouselWithScroll = withScrollAnimation(Carousel, "animate__fadeIn");
 
 const ImageTextGridWithScroll = withScrollAnimation(
   ImageTextGrid,

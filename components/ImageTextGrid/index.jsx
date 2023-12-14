@@ -53,17 +53,26 @@ function ImageTextGrid() {
       <div className={styles.gridContainer}>
         {data.map((item, index) => (
           <React.Fragment key={index}>
-            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
-              <div className={styles.textContainer}>
-                <div>
-                  <span className={styles.underLine}>
+            {/* <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}> */}
+            <div className={styles.textContainer}>
+              <div>
+                <span className={styles.underLine}>
+                  <ScrollAnimation
+                    animateOnce={true}
+                    animateIn={"animate__fadeInUp"}
+                  >
                     <div
                       className={styles.titleText}
                       dangerouslySetInnerHTML={{ __html: item.title }}
                     />
-                  </span>
-                </div>
+                  </ScrollAnimation>
+                </span>
+              </div>
 
+              <ScrollAnimation
+                animateOnce={true}
+                animateIn={"animate__fadeInUp"}
+              >
                 <div className={styles.textDescriptionContainer}>
                   {item.leadingSubtitle}
                   <div>
@@ -75,26 +84,32 @@ function ImageTextGrid() {
                     dangerouslySetInnerHTML={{ __html: item.trailingSubtitle }}
                   />
                 </div>
+              </ScrollAnimation>
 
+              <ScrollAnimation
+                animateOnce={true}
+                animateIn={"animate__fadeInUp"}
+              >
                 <div>
                   <CustomFilledButton width={"11.8125rem"}>
                     <span className={styles.buttonText}>Start Free Trial</span>
                   </CustomFilledButton>
                 </div>
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
+            </div>
+            {/* </ScrollAnimation> */}
 
-            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
-              <div className={styles.image}>
-                {/* Assuming image URL is part of the data */}
-                <Image
-                  src={item.imageUrl || ""}
-                  alt="Image"
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </ScrollAnimation>
+            {/* <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}> */}
+            <div className={styles.image}>
+              {/* Assuming image URL is part of the data */}
+              <Image
+                src={item.imageUrl || ""}
+                alt="Image"
+                width={40}
+                height={40}
+              />
+            </div>
+            {/* </ScrollAnimation> */}
           </React.Fragment>
         ))}
       </div>
