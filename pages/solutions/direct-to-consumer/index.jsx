@@ -14,6 +14,40 @@ import NavigationBar from "../../../components/navbar";
 import PartnersCarousel from "../../../components/PartnersCarousel";
 import SuccessStories from "../../../components/SuccessStories/SuccessStories";
 import Testimonials from "../../../components/Testimonials/Testimonials";
+import withScrollAnimation from "../../../components/Animate/animate";
+
+const HeroSectionSolutionWithScroll = withScrollAnimation(
+  HeroSectionSolution,
+  "animate__fadeInUp"
+);
+
+const CarouselWithScroll = withScrollAnimation(Carousel, "animate__fadeInUp");
+
+const ImageTextGridWithScroll = withScrollAnimation(
+  ImageTextGrid,
+  "animate__fadeInUp"
+);
+
+const SuccessStoriesWithScroll = withScrollAnimation(
+  SuccessStories,
+  "animate__fadeInUp"
+);
+
+const PartnersCarouselWithScroll = withScrollAnimation(
+  PartnersCarousel,
+  "animate__fadeIn"
+);
+
+const TestimonialsWithScroll = withScrollAnimation(
+  Testimonials,
+  "animate__fadeInUp"
+);
+
+const FAQWithScroll = withScrollAnimation(FAQ, "animate__fadeInUp");
+
+const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
+
+const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
 const page = () => {
   return (
@@ -25,17 +59,17 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionSolution />
-          <Carousel imagesarray={CarouselImages} />
-          <ImageTextGrid />
-          <SuccessStories />
-          <PartnersCarousel />
+          <HeroSectionSolutionWithScroll />
+          <CarouselWithScroll imagesarray={CarouselImages} />
+          <ImageTextGridWithScroll />
+          <SuccessStoriesWithScroll />
+          <PartnersCarouselWithScroll />
           {/* <ManyMore /> */}
           {/* <InventoryManagement /> */}
-          <Testimonials />
-          <FAQ />
-          <CTANew />
-          <Footer />
+          <TestimonialsWithScroll />
+          <FAQWithScroll />
+          <CTANewWithScroll />
+          <FooterWithScroll />
         </div>
       </App>
     </>

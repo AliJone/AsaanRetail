@@ -49,7 +49,7 @@ const page = () => {
           <NavigationBar />
           <HeroSectionAboutUs />
           <CarouselWithScroll imagesarray={CarouselImages} />
-          <MeetThePackWithScroll />
+          <MeetThePack />
           <OurJourneyWithScroll />
           <TextNAnimationWithScroll
             Title={"Let’s build together"}

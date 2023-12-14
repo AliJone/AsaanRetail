@@ -39,22 +39,22 @@ const CustomizePayment = () => {
       <div className={cn(limit.Limit)}>
         <div className={cn(style.spacer1)} />
         <div className={cn(style.textFrame)}>
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <Tag text="Customize" />
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <span className={cn(style.titleText)}>{Title}</span>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn={"animate__fadeInUp"}>
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <span className={cn(style.subTitleText)}>{subtTitle}</span>
           </ScrollAnimation>
         </div>
 
         <div className={cn(style.spacer1)} />
 
-        <ScrollAnimation animateIn={"animate__fadeInUp"}>
+        <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
           <div className={cn(style.tabsFrame)}>
             <Tabs tabNumber={tabNumber} handleClick={handleClick} />
           </div>

@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const FeatureCard = ({ title, description }) => {
   return (
-    <ScrollAnimation animateIn="animate__fadeInUp">
+    <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
       <div className={cn(style.featureCardContainer)}>
         <div className={cn(style.featureCardTitleContaier)}>
           <span className={cn(style.featureCardTitle)}>{title}</span>
