@@ -184,9 +184,32 @@
   box-shadow: none;
 }
 
+/* dropdown field start */
+
 :where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
-  border: 0.5px solid red;
+  border: 0.5px solid #009241;
   box-shadow: none;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):visited .ant-select-selector {
+  border: 0.5px solid #009241;
+  box-shadow: none;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: 0.5px solid #009241;
+  box-shadow: none;
+}
+
+/* dropdown field end */
+
+/* Adjust styles for the dropdown item when focused */
+:where(.css-dev-only-do-not-override-3mqfnx).ant-select-item:focus,
+:where(.css-dev-only-do-not-override-3mqfnx).ant-select-item:hover {
+  background-color: transparent;
+  /* Set background to transparent */
+  color: inherit;
+  /* Use the default text color */
 }
 
 /* :where(.css-dev-only-do-not-override-3mqfnx).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
