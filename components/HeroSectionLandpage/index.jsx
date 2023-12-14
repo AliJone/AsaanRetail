@@ -37,7 +37,7 @@ const HeroSectionLanding = () => {
       <div className={cn(style.heroSection)}>
         <div className={cn(limit.Limit)}>
           <div className={cn(style.container)}>
-            <ScrollAnimation animateIn="animate__fadeInLeft">
+            <ScrollAnimation animateOnce={true} animateIn="animate__fadeInLeft">
               <div className={cn(style.leftPane)}>
                 <div className={cn(style.textContainer)}>
                   <div className={cn(style.titleContainer)}>
@@ -102,7 +102,10 @@ const HeroSectionLanding = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeInRight">
+            <ScrollAnimation
+              animateOnce={true}
+              animateIn="animate__fadeInRight"
+            >
               <div className={cn(style.rightPane)}>
                 <div className={cn(style.ImageContainer)}>
                   <span />

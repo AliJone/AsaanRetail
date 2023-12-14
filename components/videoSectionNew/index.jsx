@@ -55,31 +55,31 @@ const VideoSectionNew = () => {
 
   return (
     <div className={style.VideoSectionDiv}>
-      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+      <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
         <Tag text="Discovery" />
       </ScrollAnimation>
 
       <div className={style.spacer1} />
 
-      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+      <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
         <span className={cn(style.VideoSectionDivTitle, style.desktopView)}>
           {<TitleWithGradientLine />}
         </span>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+      <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
         <span className={cn(style.VideoSectionDivTitle, style.mobileView)}>
           {TitleWithLineBreaks}
         </span>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+      <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
         <span className={cn(style.VideoSectionDivSubTitle, style.mobileView)}>
           {VideoSectionText.subTitle}
         </span>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn={"animate__fadeInUp"}>
+      <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
         <span className={cn(style.VideoSectionDivSubTitle, style.desktopView)}>
           {subTitleWithLineBreaks}
         </span>

@@ -61,7 +61,7 @@ const page = () => {
           <NavigationBar />
           <HeroSectionSolutionWithScroll />
           <CarouselWithScroll imagesarray={CarouselImages} />
-          <ImageTextGridWithScroll />
+          <ImageTextGrid />
           <SuccessStoriesWithScroll />
           <PartnersCarouselWithScroll />
           {/* <ManyMore /> */}

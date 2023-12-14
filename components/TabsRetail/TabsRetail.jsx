@@ -109,11 +109,17 @@ function TabsRetail() {
         <div className={cn(limit.Limit)}>
           <div className={styles.Container}>
             <div className={styles.Heading}>
-              <ScrollAnimation animateIn={"animate__fadeInUp"}>
+              <ScrollAnimation
+                animateOnce={true}
+                animateIn={"animate__fadeInUp"}
+              >
                 <Button className={styles.ButtonAntd}>Solutions</Button>
               </ScrollAnimation>
               {/* // */}
-              <ScrollAnimation animateIn={"animate__fadeInUp"}>
+              <ScrollAnimation
+                animateOnce={true}
+                animateIn={"animate__fadeInUp"}
+              >
                 <h2 className={styles.Title}>
                   From retail to{" "}
                   <span className={cn(styles.underLine)}>ecommerce , </span>{" "}
@@ -121,7 +127,10 @@ function TabsRetail() {
                 </h2>
               </ScrollAnimation>
 
-              <ScrollAnimation animateIn={"animate__fadeInUp"}>
+              <ScrollAnimation
+                animateOnce={true}
+                animateIn={"animate__fadeInUp"}
+              >
                 <h5 className={styles.SubTitle}>
                   Explore how Asaan Retail works for every industries
                 </h5>

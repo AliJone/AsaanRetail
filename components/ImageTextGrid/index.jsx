@@ -53,49 +53,48 @@ function ImageTextGrid() {
       <div className={styles.gridContainer}>
         {data.map((item, index) => (
           <React.Fragment key={index}>
-            {/* <ScrollAnimation animateIn={"animate__fadeInUp"}>
-            
-            </ScrollAnimation> */}
-
-            <div className={styles.textContainer}>
-              <div>
-                <span className={styles.underLine}>
-                  <div
-                    className={styles.titleText}
-                    dangerouslySetInnerHTML={{ __html: item.title }}
-                  />
-                </span>
-              </div>
-
-              <div className={styles.textDescriptionContainer}>
-                {item.leadingSubtitle}
+            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
+              <div className={styles.textContainer}>
                 <div>
-                  {item.listPointers.map((pointer, idx) => (
-                    <li key={idx}>{pointer}</li>
-                  ))}
+                  <span className={styles.underLine}>
+                    <div
+                      className={styles.titleText}
+                      dangerouslySetInnerHTML={{ __html: item.title }}
+                    />
+                  </span>
                 </div>
-                <div
-                  dangerouslySetInnerHTML={{ __html: item.trailingSubtitle }}
+
+                <div className={styles.textDescriptionContainer}>
+                  {item.leadingSubtitle}
+                  <div>
+                    {item.listPointers.map((pointer, idx) => (
+                      <li key={idx}>{pointer}</li>
+                    ))}
+                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: item.trailingSubtitle }}
+                  />
+                </div>
+
+                <div>
+                  <CustomFilledButton width={"11.8125rem"}>
+                    <span className={styles.buttonText}>Start Free Trial</span>
+                  </CustomFilledButton>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
+              <div className={styles.image}>
+                {/* Assuming image URL is part of the data */}
+                <Image
+                  src={item.imageUrl || ""}
+                  alt="Image"
+                  width={40}
+                  height={40}
                 />
               </div>
-
-              <div>
-                <CustomFilledButton width={"11.8125rem"}>
-                  <span className={styles.buttonText}>Start Free Trial</span>
-                </CustomFilledButton>
-              </div>
-            </div>
-            {/* <ScrollAnimation animateIn={"animate__fadeInUp"}></ScrollAnimation> */}
-
-            <div className={styles.image}>
-              {/* Assuming image URL is part of the data */}
-              <Image
-                src={item.imageUrl || ""}
-                alt="Image"
-                width={40}
-                height={40}
-              />
-            </div>
+            </ScrollAnimation>
           </React.Fragment>
         ))}
       </div>

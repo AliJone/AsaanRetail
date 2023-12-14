@@ -18,7 +18,7 @@ const FeaturesV2 = () => {
       <div className={cn(limit.Limit)}>
         <div className={cn(style.spacer1)} />
         {/* / */}
-        <ScrollAnimation animateIn="animate__fadeInUp">
+        <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
           <div className={cn(style.tagContainer)}>
             <Tag text="Product" />
           </div>
@@ -29,6 +29,7 @@ const FeaturesV2 = () => {
         <ScrollAnimation
           style={{ width: "100%" }}
           animateIn="animate__fadeInUp"
+          animateOnce={true}
         >
           <div className={cn(style.TitleContainer)}>
             <span className={cn(style.convertToRow)}>
@@ -45,6 +46,7 @@ const FeaturesV2 = () => {
         <ScrollAnimation
           style={{ width: "100%" }}
           animateIn="animate__fadeInUp"
+          animateOnce={true}
         >
           <div className={cn(style.subTitleContainer, style.subTitleText)}>
             <span>

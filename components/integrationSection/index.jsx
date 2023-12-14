@@ -29,12 +29,12 @@ const IntegrationSection = () => {
         <Row className={cn(limit.Limit)}>
           <Col span={24}>
             <div className={cn(style.upperContainer)}>
-              <ScrollAnimation animateIn="animate__fadeInUp">
+              <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
                 <div className={cn(style.tagDiv)}>
                   <Tag text="Integrations" alternative={true} />
                 </div>
               </ScrollAnimation>
-              <ScrollAnimation animateIn="animate__fadeInUp">
+              <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
                 <h1 className={cn(style.divClassText)}>
                   <span className={cn(style.titleText)}>
                     Daraz, Shopify & all your{" "}
@@ -46,7 +46,7 @@ const IntegrationSection = () => {
                   </span>
                 </h1>
               </ScrollAnimation>
-              <ScrollAnimation animateIn="animate__fadeInUp">
+              <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
                 <div className={cn(style.subTitleTextContainer)}>
                   <h5 className={cn(style.subTitleText)}>
                     With our extensive integration library, find Daraz, Shopify,
@@ -72,7 +72,7 @@ const IntegrationSection = () => {
           <div className={style.spacer} />
 
           <Col span={24}>
-            <ScrollAnimation animateIn="animate__fadeInUp">
+            <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
               <div className={style.imageContainer}>
                 <Image
                   className={cn(style.imageClass)}
