@@ -10,11 +10,38 @@ import cn from 'classnames';
 import styles from './styles.module.sass';
 
 const { Panel } = Collapse;
-function ArticleMenuSingle({ data }) {
+function ArticleMenuSingle({ data = { tableOfContents: [], content: [], titleData: {} } }) {
   
   // State to track the selected table of contents item
   const [selectedId, setSelectedId] = useState(null);
-  
+
+  // const [data,setData] = useState({tableOfContents: [],titleImage: Asset,titleData:{ 
+  // tag: '',
+  // title: '',
+  // author: '',
+  // date: '',},
+  // content: []});
+
+  // useEffect(() => {
+  //   async function fetchData(){
+  //     try{
+  //       const response = await ArticlePageService.getArticlePageData({id: 1});
+  //       console.log('article Response:', response);
+  //       console.log("abc" , parseHtmlToModel(response));
+  //       return response
+        
+  //     }
+  //     catch(error){
+  //       console.log(error);
+  //     }
+  //   }
+
+  //   const res = fetchData()
+  //   setData(parseHtmlToModel(res))
+
+  //   // fetchData().then((res)=>setData(parseHtmlToModel(res)));
+  // },[]);
+
   // Function to handle click on table of contents item
   const  handleSelect = async (id) => {
 
@@ -27,6 +54,85 @@ function ArticleMenuSingle({ data }) {
     element.scrollIntoView({ behavior: 'smooth' });
 
   };
+
+  // const parseHtmlToModel = (htmlInput) => {
+  //   let currentTOCId = 1;
+  //   let tempModel = data;
+  //   let lastOpenedTag = '';
+  //   let isTitleData = false;
+  
+  //   const parser = new Parser({
+  //     onopentag(name, attribs) {
+  //       lastOpenedTag = name;
+  //       if (name === "h1") {
+  //         const tocId = `toc${currentTOCId}`;
+  //         tempModel.tableOfContents.push({ id: tocId, title: '' });
+  //       }
+  //       else if (name === "img" && attribs.src.startsWith('data:image')) {
+  //           tempModel.content.push({
+  //             id: `toc${currentTOCId}`,
+  //             type: 'image',
+  //             src: attribs.src,
+  //           });
+  //           currentTOCId++;
+  //         }
+  //         else if (name === "strong") {
+  //           isTitleData = true;
+  //         }
+  //     },
+  //     ontext(text) {
+  //       if (isTitleData) {
+  //           // const [tag, title, author, date] = text.split(',').map(s => s.trim());
+  //           // tempModel.titleData = { tag, title, author, date };
+  //           const parts = text.split(',').map(part => {
+  //               const [key, value] = part.split(':').map(s => s.trim());
+  //               return value;
+  //             });
+  //             tempModel.titleData = {
+  //               tag: parts[0],
+  //               title: parts[1],
+  //               author: parts[2],
+  //               date: parts[3]
+  //             };
+  //           isTitleData = false;
+  //         } else if (lastOpenedTag === "h1") {
+  //         const tocId = `toc${currentTOCId}`;
+  //         tempModel.tableOfContents[tempModel.tableOfContents.length - 1].title = text;
+  //         tempModel.content.push({
+  //           id: tocId,
+  //           type: 'title',
+  //           text: text,
+  //         });
+  //         currentTOCId++;
+  //       } else if (lastOpenedTag === "h2") {
+  //         tempModel.content.push({
+  //           id: `toc${currentTOCId}`,
+  //           type: 'description',
+  //           text: text,
+  //         });
+  //         // currentTOCId++;
+  //       }
+  //        else {
+  //         tempModel.content.push({
+  //           id: `toc${currentTOCId}`,
+  //           type: 'description',
+  //           text: text,
+  //         });
+  //         // currentTOCId++;
+  //       }
+  //     },
+  //     onclosetag(tagname) {
+  //       if (tagname === "h1" || tagname === "h2") {
+  //         lastOpenedTag = '';
+  //       }
+  //     }
+  //   }, { decodeEntities: true });
+  
+  //   parser.write(htmlInput);
+  //   // parser.end();
+  
+  //   return tempModel;
+  // };
 
   return (
     <>
