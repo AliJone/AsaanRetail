@@ -5,7 +5,10 @@ const CustomFilledButton = (props) => {
   return (
     <Button
       onClick={props.handleClick}
-      style={{ width: props.width != undefined ? props.width : "auto" }}
+      style={{
+        width: props.width != undefined ? props.width : "auto",
+        height: props.height,
+      }}
       className={style.buttonClass}
       size={props.size}
       icon={props.icon}

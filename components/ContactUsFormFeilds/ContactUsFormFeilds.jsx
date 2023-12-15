@@ -165,8 +165,9 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       size="large"
                       htmlType="submit"
                       width={"100%"}
+                      height={"3.5rem"}
                     >
-                      Apply now
+                      Get Quote
                     </CustomFilledButton>
                   </Form.Item>
                 </Form>
@@ -326,8 +327,9 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       size="large"
                       htmlType="submit"
                       width={"100%"}
+                      height={"3.5rem"}
                     >
-                      Apply now
+                      Submit
                     </CustomFilledButton>
                   </Form.Item>
                 </Form>

@@ -64,7 +64,7 @@
   color: var(--primary-6, #009241) !important;
 }
 
- a:hover {
+a:hover {
   color: inherit !important
 }
 
@@ -166,6 +166,10 @@
     }
   }
 } */
+.ant-input:hover {
+  border-color: #009241 !important;
+  box-shadow: none !important;
+}
 
 .ant-input-group .ant-input {
   border: 1px solid #009241;
@@ -265,4 +269,3 @@
 .ant-switch.ant-switch-checked .ant-switch-handle {
   inset-inline-start: calc(100% - 1.75rem) !important;
 }
-
