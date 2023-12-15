@@ -68,9 +68,9 @@ const HeroSectionAboutUs = () => {
                     <div className={cn(style.buttonContainer)}>
                       <CustomFilledButton
                         children={
-                          <span className={cn(style.FilledButtonText)}>
+                          <p className={cn(style.FilledButtonText)}>
                             Start Free Trial
-                          </span>
+                          </p>
                         }
                         width={"100%"}
                         handleClick={handleSubmit}
@@ -78,7 +78,7 @@ const HeroSectionAboutUs = () => {
                     </div>
                     <div className={cn(style.greyTextContainer)}>
                       <span className={cn(style.greyText)}>
-                        Experience 14 Days of Free Trial, No Credit Card Needed
+                        Experience 14 Days of Free <p>Trial, No Credit Card Needed</p>
                       </span>
                     </div>
                   </div>

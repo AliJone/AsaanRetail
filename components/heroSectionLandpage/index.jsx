@@ -43,9 +43,10 @@ const HeroSectionLanding = () => {
                   <div className={cn(style.titleContainer)}>
                     <h1 className={cn(style.titleText)}>
                       Centralized{" "}
-                      <span className={style.underLine}>Retail</span> &{" "}
+                      <span className={style.underLine}>Retail</span> <p>&{" "}
                       <span className={style.underLine}>Ecommerce</span>{" "}
                       Management
+                      </p>
                     </h1>
                   </div>
                   <div>
@@ -94,7 +95,7 @@ const HeroSectionLanding = () => {
                     </div>
                     <div className={cn(style.greyTextContainer)}>
                       <span className={cn(style.greyText)}>
-                        Experience 14 Days of Free Trial, No Credit Card Needed
+                        Experience 14 Days of Free <p>Trial, No Credit Card Needed</p>
                       </span>
                     </div>
                   </div>

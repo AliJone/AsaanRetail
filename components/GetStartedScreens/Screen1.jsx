@@ -1,19 +1,27 @@
 import { Input, Space } from "antd";
 import { MailOutlined, UserOutlined } from "@ant-design/icons";
 
+import AppCreationInputField from "../inputs/AppCreationInputFields";
 import CustomFilledButton from "../buttons/filledButton";
 import Image from "next/image";
 import Logo from "./assests/Logo.svg";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
-import AppCreationInputField from "../inputs/AppCreationInputFields";
 
 const inputFieldStyle = {
   display: "flex",
   padding: "0.9rem 0.9rem",
   alignItems: "center",
   gap: "0.6rem",
+};
+
+const inputFieldStyle2 = {
+  // display: "flex",
+  padding: "0.9rem 0.9rem",
+  // alignItems: "center",
+  gap: "0.6rem",
+  width: "%",
 };
 
 const Screen1 = ({ AddValue, handleStepperScreen }) => {
@@ -85,12 +93,13 @@ const Screen1 = ({ AddValue, handleStepperScreen }) => {
                   </p>
                 </div>
                 <div className={cn(style.convertToRow)}>
-                  <Space.Compact>
+                  {/* <Space.Compact> */}
                     <Input
                       size="large"
                       className={cn(style.inputField)}
                       style={{ width: "14%" }}
                       defaultValue="+92"
+                      disabled
                     />
                     {/* <Input
                       size="large"
@@ -98,13 +107,20 @@ const Screen1 = ({ AddValue, handleStepperScreen }) => {
                       style={{ width: "90%" }}
                       placeholder="Phone Number"
                     /> */}
+                    {/* <Input
+                        addonBefore="+92"
+                        type="phonenumber"
+                        size="large"
+                        placeholder="  3229775013"
+                        className={inputFieldStyle}
+                      /> */}
 
                     <AppCreationInputField
                       size="large"
                       placeHolder="Phone Number"
                       customStyle={inputFieldStyle}
                     ></AppCreationInputField>
-                  </Space.Compact>
+                  {/* </Space.Compact> */}
                 </div>
               </div>
 
