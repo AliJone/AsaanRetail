@@ -35,7 +35,7 @@ $medium : breakpoints.$medium
     ::before
         content: ""
         position: absolute
-        width: 20.5rem
+        width: 15.5rem
         height: 0.5rem
         flex-shrink: 0
         border-radius: 1.25rem
@@ -67,7 +67,7 @@ $medium : breakpoints.$medium
     align-items: center
 
 .titleText
-    @include fonts.fontDesktopH1Bold
+    @include fonts.fontDesktopH2Bold
     color: colors.$fontColor_secondary
     text-align: center
 
@@ -76,11 +76,12 @@ $medium : breakpoints.$medium
     justify-content: center
     align-items: center
     text-align: center
-    width: 57%
+    width: 73%
     margin: auto
 
 .subTitleText
-    margin-top: .9rem
+    line-height: 150% !important
+    font-weight: 300 !important
     @include fonts.fontDesktopH5Regular
     color: colors.$fontColor_secondary
     text-align: center

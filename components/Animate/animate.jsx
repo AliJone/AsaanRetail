@@ -5,7 +5,7 @@ const withScrollAnimation = (WrappedComponent, className) => {
   return function (props) {
     return (
       <ScrollAnimation animateOnce={true} animateIn={className}>
-        <WrappedComponent {...props} />
+        <WrappedComponent {...props} /> 
       </ScrollAnimation>
     );
   };

@@ -6,6 +6,11 @@ import Link from "next/link";
 import React from "react";
 import Shopify from "./assets/images/Shopify.png";
 import Tables from "./assets/images/Tables.png";
+import TablesEcommerce from "./assets/images/TablesEcommerce.png";
+import TablesRetail from "./assets/images/TablesRetail.png";
+import TablesD2C from "./assets/images/TablesD2C.png";
+import TablesAgnecies from "./assets/images/TablesAgnecies.png";
+import Tables3PL from "./assets/images/Tables3PL.png";
 import TickIcon from "./assets/images/TickIcon.png";
 import Woo from "./assets/images/Woo.png";
 import cn from "classnames";
@@ -39,8 +44,51 @@ function TabsRetail() {
           { svgPath: Woo, name: "" },
         ],
         learnMoreLink: "#",
-        image: Tables,
+        image: TablesEcommerce,
         offeringHead: "Integrates",
+      },
+    },
+    {
+      tabTitle: "For Retail",
+      content: {
+        title: "Retail management made simple!",
+        subTitle:
+          "Robust retail management software helps you in inventory management, order management, and accounting management, organizing your warehouse, and generating insightful reports. Plus, through our user-friendly POS system you can enhance customer experience in your retail stores.",
+        offerings: [
+          { svgPath: TickIcon, name: "POS" },
+          { svgPath: TickIcon, name: "Barcodes" },
+        ],
+        learnMoreLink: "#",
+        image: TablesRetail,
+        offeringHead: "Offering",
+      },
+    },
+    
+    {
+      tabTitle: "For Agencies",
+      content: {
+        title: "Multi-Channel management at breeze",
+        subTitle:
+          "With Asaan Retail, manage 100s of client stores in one place, make operations smoother, and improve outcomes for your clients. Say goodbye to the complexities of handling multiple stores & couriers. You can easily oversee and provide access to all valuable insights to clients and grow clientele.",
+        offerings: [
+          { svgPath: TickIcon, name: "Automation" },
+          { svgPath: TickIcon, name: "Client dashboard" },
+        ],
+        learnMoreLink: "#",
+        image: TablesAgnecies,
+        offeringHead: "Offering",
+      },
+    },
+    {
+      tabTitle: "For 3PL",
+      content: {
+        title: "Gateway to 3PL efficiency",
+        subTitle:
+          "Asaan Retail is designed to optimize logistics, enhance inventory control, and provide real-time insights to overcome logistical inefficiencies and operational hiccups. With Asaan Retail, you can streamline your 3PL services, delight your clients with precision and transparency, and lead the industry in providing top-notch logistics solutions.",
+        offerings: [], // Empty array if no integrations for this tab
+        learnMoreLink: "#",
+        image: Tables3PL,
+        offeringHead: "",
       },
     },
     {
@@ -54,53 +102,12 @@ function TabsRetail() {
           { svgPath: TickIcon, name: "Local couriers" },
         ],
         learnMoreLink: "#",
-        image: Tables,
+        image: TablesD2C,
         offeringHead: "Integrates",
       },
     },
-    {
-      tabTitle: "For 3PL",
-      content: {
-        title: "Gateway to 3PL efficiency",
-        subTitle:
-          "Asaan Retail is designed to optimize logistics, enhance inventory control, and provide real-time insights to overcome logistical inefficiencies and operational hiccups. With Asaan Retail, you can streamline your 3PL services, delight your clients with precision and transparency, and lead the industry in providing top-notch logistics solutions.",
-        offerings: [], // Empty array if no integrations for this tab
-        learnMoreLink: "#",
-        image: Tables,
-        offeringHead: "",
-      },
-    },
-    {
-      tabTitle: "For Agencies",
-      content: {
-        title: "Multi-Channel management at breeze",
-        subTitle:
-          "With Asaan Retail, manage 100s of client stores in one place, make operations smoother, and improve outcomes for your clients. Say goodbye to the complexities of handling multiple stores & couriers. You can easily oversee and provide access to all valuable insights to clients and grow clientele.",
-        offerings: [
-          { svgPath: TickIcon, name: "Automation" },
-          { svgPath: TickIcon, name: "Client dashboard" },
-        ],
-        learnMoreLink: "#",
-        image: Tables,
-        offeringHead: "Offering",
-      },
-    },
-    {
-      tabTitle: "For Retail",
-      content: {
-        title: "Retail management made simple!",
-        subTitle:
-          "Robust retail management software helps you in inventory management, order management, and accounting management, organizing your warehouse, and generating insightful reports. Plus, through our user-friendly POS system you can enhance customer experience in your retail stores.",
-        offerings: [
-          { svgPath: TickIcon, name: "Shopify" },
-          { svgPath: TickIcon, name: "Veeqo" },
-          { svgPath: TickIcon, name: "Ginko" },
-        ],
-        learnMoreLink: "#",
-        image: Tables,
-        offeringHead: "Offering",
-      },
-    },
+    
+
   ];
 
   return (
@@ -146,10 +153,13 @@ function TabsRetail() {
                   <Tabs.TabPane tab={tab.tabTitle} key={index + 1}>
                     <div className={styles.TabPane}>
                       <div className={styles.LeftPane}>
-                        <h2 className={styles.Title}>{tab.content.title}</h2>
-                        <div className={styles.SubTitle}>
-                          {tab.content.subTitle}
+                        <div className={styles.LeftHead}>
+                          <h2 className={styles.Title}>{tab.content.title}</h2>
+                          <div className={styles.SubTitle}>
+                            {tab.content.subTitle}
+                          </div>
                         </div>
+                          {tab.content.offeringHead == ""? <></>:
                         <div className={styles.Offering}>
                           <div className={styles.OfferingHeading}>
                             {tab.content.offeringHead}
@@ -157,22 +167,23 @@ function TabsRetail() {
                           <div className={styles.OfferingData}>
                             {tab.content.offerings.map((offering) => (
                               <Offering
-                                svgPath={offering.svgPath}
-                                name={offering.name}
-                                key={offering.name}
+                              svgPath={offering.svgPath}
+                              name={offering.name}
+                              key={offering.name}
                               />
-                            ))}
+                              ))}
                           </div>
                         </div>
-                        <Button
+                            }
+                        {/* <Button
                           type="text"
-                          onClick={() => {}}
-                          style={{ padding: "0px" }}
-                        >
+                          onClick={() => { }}
+                          style={{ padding: "0px", fontSize: "1.3125rem !important" }}
+                        > */}
                           <span className={cn(styles.featureCardButton)}>
                             Learn More &gt;
                           </span>
-                        </Button>
+                        {/* </Button> */}
                       </div>
                       <div className={styles.RightPane}>
                         <Image src={tab.content.image} />
@@ -206,7 +217,7 @@ function TabsRetail() {
                         </div>
                         <Button
                           type="text"
-                          onClick={() => {}}
+                          onClick={() => { }}
                           style={{ padding: "0px" }}
                         >
                           <span className={cn(styles.featureCardButton)}>

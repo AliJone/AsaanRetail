@@ -49,9 +49,9 @@ const HeroSectionLanding = () => {
                       </p>
                     </h1>
                   </div>
-                  <div>
+                  {/* <div>
                     <Flags />
-                  </div>
+                  </div> */}
                   <div className={cn(style.subTitleContainer)}>
                     <h4 className={cn(style.subTitleText)}>
                       One window{" "}
@@ -66,7 +66,9 @@ const HeroSectionLanding = () => {
                       <span className={cn(style.changeColorSubTitle)}>
                         <b>Shipments</b>
                       </span>
-                      , and{" "}
+                      ,{" "}
+                      <br />
+                       and{" "}
                       <span className={cn(style.changeColorSubTitle)}>
                         <b>Accounting</b>
                       </span>{" "}

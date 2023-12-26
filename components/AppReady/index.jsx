@@ -28,8 +28,6 @@ function AppReady() {
           Your journey to optimized operations starts now
         </p>
 
-        {/* <Button className={styles.LoginButton}>Login to your App</Button> */}
-
         <div className={styles.buttonContainer}>
           <CustomFilledButton width={"inherit"}>
             <span className={styles.buttonText}>Login to your App</span>

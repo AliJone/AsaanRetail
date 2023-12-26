@@ -99,7 +99,7 @@ $small: breakpoints.$small
     // background-color: #b34545
     z-index: 0
     ::before
-        content: ""
+        // content: ""
         position: absolute
         
         width: 19.75rem
@@ -115,7 +115,7 @@ $small: breakpoints.$small
         
 
     ::after
-        content: ""
+        // content: ""
         position: absolute
         
         width: 19.75rem
@@ -135,6 +135,7 @@ $small: breakpoints.$small
 
 .subTitleText
     @include fonts.fontDesktopH5Regular
+    font-weight: 300 !important
     color: colors.$fontColor_primary
     text-align: center
 
@@ -169,6 +170,7 @@ $small: breakpoints.$small
     color: colors.$fontColor_primary
 
 .featureCardSubTitle
+    line-height: 150% !important
     @include fonts.fontDesktopH5Regular
     color: colors.$fontColor_primary
 
@@ -209,7 +211,7 @@ $small: breakpoints.$small
   transition: margin-left 0.3s ease 
 
 .featureCardContainer
-    width: 17.93rem
+    width: 18.8125rem
     display: flex
     padding: 2.5rem 3rem
     flex-direction: column
@@ -218,7 +220,7 @@ $small: breakpoints.$small
     border-radius: 0.625rem
     background: rgba(255, 255, 255, 0.80)
     backdrop-filter: blur(1.125rem)
-    border: .25rem solid transparent
+    // border: .25rem solid transparent
 
     &:hover
         background: linear-gradient(white, white) padding-box,colors.$linearGradientText border-box !important

@@ -40,7 +40,7 @@ const IntegrationSection = () => {
                     Daraz, Shopify & all your{" "}
                     <span className={cn(style.underLine)}>
                       <span />
-                      ecommerce{" "}
+                      ecommerce{" "} <br />
                     </span>{" "}
                     integrations in one platform
                   </span>
@@ -55,7 +55,12 @@ const IntegrationSection = () => {
                   </h5>
                 </div>
 
-                <div className={cn(style.iconDiv)}>
+                
+              </ScrollAnimation>
+
+              <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
+
+              <div className={cn(style.iconDiv)}>
                   <Button
                     type="text"
                     onClick={() => {}}

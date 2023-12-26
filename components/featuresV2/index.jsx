@@ -73,27 +73,27 @@ const FeaturesV2 = () => {
           <FeatureCard
             icon={Inventory}
             title="Inventory Management"
-            description="Manage your inventory, track your stock, and prevent losses with our inventory management system."
+            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
           />
           <FeatureCard
             icon={Order}
             title="Inventory Management"
-            description="Manage your inventory, track your stock, and prevent losses with our inventory management system."
+            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
           />
           <FeatureCard
             icon={Inventory}
             title="Inventory Management"
-            description="Manage your inventory, track your stock, and prevent losses with our inventory management system."
+            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
           />
           <FeatureCard
             icon={Reporting}
             title="Inventory Management"
-            description="Manage your inventory, track your stock, and prevent losses with our inventory management system."
+            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
           />
           <FeatureCard
             icon={warehouse}
             title="Inventory Management"
-            description="Manage your inventory, track your stock, and prevent losses with our inventory management system."
+            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
           />
         </div>
         <div className={cn(style.spacer4)} />
