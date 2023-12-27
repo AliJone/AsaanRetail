@@ -11,8 +11,11 @@ import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import ScrollAnimation from "react-animate-on-scroll";
 import warehouse from "./assests/warehouse.svg";
+import { useRouter } from "next/router";
 
 const FeaturesV2 = () => {
+  const router = useRouter();
+
   return (
     <div className={cn(style.FeaturesV2Section)}>
       <div className={cn(limit.Limit)}>
@@ -69,31 +72,38 @@ const FeaturesV2 = () => {
             icon={Accounting}
             title="Inventory Management"
             description="With Asaan Retail, multichannel inventory management is no more a hassle. "
-          />
-          <FeatureCard
-            icon={Inventory}
-            title="Inventory Management"
-            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
+            handleClick={() => router.push("products/inventory-management")}
           />
           <FeatureCard
             icon={Order}
-            title="Inventory Management"
-            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
-          />
-          <FeatureCard
-            icon={Inventory}
-            title="Inventory Management"
-            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
-          />
-          <FeatureCard
-            icon={Reporting}
-            title="Inventory Management"
-            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
+            title="Order Management"
+            description="From creation to fulfilment, all your multi channel order management in one platform."
+            handleClick={() => router.push("products/order-management")}
           />
           <FeatureCard
             icon={warehouse}
-            title="Inventory Management"
-            description="With Asaan Retail, multichannel inventory management is no more a hassle. "
+            title="Warehouse Management"
+            description="Have a check on your inventory across multiple locations for efficiency and cost savings. "
+            handleClick={() => router.push("products/shipping-management")}
+          />
+
+          <FeatureCard
+            icon={Inventory}
+            title="Accounting Management"
+            description="Asaan Retail helps you to manage finances for small & large scale businesses."
+            handleClick={() => router.push("products/accounting-management")}
+          />
+          <FeatureCard
+            icon={Reporting}
+            title="Reporting & Analytics"
+            description="Gain valuable retail & ecommerce store analytics, and make data-driven decisions."
+            handleClick={() => router.push("products/reporting")}
+          />
+          <FeatureCard
+            icon={Order}
+            title="Point of Sales (POS)"
+            description="Asaan Retail is a complete Point of Sales system that also compliances taxes efficiently."
+            handleClick={() => router.push("products/fbr-integrated-pos")}
           />
         </div>
         <div className={cn(style.spacer4)} />

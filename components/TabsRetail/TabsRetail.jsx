@@ -17,6 +17,7 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useRouter } from "next/router";
 
 function Offering({ svgPath, name }) {
   return (
@@ -31,6 +32,8 @@ function Offering({ svgPath, name }) {
 }
 
 function TabsRetail() {
+  const router = useRouter();
+
   const tabsData = [
     {
       tabTitle: "For Ecommerce",
@@ -43,7 +46,7 @@ function TabsRetail() {
           { svgPath: Daraz, name: "" },
           { svgPath: Woo, name: "" },
         ],
-        learnMoreLink: "#",
+        learnMoreLink: "/solutions/ecommerce",
         image: TablesEcommerce,
         offeringHead: "Integrates",
       },
@@ -58,12 +61,12 @@ function TabsRetail() {
           { svgPath: TickIcon, name: "POS" },
           { svgPath: TickIcon, name: "Barcodes" },
         ],
-        learnMoreLink: "#",
+        learnMoreLink: "/solutions/retail",
         image: TablesRetail,
         offeringHead: "Offering",
       },
     },
-    
+
     {
       tabTitle: "For Agencies",
       content: {
@@ -74,7 +77,7 @@ function TabsRetail() {
           { svgPath: TickIcon, name: "Automation" },
           { svgPath: TickIcon, name: "Client dashboard" },
         ],
-        learnMoreLink: "#",
+        learnMoreLink: "/solutions/agencies",
         image: TablesAgnecies,
         offeringHead: "Offering",
       },
@@ -86,7 +89,7 @@ function TabsRetail() {
         subTitle:
           "Asaan Retail is designed to optimize logistics, enhance inventory control, and provide real-time insights to overcome logistical inefficiencies and operational hiccups. With Asaan Retail, you can streamline your 3PL services, delight your clients with precision and transparency, and lead the industry in providing top-notch logistics solutions.",
         offerings: [], // Empty array if no integrations for this tab
-        learnMoreLink: "#",
+        learnMoreLink: "/solutions/third-party-logistics",
         image: Tables3PL,
         offeringHead: "",
       },
@@ -101,13 +104,11 @@ function TabsRetail() {
           { svgPath: TickIcon, name: "Sales channels" },
           { svgPath: TickIcon, name: "Local couriers" },
         ],
-        learnMoreLink: "#",
+        learnMoreLink: "/solutions/direct-to-consumer",
         image: TablesD2C,
         offeringHead: "Integrates",
       },
     },
-    
-
   ];
 
   return (
@@ -159,31 +160,31 @@ function TabsRetail() {
                             {tab.content.subTitle}
                           </div>
                         </div>
-                          {tab.content.offeringHead == ""? <></>:
-                        <div className={styles.Offering}>
-                          <div className={styles.OfferingHeading}>
-                            {tab.content.offeringHead}
-                          </div>
-                          <div className={styles.OfferingData}>
-                            {tab.content.offerings.map((offering) => (
-                              <Offering
-                              svgPath={offering.svgPath}
-                              name={offering.name}
-                              key={offering.name}
-                              />
+                        {tab.content.offeringHead == "" ? (
+                          <></>
+                        ) : (
+                          <div className={styles.Offering}>
+                            <div className={styles.OfferingHeading}>
+                              {tab.content.offeringHead}
+                            </div>
+                            <div className={styles.OfferingData}>
+                              {tab.content.offerings.map((offering) => (
+                                <Offering
+                                  svgPath={offering.svgPath}
+                                  name={offering.name}
+                                  key={offering.name}
+                                />
                               ))}
+                            </div>
                           </div>
-                        </div>
-                            }
-                        {/* <Button
-                          type="text"
-                          onClick={() => { }}
-                          style={{ padding: "0px", fontSize: "1.3125rem !important" }}
-                        > */}
-                          <span className={cn(styles.featureCardButton)}>
-                            Learn More &gt;
-                          </span>
-                        {/* </Button> */}
+                        )}
+                        <span
+                          className={cn(styles.featureCardButton)}
+                          onClick={() => router.push(tab.content.learnMoreLink)}
+                        >
+                          <span className={styles.Link}>Learn More</span>{" "}
+                          <span className={styles.arrow}> &gt; </span>
+                        </span>
                       </div>
                       <div className={styles.RightPane}>
                         <Image src={tab.content.image} />
@@ -217,7 +218,7 @@ function TabsRetail() {
                         </div>
                         <Button
                           type="text"
-                          onClick={() => { }}
+                          onClick={() => {}}
                           style={{ padding: "0px" }}
                         >
                           <span className={cn(styles.featureCardButton)}>

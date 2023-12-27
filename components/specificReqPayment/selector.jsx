@@ -93,7 +93,7 @@ const Selector = ({ handletype, type }) => {
             </div>
             <CustomFilledButton
               handleClick={() => {}}
-              width={"inherit"}
+              width={"100%"}
               children={"Get Started"}
             />
           </div>
@@ -135,7 +135,7 @@ const Selector = ({ handletype, type }) => {
             </div>
             <CustomFilledButton
               handleClick={() => {}}
-              width={"inherit"}
+              width={"100%"}
               children={"Get Started"}
             />
           </div>

@@ -12,8 +12,15 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./style.module.sass";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useRouter } from "next/router";
 
 const IntegrationSection = () => {
+  const router = useRouter();
+
+  const handleLearnMoreClick = () => {
+    router.push("/integrations");
+  };
+
   const subTitleWithLineBreaks = IntegrationText.subTitle
     .split("\n")
     .map((line, index) => (
@@ -40,7 +47,7 @@ const IntegrationSection = () => {
                     Daraz, Shopify & all your{" "}
                     <span className={cn(style.underLine)}>
                       <span />
-                      ecommerce{" "} <br />
+                      ecommerce <br />
                     </span>{" "}
                     integrations in one platform
                   </span>
@@ -54,17 +61,21 @@ const IntegrationSection = () => {
                     more
                   </h5>
                 </div>
-                
               </ScrollAnimation>
               <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
-              <div className={cn(style.iconDiv)}>
+                <div className={cn(style.iconDiv)}>
                   <Button
                     type="text"
-                    onClick={() => {}}
-                    style={{ padding: "0px" }}
+                    onClick={handleLearnMoreClick}
+                    style={{
+                      padding: "0px",
+                      background: "transparent",
+                      border: "none",
+                    }}
+                    className={cn(style.buttonTextClass)}
                   >
                     <span className={cn(style.buttonTextClass)}>
-                      <ArrowRightOutlined /> Learn More
+                      Learn More <ArrowRightOutlined />
                     </span>
                   </Button>
                 </div>

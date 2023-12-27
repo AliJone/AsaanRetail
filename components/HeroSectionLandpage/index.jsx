@@ -11,9 +11,12 @@ import cn from "classnames";
 import landingImage from "./assests/landpagePic.png";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
+import { useRouter } from "next/router";
 
 const HeroSectionLanding = () => {
   const [email, setEmail] = useState("");
+
+  const router = useRouter();
 
   const handleChange = (event) => {
     setEmail(event.target.value);
@@ -26,6 +29,8 @@ const HeroSectionLanding = () => {
       const response = await LandingPageService.setLandingPageData({ email });
       console.log("landingPage Response:", response);
       // Handle success (e.g., show a success message or redirect)
+
+      router.push("/start-free-trial");
     } catch (error) {
       console.error("Error:", error);
       // Handle error (e.g., show an error message)
@@ -43,9 +48,10 @@ const HeroSectionLanding = () => {
                   <div className={cn(style.titleContainer)}>
                     <h1 className={cn(style.titleText)}>
                       Centralized{" "}
-                      <span className={style.underLine}>Retail</span> <p>&{" "}
-                      <span className={style.underLine}>Ecommerce</span>{" "}
-                      Management
+                      <span className={style.underLine}>Retail</span>{" "}
+                      <p>
+                        & <span className={style.underLine}>Ecommerce</span>{" "}
+                        Management
                       </p>
                     </h1>
                   </div>
@@ -66,9 +72,8 @@ const HeroSectionLanding = () => {
                       <span className={cn(style.changeColorSubTitle)}>
                         <b>Shipments</b>
                       </span>
-                      ,{" "}
-                      <br />
-                       and{" "}
+                      , <br />
+                      and{" "}
                       <span className={cn(style.changeColorSubTitle)}>
                         <b>Accounting</b>
                       </span>{" "}
@@ -97,7 +102,8 @@ const HeroSectionLanding = () => {
                     </div>
                     <div className={cn(style.greyTextContainer)}>
                       <span className={cn(style.greyText)}>
-                        Experience 14 Days of Free <p>Trial, No Credit Card Needed</p>
+                        Experience 14 Days of Free{" "}
+                        <p>Trial, No Credit Card Needed</p>
                       </span>
                     </div>
                   </div>
