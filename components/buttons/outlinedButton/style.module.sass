@@ -19,7 +19,7 @@
   // Initial state of the arrow
   display: inline-block
   margin-left: 0
-  transition: margin-left 0.3s ease 
+  transition: margin-left 0.3s ease-in 
 
 
 .buttonClass
@@ -30,6 +30,7 @@
     // justify-content: center
     // align-items: center
     // gap: .5357rem
+    width: inherit
 
     height: 2.946rem
     padding: 0.4rem 0.9375rem
@@ -41,7 +42,7 @@
     border: none !important    
 
     // style
-    border-radius: .25rem
+    border-radius: 1.875rem
     border: 2px solid var(--gradient-surface, #009241) !important
     border-color: var(--gradient-surface, #009241) !important
 
@@ -49,6 +50,7 @@
     /* Website Shadow - Green */
     box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
     backdrop-filter: blur(1.0355486869812012px)
+    transition: all 0.3s ease-in-out
 
 
     
@@ -58,8 +60,16 @@
         // border-color: var(--gradient-surface, #009241) !important
         // color: colors.$fontColor_secondary !important
         // box-shadow: 0rem .1072rem 0rem 0rem rgba(0, 0, 0, 0.04)
+        
+        // padding: .525rem 1.0625rem
         cursor: pointer
-        opacity: .7
+        height: 2.765rem
+
+        width: calc(100% - 0.2rem) !important
+
+        // padding: 0rem !important
+
+        
         .arrow 
             margin-left: 10px 
 

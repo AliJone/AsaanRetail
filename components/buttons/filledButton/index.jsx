@@ -3,10 +3,11 @@ import style from "./style.module.sass";
 
 const CustomFilledButton = (props) => {
   return (
+    <div style = {{width:  props.width != undefined ? props.width : "auto"}}>
     <Button
       onClick={props.handleClick}
       style={{
-        width: props.width != undefined ? props.width : "auto",
+        width: "inherit",
         height: props.height,
       }}
       className={style.buttonClass}
@@ -15,6 +16,7 @@ const CustomFilledButton = (props) => {
     >
       {props.children}
     </Button>
+    </div>
   );
 };
 

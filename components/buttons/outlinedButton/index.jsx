@@ -5,10 +5,11 @@ import style from "./style.module.sass";
 
 const CustomOutlinedButton = (props) => {
   return (
+    <div style={{width: props.width !== undefined ? props.width : "auto"}}>
     <Button
       onClick={props.handleClick}
       style={{
-        width: props.width !== undefined ? props.width : "auto",
+        width: "inherit",
         backgroundColor: "#FCF8EF",
       }}
       className={style.buttonClass}
@@ -17,11 +18,12 @@ const CustomOutlinedButton = (props) => {
     >
       <div>
       <span className={style.buttonText}>{props.children}</span>
-      {' '}
-      <span className={cn(style.arrow, style.buttonText)}> <ArrowRightOutlined /> </span>
+      {/* {' '}
+      <span className={cn(style.arrow, style.buttonText)}> <ArrowRightOutlined /> </span> */}
       </div>
       {/* <span className={style.buttonText}>{props.children}</span> */}
     </Button>
+    </div>
   );
 };
 
