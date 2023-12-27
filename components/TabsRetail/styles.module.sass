@@ -4,6 +4,8 @@
 $issue: 1251px
 $small: 680px
 
+
+
 .BG
     padding: 3rem 0
 .TabsMain
@@ -121,6 +123,16 @@ $small: 680px
     @include fonts.fontDesktopH5Regular
     color: rgba(0, 0, 0, 0.45)
 
+    &:hover
+        cursor: pointer
+        .arrow 
+            margin-left: 10px 
+        .Link
+            background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
 .underLine::after
     content: ""
     position: absolute
@@ -130,6 +142,11 @@ $small: 680px
     border-radius: 1.25rem
     background: colors.$linearGradientLine
     top: 90%
+
+.arrow
+    display: inline-block
+    margin-left: 0
+    transition: margin-left 0.3s ease 
 
 @media (max-width: $issue)
     .TabPane

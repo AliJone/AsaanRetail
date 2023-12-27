@@ -50,9 +50,9 @@ function TextNAnimation({ Title, SubTitle, Animation = false, ButtonText }) {
                 </CustomFilledButton>
               </div>
             </div>
-            {Animation && (
+            {/* {Animation && (
               <div className={styles.Right}>Animation PlaceHolder</div>
-            )}
+            )} */}
           </div>
           <div className={styles.BGAfter}></div>
         </div>

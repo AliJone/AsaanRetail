@@ -49,6 +49,9 @@ $medium : breakpoints.$medium
     justify-content: center
     align-items: center
 
+    &:hover 
+        background-color: none
+
 .buttonTextClass
     @include fonts.fontDesktopH5Regular
     color: colors.$fontColor_secondary
@@ -102,9 +105,14 @@ $medium : breakpoints.$medium
     padding-top:3.75rem
     width:1%
 
+.learnMoreButton 
+  padding: 0px
+  background-color: red
+  border: none
 
-
-
+  &:hover 
+    background-color: none
+  
 @media (max-width: 1187px)
     .underLine
         ::before
