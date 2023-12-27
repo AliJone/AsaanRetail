@@ -4,7 +4,7 @@ import Image from "next/image";
 import CustomFilledButton from "../buttons/filledButton";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const data = [
+const datas = [
   {
     title: "Inventory Audit <br /> Feature",
     leadingSubtitle: "Accuracy is Key with Asaan Retail:",
@@ -15,7 +15,7 @@ const data = [
     ],
     trailingSubtitle:
       "The era of spreadsheets is behind you.<br />Choose Asaan Retail for accurate inventory.",
-    imageUrl: "/path/to/your/image1.jpg", // Replace with actual image path
+    imageUrl: "./assets/inventory-management/img1.png", // Replace with actual image path
   },
   {
     title: "Stock <br /> Transfers",
@@ -27,8 +27,6 @@ const data = [
       "Streamline inter-location stock movements.",
       "Improve order fulfillment times.",
     ],
-    trailingSubtitle:
-      "Effortlessly manage your stock transfers with our dedicated solutions.",
     imageUrl: "/path/to/your/image2.jpg", // Replace with actual image path
   },
   {
@@ -46,74 +44,78 @@ const data = [
   },
 ];
 
-function ImageTextGrid() {
+function ImageTextGrid({ data = datas }) {
   // Accept data as a prop
   return (
-    <div className={styles.imageTextSection}>
-      <div className={styles.gridContainer}>
-        {data.map((item, index) => (
-          <React.Fragment key={index}>
-            {/* <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}> */}
-            <div className={styles.textContainer}>
-              <div>
-                <span className={styles.underLine}>
-                  <ScrollAnimation
-                    animateOnce={true}
-                    animateIn={"animate__fadeInUp"}
-                  >
-                    <div
-                      className={styles.titleText}
-                      dangerouslySetInnerHTML={{ __html: item.title }}
-                    />
-                  </ScrollAnimation>
-                </span>
-              </div>
-
-              <ScrollAnimation
-                animateOnce={true}
-                animateIn={"animate__fadeInUp"}
-              >
-                <div className={styles.textDescriptionContainer}>
-                  {item.leadingSubtitle}
-                  <div>
-                    {item.listPointers.map((pointer, idx) => (
-                      <li key={idx}>{pointer}</li>
-                    ))}
-                  </div>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: item.trailingSubtitle }}
-                  />
-                </div>
-              </ScrollAnimation>
-
-              <ScrollAnimation
-                animateOnce={true}
-                animateIn={"animate__fadeInUp"}
-              >
+    <ScrollAnimation
+      animateOnce={true}
+      animateIn={"animate__fadeInUp"}
+    >
+      <div className={styles.imageTextSection}>
+        <div className={styles.gridContainer}>
+          {data.map((item, index) => (
+            <React.Fragment key={index}>
+              {/* <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}> */}
+              <div className={styles.textContainer}>
                 <div>
-                  <CustomFilledButton width={"11.8125rem"}>
-                    <span className={styles.buttonText}>Start Free Trial</span>
-                  </CustomFilledButton>
+                  <span className={styles.underLine}>
+                    <ScrollAnimation
+                      animateOnce={true}
+                      animateIn={"animate__fadeInUp"}
+                    >
+                      <div
+                        className={styles.titleText}
+                        dangerouslySetInnerHTML={{ __html: item.title }}
+                      />
+                    </ScrollAnimation>
+                  </span>
                 </div>
-              </ScrollAnimation>
-            </div>
-            {/* </ScrollAnimation> */}
 
-            {/* <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}> */}
-            <div className={styles.image}>
-              {/* Assuming image URL is part of the data */}
-              <Image
-                src={item.imageUrl || ""}
-                alt="Image"
-                width={40}
-                height={40}
-              />
-            </div>
-            {/* </ScrollAnimation> */}
-          </React.Fragment>
-        ))}
+                <ScrollAnimation
+                  animateOnce={true}
+                  animateIn={"animate__fadeInUp"}
+                >
+                  <div className={styles.textDescriptionContainer}>
+                    {item.leadingSubtitle}
+                    <div>
+                      {item.listPointers.map((pointer, idx) => (
+                        <li key={idx}>{pointer}</li>
+                      ))}
+                    </div>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: item.trailingSubtitle }}
+                    />
+                  </div>
+                </ScrollAnimation>
+
+                <ScrollAnimation
+                  animateOnce={true}
+                  animateIn={"animate__fadeInUp"}
+                >
+                  <div>
+                    <CustomFilledButton width={"11.8125rem"}>
+                      <span className={styles.buttonText}>Start Free Trial</span>
+                    </CustomFilledButton>
+                  </div>
+                </ScrollAnimation>
+              </div>
+              {/* </ScrollAnimation> */}
+
+              {/* <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}> */}
+              <div className={styles.image}>
+                {/* Assuming image URL is part of the data */}
+                <Image
+                  src={item.imageUrl || ""}
+                  alt="Image"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              {/* </ScrollAnimation> */}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
-    </div>
+    </ScrollAnimation>
   );
 }
 
