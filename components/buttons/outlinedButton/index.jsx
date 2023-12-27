@@ -1,4 +1,6 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
 import { Button } from "antd";
+import cn from "classnames";
 import style from "./style.module.sass";
 
 const CustomOutlinedButton = (props) => {
@@ -13,7 +15,12 @@ const CustomOutlinedButton = (props) => {
       size={props.size}
       icon={props.icon}
     >
+      <div>
       <span className={style.buttonText}>{props.children}</span>
+      {' '}
+      <span className={cn(style.arrow, style.buttonText)}> <ArrowRightOutlined /> </span>
+      </div>
+      {/* <span className={style.buttonText}>{props.children}</span> */}
     </Button>
   );
 };

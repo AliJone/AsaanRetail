@@ -9,11 +9,18 @@
     font-style: normal
     font-weight: 700
     line-height: 1.5rem
-    color: black
+    color: colors.$color
     background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
     background-clip: text
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
+
+.arrow 
+  // Initial state of the arrow
+  display: inline-block
+  margin-left: 0
+  transition: margin-left 0.3s ease 
+
 
 .buttonClass
     @include fonts.fontbold
@@ -34,14 +41,17 @@
     border: none !important    
 
     // style
-    border-radius: 0.625rem
+    border-radius: .25rem
     border: 2px solid var(--gradient-surface, #009241) !important
     border-color: var(--gradient-surface, #009241) !important
 
-    background: transparent
+    background: transparent !important
     /* Website Shadow - Green */
     box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
     backdrop-filter: blur(1.0355486869812012px)
+
+
+    
 
     &:hover
         // background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
@@ -49,10 +59,14 @@
         // color: colors.$fontColor_secondary !important
         // box-shadow: 0rem .1072rem 0rem 0rem rgba(0, 0, 0, 0.04)
         cursor: pointer
+        opacity: .7
+        .arrow 
+            margin-left: 10px 
 
     &:active
         // background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
         // border-color: var(--gradient-surface, #009241) !important
         // color: colors.$fontColor_secondary !important
         // box-shadow: 0rem .1072rem 0rem 0rem rgba(0, 0, 0, 0.04)
-        cursor: pointer        
+        cursor: pointer 
+        opacity: .7       
