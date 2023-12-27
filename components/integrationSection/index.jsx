@@ -54,12 +54,9 @@ const IntegrationSection = () => {
                     more
                   </h5>
                 </div>
-
                 
               </ScrollAnimation>
-
               <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
-
               <div className={cn(style.iconDiv)}>
                   <Button
                     type="text"

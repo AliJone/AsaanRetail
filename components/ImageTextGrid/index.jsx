@@ -107,7 +107,7 @@ function ImageTextGrid({ data = datas }) {
                 <Image
                   src={item.imageUrl || ""}
                   alt="Image"
-                  style={{ width: "100%", height: "auto" }}
+                  style={{ objectFit: "contain", width: "100%", height: "100%" }}
                 />
               </div>
               {/* </ScrollAnimation> */}
