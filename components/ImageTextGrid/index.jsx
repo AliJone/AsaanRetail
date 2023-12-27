@@ -15,7 +15,7 @@ const datas = [
     ],
     trailingSubtitle:
       "The era of spreadsheets is behind you.<br />Choose Asaan Retail for accurate inventory.",
-    imageUrl: "./assets/inventory-management/img1.png", // Replace with actual image path
+    imageUrl: "./assets/inventory-management/image1.png", // Replace with actual image path
   },
   {
     title: "Stock <br /> Transfers",
@@ -107,6 +107,8 @@ function ImageTextGrid({ data = datas }) {
                 <Image
                   src={item.imageUrl || ""}
                   alt="Image"
+                  width={45}
+                  height={45}
                   style={{ objectFit: "contain", width: "100%", height: "100%" }}
                 />
               </div>

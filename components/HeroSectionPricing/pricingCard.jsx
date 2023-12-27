@@ -43,7 +43,7 @@ const PricingCard = ({ title, subtitle, price, features, type, unit }) => {
         </h1>
         <div className={cn(style.buttonsCardContainer)}>
           <CustomFilledButton
-            width={"inherit"}
+            width={"100%"}
             handleClick={() => {}}
             children={"Get Started"}
           />

@@ -62,7 +62,8 @@
 
 .buttonClass::before
     border: 25px solid hsla(0, 0%, 100%, 0)
-    border-top-color: #57ebff
+    border-top-color: #fff
+    opacity: 0.8
     content: ""
     position: absolute
     top: 200%
@@ -71,12 +72,13 @@
     height: 804%
     border-radius: 39.875rem
     z-index: -1
-    transition: transform 0.8s ease// Apply a smooth transition with ease
+    transition: transform 0.7s ease// Apply a smooth transition with ease
     transform: translateY(0%)
 
 .buttonClass::after
     border: 25px solid hsla(0, 0%, 100%, 0)
-    border-top-color: red
+    border-top-color: #fff
+    opacity: 0.6
     content: ""
     position: absolute
     top: 250%
@@ -85,5 +87,5 @@
     height: 804%
     border-radius: 39.875rem
     z-index: -1
-    transition: transform 0.8s ease // Apply a smooth transition with ease
+    transition: transform 0.7s ease // Apply a smooth transition with ease
     transform: translateY(0%)
