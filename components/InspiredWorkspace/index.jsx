@@ -11,11 +11,11 @@ const data = [
     },
     {
       title: "Learning-driven culture",
-      description: `Startup culture is one of constant learning, and we've embedded this ethos. Here, you'll have access to a wealth of resources to help you grow both personally and professionally.`,
+      description: `Startup culture is one of constant learning, and we've embedded this ethos. Here, you'll have access to a wealth of resources to help you grow professionally.`,
     },
     {
       title: "Accelerated growth",
-      description: `Just like a startup, you'll experience rapid growth here. With exposure to cutting-edge technology and a supportive team, you'll take your career to the next level.`,
+      description: `Just like a startup, you'll experience rapid growth here. With exposure to cutting-edge technology, you'll take your career to the next level.`,
     },
     {
       title: "Diverse collaboration",

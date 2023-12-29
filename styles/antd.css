@@ -269,3 +269,15 @@ a:hover {
 .ant-switch.ant-switch-checked .ant-switch-handle {
   inset-inline-start: calc(100% - 1.75rem) !important;
 }
+
+.styleSheet_CounterDiv__M1bWc :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus, :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus-within{
+  border: none !important;
+  box-shadow: none !important;
+}
+.styleSheet_CounterDiv__M1bWc :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus, :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number{
+  font-family: Roboto !important;
+  font-size: 1rem !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 1.5rem !important;
+}

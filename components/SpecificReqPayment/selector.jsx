@@ -50,7 +50,7 @@ const Selector = ({ handletype, type }) => {
                 <span className={cn(style.textFeatures)}>Orders/{type}</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Counter />
+              <Counter step={500} />
             </div>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>

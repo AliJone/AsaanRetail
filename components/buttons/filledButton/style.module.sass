@@ -9,8 +9,9 @@
     // justify-content: center
     // align-items: center
     // gap: .5357rem
+    padding: 0.5rem 1rem !important
     position: relative
-    height: 2.946rem
+    height: 3rem
     padding: 0.4rem 0.9375rem
     justify-content: center
     align-items: center
@@ -26,7 +27,7 @@
 
     background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
     /* Website Shadow - Green */
-    box-shadow: 0px 4.14219px 49.70634px 0px rgba(227, 203, 127, 0.30)
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
     backdrop-filter: blur(1.0355486869812012px)
     transition: width height 0.3s ease
     overflow: hidden
@@ -38,7 +39,8 @@
         // box-shadow: 0rem .1072rem 0rem 0rem rgba(0, 0, 0, 0.04)
         cursor: pointer
         
-        height: 2.765rem
+        // height: 3.1rem
+        scale: 0.99
         width: calc(100% - 0.2rem) !important
 
         // opacity: .7
@@ -72,7 +74,7 @@
     height: 804%
     border-radius: 39.875rem
     z-index: -1
-    transition: transform 0.7s ease// Apply a smooth transition with ease
+    transition: transform 0.7s ease-in // Apply a smooth transition with ease
     transform: translateY(0%)
 
 .buttonClass::after
@@ -87,5 +89,5 @@
     height: 804%
     border-radius: 39.875rem
     z-index: -1
-    transition: transform 0.7s ease // Apply a smooth transition with ease
+    transition: transform 0.7s ease-in // Apply a smooth transition with ease
     transform: translateY(0%)

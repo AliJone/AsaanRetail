@@ -49,7 +49,7 @@ function OpenRoles() {
   return (
     <div className={styles.mainSection}>
       <div className={cn(limit.Limit, styles.limit)}>
-        <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} />
+        {/* <Image src={TriangleIcon} alt="icon" className={styles.triangleIcon} /> */}
 
         <div className={styles.sectionTitle}>
           <span>

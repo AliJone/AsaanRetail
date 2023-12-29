@@ -78,7 +78,7 @@ const HeroSectionProduct = () => {
 
                   <div className={cn(style.greyTextContainer)}>
                     <span className={cn(style.greyText)}>
-                      Experience 14 Days of Free Trial, No Credit Card Needed
+                      Experience 14 Days of Free Trial, <br /> No Credit Card Needed
                     </span>
                   </div>
                 </div>

@@ -30,8 +30,10 @@ function FAQ() {
     marginBottom: 24,
     background: "white",
     borderRadius: 4,
-    border: "none",
     borderLeft: "4px solid var(--gradient-surface, #009241) !important",
+    borderRight: "none",
+    borderTop: "none",
+    borderBottom: "none",
   };
 
   return (

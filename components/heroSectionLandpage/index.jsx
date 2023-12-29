@@ -102,8 +102,8 @@ const HeroSectionLanding = () => {
                     </div>
                     <div className={cn(style.greyTextContainer)}>
                       <span className={cn(style.greyText)}>
-                        Experience 14 Days of Free{" "}
-                        <p>Trial, No Credit Card Needed</p>
+                        Experience 14 Days of Free Trial,{" "}
+                        <p> No Credit Card Needed</p>
                       </span>
                     </div>
                   </div>

@@ -81,7 +81,12 @@ const NavBarExample = () => {
           <div className={divClass}>
             <div className={style.setMaxWidth}>
               <div className={menuClass}>
-                <div className={logoClass}>
+                {/* go to / onclick */}
+                <div className={logoClass} onClick={
+                  () => {
+                    router.push("/");
+                  }
+                }>
                   <Image src={Logo} alt="Asaan Retail" />
                 </div>
                 <div className={classNames(style.divClassRow)}>

@@ -5,7 +5,7 @@ $medium: 830px
 $small: 430px
 
 .BG
-    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #FFF
+    // background: radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 87, 0.15) 0%, rgba(0, 0, 0, 0.00) 100%), #FFF
 .Container
     margin: 2rem auto
     display: flex
@@ -37,6 +37,7 @@ $small: 430px
         @include fonts.fontDesktopH1Bold
         
 .HeadSubTitle
+    margin-top: 0.5rem
     display: flex
     flex-direction: column
     justify-content: center
@@ -44,6 +45,7 @@ $small: 430px
     align-self: stretch
     h4
         color: var(--character-title-85, rgba(0, 0, 0, 0.85))
+        line-height: 150% !important
         @include fonts.fontDesktopH5Regular
 .Middle
     display: flex
@@ -104,6 +106,7 @@ $small: 430px
     p
         color: var(--character-title-85, rgba(0, 0, 0, 0.85))
         text-align: center
+        line-height: 150% !important
         @include fonts.fontDesktopH5Regular
 
 

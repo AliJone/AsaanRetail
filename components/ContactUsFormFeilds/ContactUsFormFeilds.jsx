@@ -20,13 +20,38 @@ import captcha from "./assets/images/captcha.png";
 import CustomSelect from "../dropDowns/AntDesignDropdown";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const options = [];
-for (let i = 10; i < 36; i++) {
-  options.push({
-    label: i.toString(36) + i,
-    value: i.toString(36) + i,
-  });
-}
+const options = [{
+  label: 'Up to 100',
+  value: '100',
+},
+{
+  label: '101 - 500',
+  value: '500',
+},
+{
+  label: '501 - 3000',
+  value: '3000',
+},
+{
+  label: '3001 - 10,000',
+  value: '10,000',
+},
+{
+  label: '10,001 +',
+  value: '10,001',
+},
+{
+  label: 'I\'m launching my ecommerce site soon',
+  value: 'launching',
+},
+
+];
+// for (let i = 10; i < 36; i++) {
+//   options.push({
+//     label: i.toString(36) + i,
+//     value: i.toString(36) + i,
+//   });
+// }
 
 const ContactUsFormFeilds = ({ data, state }) => {
   // Function to handle file upload, assuming you need to handle it
@@ -90,10 +115,11 @@ const ContactUsFormFeilds = ({ data, state }) => {
                   </div>
                 </div>
               </div>
+              
               <div className={cn(styles.ARight, styles.Container)}>
                 <Form layout="vertical" style={{ width: "100%" }}>
                   <>
-                    <Form.Item
+                  <Form.Item
                       className={styles.Labels}
                       label="* Name"
                       name="name"
@@ -102,6 +128,16 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         size="large"
                         placeHolder="Jhon Doe"
                         prefix={<UserOutlined />}
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      className={styles.Labels}
+                      label="* Company Name"
+                      name="companyName"
+                    >
+                      <AppCreationInputField
+                        size="large"
+                        placeHolder="  Highfy"
                       />
                     </Form.Item>
                     <Form.Item
@@ -130,14 +166,52 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     </Form.Item>
                     <Form.Item
                       className={styles.Labels}
-                      label="Message"
-                      name="coverLetter"
+                      label="* Orders/Month"
+                      name="ordersMonth"
                     >
-                      <CareerLargeInputField
+                      <Select
                         size="large"
-                        placeHolder="  Your message here"
+                        // mode="multiple"
+                        allowClear
+                        style={{
+                          width: "100%",
+                        }}
+                        placeholder="Please select"
+                        options={options}
                       />
                     </Form.Item>
+                    {/* <Form.Item
+                      className={styles.Labels}
+                      label="* Sales Channels"
+                      name="salesChannels"
+                    >
+                      <Select
+                        size="large"
+                        mode="multiple"
+                        allowClear
+                        style={{
+                          width: "100%",
+                        }}
+                        placeholder="Please select"
+                        options={options}
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      className={styles.Labels}
+                      label="* Couriers"
+                      name="couriers"
+                    >
+                      <Select
+                        size="large"
+                        mode="multiple"
+                        allowClear
+                        style={{
+                          width: "100%",
+                        }}
+                        placeholder="Please select"
+                        options={options}
+                      />
+                    </Form.Item> */}
                   </>
 
                   {/* <Form.Item className={styles.Labels} label="* Resume" name="resume">
@@ -239,66 +313,65 @@ const ContactUsFormFeilds = ({ data, state }) => {
                   </div>
                 </div>
               </div>
+
+
               <div className={cn(styles.ARight, styles.Container)}>
                 <Form layout="vertical" style={{ width: "100%" }}>
                   <>
                     <Form.Item
                       className={styles.Labels}
-                      label="* Company Name"
-                      name="companyName"
+                      label="* Name"
+                      name="name"
                     >
                       <AppCreationInputField
                         size="large"
-                        placeHolder="  Highfy"
+                        placeHolder="Jhon Doe"
+                        prefix={<UserOutlined />}
                       />
                     </Form.Item>
                     <Form.Item
                       className={styles.Labels}
-                      label="* Orders/Month"
-                      name="ordersMonth"
+                      label="* Email"
+                      name="email"
                     >
-                      <Select
+                      <AppCreationInputField
+                        type="email"
                         size="large"
-                        mode="multiple"
-                        allowClear
-                        style={{
-                          width: "100%",
-                        }}
-                        placeholder="Please select"
-                        options={options}
+                        placeHolder="  Jhon@gmail.com"
+                        prefix={<MailOutlined />}
                       />
                     </Form.Item>
                     <Form.Item
                       className={styles.Labels}
-                      label="* Sales Channels"
-                      name="salesChannels"
+                      label="* Phone"
+                      name="phone"
                     >
-                      <Select
+                      <Input
+                        addonBefore="+92"
+                        type="phonenumber"
                         size="large"
-                        mode="multiple"
-                        allowClear
-                        style={{
-                          width: "100%",
-                        }}
-                        placeholder="Please select"
-                        options={options}
+                        placeholder="  3229775013"
                       />
                     </Form.Item>
                     <Form.Item
                       className={styles.Labels}
-                      label="* Couriers"
-                      name="couriers"
+                      label="Message"
+                      name="coverLetter"
                     >
-                      <Select
+                      <CareerLargeInputField
                         size="large"
-                        mode="multiple"
-                        allowClear
-                        style={{
-                          width: "100%",
-                        }}
-                        placeholder="Please select"
-                        options={options}
+                        placeHolder="  Your message here"
                       />
+                    </Form.Item>
+
+                    {/* atachment */}
+                    <Form.Item className={styles.Labels} label="Attachments" name="attachments">
+                      <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
+                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                      </Upload>
+                      <div className={styles.Allowed}>
+                        Allowed Type(s): .pdf, .doc, .docx
+                      </div>
                     </Form.Item>
                   </>
 

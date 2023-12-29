@@ -75,6 +75,14 @@ const ApplicationFormFeilds = () => {
               className={styles.Labels}
               label="* Cover Letter"
               name="coverLetter"
+    //           style={{
+    //             color: "var(--character-title-85, rgba(0, 0, 0, 0.85))",
+    // fontFamily: "Roboto",
+    // fontSize: "1.05rem",
+    // fontStyle: "normal",
+    // fontWeight: "400",
+    // lineHeight: "1.65rem",
+    //           }}
             >
               <CareerLargeInputField size="large" placeHolder="  Enter Text" />
             </Form.Item>
@@ -84,11 +92,8 @@ const ApplicationFormFeilds = () => {
                 Allowed Type(s): .pdf, .doc, .docx
               </div>
             </Form.Item>
-          </div>
-        </div>
-
         <Form.Item className={styles.Submit}>
-          <Image src={captcha} />
+          <Image src={captcha} style={{marginBottom:"24px"}} />
           <Button
             className={styles.SubmitButton}
             type="primary"
@@ -98,6 +103,9 @@ const ApplicationFormFeilds = () => {
             Apply now
           </Button>
         </Form.Item>
+          </div>
+        </div>
+
       </Form>
     </div>
   );

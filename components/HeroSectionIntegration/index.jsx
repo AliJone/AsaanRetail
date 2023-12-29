@@ -65,7 +65,7 @@ const HeroSectionIntegration = () => {
                 />
                 {/* </div> */}
                 <span className={cn(style.greyText)}>
-                  Experience 14 Days of Free Trial, No Credit Card Needed
+                  Experience 14 Days of Free Trial, <br /> No Credit Card Needed
                 </span>
                 <div className={cn(style.buttonContainer)}>
                   <CustomFilledButton
