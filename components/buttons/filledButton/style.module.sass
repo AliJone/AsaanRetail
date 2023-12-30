@@ -91,3 +91,35 @@
     z-index: -1
     transition: transform 0.7s ease-in // Apply a smooth transition with ease
     transform: translateY(0%)
+
+.buttonClassDisabled
+    cursor: not-allowed
+    @include fonts.fontbold
+    display: flex
+    // height: 2.9467rem
+    // padding: var(--Size-08, .5rem) var(--Size-16, 1rem)
+    // justify-content: center
+    // align-items: center
+    // gap: .5357rem
+    padding: 0.5rem 1rem !important
+    position: relative
+    height: 3rem
+    padding: 0.4rem 0.9375rem
+    justify-content: center
+    align-items: center
+    gap: 0.625rem
+    align-self: stretch
+    color: colors.$fontColor_secondary !important
+    border: none !important    
+
+    // style
+    border-radius: 1.875rem
+    border: 1px solid var(--gradient-surface, #009241)
+     border-color: var(--gradient-surface, #009241) !important
+
+    background: var(--gradient-surface, linear-gradient(180deg, #009241 0%, rgba(4, 173, 79, 0.84) 100%))
+    /* Website Shadow - Green */
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04)
+    backdrop-filter: blur(1.0355486869812012px)
+    transition: width height 0.3s ease
+    overflow: hidden

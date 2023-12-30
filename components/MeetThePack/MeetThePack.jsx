@@ -124,10 +124,7 @@ function MeetThePack() {
                       <h2>{item?.title}</h2>
                     </div>
 
-                    <ScrollAnimation
-                      animateOnce={true}
-                      animateIn="animate__fadeInRight"
-                    >
+                    <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
                       <div className={styles.EmployeeBox}>
                         {item?.employees?.map((employee, index) => (
                           <>
