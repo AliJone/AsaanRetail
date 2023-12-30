@@ -2,7 +2,9 @@
   text-align: center;
   cursor: default;
 }
-
+.ant-collapse-item.ant-collapse-item-active.styles_PanelHead__C0czR , .ant-collapse-item.styles_PanelHead__C0czR{
+    border-left: 4px solid #009241 !important;
+}
 .ant-input-number-disabled .ant-input-number-input {
   text-align: center;
 }

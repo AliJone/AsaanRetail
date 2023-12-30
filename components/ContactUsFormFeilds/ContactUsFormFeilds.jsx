@@ -61,6 +61,50 @@ const ContactUsFormFeilds = ({ data, state }) => {
       onSuccess("ok");
     }, 0);
   };
+  // Separate component for Email
+  const EmailComponent = ({ email, label }) => (
+    <a href={`mailto:${email}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <div className={styles.AData}>
+        <div className={styles.ADataHead}>
+          <MailOutlined style={{ fontSize: "24px" }} />
+          <h3>{label}</h3>
+        </div>
+        <div className={styles.ADataBody}>
+          <p>{email}</p>
+        </div>
+      </div>
+    </a>
+  );
+
+  // Separate component for Phone
+  const PhoneComponent = ({ phone, label }) => (
+    <a href={`tel:${phone}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <div className={styles.AData}>
+        <div className={styles.ADataHead}>
+          <PhoneOutlined style={{ fontSize: "24px" }} />
+          <h3>{label}</h3>
+        </div>
+        <div className={styles.ADataBody}>
+          <p>{phone}</p>
+        </div>
+      </div>
+    </a>
+  );
+
+  // Separate component for WhatsApp
+  const WhatsAppComponent = ({ whatsappLink, label, phone }) => (
+    <a href={whatsappLink} style={{ textDecoration: "none", color: "inherit" }}>
+      <div className={styles.AData}>
+        <div className={styles.ADataHead}>
+          <WhatsAppOutlined style={{ fontSize: "24px" }} />
+          <h3>{label}</h3>
+        </div>
+        <div className={styles.ADataBody}>
+          <p>{phone}</p>
+        </div>
+      </div>
+    </a>
+  );
 
   return (
     <div className={styles.BG}>
@@ -85,41 +129,18 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <h2>can drive growth and transform your business.</h2>
                   </div>
                 </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <PhoneOutlined style={{ fontSize: "24px" }} />
-                    <h3>Helpline 02</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>+92-318-4866136</p>
-                  </div>
-                </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <MailOutlined style={{ fontSize: "24px" }} />
-                    <h3>Email</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>Sales@asaanretail.pk</p>
-                  </div>
-                </div>
+                <PhoneComponent phone="+92-318-4866136" label="Helpline" />
+                <EmailComponent email="Sales@asaanretail.pk" label="Email" />
                 <div className={styles.DayCover}>
-                  <div className={styles.AData}>
-                    <div className={styles.ADataHead}>
-                      <WhatsAppOutlined style={{ fontSize: "24px" }} />
-                      <h3>WhatsApp Us</h3>
-                    </div>
-                    <div className={styles.ADataBody}>
-                      <p>+92-318-4866136</p>
-                    </div>
-                  </div>
+
+                  <WhatsAppComponent whatsappLink="https://wa.me/923184866136" phone="+92-318-4866136" label="WhatsApp Us" />
                 </div>
               </div>
-              
+
               <div className={cn(styles.ARight, styles.Container)}>
                 <Form layout="vertical" style={{ width: "100%" }}>
                   <>
-                  <Form.Item
+                    <Form.Item
                       className={styles.Labels}
                       label="* Name"
                       name="name"
@@ -272,34 +293,11 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <h2>can drive growth and transform your business.</h2>
                   </div>
                 </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <PhoneOutlined style={{ fontSize: "24px" }} />
-                    <h3>Helpline 02</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>+92-318-4866136</p>
-                  </div>
-                </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <MailOutlined style={{ fontSize: "24px" }} />
-                    <h3>Email</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>Sales@asaanretail.pk</p>
-                  </div>
-                </div>
+                <PhoneComponent phone="+92-318-4866136" label="Helpline" />
+                <EmailComponent email="Sales@asaanretail.pk" label="Email" />
                 <div className={styles.DayCover}>
-                  <div className={styles.AData}>
-                    <div className={styles.ADataHead}>
-                      <WhatsAppOutlined style={{ fontSize: "24px" }} />
-                      <h3>WhatsApp Us</h3>
-                    </div>
-                    <div className={styles.ADataBody}>
-                      <p>+92-318-4866136</p>
-                    </div>
-                  </div>
+                  
+                <WhatsAppComponent whatsappLink="https://wa.me/923184866136" phone="+92-318-4866136" label="WhatsApp Us" />
                   <div className={styles.Divider}>
                     <Divider />
                   </div>

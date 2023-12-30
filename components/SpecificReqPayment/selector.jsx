@@ -6,23 +6,46 @@ import Image from "next/image";
 import QuestionMark from "./assests/QuestionCircle.svg";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Selector = ({ handletype, type }) => {
-  const [price, setPrice] = useState("20,000");
+const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) => {
+  const [priceState, setPriceState] = useState(priceProps[type-1][tabNumber - 1]);
+  const [usersState, setUsersState] = useState(type == 1 ? users[0] : type == 2 ? users[1] : users[2]);
+  const [LocationState, setLocationState] = useState(type == 1 ? Location[0] : type == 2 ? Location[1] : Location[2]);
+  const [switchState, setSwitchState] = useState(false);
+
+  useEffect(() => {
+    setPriceState(priceProps[type-1][tabNumber - 1]);
+    setUsersState(type == 1 ? users[0] : type == 2 ? users[1] : users[2]);
+    setLocationState(type == 1 ? Location[0] : type == 2 ? Location[1] : Location[2]);
+  }, [tabNumber, type]);
 
   const handleChange = (type) => {
     handletype(type);
-    if (type === "Monthly") {
-      setPrice("20,000");
+    if (type === 1) {
+      setUsersState(users[0]);
+      setLocationState(Location[0]);
     }
-    if (type === "Yearly") {
-      setPrice("120,000");
+    if (type === 2) {
+      // setPrice(120000);
+      setUsersState(users[1]);
+      setLocationState(Location[1]);
     }
-    if (type === "Quaterly") {
-      setPrice("60,000");
+    if (type === 3) {
+      // setPrice(60000);
+      setUsersState(users[2]);
+      setLocationState(Location[2]);
     }
+    
+    let price = priceProps[type-1][tabNumber - 1];
+    setPriceState(price);
   };
+
+  const handleSwitchChangePOS = (checked) => {
+    setSwitchState(checked);
+    // console.log(`switch to ${checked}`);
+  }
+
 
   return (
     <>
@@ -34,12 +57,13 @@ const Selector = ({ handletype, type }) => {
               className={cn(style.dropDown)}
               bordered={false}
               defaultValue={type}
+              value={type}
               style={{ width: "47%" }}
               onChange={handleChange}
               options={[
-                { value: "Monthly", label: "Monthly" },
-                { value: "Quaterly", label: "Quaterly" },
-                { value: "Yearly", label: "Yearly" },
+                { value: 1, label: "Monthly" },
+                { value: 2, label: "Quaterly" },
+                { value: 3, label: "Yearly" },
               ]}
             />
           </div>
@@ -47,24 +71,26 @@ const Selector = ({ handletype, type }) => {
           <div className={cn(style.divFeatures)}>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
-                <span className={cn(style.textFeatures)}>Orders/{type}</span>
+                <span className={cn(style.textFeatures)}>Orders/{type == 1 ? "mo": 
+                type == 2 ? "qtr" : "yr"
+                }</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Counter step={500} />
+              <Counter count={priceState} setCount={setPriceState} step={500} />
             </div>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
                 <span className={cn(style.textFeatures)}>Users</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Counter />
+              <Counter count={usersState} setCount={setUsersState}/>
             </div>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
                 <span className={cn(style.textFeatures)}>Location</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Counter />
+              <Counter count={LocationState} setCount={setLocationState}/>
             </div>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
@@ -79,7 +105,7 @@ const Selector = ({ handletype, type }) => {
                 <span className={cn(style.textFeatures)}>POS</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Switch className={cn(style.switchColor)} />
+              <Switch onChange={handleSwitchChangePOS} className={cn(style.switchColor)} />
             </div>
 
             <div className={cn(style.spacerSelector1, style.desktopView)} />
@@ -103,27 +129,33 @@ const Selector = ({ handletype, type }) => {
           <div className={cn(style.reciptDiv)}>
             <div className={cn(style.manageRecipt, style.convertToRow)}>
               <span className={cn(style.titleRecipt)}>Total</span>
-              <span className={cn(style.titleRecipt)}>{type}</span>
+              <span className={cn(style.titleRecipt)}>{type == 1 ? "Monthly": 
+                type == 2 ? "Quaterly" : "Yearly"
+                }</span>
             </div>
 
             <div className={cn(style.manageRecipt, style.convertToRow)}>
-              <span className={cn(style.textRecipt)}>Order/{type}</span>
-              <span className={cn(style.textRecipt)}>{price}</span>
+              <span className={cn(style.textRecipt)}>Order/{type == 1 ? "mo": 
+                type == 2 ? "qtr" : "yr"
+                }</span>
+              <span className={cn(style.textRecipt)}>{priceState}</span>
             </div>
 
             <div className={cn(style.manageRecipt, style.convertToRow)}>
               <span className={cn(style.textRecipt)}>Users</span>
-              <span className={cn(style.textRecipt)}>2</span>
+              <span className={cn(style.textRecipt)}>{usersState}</span>
             </div>
 
             <div className={cn(style.manageRecipt, style.convertToRow)}>
               <span className={cn(style.textRecipt)}>Location</span>
-              <span className={cn(style.textRecipt)}>2</span>
+              <span className={cn(style.textRecipt)}>{LocationState}</span>
             </div>
 
             <div className={cn(style.manageRecipt, style.convertToRow)}>
               <span className={cn(style.textRecipt)}>POS</span>
-              <span className={cn(style.textRecipt)}>Included</span>
+              <span className={cn(style.textRecipt)}> { 
+              switchState ? "Included" : "Not Included"
+              }</span>
             </div>
           </div>
 

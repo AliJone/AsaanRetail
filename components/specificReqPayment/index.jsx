@@ -7,17 +7,17 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const CustomizePayment = () => {
+const CustomizePayment = ({tabNumberSelect, setTabNumberSelect, users, Location, priceProps}) => {
   const [tabNumber, setTabNumber] = useState(1);
 
   const handleClick = (tabNumber) => {
     setTabNumber(tabNumber);
   };
 
-  const [type, setType] = useState("Monthly");
+  // const [tabNumberSelect, setTabNumberSelect] = useState("Monthly");
 
   const handleType = (type) => {
-    setType(type);
+    setTabNumberSelect(type);
   };
 
   const Title = (
@@ -71,7 +71,7 @@ const CustomizePayment = () => {
         <div className={cn(style.bgDiv)}>
           <div className={cn(style.selectorsFrame)}>
             <div className={cn(style.lowerCircle)} />
-            <Selector handletype={handleType} type={type} />
+            <Selector handletype={handleType} tabNumber={tabNumber} type={tabNumberSelect} users={users} Location={Location} priceProps={priceProps}/>
           </div>
         </div>
       </div>

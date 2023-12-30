@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import style from './styleSheet.module.sass';
 
-function Counter({step =1}) {
-  const [count, setCount] = useState(0);
+function Counter({step =1, count, setCount}) {
+  // const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
     setCount(count + 1);
