@@ -8,8 +8,11 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import CustomFilledButton from "../buttons/filledButton";
+import { useRouter } from "next/router";
 
 function Enterprise() {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.BG}>
@@ -29,7 +32,11 @@ function Enterprise() {
                 Contact Sales
               </Button> */}
 
-              <CustomFilledButton size={"large"} width={"11.875rem"}>
+              <CustomFilledButton
+                size={"large"}
+                width={"11.875rem"}
+                handleClick={() => router.push("/contact-us")}
+              >
                 <span className={styles.buttonText}>Contact Sales</span>
               </CustomFilledButton>
             </div>

@@ -6,14 +6,21 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const HeroSectionPricing = ({ tabNumber, setTabNumber,featureProps, titleProps, priceProps, unitProps, subtitleProps }) => {
+const HeroSectionPricing = ({
+  tabNumber,
+  setTabNumber,
+  featureProps,
+  titleProps,
+  priceProps,
+  unitProps,
+  subtitleProps,
+}) => {
   // const [tabNumber, setTabNumber] = useState(1);
   const [feature, setFeatures] = useState(featureProps);
   const [Title, setTitles] = useState(titleProps);
   const [Price, setPrices] = useState(priceProps); // Prices should be stored as numbers
   const [unit, setUnits] = useState(unitProps);
   const [Subtitle, setSubtitles] = useState(subtitleProps);
-
 
   const handleClick = (number) => {
     setTabNumber(number);

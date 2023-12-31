@@ -8,8 +8,11 @@ import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import CustomFilledButton from "../buttons/filledButton/index";
 import CustomOutlinedButton from "../buttons/outlinedButton/index";
+import { useRouter } from "next/router";
 
 function CTANew() {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.CTANew}>
@@ -24,13 +27,23 @@ function CTANew() {
               </h2>
               <div className={styles.Buttons}>
                 <div>
-                  <CustomOutlinedButton width={"11.875rem"}>
+                  <CustomOutlinedButton
+                    width={"11.875rem"}
+                    handleClick={() =>
+                      router.push(
+                        "https://calendly.com/asaan-retail/onboarding-session"
+                      )
+                    }
+                  >
                     <span className={styles.buttonText}>Get Demo</span>
                   </CustomOutlinedButton>
                 </div>
 
                 <div>
-                  <CustomFilledButton width={"11.875rem"}>
+                  <CustomFilledButton
+                    width={"11.875rem"}
+                    handleClick={() => router.push("start-free-trial")}
+                  >
                     <span className={styles.buttonText}>Start Free Trial</span>
                   </CustomFilledButton>
                 </div>

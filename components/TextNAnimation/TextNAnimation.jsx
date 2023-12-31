@@ -7,8 +7,11 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import CustomFilledButton from "../buttons/filledButton";
+import { useRouter } from "next/router";
 
 function TextNAnimation({ Title, SubTitle, Animation = false, ButtonText }) {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.BG}>
@@ -44,7 +47,11 @@ function TextNAnimation({ Title, SubTitle, Animation = false, ButtonText }) {
                   size="large"
                   icon={<CalendarOutlined />}
                   width={"11.875rem"}
-                  handleClick={() => {}}
+                  handleClick={() =>
+                    router.push(
+                      "https://calendly.com/asaan-retail/onboarding-session"
+                    )
+                  }
                 >
                   {ButtonText}
                 </CustomFilledButton>
