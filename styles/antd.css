@@ -287,3 +287,8 @@ a:hover {
 .ant-divider-horizontal{
   margin : 0px !important;
 }
+
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+  background-color:  rgba(0, 146, 65, 0.3) !important;
+
+}

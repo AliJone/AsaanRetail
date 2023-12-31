@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Input } from "antd";
 import styles from "./styles.module.sass";
 
@@ -10,13 +11,14 @@ const AppCreationInputField = ({
   addonBefore,
   type,
   customStyle,
+  height,
 }) => {
   const mergedStyle = {
     ...customStyle,
   };
 
   return (
-    <div className={styles.inputContainer}>
+    <div className={styles.inputContainer} style = {{height: height!== undefined ? height: "auto"}}>
       <Input
         placeholder={placeHolder}
         size={size}

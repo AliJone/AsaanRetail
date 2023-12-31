@@ -1,25 +1,26 @@
 // ApplicationForm.jsx
-import React from "react";
-import { useState, useEffect } from 'react';
-import Image from "next/image";
-import cn from "classnames";
-import { Form, Input, Button, Upload, Divider, Select } from "antd";
+
+import { Button, Divider, Form, Input, Select, Upload } from "antd";
 import {
-  WhatsAppOutlined,
-  PhoneOutlined,
   MailOutlined,
-  UserOutlined,
+  PhoneOutlined,
   UploadOutlined,
+  UserOutlined,
+  WhatsAppOutlined,
 } from "@ant-design/icons";
-import styles from "./styles.module.sass"; // make sure you have this SASS file
-import limits from "../../styles/Limits.module.css";
+import { useEffect, useState } from 'react';
+
 import AppCreationInputField from "../inputs/AppCreationInputFields";
 import { CareerLargeInputField } from "../inputs/CareerApplyFields";
 import CustomFilledButton from "../buttons/filledButton";
-
-import captcha from "./assets/images/captcha.png";
 import CustomSelect from "../dropDowns/AntDesignDropdown";
+import Image from "next/image";
+import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
+import captcha from "./assets/images/captcha.png";
+import cn from "classnames";
+import limits from "../../styles/Limits.module.css";
+import styles from "./styles.module.sass"; // make sure you have this SASS file
 
 const options = [{
   label: 'Up to 100',
@@ -47,12 +48,6 @@ const options = [{
 },
 
 ];
-// for (let i = 10; i < 36; i++) {
-//   options.push({
-//     label: i.toString(36) + i,
-//     value: i.toString(36) + i,
-//   });
-// }
 
 const ContactUsFormFeilds = ({ data, state }) => {
   const [isGetQuoteDisabled, setGetQuoteDisabled] = useState(true);
@@ -161,6 +156,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       <AppCreationInputField
                         size="large"
                         placeHolder="Jhon Doe"
+                        height={"3rem"}
                         prefix={<UserOutlined />}
                       />
                     </Form.Item>
@@ -171,6 +167,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     >
                       <AppCreationInputField
                         size="large"
+                        height={"3rem"}
                         placeHolder="  Highfy"
                       />
                     </Form.Item>
@@ -182,6 +179,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       <AppCreationInputField
                         type="email"
                         size="large"
+                        height={"3rem"}
                         placeHolder="  Jhon@gmail.com"
                         prefix={<MailOutlined />}
                       />
@@ -193,6 +191,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     >
                       <Input
                         addonBefore="+92"
+                        // style={{ height: "3rem" }}
                         type="phonenumber"
                         size="large"
                         placeholder="  3229775013"
@@ -209,64 +208,18 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         allowClear
                         style={{
                           width: "100%",
+                          height:"3rem"
                         }}
                         placeholder="Please select"
                         options={options}
                       />
                     </Form.Item>
-                    {/* <Form.Item
-                      className={styles.Labels}
-                      label="* Sales Channels"
-                      name="salesChannels"
-                    >
-                      <Select
-                        size="large"
-                        mode="multiple"
-                        allowClear
-                        style={{
-                          width: "100%",
-                        }}
-                        placeholder="Please select"
-                        options={options}
-                      />
-                    </Form.Item>
-                    <Form.Item
-                      className={styles.Labels}
-                      label="* Couriers"
-                      name="couriers"
-                    >
-                      <Select
-                        size="large"
-                        mode="multiple"
-                        allowClear
-                        style={{
-                          width: "100%",
-                        }}
-                        placeholder="Please select"
-                        options={options}
-                      />
-                    </Form.Item> */}
+                    
                   </>
 
-                  {/* <Form.Item className={styles.Labels} label="* Resume" name="resume">
-                  <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
-                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
-                  </Upload>
-                  <div className={styles.Allowed}>
-                    Allowed Type(s): .pdf, .doc, .docx
-                  </div>
-                </Form.Item> */}
+                  
 
                   <Form.Item className={styles.Submit}>
-                    {/* <Image src={captcha} /> */}
-                    {/* <Button
-                    className={styles.SubmitButton}
-                    type="primary"
-                    size="large"
-                    htmlType="submit"
-                  >
-                    Apply now
-                  </Button> */}
 
                     <CustomFilledButton
                       type="primary"
@@ -336,6 +289,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       name="Supportname"
                     >
                       <AppCreationInputField
+                        height={"3rem"}
                         size="large"
                         placeHolder="Jhon Doe"
                         prefix={<UserOutlined />}
@@ -349,6 +303,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       <AppCreationInputField
                         type="email"
                         size="large"
+                        height={"3rem"}
                         placeHolder="  Jhon@gmail.com"
                         prefix={<MailOutlined />}
                       />
