@@ -1,6 +1,6 @@
 // ApplicationForm.jsx
 
-import { Button, Divider, Form, Input, Select, Upload } from "antd";
+import { Button, Divider, Form, Input, Select, Upload, message } from "antd";
 import {
   MailOutlined,
   PhoneOutlined,
@@ -50,24 +50,44 @@ const options = [{
 ];
 
 const ContactUsFormFeilds = ({ data, state }) => {
-  const [isGetQuoteDisabled, setGetQuoteDisabled] = useState(true);
-  const [isSubmitDisabled, setSubmitDisabled] = useState(true);
+
+  // Sales Form
+  const [SalesName , setSalesName] = useState("");
+  const [SalesCompanyName , setSalesCompanyName] = useState("");
+  const [SalesEmail , setSalesEmail] = useState("");
+  const [SalesPhone , setSalesPhone] = useState("");
+  const [SalesOrdersMonth , setSalesOrdersMonth] = useState("");
+
+
+  // Support Form
+  const [SupportName , setSupportName] = useState("");
+  const [SupportEmail , setSupportEmail] = useState("");
+  const [SupportPhone , setSupportPhone] = useState("");
+  const [Message , setMessage] = useState("");
+
+  function handleSalesSubmit(){
+    if(SalesName == "" || SalesCompanyName == "" || SalesEmail == "" || SalesPhone == "" || SalesOrdersMonth == ""){
+      message.error("Please fill all the Sales Form fields")
+    }
+    else{
+      console.log("Submited Sales Form")
+    }
+  }
+
+  function handleSupportSubmit(){
+    if(SupportName == "" || SupportEmail == "" || SupportPhone == "" || Message == ""){
+      message.error("Please fill all the Support Form fields")
+    }
+    else{
+      console.log("Submited Support Form")
+    }
+  }
 
 
 
 
 
-
-  const validateSalesFormFields = (values) => {
-    const requiredFields = ['Salesname', 'SalescompanyName', 'Salesemail', 'Salesphone', 'SalesordersMonth'];
-    return requiredFields.every(field => values[field]);
-  };
-
-  // Function to validate required fields for 'Support Section Form'
-  const validateSupportFormFields = (values) => {
-    const requiredFields = ['Supportname', 'Supportemail', 'Supportphone', 'SupportcoverLetter'];
-    return requiredFields.every(field => values[field]);
-  };
+  
   // Function to handle file upload, assuming you need to handle it
   const handleUpload = ({ file, onSuccess }) => {
     setTimeout(() => {
@@ -162,6 +182,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       <AppCreationInputField
                         size="large"
                         placeHolder="Jhon Doe"
+                        onInputChange={(e) => setSalesName(e.target.value)}
                         height={"3rem"}
                         prefix={<UserOutlined />}
                       />
@@ -175,6 +196,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         size="large"
                         height={"3rem"}
                         placeHolder="  Highfy"
+                        onInputChange={(e) => setSalesCompanyName(e.target.value)}
                       />
                     </Form.Item>
                     <Form.Item
@@ -186,6 +208,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         type="email"
                         size="large"
                         height={"3rem"}
+                        onInputChange={(e) => setSalesEmail(e.target.value)}
                         placeHolder="  Jhon@gmail.com"
                         prefix={<MailOutlined />}
                       />
@@ -199,6 +222,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         addonBefore="+92"
                         // style={{ height: "3rem" }}
                         type="phonenumber"
+                        onChange={(e) => setSalesPhone(e.target.value)}
                         size="large"
                         placeholder="  3229775013"
                       />
@@ -218,6 +242,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         }}
                         placeholder="Please select"
                         options={options}
+                        onChange={(e) => setSalesOrdersMonth(e)}
                       />
                     </Form.Item>
                     
@@ -233,7 +258,8 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       htmlType="submit"
                       width={"100%"}
                       height={"3.5rem"}
-                      disabled={isGetQuoteDisabled}
+                      handleClick={handleSalesSubmit}
+
                     >
                       Get Quote
                     </CustomFilledButton>
@@ -298,6 +324,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         height={"3rem"}
                         size="large"
                         placeHolder="Jhon Doe"
+                        onInputChange={(e) => setSupportName(e.target.value)}
                         prefix={<UserOutlined />}
                       />
                     </Form.Item>
@@ -311,6 +338,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         size="large"
                         height={"3rem"}
                         placeHolder="  Jhon@gmail.com"
+                        onInputChange={(e) => setSupportEmail(e.target.value)}
                         prefix={<MailOutlined />}
                       />
                     </Form.Item>
@@ -322,6 +350,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       <Input
                         addonBefore="+92"
                         type="phonenumber"
+                        onChange={(e) => setSupportPhone(e.target.value)}
                         size="large"
                         placeholder="  3229775013"
                       />
@@ -333,11 +362,11 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     >
                       <CareerLargeInputField
                         size="large"
+                        onInputChange={(e) => setMessage(e.target.value)}
                         placeHolder="  Your message here"
                       />
                     </Form.Item>
-
-                    {/* atachment */}
+                    
                     <Form.Item className={styles.Labels} label="Attachments" name="attachments">
                       <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
                         <Button icon={<UploadOutlined />}>Click to Upload</Button>
@@ -348,25 +377,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     </Form.Item>
                   </>
 
-                  {/* <Form.Item className={styles.Labels} label="* Resume" name="resume">
-                  <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
-                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
-                  </Upload>
-                  <div className={styles.Allowed}>
-                    Allowed Type(s): .pdf, .doc, .docx
-                  </div>
-                </Form.Item> */}
-
                   <Form.Item className={styles.Submit}>
-                    {/* <Image src={captcha} /> */}
-                    {/* <Button
-                    className={styles.SubmitButton}
-                    type="primary"
-                    size="large"
-                    htmlType="submit"
-                  >
-                    Apply now
-                  </Button> */}
 
                     <CustomFilledButton
                       type="primary"
@@ -374,7 +385,8 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       htmlType="submit"
                       width={"100%"}
                       height={"3.5rem"}
-                      disabled={isSubmitDisabled}
+                      handleClick={handleSupportSubmit}
+                      
                     >
                       Submit
                     </CustomFilledButton>
