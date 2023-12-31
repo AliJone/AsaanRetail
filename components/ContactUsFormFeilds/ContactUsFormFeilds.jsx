@@ -8,7 +8,7 @@ import {
   UserOutlined,
   WhatsAppOutlined,
 } from "@ant-design/icons";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 import AppCreationInputField from "../inputs/AppCreationInputFields";
 import { CareerLargeInputField } from "../inputs/CareerApplyFields";
@@ -22,51 +22,57 @@ import cn from "classnames";
 import limits from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass"; // make sure you have this SASS file
 
-const options = [{
-  label: 'Up to 100',
-  value: '100',
-},
-{
-  label: '101 - 500',
-  value: '500',
-},
-{
-  label: '501 - 3000',
-  value: '3000',
-},
-{
-  label: '3001 - 10,000',
-  value: '10,000',
-},
-{
-  label: '10,001 +',
-  value: '10,001',
-},
-{
-  label: 'I\'m launching my ecommerce site soon',
-  value: 'launching',
-},
-
+const options = [
+  {
+    label: "Up to 100",
+    value: "100",
+  },
+  {
+    label: "101 - 500",
+    value: "500",
+  },
+  {
+    label: "501 - 3000",
+    value: "3000",
+  },
+  {
+    label: "3001 - 10,000",
+    value: "10,000",
+  },
+  {
+    label: "10,001 +",
+    value: "10,001",
+  },
+  {
+    label: "I'm launching my ecommerce site soon",
+    value: "launching",
+  },
 ];
 
 const ContactUsFormFeilds = ({ data, state }) => {
   const [isGetQuoteDisabled, setGetQuoteDisabled] = useState(true);
   const [isSubmitDisabled, setSubmitDisabled] = useState(true);
 
-
-
-
-
-
   const validateSalesFormFields = (values) => {
-    const requiredFields = ['Salesname', 'SalescompanyName', 'Salesemail', 'Salesphone', 'SalesordersMonth'];
-    return requiredFields.every(field => values[field]);
+    const requiredFields = [
+      "Salesname",
+      "SalescompanyName",
+      "Salesemail",
+      "Salesphone",
+      "SalesordersMonth",
+    ];
+    return requiredFields.every((field) => values[field]);
   };
 
   // Function to validate required fields for 'Support Section Form'
   const validateSupportFormFields = (values) => {
-    const requiredFields = ['Supportname', 'Supportemail', 'Supportphone', 'SupportcoverLetter'];
-    return requiredFields.every(field => values[field]);
+    const requiredFields = [
+      "Supportname",
+      "Supportemail",
+      "Supportphone",
+      "SupportcoverLetter",
+    ];
+    return requiredFields.every((field) => values[field]);
   };
   // Function to handle file upload, assuming you need to handle it
   const handleUpload = ({ file, onSuccess }) => {
@@ -77,7 +83,10 @@ const ContactUsFormFeilds = ({ data, state }) => {
   };
   // Separate component for Email
   const EmailComponent = ({ email, label }) => (
-    <a href={`mailto:${email}`} style={{ textDecoration: "none", color: "inherit" }}>
+    <a
+      href={`mailto:${email}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <div className={styles.AData}>
         <div className={styles.ADataHead}>
           <MailOutlined style={{ fontSize: "24px" }} />
@@ -92,7 +101,10 @@ const ContactUsFormFeilds = ({ data, state }) => {
 
   // Separate component for Phone
   const PhoneComponent = ({ phone, label }) => (
-    <a href={`tel:${phone}`} style={{ textDecoration: "none", color: "inherit" }}>
+    <a
+      href={`tel:${phone}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <div className={styles.AData}>
         <div className={styles.ADataHead}>
           <PhoneOutlined style={{ fontSize: "24px" }} />
@@ -146,13 +158,16 @@ const ContactUsFormFeilds = ({ data, state }) => {
                 <PhoneComponent phone="+92-318-4866136" label="Helpline" />
                 <EmailComponent email="Sales@asaanretail.pk" label="Email" />
                 <div className={styles.DayCover}>
-
-                  <WhatsAppComponent whatsappLink="https://wa.me/923184866136" phone="+92-318-4866136" label="WhatsApp Us" />
+                  <WhatsAppComponent
+                    whatsappLink="https://wa.me/923184866136"
+                    phone="+92-318-4866136"
+                    label="WhatsApp Us"
+                  />
                 </div>
               </div>
 
               <div className={cn(styles.ARight, styles.Container)}>
-                <Form layout="vertical" style={{ width: "100%" }} >
+                <Form layout="vertical" style={{ width: "100%" }}>
                   <>
                     <Form.Item
                       className={styles.Labels}
@@ -214,19 +229,15 @@ const ContactUsFormFeilds = ({ data, state }) => {
                         allowClear
                         style={{
                           width: "100%",
-                          height:"3rem"
+                          height: "3rem",
                         }}
                         placeholder="Please select"
                         options={options}
                       />
                     </Form.Item>
-                    
                   </>
 
-                  
-
                   <Form.Item className={styles.Submit}>
-
                     <CustomFilledButton
                       type="primary"
                       size="large"
@@ -269,8 +280,11 @@ const ContactUsFormFeilds = ({ data, state }) => {
                 <PhoneComponent phone="+92-318-4866136" label="Helpline" />
                 <EmailComponent email="Sales@asaanretail.pk" label="Email" />
                 <div className={styles.DayCover}>
-                  
-                <WhatsAppComponent whatsappLink="https://wa.me/923184866136" phone="+92-318-4866136" label="WhatsApp Us" />
+                  <WhatsAppComponent
+                    whatsappLink="https://wa.me/923184866136"
+                    phone="+92-318-4866136"
+                    label="WhatsApp Us"
+                  />
                   <div className={styles.Divider}>
                     <Divider />
                   </div>
@@ -284,7 +298,6 @@ const ContactUsFormFeilds = ({ data, state }) => {
                   </div>
                 </div>
               </div>
-
 
               <div className={cn(styles.ARight, styles.Container)}>
                 <Form layout="vertical" style={{ width: "100%" }}>
@@ -338,9 +351,18 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     </Form.Item>
 
                     {/* atachment */}
-                    <Form.Item className={styles.Labels} label="Attachments" name="attachments">
-                      <Upload customRequest={handleUpload} accept=".pdf,.doc,.docx">
-                        <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                    <Form.Item
+                      className={styles.Labels}
+                      label="Attachments"
+                      name="attachments"
+                    >
+                      <Upload
+                        customRequest={handleUpload}
+                        accept=".pdf,.doc,.docx"
+                      >
+                        <Button icon={<UploadOutlined />}>
+                          Click to Upload
+                        </Button>
                       </Upload>
                       <div className={styles.Allowed}>
                         Allowed Type(s): .pdf, .doc, .docx

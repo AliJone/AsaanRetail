@@ -7,7 +7,13 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const CustomizePayment = ({tabNumberSelect, setTabNumberSelect, users, Location, priceProps}) => {
+const CustomizePayment = ({
+  tabNumberSelect,
+  setTabNumberSelect,
+  users,
+  Location,
+  priceProps,
+}) => {
   const [tabNumber, setTabNumber] = useState(1);
 
   const handleClick = (tabNumber) => {
@@ -71,7 +77,14 @@ const CustomizePayment = ({tabNumberSelect, setTabNumberSelect, users, Location,
         <div className={cn(style.bgDiv)}>
           <div className={cn(style.selectorsFrame)}>
             <div className={cn(style.lowerCircle)} />
-            <Selector handletype={handleType} tabNumber={tabNumber} type={tabNumberSelect} users={users} Location={Location} priceProps={priceProps}/>
+            <Selector
+              handletype={handleType}
+              tabNumber={tabNumber}
+              type={tabNumberSelect}
+              users={users}
+              Location={Location}
+              priceProps={priceProps}
+            />
           </div>
         </div>
       </div>

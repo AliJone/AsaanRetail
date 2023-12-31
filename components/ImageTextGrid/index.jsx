@@ -3,6 +3,7 @@ import styles from "./styles.module.sass";
 import Image from "next/image";
 import CustomFilledButton from "../buttons/filledButton";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useRouter } from "next/router";
 
 const datas = [
   {
@@ -45,12 +46,11 @@ const datas = [
 ];
 
 function ImageTextGrid({ data = datas }) {
+  const router = useRouter();
+
   // Accept data as a prop
   return (
-    <ScrollAnimation
-      animateOnce={true}
-      animateIn={"animate__fadeInUp"}
-    >
+    <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
       <div className={styles.imageTextSection}>
         <div className={styles.gridContainer}>
           {data.map((item, index) => (
@@ -83,7 +83,9 @@ function ImageTextGrid({ data = datas }) {
                       ))}
                     </div>
                     <div
-                      dangerouslySetInnerHTML={{ __html: item.trailingSubtitle }}
+                      dangerouslySetInnerHTML={{
+                        __html: item.trailingSubtitle,
+                      }}
                     />
                   </div>
                 </ScrollAnimation>
@@ -93,8 +95,13 @@ function ImageTextGrid({ data = datas }) {
                   animateIn={"animate__fadeInUp"}
                 >
                   <div>
-                    <CustomFilledButton width={"11.8125rem"}>
-                      <span className={styles.buttonText}>Start Free Trial</span>
+                    <CustomFilledButton
+                      width={"11.8125rem"}
+                      handleClick={() => router.push("/start-free-trial")}
+                    >
+                      <span className={styles.buttonText}>
+                        Start Free Trial
+                      </span>
                     </CustomFilledButton>
                   </div>
                 </ScrollAnimation>
@@ -109,7 +116,11 @@ function ImageTextGrid({ data = datas }) {
                   alt="Image"
                   width={45}
                   height={45}
-                  style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                  style={{
+                    objectFit: "contain",
+                    width: "100%",
+                    height: "100%",
+                  }}
                 />
               </div>
               {/* </ScrollAnimation> */}

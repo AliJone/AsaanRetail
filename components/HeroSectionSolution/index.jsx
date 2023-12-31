@@ -8,23 +8,29 @@ import landingImage from "./assests/landpagePic.png";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const HeroSectionProduct = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
     setEmail(event.target.value);
     console.log(email);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await SolutionsPageService.sendSolutionsPageData({email});
-      console.log('landingPage Response:', response);
+      const response = await SolutionsPageService.sendSolutionsPageData({
+        email,
+      });
+      console.log("landingPage Response:", response);
       // Handle success (e.g., show a success message or redirect)
+      router.push("/start-free-trial");
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       // Handle error (e.g., show an error message)
     }
   };
@@ -36,7 +42,7 @@ const HeroSectionProduct = () => {
             <div className={cn(style.leftPane)}>
               <div className={cn(style.textContainer)}>
                 <div className={cn(style.titleContainer)}>
-                <span className={cn(style.titleText)}>
+                  <span className={cn(style.titleText)}>
                     Your complete
                     <br /> <span className={style.underLine}>
                       Ecommerce
@@ -47,8 +53,9 @@ const HeroSectionProduct = () => {
                 </div>
                 <div className={cn(style.subTitleContainer)}>
                   <span className={cn(style.subTitleText)}>
-                  Asaan Retail's tailored solutions redefine how you manage inventory, fulfill orders, and harness analytics. 
-Experience a surge in productivity and profitability.
+                    Asaan Retail's tailored solutions redefine how you manage
+                    inventory, fulfill orders, and harness analytics. Experience
+                    a surge in productivity and profitability.
                   </span>
                 </div>
               </div>
@@ -56,7 +63,11 @@ Experience a surge in productivity and profitability.
                 {/* <div className={style.FieldClass}>
                   <InputField placeHolder={"Enter Your Work Email"} />
                 </div> */}
-                <HeroSectionInput placeHolder={"Enter Your Work Email"} onChange={handleChange} value={email} />
+                <HeroSectionInput
+                  placeHolder={"Enter Your Work Email"}
+                  onChange={handleChange}
+                  value={email}
+                />
 
                 <div className={cn(style.buttonTextContainer)}>
                   <div className={cn(style.buttonContainer)}>
@@ -72,7 +83,8 @@ Experience a surge in productivity and profitability.
                   </div>
                   <div className={cn(style.greyTextContainer)}>
                     <span className={cn(style.greyText)}>
-                      Experience 14 Days of Free Trial, <br /> No Credit Card Needed
+                      Experience 14 Days of Free Trial, <br /> No Credit Card
+                      Needed
                     </span>
                   </div>
                 </div>

@@ -8,8 +8,11 @@ import landingImage from "./assests/landpagePic.png";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const HeroSectionProduct = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
@@ -23,6 +26,8 @@ const HeroSectionProduct = () => {
       const response = await ProductPageService.sendProductPageData({ email });
       console.log("Product Page Response:", response);
       // Handle success (e.g., show a success message or redirect)
+
+      router.push("/start-free-trial");
     } catch (error) {
       console.error("Error:", error);
       // Handle error (e.g., show an error message)
@@ -78,7 +83,8 @@ const HeroSectionProduct = () => {
 
                   <div className={cn(style.greyTextContainer)}>
                     <span className={cn(style.greyText)}>
-                      Experience 14 Days of Free Trial, <br /> No Credit Card Needed
+                      Experience 14 Days of Free Trial, <br /> No Credit Card
+                      Needed
                     </span>
                   </div>
                 </div>

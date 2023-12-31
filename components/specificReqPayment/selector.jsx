@@ -7,17 +7,35 @@ import QuestionMark from "./assests/QuestionCircle.svg";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
-const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) => {
-  const [priceState, setPriceState] = useState(priceProps[type-1][tabNumber - 1]);
-  const [usersState, setUsersState] = useState(type == 1 ? users[0] : type == 2 ? users[1] : users[2]);
-  const [LocationState, setLocationState] = useState(type == 1 ? Location[0] : type == 2 ? Location[1] : Location[2]);
+const Selector = ({
+  handletype,
+  type,
+  users,
+  Location,
+  tabNumber,
+  priceProps,
+}) => {
+  const router = useRouter();
+
+  const [priceState, setPriceState] = useState(
+    priceProps[type - 1][tabNumber - 1]
+  );
+  const [usersState, setUsersState] = useState(
+    type == 1 ? users[0] : type == 2 ? users[1] : users[2]
+  );
+  const [LocationState, setLocationState] = useState(
+    type == 1 ? Location[0] : type == 2 ? Location[1] : Location[2]
+  );
   const [switchState, setSwitchState] = useState(false);
 
   useEffect(() => {
-    setPriceState(priceProps[type-1][tabNumber - 1]);
+    setPriceState(priceProps[type - 1][tabNumber - 1]);
     setUsersState(type == 1 ? users[0] : type == 2 ? users[1] : users[2]);
-    setLocationState(type == 1 ? Location[0] : type == 2 ? Location[1] : Location[2]);
+    setLocationState(
+      type == 1 ? Location[0] : type == 2 ? Location[1] : Location[2]
+    );
   }, [tabNumber, type]);
 
   const handleChange = (type) => {
@@ -36,16 +54,15 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
       setUsersState(users[2]);
       setLocationState(Location[2]);
     }
-    
-    let price = priceProps[type-1][tabNumber - 1];
+
+    let price = priceProps[type - 1][tabNumber - 1];
     setPriceState(price);
   };
 
   const handleSwitchChangePOS = (checked) => {
     setSwitchState(checked);
     // console.log(`switch to ${checked}`);
-  }
-
+  };
 
   return (
     <>
@@ -71,9 +88,9 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
           <div className={cn(style.divFeatures)}>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
-                <span className={cn(style.textFeatures)}>Orders/{type == 1 ? "mo": 
-                type == 2 ? "qtr" : "yr"
-                }</span>
+                <span className={cn(style.textFeatures)}>
+                  Orders/{type == 1 ? "mo" : type == 2 ? "qtr" : "yr"}
+                </span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
               <Counter count={priceState} setCount={setPriceState} step={500} />
@@ -83,14 +100,14 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
                 <span className={cn(style.textFeatures)}>Users</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Counter count={usersState} setCount={setUsersState}/>
+              <Counter count={usersState} setCount={setUsersState} />
             </div>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
                 <span className={cn(style.textFeatures)}>Location</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Counter count={LocationState} setCount={setLocationState}/>
+              <Counter count={LocationState} setCount={setLocationState} />
             </div>
             <div className={cn(style.convertToRow, style.manageFeatures)}>
               <div className={cn(style.textFeaturesDiv)}>
@@ -105,7 +122,10 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
                 <span className={cn(style.textFeatures)}>POS</span>
                 <Image src={QuestionMark} alt={"QuestionMark"} />
               </div>
-              <Switch onChange={handleSwitchChangePOS} className={cn(style.switchColor)} />
+              <Switch
+                onChange={handleSwitchChangePOS}
+                className={cn(style.switchColor)}
+              />
             </div>
 
             <div className={cn(style.spacerSelector1, style.desktopView)} />
@@ -118,7 +138,7 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
               <span className={cn(style.titleRecipt)}>Rs 0/yr</span>
             </div>
             <CustomFilledButton
-              handleClick={() => {}}
+              handleClick={() => router.push("/start-free-trial")}
               width={"100%"}
               children={"Get Started"}
             />
@@ -129,15 +149,15 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
           <div className={cn(style.reciptDiv)}>
             <div className={cn(style.manageRecipt, style.convertToRow)}>
               <span className={cn(style.titleRecipt)}>Total</span>
-              <span className={cn(style.titleRecipt)}>{type == 1 ? "Monthly": 
-                type == 2 ? "Quaterly" : "Yearly"
-                }</span>
+              <span className={cn(style.titleRecipt)}>
+                {type == 1 ? "Monthly" : type == 2 ? "Quaterly" : "Yearly"}
+              </span>
             </div>
 
             <div className={cn(style.manageRecipt, style.convertToRow)}>
-              <span className={cn(style.textRecipt)}>Order/{type == 1 ? "mo": 
-                type == 2 ? "qtr" : "yr"
-                }</span>
+              <span className={cn(style.textRecipt)}>
+                Order/{type == 1 ? "mo" : type == 2 ? "qtr" : "yr"}
+              </span>
               <span className={cn(style.textRecipt)}>{priceState}</span>
             </div>
 
@@ -153,9 +173,10 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
 
             <div className={cn(style.manageRecipt, style.convertToRow)}>
               <span className={cn(style.textRecipt)}>POS</span>
-              <span className={cn(style.textRecipt)}> { 
-              switchState ? "Included" : "Not Included"
-              }</span>
+              <span className={cn(style.textRecipt)}>
+                {" "}
+                {switchState ? "Included" : "Not Included"}
+              </span>
             </div>
           </div>
 
@@ -166,7 +187,7 @@ const Selector = ({ handletype, type, users, Location, tabNumber, priceProps }) 
               <span className={cn(style.titleRecipt)}>Rs 0/yr</span>
             </div>
             <CustomFilledButton
-              handleClick={() => {}}
+              handleClick={() => router.push("/start-free-trial")}
               width={"100%"}
               children={"Get Started"}
             />
