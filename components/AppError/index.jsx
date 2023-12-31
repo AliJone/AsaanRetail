@@ -8,7 +8,6 @@ import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import { useRouter } from "next/router";
 import CustomFilledButton from "../buttons/filledButton";
-import CustomOutlinedButton from "../buttons/outlinedButton";
 
 function AppError() {
   const router = useRouter();

@@ -176,6 +176,11 @@
         // margin-bottom: 4rem
 
 @media (max-width: 681px)
+
+    .image 
+        height: inherit
+        // background: red
+
     .titleText
         @include fonts.fontMobileH1Bold
   
@@ -186,18 +191,22 @@
         @include fonts.fontDesktopH5Bold
 
     .gridContainer
+        row-gap: 2.5rem
+
         .textContainer:nth-child(1)
             .underLine
                 ::before
-                    left: 6.5rem
+                    left: 5.5rem
         .textContainer:nth-child(3)
             .underLine
                 ::before
-                    left: 2rem
+                    left: 5rem
+
         .textContainer:nth-child(5)
             .underLine
                 ::before
-                    left: 5rem
+                    left: 2rem
+
 
     .underLine
         position: relative
