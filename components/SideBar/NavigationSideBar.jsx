@@ -7,6 +7,7 @@ import { Divider } from "antd";
 import Image from "next/image";
 import Logo from "./assests/logo.svg";
 import MenuItem from "./MenuItems.jsx";
+import ScrollAnimation from "react-animate-on-scroll";
 import SubMenuTiles from "./submenuTiles.jsx";
 import cn from "classnames";
 import style from "./styleSheet.module.sass";
@@ -197,7 +198,9 @@ const NavigationSideBar = ({ props }) => {
   return (
     <div className={cn(style.overlay)}>
       {console.log("sidebar opened")}
+      <ScrollAnimation animateOnce={true} animateIn="animate__fadeIn">
       <div className={cn(style.bg)}>
+        
         <MenuItem
           onClick={() => {}}
           item={
@@ -344,6 +347,7 @@ const NavigationSideBar = ({ props }) => {
               <>
                 {Resources.map((element, index) => (
                   <>
+                  
                     <SubMenuTiles
                       Logo={element.logo}
                       item={element.title}
@@ -390,6 +394,7 @@ const NavigationSideBar = ({ props }) => {
                     <span className={style.buttonText}>Book a Demo</span>
                   </CustomOutlinedButton>
       </div>
+      </ScrollAnimation>
     </div>
   );
 };
