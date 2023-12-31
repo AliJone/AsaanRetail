@@ -29,10 +29,8 @@ const Screen3 =({handleStepperScreen})=>{
         if(progress >= 50 && progress < 100) {
             var hit = await LoaderScreenService.GetProgressData();
             if(hit.status == 200){
-                console.log(hit.data.message)
                 hit.data.message == "Success" ? 
                 setProgress(100) 
-                // console.log("done")
                 : 
                 setProgress(prevProgress => prevProgress);
             }
