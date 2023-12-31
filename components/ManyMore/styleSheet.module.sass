@@ -34,7 +34,8 @@ $small : breakpoints.$small
 .frameCards
     width: 86.955%
     margin: auto
-    display: flex
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
     justify-content: center
     align-items: flex-start
     align-content: flex-start
@@ -55,7 +56,7 @@ $small : breakpoints.$small
     border: 4px solid transparent
     // background: rgba(255, 255, 255, 0.80)
     backdrop-filter: blur(18px)
-    width: 24.8125rem
+    // width: 24.8125rem
 
 .cardTitleText
     @include fonts.fontDesktopH3Bold
@@ -114,12 +115,12 @@ $small : breakpoints.$small
     .cardSubTitleText
         -webkit-line-clamp: 3
 
-
-
-@media (max-width: 1025px)
+@media (max-width: 1320px)
     .frameCards
-        flex-wrap: wrap
+        grid-template-columns: 1fr 1fr 
 
 @media (max-width: $small)
-    .manyMoreSection
-        display: none
+    // .manyMoreSection
+    //     display: none
+    .frameCards
+        grid-template-columns: 1fr

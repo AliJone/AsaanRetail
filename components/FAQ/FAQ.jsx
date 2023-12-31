@@ -25,16 +25,13 @@ const pluss = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" vie
 
 function FAQ() {
   const [activeKeys, setActiveKeys] = useState(["1"]); // Initially expand panel with key '1'
-
-  const customPanelStyle = {
-    marginBottom: 24,
+  const [customPanelStyle, setCustomPanelStyle] = useState({ marginBottom: 24,
     background: "white",
     borderRadius: 4,
-    borderLeft: "4px solid var(--gradient-surface, #009241) !important",
+    borderLeft: "4px solid #009241 !important",
     borderRight: "none",
     borderTop: "none",
-    borderBottom: "none",
-  };
+    borderBottom: "none",})
 
   return (
     <>

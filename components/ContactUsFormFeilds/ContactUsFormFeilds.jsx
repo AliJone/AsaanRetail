@@ -1,5 +1,6 @@
 // ApplicationForm.jsx
 import React from "react";
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import cn from "classnames";
 import { Form, Input, Button, Upload, Divider, Select } from "antd";
@@ -54,6 +55,18 @@ const options = [{
 // }
 
 const ContactUsFormFeilds = ({ data, state }) => {
+  const [isGetQuoteDisabled, setGetQuoteDisabled] = useState(true);
+  const [isSubmitDisabled, setSubmitDisabled] = useState(true);
+  const validateSalesFormFields = (values) => {
+    const requiredFields = ['Salesname', 'SalescompanyName', 'Salesemail', 'Salesphone', 'SalesordersMonth'];
+    return requiredFields.every(field => values[field]);
+  };
+
+  // Function to validate required fields for 'Support Section Form'
+  const validateSupportFormFields = (values) => {
+    const requiredFields = ['Supportname', 'Supportemail', 'Supportphone', 'SupportcoverLetter'];
+    return requiredFields.every(field => values[field]);
+  };
   // Function to handle file upload, assuming you need to handle it
   const handleUpload = ({ file, onSuccess }) => {
     setTimeout(() => {
@@ -61,6 +74,50 @@ const ContactUsFormFeilds = ({ data, state }) => {
       onSuccess("ok");
     }, 0);
   };
+  // Separate component for Email
+  const EmailComponent = ({ email, label }) => (
+    <a href={`mailto:${email}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <div className={styles.AData}>
+        <div className={styles.ADataHead}>
+          <MailOutlined style={{ fontSize: "24px" }} />
+          <h3>{label}</h3>
+        </div>
+        <div className={styles.ADataBody}>
+          <p>{email}</p>
+        </div>
+      </div>
+    </a>
+  );
+
+  // Separate component for Phone
+  const PhoneComponent = ({ phone, label }) => (
+    <a href={`tel:${phone}`} style={{ textDecoration: "none", color: "inherit" }}>
+      <div className={styles.AData}>
+        <div className={styles.ADataHead}>
+          <PhoneOutlined style={{ fontSize: "24px" }} />
+          <h3>{label}</h3>
+        </div>
+        <div className={styles.ADataBody}>
+          <p>{phone}</p>
+        </div>
+      </div>
+    </a>
+  );
+
+  // Separate component for WhatsApp
+  const WhatsAppComponent = ({ whatsappLink, label, phone }) => (
+    <a href={whatsappLink} style={{ textDecoration: "none", color: "inherit" }}>
+      <div className={styles.AData}>
+        <div className={styles.ADataHead}>
+          <WhatsAppOutlined style={{ fontSize: "24px" }} />
+          <h3>{label}</h3>
+        </div>
+        <div className={styles.ADataBody}>
+          <p>{phone}</p>
+        </div>
+      </div>
+    </a>
+  );
 
   return (
     <div className={styles.BG}>
@@ -85,44 +142,21 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <h2>can drive growth and transform your business.</h2>
                   </div>
                 </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <PhoneOutlined style={{ fontSize: "24px" }} />
-                    <h3>Helpline 02</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>+92-318-4866136</p>
-                  </div>
-                </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <MailOutlined style={{ fontSize: "24px" }} />
-                    <h3>Email</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>Sales@asaanretail.pk</p>
-                  </div>
-                </div>
+                <PhoneComponent phone="+92-318-4866136" label="Helpline" />
+                <EmailComponent email="Sales@asaanretail.pk" label="Email" />
                 <div className={styles.DayCover}>
-                  <div className={styles.AData}>
-                    <div className={styles.ADataHead}>
-                      <WhatsAppOutlined style={{ fontSize: "24px" }} />
-                      <h3>WhatsApp Us</h3>
-                    </div>
-                    <div className={styles.ADataBody}>
-                      <p>+92-318-4866136</p>
-                    </div>
-                  </div>
+
+                  <WhatsAppComponent whatsappLink="https://wa.me/923184866136" phone="+92-318-4866136" label="WhatsApp Us" />
                 </div>
               </div>
-              
+
               <div className={cn(styles.ARight, styles.Container)}>
-                <Form layout="vertical" style={{ width: "100%" }}>
+                <Form layout="vertical" style={{ width: "100%" }} >
                   <>
-                  <Form.Item
+                    <Form.Item
                       className={styles.Labels}
                       label="* Name"
-                      name="name"
+                      name="Salesname"
                     >
                       <AppCreationInputField
                         size="large"
@@ -133,7 +167,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Company Name"
-                      name="companyName"
+                      name="SalescompanyName"
                     >
                       <AppCreationInputField
                         size="large"
@@ -143,7 +177,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Email"
-                      name="email"
+                      name="Salesemail"
                     >
                       <AppCreationInputField
                         type="email"
@@ -155,7 +189,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Phone"
-                      name="phone"
+                      name="Salesphone"
                     >
                       <Input
                         addonBefore="+92"
@@ -167,7 +201,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Orders/Month"
-                      name="ordersMonth"
+                      name="SalesordersMonth"
                     >
                       <Select
                         size="large"
@@ -240,6 +274,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       htmlType="submit"
                       width={"100%"}
                       height={"3.5rem"}
+                      disabled={isGetQuoteDisabled}
                     >
                       Get Quote
                     </CustomFilledButton>
@@ -272,34 +307,11 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <h2>can drive growth and transform your business.</h2>
                   </div>
                 </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <PhoneOutlined style={{ fontSize: "24px" }} />
-                    <h3>Helpline 02</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>+92-318-4866136</p>
-                  </div>
-                </div>
-                <div className={styles.AData}>
-                  <div className={styles.ADataHead}>
-                    <MailOutlined style={{ fontSize: "24px" }} />
-                    <h3>Email</h3>
-                  </div>
-                  <div className={styles.ADataBody}>
-                    <p>Sales@asaanretail.pk</p>
-                  </div>
-                </div>
+                <PhoneComponent phone="+92-318-4866136" label="Helpline" />
+                <EmailComponent email="Sales@asaanretail.pk" label="Email" />
                 <div className={styles.DayCover}>
-                  <div className={styles.AData}>
-                    <div className={styles.ADataHead}>
-                      <WhatsAppOutlined style={{ fontSize: "24px" }} />
-                      <h3>WhatsApp Us</h3>
-                    </div>
-                    <div className={styles.ADataBody}>
-                      <p>+92-318-4866136</p>
-                    </div>
-                  </div>
+                  
+                <WhatsAppComponent whatsappLink="https://wa.me/923184866136" phone="+92-318-4866136" label="WhatsApp Us" />
                   <div className={styles.Divider}>
                     <Divider />
                   </div>
@@ -321,7 +333,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Name"
-                      name="name"
+                      name="Supportname"
                     >
                       <AppCreationInputField
                         size="large"
@@ -332,7 +344,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Email"
-                      name="email"
+                      name="Supportemail"
                     >
                       <AppCreationInputField
                         type="email"
@@ -344,7 +356,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     <Form.Item
                       className={styles.Labels}
                       label="* Phone"
-                      name="phone"
+                      name="Supportphone"
                     >
                       <Input
                         addonBefore="+92"
@@ -355,8 +367,8 @@ const ContactUsFormFeilds = ({ data, state }) => {
                     </Form.Item>
                     <Form.Item
                       className={styles.Labels}
-                      label="Message"
-                      name="coverLetter"
+                      label="* Message"
+                      name="SupportcoverLetter"
                     >
                       <CareerLargeInputField
                         size="large"
@@ -401,6 +413,7 @@ const ContactUsFormFeilds = ({ data, state }) => {
                       htmlType="submit"
                       width={"100%"}
                       height={"3.5rem"}
+                      disabled={isSubmitDisabled}
                     >
                       Submit
                     </CustomFilledButton>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { App } from "antd";
 import CTANew from "../../components/CTA new/CTANew";
 import Enterprise from "../../components/Enterprise/Enterprise";
@@ -29,7 +30,43 @@ const CTANewWithScroll = withScrollAnimation(CTANew, "animate__fadeIn");
 
 const FooterWithScroll = withScrollAnimation(Footer, "animate__fadeIn");
 
+const pricingData = {
+  featureProps: [
+    "50 sales orders/month incl.",
+    "1 team member.",
+    "No Setup Assistance.",
+    "Inventory sync after 2 hours.",
+  ],
+  titleProps: ["Standard", "Premium", "Pro"],
+  priceProps: [
+    [40, 60, 50], // Prices for the first tab
+    [70, 80, 90], // Prices for the second tab
+    [100, 120, 140], // Prices for the third tab
+  ],
+  unitProps: ["/mo", "/qtr", "/yr"],
+  subtitleProps: [
+    "Perfect plan for Starters",
+    "Perfect plan for mid-level businesses",
+    "Perfect plan for Starters",
+  ],
+  users:[
+    500,
+    1000,
+    1500
+  ],
+  Location:[
+    1,
+    2,
+    3,
+  ]
+};
+
+// Usage in your component
+// <HeroSectionPricing {...pricingData} />
+
+
 const page = () => {
+  const [tabNumber, setTabNumber] = useState(1);
   return (
     <>
       <App>
@@ -39,9 +76,9 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionPricing />
+          <HeroSectionPricing {...pricingData} tabNumber={tabNumber} setTabNumber={setTabNumber}/>
           <EnterpriseWithScroll />
-          <SpecificRequirementPayment />
+          <SpecificRequirementPayment tabNumberSelect={tabNumber} setTabNumberSelect={setTabNumber} {...pricingData}/>
           <PriceTable />
           <ThroughLenseWithScroll />
           <TestimonialsWithScroll />

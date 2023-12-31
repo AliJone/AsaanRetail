@@ -6,35 +6,41 @@ import style from "./styleSheet.module.sass";
 import { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const HeroSectionPricing = () => {
-  const [tabNumber, setTabNumber] = useState(1);
+const HeroSectionPricing = ({ tabNumber, setTabNumber,featureProps, titleProps, priceProps, unitProps, subtitleProps }) => {
+  // const [tabNumber, setTabNumber] = useState(1);
+  const [feature, setFeatures] = useState(featureProps);
+  const [Title, setTitles] = useState(titleProps);
+  const [Price, setPrices] = useState(priceProps); // Prices should be stored as numbers
+  const [unit, setUnits] = useState(unitProps);
+  const [Subtitle, setSubtitles] = useState(subtitleProps);
+
 
   const handleClick = (number) => {
     setTabNumber(number);
   };
 
-  const feature = [
-    "50 sales orders/month incl.",
-    "1 team member.",
-    "No Setup Assistance.",
-    "Inventory sync after 2 hours.",
-  ];
+  // const feature = [
+  //   "50 sales orders/month incl.",
+  //   "1 team member.",
+  //   "No Setup Assistance.",
+  //   "Inventory sync after 2 hours.",
+  // ];
 
-  const Title = ["Standard", "Premium", "Pro"];
+  // const Title = ["Standard", "Premium", "Pro"];
 
-  const Price1 = ["$40", "$60", "$50"];
+  // const Price1 = ["$40", "$60", "$50"];
 
-  const Price2 = ["$40", "$60", "$50"];
+  // const Price2 = ["$40", "$60", "$50"];
 
-  const Price3 = ["$40", "$60", "$50"];
+  // const Price3 = ["$40", "$60", "$50"];
 
-  const unit = ["/mo", "/qtr", "/yr"];
+  // const unit = ["/mo", "/qtr", "/yr"];
 
-  const Subtitle = [
-    "Perfect plan for Starters",
-    "Perfect plan for mid level businesses",
-    "Perfect plan for Starters",
-  ];
+  // const Subtitle = [
+  //   "Perfect plan for Starters",
+  //   "Perfect plan for mid level businesses",
+  //   "Perfect plan for Starters",
+  // ];
 
   return (
     <>
@@ -87,10 +93,10 @@ const HeroSectionPricing = () => {
                 features={feature}
                 price={
                   tabNumber === 1
-                    ? Price1[1]
+                    ? Price[0][1]
                     : tabNumber == 2
-                    ? Price2[1]
-                    : Price3[1]
+                    ? Price[1][1]
+                    : Price[2][1]
                 }
                 unit={
                   tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
@@ -105,10 +111,10 @@ const HeroSectionPricing = () => {
               features={feature}
               price={
                 tabNumber === 1
-                  ? Price1[0]
+                  ? Price[0][0]
                   : tabNumber == 2
-                  ? Price2[0]
-                  : Price3[0]
+                  ? Price[1][0]
+                  : Price[2][0]
               }
               unit={
                 tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
@@ -122,10 +128,10 @@ const HeroSectionPricing = () => {
                 features={feature}
                 price={
                   tabNumber === 1
-                    ? Price1[1]
+                    ? Price[0][1]
                     : tabNumber == 2
-                    ? Price2[1]
-                    : Price3[1]
+                    ? Price[1][1]
+                    : Price[2][1]
                 }
                 unit={
                   tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]
@@ -139,10 +145,10 @@ const HeroSectionPricing = () => {
               features={feature}
               price={
                 tabNumber === 1
-                  ? Price1[2]
+                  ? Price[0][2]
                   : tabNumber == 2
-                  ? Price2[2]
-                  : Price3[2]
+                  ? Price[1][2]
+                  : Price[2][2]
               }
               unit={
                 tabNumber === 1 ? unit[0] : tabNumber == 2 ? unit[1] : unit[2]

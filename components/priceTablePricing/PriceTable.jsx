@@ -131,7 +131,7 @@ function QuestionCircle() {
   return (
     <Image
       className={styles.tableMobileView}
-      styles={{ marginLeft: "0.3rem" }}
+      // styles={{ marginLeft: "0.3rem" }}
       src={QuestionCircleimg}
       alt="❔"
     />
@@ -339,7 +339,9 @@ function PriceTable() {
           <div className={styles.spacer1} />
 
           {/* <Tag text="Compare plans" className={styles.tag} /> */}
-
+          <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
+            <Tag text="Compare Plans" />
+          </ScrollAnimation>
           <ScrollAnimation animateOnce={true} animateIn={"animate__fadeInUp"}>
             <div className={styles.divTitleContainer}>
               <h2 className={styles.titleText}>
