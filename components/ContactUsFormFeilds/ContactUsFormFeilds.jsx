@@ -52,6 +52,12 @@ const options = [{
 const ContactUsFormFeilds = ({ data, state }) => {
   const [isGetQuoteDisabled, setGetQuoteDisabled] = useState(true);
   const [isSubmitDisabled, setSubmitDisabled] = useState(true);
+
+
+
+
+
+
   const validateSalesFormFields = (values) => {
     const requiredFields = ['Salesname', 'SalescompanyName', 'Salesemail', 'Salesphone', 'SalesordersMonth'];
     return requiredFields.every(field => values[field]);

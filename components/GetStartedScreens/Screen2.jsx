@@ -1,14 +1,15 @@
 import { ArrowLeftOutlined, GlobalOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 
+import AppCreationInputField from "../inputs/AppCreationInputFields";
 import CustomFilledButton from "../buttons/filledButton";
 import Image from "next/image";
 import Link from "next/link";
 import VerificationModal from "../VerificationCodeModal";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
+import { message } from "antd";
 import style from "./styleSheet.module.sass";
-import AppCreationInputField from "../inputs/AppCreationInputFields";
 
 const inputFieldStyle = {
   display: "flex",
@@ -22,13 +23,47 @@ const Screen1 = ({
   handleStepperScreen,
   setModal2Open,
   modal2Open,
+  WebsiteURL,
+  setWebsiteURL,
+  OrdersPerMonth,
+  setOrdersPerMonth,
+  Channels,
+  setChannels,
+  Partner,
+  setPartner,
+  Name,
+  Email,
+  Phone,
+  CompanyName,
+
 }) => {
+
+  function onProceed() {
+    if(WebsiteURL === "" || OrdersPerMonth === "" || Channels === "" || Partner === ""){
+      message.error("Please Fill All The Fields");
+    }
+    else{
+    console.log("called from Screen 1");
+    setModal2Open({ bool: true });
+    }
+  }
+  
+
+  
   return (
     <div className={cn(limit.Limit, style.overrideLimit)}>
       <VerificationModal
         modal2Open={modal2Open}
         setModal2Open={setModal2Open}
         handleStepperScreen={handleStepperScreen}
+        Name = {Name}
+        Email = {Email}
+        Phone = {Phone}
+        CompanyName = {CompanyName}
+        WebsiteURL = {WebsiteURL}
+        OrdersPerMonth = {OrdersPerMonth}
+        Channels = {Channels}
+        Partner = {Partner}
       />
       <div className={cn(style.Screen1)}>
         <div className={cn(style.leftPane)}>
@@ -68,7 +103,8 @@ const Screen1 = ({
                 </div>
                 <AppCreationInputField
                   size="large"
-                  placeHolder="large size"
+                  onInputChange={(e) => setWebsiteURL(e.target.value)}
+                  placeHolder="Website URL"
                   prefix={<GlobalOutlined />}
                   customStyle={inputFieldStyle}
                 ></AppCreationInputField>
@@ -87,7 +123,8 @@ const Screen1 = ({
                 </div>
                 <AppCreationInputField
                   size="large"
-                  placeHolder="large size"
+                  onInputChange={(e) => setOrdersPerMonth(e.target.value)}
+                  placeHolder="Orders Per Month"
                   customStyle={inputFieldStyle}
                 />
               </div>
@@ -104,6 +141,7 @@ const Screen1 = ({
                 <AppCreationInputField
                   size="large"
                   placeHolder="Highfy"
+                  onInputChange={(e) => setChannels(e.target.value)}
                   customStyle={inputFieldStyle}
                 />
               </div>
@@ -118,6 +156,7 @@ const Screen1 = ({
                 </div>
                 <AppCreationInputField
                   size="large"
+                  onInputChange={(e) => setPartner(e.target.value)}
                   placeHolder="Highfy"
                   customStyle={inputFieldStyle}
                 />
@@ -130,7 +169,7 @@ const Screen1 = ({
                 <span className={cn(style.buttonText)}>Create App</span>
               }
               width={"inherit"}
-              handleClick={() => setModal2Open({ bool: true })}
+              handleClick={onProceed}
             />
           </div>
         </div>

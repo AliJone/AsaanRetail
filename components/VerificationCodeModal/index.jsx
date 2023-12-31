@@ -2,13 +2,27 @@ import { Button, Input, Modal } from "antd";
 import React, { useState } from "react";
 
 import CloseModalIcon from "./assets/crossIcon.svg";
+import CustomFilledButton from "../buttons/filledButton";
 import Image from "next/image";
+import Link from "next/link";
 import MobileImage from "./assets/MobileImage.png";
 import cn from "classnames";
+import { message } from "antd";
 import styles from "./styles.module.sass";
-import CustomFilledButton from "../buttons/filledButton";
 
-function VerificationModal({ modal2Open, setModal2Open, handleStepperScreen }) {
+function VerificationModal({ 
+  modal2Open, 
+  setModal2Open, 
+  handleStepperScreen,
+  Name,
+  Email,
+  Phone,
+  CompanyName,
+  WebsiteURL,
+  OrdersPerMonth,
+  Channels,
+  Partner,
+}) {
   const closeModal = () => {
     setModal2Open(false);
     document.body.style.overflow = "visible"; // enable scrolling back when modal is closed
@@ -28,9 +42,16 @@ function VerificationModal({ modal2Open, setModal2Open, handleStepperScreen }) {
   };
 
   const verifyOtp = () => {
+    if(otpValues[0] === "" || otpValues[1] === "" || otpValues[2] === "" || otpValues[3] === ""){
+      message.error("Please Fill All the OTP Fields");
+    }
+    
+    else
+    {
     setModal2Open(false);
     handleStepperScreen({ position: 2 });
     console.log(otpValues);
+    }
   };
 
   return (
@@ -51,7 +72,7 @@ function VerificationModal({ modal2Open, setModal2Open, handleStepperScreen }) {
                 <div className={styles.divTitleContainer}>
                   <h3 className={styles.title}>Enter Verification Code</h3>
                   <p className={styles.subTitle}>
-                    We have just sent a verification code to +92 3229775013
+                    We have just sent a verification code to +92 {Phone}
                   </p>
                 </div>
 
@@ -71,12 +92,14 @@ function VerificationModal({ modal2Open, setModal2Open, handleStepperScreen }) {
                   Code doesn’t seem right! Try again
                 </div>
 
-                <CustomFilledButton handleClick={verifyOtp}>
+                <CustomFilledButton width={"100%"} handleClick={verifyOtp} >
                   Verify
                 </CustomFilledButton>
 
                 <div className={styles.changeNumberContainer}>
+                  <Link href='/start-free-trial'>
                   <p className={styles.changeNumber}>Change the number</p>
+                  </Link>
                   <p className={styles.tryAgain}>
                     Didn’t receive the code? Try again in 30s
                   </p>

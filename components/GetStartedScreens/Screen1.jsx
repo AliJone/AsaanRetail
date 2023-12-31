@@ -7,7 +7,9 @@ import Image from "next/image";
 import Logo from "./assests/Logo.svg";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
+import { message } from "antd";
 import style from "./styleSheet.module.sass";
+import { useState } from "react";
 
 const inputFieldStyle = {
   display: "flex",
@@ -24,11 +26,26 @@ const inputFieldStyle2 = {
   width: "%",
 };
 
-const Screen1 = ({ AddValue, handleStepperScreen }) => {
+
+
+const Screen1 = ({ AddValue, handleStepperScreen,Email,setEmail,Name,setName,Phone,setPhone,CompanyName,setCompanyName }) => {
   function onProceed() {
+    if(Email === "" || Name === "" || Phone === "" || CompanyName === ""){
+      message.error("Please Fill All The Fields");
+    }
+    else{
     console.log("called from Screen 1");
     handleStepperScreen({ position: 1 });
+    }
   }
+
+  // const [Email, setEmail] = useState("");
+  // const [Name, setName] = useState("");
+  // const [Phone, setPhone] = useState("");
+  // const [CompanyName, setCompanyName] = useState("");
+
+
+
 
   return (
     <div className={cn(limit.Limit, style.overrideLimit)}>
@@ -60,7 +77,8 @@ const Screen1 = ({ AddValue, handleStepperScreen }) => {
                 </div>
                 <AppCreationInputField
                   size="large"
-                  placeHolder="large size"
+                  placeHolder="Name"
+                  onInputChange={(e) => setName(e.target.value)}
                   prefix={<UserOutlined />}
                   customStyle={inputFieldStyle}
                 ></AppCreationInputField>
@@ -77,7 +95,8 @@ const Screen1 = ({ AddValue, handleStepperScreen }) => {
                 </div>
                 <AppCreationInputField
                   size="large"
-                  placeHolder="large size"
+                  placeHolder="Email"
+                  onInputChange={(e) => setEmail(e.target.value)}
                   prefix={<MailOutlined />}
                   customStyle={inputFieldStyle}
                 ></AppCreationInputField>
@@ -101,23 +120,11 @@ const Screen1 = ({ AddValue, handleStepperScreen }) => {
                       defaultValue="+92"
                       disabled
                     />
-                    {/* <Input
-                      size="large"
-                      className={cn(style.inputField)}
-                      style={{ width: "90%" }}
-                      placeholder="Phone Number"
-                    /> */}
-                    {/* <Input
-                        addonBefore="+92"
-                        type="phonenumber"
-                        size="large"
-                        placeholder="  3229775013"
-                        className={inputFieldStyle}
-                      /> */}
 
                     <AppCreationInputField
                       size="large"
                       placeHolder="Phone Number"
+                      onInputChange={(e) => setPhone(e.target.value)}
                       customStyle={inputFieldStyle}
                     ></AppCreationInputField>
                   {/* </Space.Compact> */}
@@ -135,11 +142,12 @@ const Screen1 = ({ AddValue, handleStepperScreen }) => {
                 </div>
                 <AppCreationInputField
                   size="large"
-                  placeHolder="Highfy"
+                  placeHolder="Company Name"
+                  onInputChange={(e) => setCompanyName(e.target.value)}
                   customStyle={inputFieldStyle}
                 ></AppCreationInputField>
                 <div className={cn(style.greyText)}>
-                  Your app URL will be highfy.asaanretail.pk
+                  Your app URL will be {CompanyName !== "" ? CompanyName : "YourCompayName"}.asaanretail.pk
                 </div>
               </div>
             </div>
