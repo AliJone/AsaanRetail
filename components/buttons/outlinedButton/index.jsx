@@ -5,12 +5,13 @@ import style from "./style.module.sass";
 
 const CustomOutlinedButton = (props) => {
   return (
-    <div style={{width: props.width !== undefined ? props.width : "auto"}}>
+    <div style={{width: props.width !== undefined ? props.width : "auto" }}>
     <Button
       onClick={props.handleClick}
       style={{
         width: "inherit",
         backgroundColor: "#FCF8EF",
+        height: props.height
       }}
       className={style.buttonClass}
       size={props.size}

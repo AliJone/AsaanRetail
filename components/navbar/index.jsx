@@ -8,6 +8,7 @@ import DropDownIcon from "../../images/svgs/icons/Icon_Drop_Down.svg";
 import Image from "next/image";
 import Logo from "./assests/logo.svg";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
+import NavigationSideBar from "../SideBar/NavigationSideBar";
 import ProductsDropDown from "../dropDowns/products";
 import React from "react";
 import ResourcesDropDown from "../dropDowns/resources";
@@ -29,6 +30,7 @@ const NavBarExample = () => {
   const BottomLineClass = classNames(style.BottomLine);
 
   const [current, setCurrent] = React.useState("");
+  
 
   const router = useRouter();
 
@@ -57,6 +59,15 @@ const NavBarExample = () => {
     }
   };
 
+  const OpenNavSideBar = () => {
+    console.log("Clicked")
+    if (current === "SideBar") {
+      setCurrent("");
+    } else {
+      setCurrent("SideBar");
+    }
+  }
+
   const handleClickSolution = () => {
     // Handle click event
     if (current === "Solution") {
@@ -74,6 +85,8 @@ const NavBarExample = () => {
       setCurrent("Resources");
     }
   };
+
+
   return (
     <>
       <div className={classNames(style.limitOverride)}>
@@ -173,13 +186,14 @@ const NavBarExample = () => {
                   />
                 </div>
                 <div className={cn(style.mobileNavBar)}>
-                  <MenuOutlined />
+                  <MenuOutlined onClick={OpenNavSideBar} />
                 </div>
               </div>
             </div>
           </div>
         </Header>
       </div>
+      {current === "SideBar" ? <> <NavigationSideBar props={{Open: OpenNavSideBar}}/></>:<> </>}
       {current === "Product" ? <ProductsDropDown /> : <></>}
       {current === "Solution" ? <SolutionsDropDown /> : <></>}
       {current === "Resources" ? <ResourcesDropDown /> : <></>}
