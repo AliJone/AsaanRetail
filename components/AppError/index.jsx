@@ -17,7 +17,7 @@ function AppError() {
     router.push("/");
   };
   const handlePricingButtonclick = () => {
-    router.push("/pricingPage");
+    router.push("/pricing");
   };
 
   return (

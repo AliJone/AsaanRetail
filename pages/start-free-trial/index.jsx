@@ -22,8 +22,8 @@ const page = () => {
   //screen2
   const [WebsiteURL, setWebsiteURL] = useState("");
   const [OrdersPerMonth, setOrdersPerMonth] = useState("");
-  const [Channels,setChannels] = useState("");
-  const [Partner,setPartner] = useState("");
+  const [Channels, setChannels] = useState("");
+  const [Partner, setPartner] = useState("");
 
   const showModal = ({ bool }) => {
     if (bool !== undefined) console.log("called from page", bool);
@@ -42,9 +42,6 @@ const page = () => {
   const AddValue = ({ Value }) => {
     if (Value !== undefined) setValues([...Values, Value]);
   };
-
-  
-
 
   return (
     <>

@@ -10,10 +10,13 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 // import landingImage from './assests/landpagePic.png'
 
 const HeroSectionAboutUs = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
@@ -27,6 +30,7 @@ const HeroSectionAboutUs = () => {
       const response = await AboutUsPageService.sendArticlePageData({ email });
       console.log("landingPage Response:", response);
       // Handle success (e.g., show a success message or redirect)
+      router.push("start-free-trial");
     } catch (error) {
       console.error("Error:", error);
       // Handle error (e.g., show an error message)
@@ -78,7 +82,8 @@ const HeroSectionAboutUs = () => {
                     </div>
                     <div className={cn(style.greyTextContainer)}>
                       <span className={cn(style.greyText)}>
-                        Experience 14 Days of Free <p>Trial, No Credit Card Needed</p>
+                        Experience 14 Days of Free{" "}
+                        <p>Trial, No Credit Card Needed</p>
                       </span>
                     </div>
                   </div>

@@ -35,35 +35,35 @@ const Screen1 = ({
   Email,
   Phone,
   CompanyName,
-
 }) => {
-
   function onProceed() {
-    if(WebsiteURL === "" || OrdersPerMonth === "" || Channels === "" || Partner === ""){
+    if (
+      WebsiteURL === "" ||
+      OrdersPerMonth === "" ||
+      Channels === "" ||
+      Partner === ""
+    ) {
       message.error("Please Fill All The Fields");
-    }
-    else{
-    console.log("called from Screen 1");
-    setModal2Open({ bool: true });
+    } else {
+      console.log("called from Screen 1");
+      setModal2Open({ bool: true });
     }
   }
-  
 
-  
   return (
     <div className={cn(limit.Limit, style.overrideLimit)}>
       <VerificationModal
         modal2Open={modal2Open}
         setModal2Open={setModal2Open}
         handleStepperScreen={handleStepperScreen}
-        Name = {Name}
-        Email = {Email}
-        Phone = {Phone}
-        CompanyName = {CompanyName}
-        WebsiteURL = {WebsiteURL}
-        OrdersPerMonth = {OrdersPerMonth}
-        Channels = {Channels}
-        Partner = {Partner}
+        Name={Name}
+        Email={Email}
+        Phone={Phone}
+        CompanyName={CompanyName}
+        WebsiteURL={WebsiteURL}
+        OrdersPerMonth={OrdersPerMonth}
+        Channels={Channels}
+        Partner={Partner}
       />
       <div className={cn(style.Screen1)}>
         <div className={cn(style.leftPane)}>

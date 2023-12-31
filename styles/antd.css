@@ -2,9 +2,12 @@
   text-align: center;
   cursor: default;
 }
-.ant-collapse-item.ant-collapse-item-active.styles_PanelHead__C0czR , .ant-collapse-item.styles_PanelHead__C0czR{
-    border-left: 4px solid #009241 !important;
+
+.ant-collapse-item.ant-collapse-item-active.styles_PanelHead__C0czR,
+.ant-collapse-item.styles_PanelHead__C0czR {
+  border-left: 4px solid #009241 !important;
 }
+
 .ant-input-number-disabled .ant-input-number-input {
   text-align: center;
 }
@@ -272,11 +275,14 @@ a:hover {
   inset-inline-start: calc(100% - 1.75rem) !important;
 }
 
-.styleSheet_CounterDiv__M1bWc :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus, :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus-within{
+.styleSheet_CounterDiv__M1bWc :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus,
+:where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus-within {
   border: none !important;
   box-shadow: none !important;
 }
-.styleSheet_CounterDiv__M1bWc :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus, :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number{
+
+.styleSheet_CounterDiv__M1bWc :where(.css-dev-only-do-not-override-3mqfnx).ant-input-number:focus,
+:where(.css-dev-only-do-not-override-3mqfnx).ant-input-number {
   font-family: Roboto !important;
   font-size: 1rem !important;
   font-style: normal !important;
@@ -284,11 +290,11 @@ a:hover {
   line-height: 1.5rem !important;
 }
 
-.ant-divider-horizontal{
-  margin : 0px !important;
+.ant-divider-horizontal {
+  margin: 0px !important;
 }
 
-.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
-  background-color:  rgba(0, 146, 65, 0.3) !important;
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: rgba(0, 146, 65, 0.3) !important;
 
 }

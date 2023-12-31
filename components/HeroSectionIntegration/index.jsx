@@ -14,9 +14,12 @@ import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import style from "./styleSheet.module.sass";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const imagesarray = [c1, c2, c3, c4, c5, c6, c7];
 const HeroSectionIntegration = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
 
   const handleChange = (event) => {
@@ -32,6 +35,8 @@ const HeroSectionIntegration = () => {
       });
       console.log("landingPage Response:", response);
       // Handle success (e.g., show a success message or redirect)
+
+      router.push("/start-free-trial");
     } catch (error) {
       console.error("Error:", error);
       // Handle error (e.g., show an error message)

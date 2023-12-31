@@ -7,10 +7,13 @@ import classNames from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
 import CustomFilledButton from "../buttons/filledButton";
+import { useRouter } from "next/router";
 
 const textData = ["Apply", "Refer", "Earn"];
 
 function ARPartnerProgram() {
+  const router = useRouter();
+
   return (
     <>
       {/* desktop view */}
@@ -45,7 +48,10 @@ function ARPartnerProgram() {
                 </div>
               ))}
 
-              <CustomFilledButton width={"11.8125rem"}>
+              <CustomFilledButton
+                width={"11.8125rem"}
+                handleClick={() => router.push("/start-free-trial")}
+              >
                 Apply Now
               </CustomFilledButton>
             </div>

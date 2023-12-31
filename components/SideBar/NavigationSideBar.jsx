@@ -199,201 +199,205 @@ const NavigationSideBar = ({ props }) => {
     <div className={cn(style.overlay)}>
       {console.log("sidebar opened")}
       <ScrollAnimation animateOnce={true} animateIn="animate__fadeIn">
-      <div className={cn(style.bg)}>
-        
-        <MenuItem
-          onClick={() => {}}
-          item={
-            <>
-              <Image src={Logo} alt="Logo" />
-            </>
-          }
-          isParent={true}
-          hasSubMenu={false}
-          child={
-            <>
-              <CloseOutlined onClick={props.Open} />
-            </>
-          }
-        />
-
-        <MenuItem
-          onClick={handleClickProduct}
-          item={
-            <>
-              <p className={cn(style.MenuItemText)}>Product</p>
-            </>
-          }
-          isParent={true}
-          child={
-            <>
-              <RightOutlined
-                className={
-                  current == "Product"
-                    ? cn(style.rotateIcon)
-                    : cn(style.orgIcon)
-                }
-              />
-            </>
-          }
-          hasSubMenu={true}
-          SubMenu={
-            current == "Product" ? (
+        <div className={cn(style.bg)}>
+          <MenuItem
+            onClick={() => {}}
+            item={
               <>
-                {Products.map((element, index) => (
-                  <>
-                    <SubMenuTiles
-                      Logo={element.logo}
-                      item={element.title}
-                      handleClick={element.handleClick}
-                    />
-                    {index != Products.length - 1 ? (
-                      <>
-                        {" "}
-                        <Divider />
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                  </>
-                ))}
+                <Image src={Logo} alt="Logo" />
               </>
-            ) : (
-              <></>
-            )
-          }
-        />
-
-        <MenuItem
-          onClick={handleClickSolution}
-          item={
-            <>
-              <p className={cn(style.MenuItemText)}>Solution</p>
-            </>
-          }
-          isParent={true}
-          child={
-            <>
-              <RightOutlined
-                className={
-                  current == "Solution"
-                    ? cn(style.rotateIcon)
-                    : cn(style.orgIcon)
-                }
-              />
-            </>
-          }
-          hasSubMenu={true}
-          SubMenu={
-            current == "Solution" ? (
+            }
+            isParent={true}
+            hasSubMenu={false}
+            child={
               <>
-                {Solution.map((element, index) => (
-                  <>
-                    <SubMenuTiles
-                      Logo={element.logo}
-                      item={element.title}
-                      handleClick={element.handleClick}
-                    />
-                    {index != Solution.length - 1 ? (
-                      <>
-                        {" "}
-                        <Divider />
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                  </>
-                ))}
+                <CloseOutlined onClick={props.Open} />
               </>
-            ) : (
-              <></>
-            )
-          }
-        />
+            }
+          />
 
-        <MenuItem
-          onClick={handlePricingClick}
-          item={
-            <>
-              <p className={cn(style.MenuItemText)}>Pricing</p>
-            </>
-          }
-          isParent={false}
-          hasSubMenu={false}
-        />
-
-        <MenuItem
-          onClick={handleClickResources}
-          item={
-            <>
-              <p className={cn(style.MenuItemText)}>Resources</p>
-            </>
-          }
-          isParent={true}
-          child={
-            <>
-              <RightOutlined
-                className={
-                  current == "Resources"
-                    ? cn(style.rotateIcon)
-                    : cn(style.orgIcon)
-                }
-              />
-            </>
-          }
-          hasSubMenu={true}
-          SubMenu={
-            current == "Resources" ? (
+          <MenuItem
+            onClick={handleClickProduct}
+            item={
               <>
-                {Resources.map((element, index) => (
-                  <>
-                  
-                    <SubMenuTiles
-                      Logo={element.logo}
-                      item={element.title}
-                      handleClick={element.handleClick}
-                    />
-                    {index != Resources.length - 1 ? (
-                      <>
-                        {" "}
-                        <Divider />
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                  </>
-                ))}
+                <p className={cn(style.MenuItemText)}>Product</p>
               </>
-            ) : (
-              <></>
-            )
-          }
-        />
+            }
+            isParent={true}
+            child={
+              <>
+                <RightOutlined
+                  className={
+                    current == "Product"
+                      ? cn(style.rotateIcon)
+                      : cn(style.orgIcon)
+                  }
+                />
+              </>
+            }
+            hasSubMenu={true}
+            SubMenu={
+              current == "Product" ? (
+                <>
+                  {Products.map((element, index) => (
+                    <>
+                      <SubMenuTiles
+                        Logo={element.logo}
+                        item={element.title}
+                        handleClick={element.handleClick}
+                      />
+                      {index != Products.length - 1 ? (
+                        <>
+                          {" "}
+                          <Divider />
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                    </>
+                  ))}
+                </>
+              ) : (
+                <></>
+              )
+            }
+          />
 
-        <MenuItem
-          onClick={handleAboutClick}
-          item={
-            <>
-              <p className={cn(style.MenuItemText)}>About</p>
-            </>
-          }
-          isParent={false}
-          hasSubMenu={false}
-        />
+          <MenuItem
+            onClick={handleClickSolution}
+            item={
+              <>
+                <p className={cn(style.MenuItemText)}>Solution</p>
+              </>
+            }
+            isParent={true}
+            child={
+              <>
+                <RightOutlined
+                  className={
+                    current == "Solution"
+                      ? cn(style.rotateIcon)
+                      : cn(style.orgIcon)
+                  }
+                />
+              </>
+            }
+            hasSubMenu={true}
+            SubMenu={
+              current == "Solution" ? (
+                <>
+                  {Solution.map((element, index) => (
+                    <>
+                      <SubMenuTiles
+                        Logo={element.logo}
+                        item={element.title}
+                        handleClick={element.handleClick}
+                      />
+                      {index != Solution.length - 1 ? (
+                        <>
+                          {" "}
+                          <Divider />
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                    </>
+                  ))}
+                </>
+              ) : (
+                <></>
+              )
+            }
+          />
 
-        <CustomFilledButton
-          children={
-            <span className={cn(style.FilledButtonText)}>Start Free Trial</span>
-          }
-          width={"100%"}
-          handleClick={handleFreeTrialClick}
-          height = {"4.1625rem"}
-        />
+          <MenuItem
+            onClick={handlePricingClick}
+            item={
+              <>
+                <p className={cn(style.MenuItemText)}>Pricing</p>
+              </>
+            }
+            isParent={false}
+            hasSubMenu={false}
+          />
 
-                    <CustomOutlinedButton width={"100%"} height={"4.1625rem"} handleClick={handleBookDemoClick}>
-                    <span className={style.buttonText}>Book a Demo</span>
-                  </CustomOutlinedButton>
-      </div>
+          <MenuItem
+            onClick={handleClickResources}
+            item={
+              <>
+                <p className={cn(style.MenuItemText)}>Resources</p>
+              </>
+            }
+            isParent={true}
+            child={
+              <>
+                <RightOutlined
+                  className={
+                    current == "Resources"
+                      ? cn(style.rotateIcon)
+                      : cn(style.orgIcon)
+                  }
+                />
+              </>
+            }
+            hasSubMenu={true}
+            SubMenu={
+              current == "Resources" ? (
+                <>
+                  {Resources.map((element, index) => (
+                    <>
+                      <SubMenuTiles
+                        Logo={element.logo}
+                        item={element.title}
+                        handleClick={element.handleClick}
+                      />
+                      {index != Resources.length - 1 ? (
+                        <>
+                          {" "}
+                          <Divider />
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                    </>
+                  ))}
+                </>
+              ) : (
+                <></>
+              )
+            }
+          />
+
+          <MenuItem
+            onClick={handleAboutClick}
+            item={
+              <>
+                <p className={cn(style.MenuItemText)}>About</p>
+              </>
+            }
+            isParent={false}
+            hasSubMenu={false}
+          />
+
+          <CustomFilledButton
+            children={
+              <span className={cn(style.FilledButtonText)}>
+                Start Free Trial
+              </span>
+            }
+            width={"100%"}
+            handleClick={handleFreeTrialClick}
+            height={"4.1625rem"}
+          />
+
+          <CustomOutlinedButton
+            width={"100%"}
+            height={"4.1625rem"}
+            handleClick={handleBookDemoClick}
+          >
+            <span className={style.buttonText}>Book a Demo</span>
+          </CustomOutlinedButton>
+        </div>
       </ScrollAnimation>
     </div>
   );

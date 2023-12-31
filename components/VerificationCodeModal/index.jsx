@@ -10,9 +10,9 @@ import cn from "classnames";
 import { message } from "antd";
 import styles from "./styles.module.sass";
 
-function VerificationModal({ 
-  modal2Open, 
-  setModal2Open, 
+function VerificationModal({
+  modal2Open,
+  setModal2Open,
   handleStepperScreen,
   Name,
   Email,
@@ -42,15 +42,17 @@ function VerificationModal({
   };
 
   const verifyOtp = () => {
-    if(otpValues[0] === "" || otpValues[1] === "" || otpValues[2] === "" || otpValues[3] === ""){
+    if (
+      otpValues[0] === "" ||
+      otpValues[1] === "" ||
+      otpValues[2] === "" ||
+      otpValues[3] === ""
+    ) {
       message.error("Please Fill All the OTP Fields");
-    }
-    
-    else
-    {
-    setModal2Open(false);
-    handleStepperScreen({ position: 2 });
-    console.log(otpValues);
+    } else {
+      setModal2Open(false);
+      handleStepperScreen({ position: 2 });
+      console.log(otpValues);
     }
   };
 
@@ -92,13 +94,13 @@ function VerificationModal({
                   Code doesn’t seem right! Try again
                 </div>
 
-                <CustomFilledButton width={"100%"} handleClick={verifyOtp} >
+                <CustomFilledButton width={"100%"} handleClick={verifyOtp}>
                   Verify
                 </CustomFilledButton>
 
                 <div className={styles.changeNumberContainer}>
-                  <Link href='/start-free-trial'>
-                  <p className={styles.changeNumber}>Change the number</p>
+                  <Link href="/start-free-trial">
+                    <p className={styles.changeNumber}>Change the number</p>
                   </Link>
                   <p className={styles.tryAgain}>
                     Didn’t receive the code? Try again in 30s

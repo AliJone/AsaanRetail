@@ -9,6 +9,7 @@ import styles from "./styles.module.sass";
 import { useState } from "react";
 import CustomFilledButton from "../buttons/filledButton";
 import ScrollAnimation from "react-animate-on-scroll";
+import { useRouter } from "next/router";
 
 const tiers = [
   { type: "Standard", price: "Rs 12,000" },
@@ -227,6 +228,8 @@ function FeatureComparisonTable({ tabNumber }) {
 }
 
 function TierContainer({ type, price }) {
+  const router = useRouter();
+
   return (
     <>
       {/* dektop view */}
@@ -239,7 +242,10 @@ function TierContainer({ type, price }) {
         <div className={styles.tierContainerButton}>
           {/* <Button className={styles.tierContainerCTA}>Get started</Button> */}
 
-          <CustomFilledButton width={"11.785rem"}>
+          <CustomFilledButton
+            width={"11.785rem"}
+            handleClick={() => router.push("/start-free-trial")}
+          >
             Get started
           </CustomFilledButton>
         </div>
@@ -259,7 +265,10 @@ function TierContainer({ type, price }) {
           <div className={styles.tierContainerButton}>
             {/* <Button className={styles.tierContainerCTA}>Get started</Button> */}
 
-            <CustomFilledButton width={"79.86%"}>
+            <CustomFilledButton
+              width={"79.86%"}
+              handleClick={() => router.push("/start-free-trial")}
+            >
               <span className={styles.buttonText}>Get started</span>
             </CustomFilledButton>
           </div>
