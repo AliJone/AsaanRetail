@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import LoaderScreenService from '../../../services/LoaderScreenService';
 import { Progress } from 'antd';
 import animation from '../assests/containerCard.svg';
 import chemical from '../assests/icons/chemical.svg';
@@ -20,22 +21,32 @@ import web from '../assests/icons/web.svg';
 const Screen3 =({handleStepperScreen})=>{
 
     const [progress, setProgress] = useState(0);
+    const timer = setInterval(() => {
+        setProgress((prevProgress) => (prevProgress == 50 ? prevProgress : prevProgress + 5));
+      }, 9000);
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-          setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
-        }, 800);
+    const timer2 = setInterval(async () => {
+        if(progress >= 50 && progress < 100) {
+            var hit = await LoaderScreenService.GetProgressData();
+            if(hit.status == 200){
+                console.log(hit.data.message)
+                hit.data.message == "Success" ? 
+                setProgress(100) 
+                // console.log("done")
+                : 
+                setProgress(prevProgress => prevProgress);
+            }
+        } 
+     }, 10000);
 
+    useEffect(() => {    
         if(progress >= 100){
             handleStepperScreen({position: 3});
         }
-
         return () => {
           clearInterval(timer);
         };
-
-       
-      })
+      },[progress])
 
     return(
         <div className={cn(style.Screen3)}>
