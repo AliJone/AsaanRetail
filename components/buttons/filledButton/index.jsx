@@ -4,7 +4,7 @@ import style from "./style.module.sass";
 const CustomFilledButton = (props) => {
   return (
     <div style={{ width: props.width != undefined ? props.width : "auto" }}>
-      {!props.disabled ?
+      {!props.disabled ? (
         <Button
           onClick={props.handleClick}
           style={{
@@ -16,7 +16,8 @@ const CustomFilledButton = (props) => {
           icon={props.icon}
         >
           {props.children}
-        </Button> :
+        </Button>
+      ) : (
         <Button
           onClick={props.handleClick}
           style={{
@@ -30,7 +31,7 @@ const CustomFilledButton = (props) => {
         >
           {props.children}
         </Button>
-      }
+      )}
     </div>
   );
 };

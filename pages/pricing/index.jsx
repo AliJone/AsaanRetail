@@ -49,21 +49,9 @@ const pricingData = {
     "Perfect plan for mid-level businesses",
     "Perfect plan for Starters",
   ],
-  users:[
-    500,
-    1000,
-    1500
-  ],
-  Location:[
-    1,
-    2,
-    3,
-  ]
+  users: [500, 1000, 1500],
+  Location: [1, 2, 3],
 };
-
-// Usage in your component
-// <HeroSectionPricing {...pricingData} />
-
 
 const page = () => {
   const [tabNumber, setTabNumber] = useState(1);
@@ -76,9 +64,17 @@ const page = () => {
           }}
         >
           <NavigationBar />
-          <HeroSectionPricing {...pricingData} tabNumber={tabNumber} setTabNumber={setTabNumber}/>
+          <HeroSectionPricing
+            {...pricingData}
+            tabNumber={tabNumber}
+            setTabNumber={setTabNumber}
+          />
           <EnterpriseWithScroll />
-          <SpecificRequirementPayment tabNumberSelect={tabNumber} setTabNumberSelect={setTabNumber} {...pricingData}/>
+          <SpecificRequirementPayment
+            tabNumberSelect={tabNumber}
+            setTabNumberSelect={setTabNumber}
+            {...pricingData}
+          />
           <PriceTable />
           <ThroughLenseWithScroll />
           <TestimonialsWithScroll />

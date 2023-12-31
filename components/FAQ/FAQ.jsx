@@ -6,43 +6,77 @@ import { PlusOutlined } from "@ant-design/icons";
 import cn from "classnames";
 import limit from "../../styles/Limits.module.css";
 import styles from "./styles.module.sass";
+import { useRouter } from "next/router";
 
 const { Panel } = Collapse;
-const pluss = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
-<path d="M18 8.41162L18 29.4116" stroke="url(#paint0_linear_2673_6357)" stroke-width="4.5" stroke-linecap="round"/>
-<path d="M28.5 18.9116L7.5 18.9116" stroke="url(#paint1_linear_2673_6357)" stroke-width="4.5" stroke-linecap="round"/>
-<defs>
-  <linearGradient id="paint0_linear_2673_6357" x1="18" y1="18.9116" x2="17" y2="18.9116" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#009241"/>
-    <stop offset="1" stop-color="#04AD4F" stop-opacity="0.84"/>
-  </linearGradient>
-  <linearGradient id="paint1_linear_2673_6357" x1="18" y1="18.9116" x2="18" y2="17.9116" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#009241"/>
-    <stop offset="1" stop-color="#04AD4F" stop-opacity="0.84"/>
-  </linearGradient>
-</defs>
-</svg>
+const pluss = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="36"
+    height="37"
+    viewBox="0 0 36 37"
+    fill="none"
+  >
+    <path
+      d="M18 8.41162L18 29.4116"
+      stroke="url(#paint0_linear_2673_6357)"
+      stroke-width="4.5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M28.5 18.9116L7.5 18.9116"
+      stroke="url(#paint1_linear_2673_6357)"
+      stroke-width="4.5"
+      stroke-linecap="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_2673_6357"
+        x1="18"
+        y1="18.9116"
+        x2="17"
+        y2="18.9116"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#009241" />
+        <stop offset="1" stop-color="#04AD4F" stop-opacity="0.84" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_2673_6357"
+        x1="18"
+        y1="18.9116"
+        x2="18"
+        y2="17.9116"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#009241" />
+        <stop offset="1" stop-color="#04AD4F" stop-opacity="0.84" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
 
 function FAQ() {
   const [activeKeys, setActiveKeys] = useState(["1"]); // Initially expand panel with key '1'
-  const [customPanelStyle, setCustomPanelStyle] = useState({ marginBottom: 24,
+  const [customPanelStyle, setCustomPanelStyle] = useState({
+    marginBottom: 24,
     background: "white",
     borderRadius: 4,
     borderLeft: "4px solid #009241 !important",
     borderRight: "none",
     borderTop: "none",
-    borderBottom: "none",})
+    borderBottom: "none",
+  });
+
+  const router = useRouter();
 
   return (
     <>
-        <div className={cn(limit.Limit)}>
-      <div className={styles.FAQ}>
+      <div className={cn(limit.Limit)}>
+        <div className={styles.FAQ}>
           <div className={styles.Head}>
             <div className={styles.Title}>
-              Frequently asked{" "}
-              <span>
-                questions 
-              </span>
+              Frequently asked <span>questions</span>
             </div>
 
             <div className={styles.SubTitle}>
@@ -63,7 +97,7 @@ function FAQ() {
                   borderRadius: "2.5rem",
                   border: "2px solid var(--gradient-surface, #009241)",
                   boxShadow: "0px 2px 0px 0px rgba(0, 0, 0, 0.02)",
-                  padding:"0.25rem 0.9375rem",
+                  padding: "0.25rem 0.9375rem",
                   fontFamily: "Roboto",
                   fontSize: "1rem",
                   fontStyle: "normal",
@@ -72,6 +106,7 @@ function FAQ() {
                   flexWrap: "wrap",
                   textAlign: "center",
                 }}
+                onClick={() => router.push("contact-us")}
               >
                 Visit help center
               </Button>
@@ -88,7 +123,7 @@ function FAQ() {
                   borderRadius: "2.5rem",
                   border: "2px solid var(--gradient-surface, #009241)",
                   boxShadow: "0px 2px 0px 0px rgba(0, 0, 0, 0.02)",
-                  padding:"0.25rem 0.9375rem",
+                  padding: "0.25rem 0.9375rem",
                   fontFamily: "Roboto",
                   fontSize: "1rem",
                   fontStyle: "normal",
@@ -97,6 +132,7 @@ function FAQ() {
                   flexWrap: "wrap",
                   textAlign: "center",
                 }}
+                onClick={() => router.push("about-us")}
               >
                 About Asaan Retail
               </Button>
@@ -113,7 +149,7 @@ function FAQ() {
                   borderRadius: "2.5rem",
                   border: "2px solid var(--gradient-surface, #009241)",
                   boxShadow: "0px 2px 0px 0px rgba(0, 0, 0, 0.02)",
-                  padding:"0.25rem 0.9375rem",
+                  padding: "0.25rem 0.9375rem",
                   fontFamily: "Roboto",
                   fontSize: "1rem",
                   fontStyle: "normal",
@@ -122,6 +158,7 @@ function FAQ() {
                   flexWrap: "wrap",
                   textAlign: "center",
                 }}
+                onClick={() => router.push("contact-us")}
               >
                 Contact us
               </Button>
@@ -134,7 +171,15 @@ function FAQ() {
               // onChange={handleCollapseChange}
               defaultActiveKey={["1"]}
               expandIcon={({ isActive }) => (
-                <PlusOutlined rotate={isActive ? 45 : 0} style={{ fontSize: '16px', color: '#009241', strokeWidth: "100", stroke: "#009241" }}/>
+                <PlusOutlined
+                  rotate={isActive ? 45 : 0}
+                  style={{
+                    fontSize: "16px",
+                    color: "#009241",
+                    strokeWidth: "100",
+                    stroke: "#009241",
+                  }}
+                />
               )}
               style={{
                 backgroundColor: "transparent",
