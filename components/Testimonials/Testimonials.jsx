@@ -21,17 +21,17 @@ function Testimonials() {
     },
     {
       quote:
-        "Asdfadfsdsaan Retail streamlined our retail and e-commerce operations seamlessly with efficient inventory, orders, and accounting management. Highly recommended!",
-      name: "Hanzasdf Raja",
-      position: "Co-Fasdfasdounder, Highfy.pk",
+        "Asaan Retail streamlined our retail and e-commerce operations seamlessly with efficient inventory, orders, and accounting management. Highly recommended!",
+      name: "Hanzala Raja",
+      position: "Co-Founder, Highfy.pk",
       image: highfyMan,
       logo: highfy,
     },
     {
       quote:
-        "Asaaasdfasdn Retail streamlined our retail and e-commerce operations seamlessly with efficient inventory, orders, and accounting management. Highly recommended!",
-      name: "Hanza Raja",
-      position: "Co-Foasdfasunder, Highfy.pk",
+        "Asaan Retail streamlined our retail and e-commerce operations seamlessly with efficient inventory, orders, and accounting management. Highly recommended!",
+      name: "Hanzala Raja",
+      position: "Co-Founder, Highfy.pk",
       image: highfyMan,
       logo: highfy,
     },

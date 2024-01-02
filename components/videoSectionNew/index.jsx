@@ -104,6 +104,7 @@ const VideoSectionNew = () => {
               title="English | Centralized Inventory, Fulfillment and Accounting Management for Multi-Channel Commerce"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
+              style={{ borderRadius: "10px" }}
             ></iframe>
           </div>
         </div>

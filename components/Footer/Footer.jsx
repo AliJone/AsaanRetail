@@ -56,7 +56,8 @@ function Footer() {
       </div> */}
         <div className={styles.Extra}>
           <div className={cn(styles.Copyright, styles.fontDesktopBodyMedium)}>
-            © 2023 NEOSHIFT TECHNOLOGIES (PVT) LTD. All rights reserved.
+            © 2023 NEOSHIFT TECHNOLOGIES (PVT) LTD. <br />
+            All rights reserved.
           </div>
         </div>
       </div>
